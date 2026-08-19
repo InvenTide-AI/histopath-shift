@@ -1,0 +1,249 @@
+{
+  "source_dataset": "wltjr1007/Camelyon17-WILDS",
+  "reason_for_mirror": "carries center/patient/node/slide; the jxie mirror used by the original runs has image+label only",
+  "metadata_rows": 455954,
+  "metadata_sha256": "c3476054ea133c4f",
+  "split_seed": 0,
+  "val_patient_frac": 0.2,
+  "caps": {
+    "train": 40000,
+    "id_val": 8000,
+    "test": 20000
+  },
+  "design": "leave-one-hospital-out; test = held-out center only; train/id_val split BY PATIENT among remaining centers; all splits balanced 50/50 by label",
+  "per_center_population": {
+    "0": {
+      "n_patches": 59436,
+      "pos_frac": 0.5,
+      "n_patients": 7,
+      "n_slides": 10
+    },
+    "1": {
+      "n_patches": 34904,
+      "pos_frac": 0.5,
+      "n_patients": 8,
+      "n_slides": 10
+    },
+    "2": {
+      "n_patches": 85054,
+      "pos_frac": 0.5,
+      "n_patients": 9,
+      "n_slides": 10
+    },
+    "3": {
+      "n_patches": 129838,
+      "pos_frac": 0.5,
+      "n_patients": 10,
+      "n_slides": 10
+    },
+    "4": {
+      "n_patches": 146722,
+      "pos_frac": 0.5,
+      "n_patients": 9,
+      "n_slides": 10
+    }
+  },
+  "folds": {
+    "0": {
+      "train": {
+        "n": 40000,
+        "pos_frac": 0.5,
+        "n_patients": 29,
+        "centers": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "id_val": {
+        "n": 8000,
+        "pos_frac": 0.5,
+        "n_patients": 7,
+        "centers": [
+          "1",
+          "3",
+          "4"
+        ]
+      },
+      "test": {
+        "n": 20000,
+        "pos_frac": 0.5,
+        "n_patients": 7,
+        "centers": [
+          "0"
+        ]
+      },
+      "val_patients": [
+        22,
+        24,
+        34,
+        66,
+        75,
+        87,
+        96
+      ]
+    },
+    "1": {
+      "train": {
+        "n": 40000,
+        "pos_frac": 0.5,
+        "n_patients": 28,
+        "centers": [
+          "0",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "id_val": {
+        "n": 8000,
+        "pos_frac": 0.5,
+        "n_patients": 7,
+        "centers": [
+          "0",
+          "2",
+          "4"
+        ]
+      },
+      "test": {
+        "n": 20000,
+        "pos_frac": 0.5,
+        "n_patients": 8,
+        "centers": [
+          "1"
+        ]
+      },
+      "val_patients": [
+        9,
+        16,
+        42,
+        46,
+        48,
+        88,
+        96
+      ]
+    },
+    "2": {
+      "train": {
+        "n": 40000,
+        "pos_frac": 0.5,
+        "n_patients": 27,
+        "centers": [
+          "0",
+          "1",
+          "3",
+          "4"
+        ]
+      },
+      "id_val": {
+        "n": 8000,
+        "pos_frac": 0.5,
+        "n_patients": 7,
+        "centers": [
+          "0",
+          "1",
+          "3",
+          "4"
+        ]
+      },
+      "test": {
+        "n": 20000,
+        "pos_frac": 0.5,
+        "n_patients": 9,
+        "centers": [
+          "2"
+        ]
+      },
+      "val_patients": [
+        9,
+        10,
+        12,
+        22,
+        38,
+        61,
+        96
+      ]
+    },
+    "3": {
+      "train": {
+        "n": 40000,
+        "pos_frac": 0.5,
+        "n_patients": 26,
+        "centers": [
+          "0",
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "id_val": {
+        "n": 8000,
+        "pos_frac": 0.5,
+        "n_patients": 7,
+        "centers": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "test": {
+        "n": 20000,
+        "pos_frac": 0.5,
+        "n_patients": 10,
+        "centers": [
+          "3"
+        ]
+      },
+      "val_patients": [
+        9,
+        12,
+        16,
+        20,
+        39,
+        44,
+        45
+      ]
+    },
+    "4": {
+      "train": {
+        "n": 40000,
+        "pos_frac": 0.5,
+        "n_patients": 27,
+        "centers": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "id_val": {
+        "n": 8000,
+        "pos_frac": 0.5,
+        "n_patients": 7,
+        "centers": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "test": {
+        "n": 20000,
+        "pos_frac": 0.5,
+        "n_patients": 9,
+        "centers": [
+          "4"
+        ]
+      },
+      "val_patients": [
+        15,
+        16,
+        20,
+        21,
+        34,
+        38,
+        41
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+ "purpose": "pool-size test for the CRC stain-shift axis",
+ "seed": 20240,
+ "cohort": "NCT_CRC_HE_100K (colour-normalised) ONLY -- no NONORM tiles",
+ "n": 20000,
+ "pos": 0,
+ "neg": 20000,
+ "tumour_fraction": 0.0,
+ "row_groups": 565,
+ "disjoint_from": [
+  "train",
+  "id_val",
+  "original unlabeled pool"
+ ],
+ "note": "Unbalanced by necessity: TUM headroom after train+id_val+original pool is ~91 tiles, so a 40k pool cannot preserve the original 21.8% tumour fraction. Camelyon17's unlabeled pool was itself uniform random with no class balancing. Pool SIZE and COMPOSITION are therefore confounded in this test; see DESIGN_crc_pool40k.md."
+}

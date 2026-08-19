@@ -1,0 +1,40 @@
+{
+ "purpose": "composition-matched nested pools for the CRC pool-size test",
+ "seed": 20240,
+ "cohort": "NCT_CRC_HE_100K (colour-normalised) for train/id_val/pools",
+ "design": "pool10k is a class-stratified SUBSET of pool20k, so pool composition is identical by construction and only size varies",
+ "splits": {
+  "train_n15k": {
+   "n": 15000,
+   "pos": 7500,
+   "row_groups": 154
+  },
+  "id_val": {
+   "n": 4000,
+   "pos": 2000,
+   "row_groups": 40
+  },
+  "shift_nonorm": {
+   "n": 4000,
+   "pos": 2000
+  },
+  "shift_external": {
+   "n": 2466,
+   "pos": 1233
+  }
+ },
+ "pools": {
+  "pool20k": {
+   "n": 20000,
+   "pos": 4392,
+   "tumour_fraction": 0.2196,
+   "row_groups": 207
+  },
+  "pool10k": {
+   "n": 10000,
+   "pos": 2196,
+   "tumour_fraction": 0.2196,
+   "nested_in": "pool20k (class-stratified subset)"
+  }
+ }
+}

@@ -1,0 +1,10 @@
+arm,seed,id_test_auroc,ood_auroc,provenance
+baseline,0,0.833,0.8084,transcript-recovered summary; per-sample predictions lost
+baseline,1,0.8333,0.8051,transcript-recovered summary; per-sample predictions lost
+sam,0,0.8237,0.8032,transcript-recovered summary; per-sample predictions lost
+ssl_M,0,0.843,0.7919,transcript-recovered summary; per-sample predictions lost
+ssl_M,1,0.8363,0.7879,transcript-recovered summary; per-sample predictions lost
+ssl_S,0,0.8345,0.7998,transcript-recovered summary; per-sample predictions lost
+ssl_S,1,0.8389,0.7938,transcript-recovered summary; per-sample predictions lost
+ssl_S_sam,0,0.8305,0.8049,transcript-recovered summary; per-sample predictions lost
+ssl_S_sam,1,0.8353,0.7996,transcript-recovered summary; per-sample predictions lost

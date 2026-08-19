@@ -1,0 +1,13 @@
+# Versions the two completed experiments were actually run with, read back from
+# the run environment (Python 3.11.15, CPU-only torch, 10-core macOS host).
+# torchvision was installed but its version was not recorded, so it is left
+# unpinned rather than guessed.
+torch==2.13.0
+torchvision
+numpy==2.4.6
+pandas==3.0.5
+scikit-learn==1.9.0
+scipy==1.17.1
+pyarrow==25.0.0
+matplotlib==3.11.1
+Pillow==12.3.0

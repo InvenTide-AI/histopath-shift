@@ -1,0 +1,54 @@
+{
+ "source": "huggingface.co/datasets/1aurent/NCT-CRC-HE",
+ "origin": "Kather JN, Halama N, Marx A (2018), Zenodo",
+ "doi": "10.5281/zenodo.1214456",
+ "license": "CC-BY-4.0",
+ "task": "binary TUM (adenocarcinoma epithelium) vs non-TUM, class-balanced",
+ "excluded_class": "BACK (empty slide glass; trivially separable)",
+ "crop": "centre 64x64 of 224x224 (0.5 MPP source)",
+ "seed": 20240,
+ "model_selection": "in-distribution validation only; no third site exists in this dataset, so the WILDS ood_val protocol used for Camelyon17 cannot be reproduced (see DESIGN_crc.md)",
+ "splits": {
+  "train": {
+   "cohort": "NCT_CRC_HE_100K (colour-normalised)",
+   "n": 20000,
+   "pos": 10000,
+   "neg": 10000,
+   "row_groups": 204
+  },
+  "id_val": {
+   "cohort": "NCT_CRC_HE_100K (colour-normalised)",
+   "n": 4000,
+   "pos": 2000,
+   "neg": 2000,
+   "row_groups": 43
+  },
+  "unlabeled": {
+   "cohort": "NCT_CRC_HE_100K (colour-normalised)",
+   "n": 10226,
+   "pos": 2226,
+   "neg": 8000,
+   "row_groups": 104,
+   "note": "SSL pre-training pool. Normalised cohort ONLY -- the encoder never sees NONORM appearance, which would leak the primary test condition. Labels are discarded."
+  },
+  "shift_nonorm": {
+   "cohort": "NCT_CRC_HE_100K_NONORM (no colour normalisation)",
+   "role": "PRIMARY shift axis: stain/acquisition shift, tissue material held approximately constant",
+   "n": 4000,
+   "pos": 2000,
+   "neg": 2000,
+   "row_groups": 44
+  },
+  "shift_external": {
+   "cohort": "CRC_VAL_HE_7K",
+   "role": "SECONDARY axis: 50 patients, no patient overlap with the 100K set, but SAME NCT tissue bank -- patient-disjoint external cohort, NOT a second hospital",
+   "n": 2466,
+   "pos": 1233,
+   "neg": 1233,
+   "balanced_from": {
+    "pos": 1233,
+    "neg": 5100
+   }
+  }
+ }
+}

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software or the released result records, please cite the paper."
+title: >-
+  Self-supervised pre-training and sharpness-aware minimisation interact under
+  distribution shift in histopathology, and the interaction sets the condition
+  for benefit
+# NOTE: the manuscript author list is still a placeholder (see paper/main_journal.tex).
+# Fill in real authors here and there together before publishing this repository;
+# CFF requires at least one author, so this entry is intentionally an obvious stub.
+authors:
+  - name: "[Author list pending -- do not cite as-is]"
+type: software
+license: MIT
+repository-code: "https://github.com/ORG/REPO"
+abstract: >-
+  Code, per-run result records and manuscript source for a controlled test of
+  self-supervised pre-training (SSL) and sharpness-aware minimisation (SAM) on
+  two cross-site histopathology benchmarks. The SSL x SAM interaction term is
+  positive on every evaluation under distribution shift and absent
+  in-distribution; net benefit over a supervised baseline requires the
+  interaction to exceed the summed cost of each mechanism applied alone.
+  Also includes five patient-disjoint leave-one-hospital-out splits of
+  Camelyon17 and a model-free quantification of site shift across them, which
+  shows the shift is graded (stain distance varies 1.65-fold across folds while
+  domain-classifier separability sits near ceiling) and that a substantial part
+  of apparent site separability is patient-level rather than institutional.
+keywords:
+  - distribution shift
+  - self-supervised learning
+  - sharpness-aware minimization
+  - computational pathology
+  - external validation
+  - domain generalization
+  - multi-site validation
