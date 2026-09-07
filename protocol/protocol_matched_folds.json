@@ -1,0 +1,170 @@
+{
+ "target_sizes": {
+  "train": 60000,
+  "id_val": 12000,
+  "ood_val": 12000,
+  "ood_test": 25000,
+  "unlabeled": 40000
+ },
+ "seed_base": 20240,
+ "unlabeled_seed_base": 90240,
+ "rotation": "ood_val = (test-1) mod 5",
+ "note": "t2 reproduces the published design: train {0,3,4}, ood_val 1, test 2",
+ "global_index": "row position in camelyon17_metadata.parquet; shards are contiguous blocks in this order",
+ "shard_order": [
+  "test-00000-of-00004.parquet",
+  "test-00001-of-00004.parquet",
+  "test-00002-of-00004.parquet",
+  "test-00003-of-00004.parquet",
+  "train-00000-of-00014.parquet",
+  "train-00001-of-00014.parquet",
+  "train-00002-of-00014.parquet",
+  "train-00003-of-00014.parquet",
+  "train-00004-of-00014.parquet",
+  "train-00005-of-00014.parquet",
+  "train-00006-of-00014.parquet",
+  "train-00007-of-00014.parquet",
+  "train-00008-of-00014.parquet",
+  "train-00009-of-00014.parquet",
+  "train-00010-of-00014.parquet",
+  "train-00011-of-00014.parquet",
+  "train-00012-of-00014.parquet",
+  "train-00013-of-00014.parquet",
+  "validation-00000-of-00003.parquet",
+  "validation-00001-of-00003.parquet",
+  "validation-00002-of-00003.parquet"
+ ],
+ "folds": {
+  "t0": {
+   "test_center": 0,
+   "ood_val_center": 4,
+   "train_centers": [
+    1,
+    2,
+    3
+   ],
+   "id_val_patients": [
+    [
+     1,
+     20
+    ],
+    [
+     1,
+     22
+    ],
+    [
+     2,
+     41
+    ],
+    [
+     3,
+     64
+    ]
+   ]
+  },
+  "t1": {
+   "test_center": 1,
+   "ood_val_center": 0,
+   "train_centers": [
+    2,
+    3,
+    4
+   ],
+   "id_val_patients": [
+    [
+     2,
+     41
+    ],
+    [
+     2,
+     42
+    ],
+    [
+     3,
+     66
+    ],
+    [
+     3,
+     72
+    ],
+    [
+     4,
+     89
+    ],
+    [
+     4,
+     92
+    ]
+   ]
+  },
+  "t2": {
+   "test_center": 2,
+   "ood_val_center": 1,
+   "train_centers": [
+    0,
+    3,
+    4
+   ],
+   "id_val_patients": [
+    [
+     0,
+     12
+    ],
+    [
+     3,
+     60
+    ],
+    [
+     4,
+     87
+    ]
+   ]
+  },
+  "t3": {
+   "test_center": 3,
+   "ood_val_center": 2,
+   "train_centers": [
+    0,
+    1,
+    4
+   ],
+   "id_val_patients": [
+    [
+     0,
+     12
+    ],
+    [
+     1,
+     20
+    ],
+    [
+     4,
+     96
+    ]
+   ]
+  },
+  "t4": {
+   "test_center": 4,
+   "ood_val_center": 3,
+   "train_centers": [
+    0,
+    1,
+    2
+   ],
+   "id_val_patients": [
+    [
+     0,
+     17
+    ],
+    [
+     1,
+     34
+    ],
+    [
+     2,
+     52
+    ]
+   ]
+  }
+ }
+}

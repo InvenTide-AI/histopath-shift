@@ -1,0 +1,5 @@
+arm,mean,sd_across_hospitals,worst_hospital,best_hospital,range
+baseline,0.851,0.1271,0.6673,0.9543,0.287
+sam,0.8481,0.0975,0.7044,0.9544,0.25
+ssl,0.9426,0.0227,0.9098,0.9667,0.0569
+ssl_sam,0.9468,0.0141,0.9334,0.9634,0.03

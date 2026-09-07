@@ -1,34 +1,40 @@
 cff-version: 1.2.0
-message: "If you use this software or the released result records, please cite the paper."
-title: >-
-  Self-supervised pre-training and sharpness-aware minimisation interact under
-  distribution shift in histopathology, and the interaction sets the condition
-  for benefit
-# NOTE: the manuscript author list is still a placeholder (see paper/main_journal.tex).
-# Fill in real authors here and there together before publishing this repository;
-# CFF requires at least one author, so this entry is intentionally an obvious stub.
-authors:
-  - name: "[Author list pending -- do not cite as-is]"
+message: "If you use this code or these result records, please cite the manuscript below."
+title: "Self-Supervised Pre-Training Drives Cross-Hospital Generalization in Histopathology (code and result records)"
+abstract: >-
+  Four-arm factorial (supervised baseline, self-supervised pre-training,
+  sharpness-aware minimization, and both) evaluated on Camelyon17-WILDS with each
+  of the five hospitals held out in turn, plus a colorectal-cancer replication on
+  NCT-CRC-HE. Contains the pipeline, the aggregated result tables, the fold
+  protocol and a checker that re-derives every published table.
 type: software
 license: MIT
-repository-code: "https://github.com/ORG/REPO"
-abstract: >-
-  Code, per-run result records and manuscript source for a controlled test of
-  self-supervised pre-training (SSL) and sharpness-aware minimisation (SAM) on
-  two cross-site histopathology benchmarks. The SSL x SAM interaction term is
-  positive on every evaluation under distribution shift and absent
-  in-distribution; net benefit over a supervised baseline requires the
-  interaction to exceed the summed cost of each mechanism applied alone.
-  Also includes five patient-disjoint leave-one-hospital-out splits of
-  Camelyon17 and a model-free quantification of site shift across them, which
-  shows the shift is graded (stain distance varies 1.65-fold across folds while
-  domain-classifier separability sits near ceiling) and that a substantial part
-  of apparent site separability is patient-level rather than institutional.
+authors:
+  - family-names: Chatterjee
+    given-names: Ayan
+    affiliation: "Indian Institute of Technology Bhubaneswar, Odisha, India"
+  - family-names: Paluh
+    given-names: Janet
+    affiliation: "State University of New York at Albany, NY, USA"
+  - family-names: Mukherjee
+    given-names: Amitava
+    affiliation: "Birla Institute of Technology & Science, Pilani - Dubai Campus, UAE"
 keywords:
-  - distribution shift
+  - histopathology
+  - domain generalization
   - self-supervised learning
   - sharpness-aware minimization
-  - computational pathology
-  - external validation
-  - domain generalization
-  - multi-site validation
+  - Camelyon17
+preferred-citation:
+  type: article
+  title: "Self-Supervised Pre-Training Drives Cross-Hospital Generalization in Histopathology"
+  status: submitted
+  journal: "IEEE Transactions on Medical Imaging"
+  year: 2026
+  authors:
+    - family-names: Chatterjee
+      given-names: Ayan
+    - family-names: Paluh
+      given-names: Janet
+    - family-names: Mukherjee
+      given-names: Amitava

@@ -1,0 +1,103 @@
+{
+ "NCT_CRC_HE_100K-00000-of-00031-9780c9afe3d80c58.parquet": {
+  "2": 3226
+ },
+ "NCT_CRC_HE_100K-00001-of-00031-89eb0ee8f756b1d1.parquet": {
+  "2": 3226
+ },
+ "NCT_CRC_HE_100K-00002-of-00031-0ee839cd355aeab1.parquet": {
+  "2": 3226
+ },
+ "NCT_CRC_HE_100K-00003-of-00031-264d0491a5f814e5.parquet": {
+  "2": 1834,
+  "7": 1392
+ },
+ "NCT_CRC_HE_100K-00004-of-00031-04197e7c2252e508.parquet": {
+  "7": 3226
+ },
+ "NCT_CRC_HE_100K-00005-of-00031-6929e3c0e6f21267.parquet": {
+  "7": 3226
+ },
+ "NCT_CRC_HE_100K-00006-of-00031-139caa66def8ba47.parquet": {
+  "7": 2602,
+  "0": 624
+ },
+ "NCT_CRC_HE_100K-00007-of-00031-7240d4f64e3ab056.parquet": {
+  "0": 3226
+ },
+ "NCT_CRC_HE_100K-00008-of-00031-164c2dc788d56bcd.parquet": {
+  "0": 3226
+ },
+ "NCT_CRC_HE_100K-00009-of-00031-a88ca52bf61c4a65.parquet": {
+  "0": 3226
+ },
+ "NCT_CRC_HE_100K-00010-of-00031-10d1d039bbb1e518.parquet": {
+  "0": 105,
+  "3": 3121
+ },
+ "NCT_CRC_HE_100K-00011-of-00031-9586fd31243bcf81.parquet": {
+  "3": 3226
+ },
+ "NCT_CRC_HE_100K-00012-of-00031-68088e297e94d57f.parquet": {
+  "3": 3226
+ },
+ "NCT_CRC_HE_100K-00013-of-00031-78a603d1323d36ab.parquet": {
+  "3": 1984,
+  "6": 1242
+ },
+ "NCT_CRC_HE_100K-00014-of-00031-a59185824004206f.parquet": {
+  "6": 3226
+ },
+ "NCT_CRC_HE_100K-00015-of-00031-72d58c4f33fb37a0.parquet": {
+  "6": 3226
+ },
+ "NCT_CRC_HE_100K-00016-of-00031-08c5023e7f6558a6.parquet": {
+  "6": 1069,
+  "8": 2157
+ },
+ "NCT_CRC_HE_100K-00017-of-00031-240fc2989151d739.parquet": {
+  "8": 3226
+ },
+ "NCT_CRC_HE_100K-00018-of-00031-84ed50962a18a85e.parquet": {
+  "8": 3226
+ },
+ "NCT_CRC_HE_100K-00019-of-00031-e4a4c7209859272a.parquet": {
+  "8": 3226
+ },
+ "NCT_CRC_HE_100K-00020-of-00031-53205a9a51e1db08.parquet": {
+  "8": 2482,
+  "1": 744
+ },
+ "NCT_CRC_HE_100K-00021-of-00031-e828a2a9aff921c7.parquet": {
+  "1": 3226
+ },
+ "NCT_CRC_HE_100K-00022-of-00031-179504506f62afff.parquet": {
+  "1": 3226
+ },
+ "NCT_CRC_HE_100K-00023-of-00031-0c174269fdc04fcd.parquet": {
+  "1": 3226
+ },
+ "NCT_CRC_HE_100K-00024-of-00031-6724461c96053f0e.parquet": {
+  "1": 144,
+  "4": 3082
+ },
+ "NCT_CRC_HE_100K-00025-of-00031-06d3e29beab848cc.parquet": {
+  "4": 3225
+ },
+ "NCT_CRC_HE_100K-00026-of-00031-2cd8b9c340900f59.parquet": {
+  "4": 2589,
+  "5": 636
+ },
+ "NCT_CRC_HE_100K-00027-of-00031-76ba1a4a6d60e4bf.parquet": {
+  "5": 3225
+ },
+ "NCT_CRC_HE_100K-00028-of-00031-6161e17b52896e1b.parquet": {
+  "5": 3225
+ },
+ "NCT_CRC_HE_100K-00029-of-00031-01d8069141f86ca7.parquet": {
+  "5": 3225
+ },
+ "NCT_CRC_HE_100K-00030-of-00031-3df3a4a7b9dd86b2.parquet": {
+  "5": 3225
+ }
+}

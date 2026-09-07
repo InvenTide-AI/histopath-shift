@@ -16,6 +16,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from scipy.stats import spearmanr
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ARMS = ["baseline", "ssl", "sam", "ssl_sam"]
@@ -72,7 +73,11 @@ for j, axis in enumerate(axes_order):
 ax.set_xticks(range(len(ARMS)))
 ax.set_xticklabels([SHORT[a] for a in ARMS])
 ax.set_ylabel("AUROC under shift")
-ax.set_title("No arm beats supervised training", loc="left")
+# Panel (a) plots BOTH shift axes, and on the external-cohort axis SAM alone
+# does edge past the supervised baseline (+0.002 ensemble, interval spanning
+# zero). "No arm beats supervised training" is therefore true of the stain axis
+# only; state the axis rather than overclaiming across both.
+ax.set_title("Stain axis: no arm beats supervised", loc="left")
 ax.margins(x=.12, y=.16)
 h = [plt.Line2D([], [], marker="o", ls="none", mfc="#555", mec="#555", ms=4.6,
                 label=AXLAB["shift_nonorm"]),
@@ -147,8 +152,14 @@ if sharp is not None and len(sharp):
             b, a0 = np.polyfit(x[ok], y[ok], 1)
             xs = np.linspace(x[ok].min(), x[ok].max(), 50)
             ax.plot(xs, a0 + b * xs, color="#666", lw=.9, ls="--", zorder=2)
-            r = np.corrcoef(x[ok], y[ok])[0, 1]
-            ax.text(.97, .95, f"r = {r:.2f}  (n = {int(ok.sum())})",
+            # Report the same statistic the caption and body text quote: a
+            # Spearman rank correlation. n = 8 checkpoints is too small for a
+            # Pearson coefficient to be robust to a single outlying arm, and
+            # the earlier version of this panel annotated Pearson r while the
+            # caption quoted Spearman rho -- a mismatch, not a second result.
+            rho, p_rho = spearmanr(x[ok], y[ok])
+            ax.text(.97, .95,
+                    f"$\\rho$ = {rho:+.2f}  ($p$ = {p_rho:.2f}, n = {int(ok.sum())})",
                     transform=ax.transAxes, ha="right", va="top", fontsize=6)
     ax.set_xlabel("Adversarial sharpness ($\\rho$ = 0.05)")
     ax.set_ylabel("Stain-shift AUROC")
