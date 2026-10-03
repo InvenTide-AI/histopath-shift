@@ -1,0 +1,57 @@
+{
+ "label": "Canine SCC multi-scanner (scale-normalized, slide-disjoint)",
+ "K": 5,
+ "variance": {
+  "baseline": {
+   "sigma_site": 0.04965557081108555,
+   "sigma_seed": 0.018348125968804235,
+   "sigma_resid": 0.03505970868027956,
+   "icc_site": 0.6116006447069218
+  },
+  "sam": {
+   "sigma_site": 0.0595085756791761,
+   "sigma_seed": 0.00937201682613961,
+   "sigma_resid": 0.018422314661422003,
+   "icc_site": 0.8923477936087604
+  },
+  "ssl": {
+   "sigma_site": 0.031221467943029112,
+   "sigma_seed": 0.007691465540707471,
+   "sigma_resid": 0.038422308579511524,
+   "icc_site": 0.3883257137810794
+  },
+  "ssl_sam": {
+   "sigma_site": 0.04536370277175487,
+   "sigma_seed": 0.029365311062310107,
+   "sigma_resid": 0.017841666187874392,
+   "icc_site": 0.6354354967063705
+  }
+ },
+ "power": [
+  {
+   "delta": 0.05,
+   "K_1seed": 15,
+   "K_3seed": 12
+  },
+  {
+   "delta": 0.075,
+   "K_1seed": 8,
+   "K_3seed": 7
+  },
+  {
+   "delta": 0.1,
+   "K_1seed": 6,
+   "K_3seed": 5
+  },
+  {
+   "delta": 0.15,
+   "K_1seed": 4,
+   "K_3seed": 4
+  },
+  {
+   "delta": 0.2,
+   "K_1seed": 4,
+   "K_3seed": 3
+  }
+ ]
+}

@@ -1,143 +1,164 @@
-# Self-Supervised Pre-Training Drives Cross-Hospital Generalization in Histopathology
+# Domain-Complete Evaluation of Distribution Shift in Histopathology
 
-Code, result records and reproduction protocol for the manuscript submitted to
-*IEEE Transactions on Medical Imaging*. Every number in its four tables and its
-figure can be re-derived from the files in this repository.
+Code, experimental records, and reproduction protocol for the manuscript
+submitted to *Transactions on Machine Learning Research (TMLR)*.
 
-## The finding
+Every number in the paper's tables and figures can be re-derived from the files
+in this repository.
 
-A four-arm factorial — supervised baseline (ERM), self-supervised pre-training
-(SSL), sharpness-aware minimization (SAM), and both — was run on
-Camelyon17-WILDS with **each of the five hospitals held out in turn**.
+## Key finding
 
-| | ERM | SAM | SSL | SSL+SAM |
-|---|---|---|---|---|
-| Mean off-site AUROC | 0.851 | 0.848 | 0.943 | 0.947 |
-| SD across hospitals | 0.127 | 0.098 | **0.023** | **0.014** |
-| Range across hospitals | 0.287 | 0.250 | 0.057 | 0.030 |
+The **type** of domain shift—not just its presence—determines which robustness
+method works for histopathology AI.
 
-* **Which hospital you hold out matters more than which method you use.**
-  Baseline off-site AUROC ranges from 0.667 to 0.954 across the five held-out
-  hospitals — a 0.287 swing produced by the choice of test site alone, larger
-  than any training intervention produced.
-* **SSL pre-training compresses that spread and raises the floor.** It cuts the
-  hospital-to-hospital SD 5.6-fold (0.127 → 0.023) and lifts the worst hospital
-  (C4) by +0.274 AUROC. The gain is concentrated where ERM fails: Pearson
-  *r* = −0.98 (n = 5) between baseline AUROC at a hospital and the gain there.
-* **The SSL × SAM synergy we previously reported at one hospital does not
-  replicate.** The interaction was +0.161 AUROC at center 2 alone; across all
-  five hospitals it is +0.007 ± 0.047 (mean ± SD), with a 95% CI that covers
-  zero and a sign that flips between hospitals. Single-site evidence for the
-  interaction was a property of that site, not of the methods.
+We tested eleven interventions across three cohorts that isolate different
+sources of shift:
 
-The last point is why this repository ships the earlier single-hospital
-experiment alongside the five-hospital sweep rather than replacing it: the
-single-hospital result is reproducible and is reported in the paper as Table
-III, but it is superseded as evidence by the sweep in Table II.
+| Cohort | What changes between domains | Best method (worst-site AUROC) |
+|---|---|---|
+| **Camelyon17-WILDS** (5 hospitals) | Scanner + stain + patients | Frozen ImageNet probe (0.929) |
+| **MIDOG 2021** (3 scanners, 1 lab) | Scanner only | Stain normalization (0.865) |
+| **Canine SCC** (5 scanners) | Scanner only | Frozen ImageNet probe (0.792) |
+
+**Under hospital shift** (scanner, stain, and patient population all change),
+self-supervised pre-training on unlabelled tissue lifts the worst hospital's
+AUROC by +0.175 and compresses the across-hospital spread 3.2×. Under
+**scanner-only shift**, stain normalization dominates and pre-training adds
+nothing. Most domain-generalization objectives (GroupDRO, IRM, DeepCORAL) hurt
+the worst domain on every cohort.
+
+We propose the **intraclass correlation coefficient (ICC)** from a variance
+decomposition of off-site performance as a quantitative measure for evaluating
+robustness claims. The ICC separates true site sensitivity from random-seed
+noise and yields a closed-form power formula: detecting a 0.10 AUROC mean
+effect requires at least 8 hospitals at 3 seeds.
 
 ## Layout
 
 ```
-src/                    pipeline: data prep, SSL pre-training, training arms,
-                        aggregation, bootstrap CIs, sharpness, site shift, figures
-src/check_release.py    re-derives every published table from results/ (112 checks)
-src/make_figure_fivefold.py   regenerates Fig. 1 from results/
-protocol/               fold protocol, hospital splits, dataset manifests and
-                        shard indices — the exact sample assignment used
+src/                        Pipeline: data prep, SSL pre-training, training arms,
+                            aggregation, variance decomposition, figures
+paper/tmlr/                 Manuscript source (LaTeX) and compiled PDF
+paper/tmlr/figs/            All figures (PDF)
+protocol/                   Fold protocols, hospital splits, dataset manifests
 results/
-  camelyon17_fivehospital/   Table II, Fig. 1 — the five-hospital sweep
-  camelyon17_center2/        Table III — the single held-out hospital, 2 seeds
-  nct_crc_he/                Table IV — colorectal replication, 2 shift axes
-  site_characterization/     hospital separability, stain distance, case mix
-  chest_xray_incomplete/     partial third task, not reported in the paper
-runs/camelyon17_center2/     per-run JSON records for the center-2 experiment
+  camelyon17_fivehospital/  Five-hospital sweep (Tables 1–3, Figs 1–2)
+  camelyon17_extended/      Extended grid: 13 arms × 5 hospitals
+  camelyon17_cohort/        Variance decomposition for Camelyon17
+  midog/                    Scanner-complete grid: 15 arms × 3 scanners
+  canine/                   Scanner-complete grid: 15 arms × 5 scanners
+  cohorts/                  Cross-cohort summary (Table 4)
+  camelyon17_center2/       Single held-out hospital (legacy experiment)
+  nct_crc_he/               NCT-CRC-HE replication (Appendix D)
+  rules/                    Response-shape analysis
+  site_characterization/    Hospital separability, stain distance, case mix
+runs/camelyon17_center2/    Per-run JSON records for the center-2 experiment
+slurm/                      Example SLURM job scripts (adapt paths for your cluster)
 ```
 
-## Reproducing the paper from the shipped results
+## Quick start: reproduce the paper from shipped results
 
-No dataset download or GPU required — these read only the CSVs in `results/`.
+No dataset download or GPU required—these read only the CSVs and JSONs in
+`results/`.
 
 ```bash
 pip install -r requirements.txt
-python src/check_release.py            # 112 checks: shipped tables vs. paper
-python src/make_figure_fivefold.py     # -> paper/fig1_site_complete_factorial.pdf
+
+# Verify shipped tables match the paper
+python src/check_release.py
+
+# Regenerate figures
+python src/make_figures_tmlr.py          # Main-text figures
+python src/make_figures_cohorts.py       # Cross-cohort figures
+python src/emit_tables.py               # LaTeX tables
 ```
 
-`make check` and `make figures` do the same. Each published item maps to one file:
-
-| Paper item | File | Produced by |
-|---|---|---|
-| Table II, Fig. 1 | `results/camelyon17_fivehospital/results_folds.csv` | `drive_folds.py` → `analyze_sweep.py` |
-| Table II summary rows | `results/camelyon17_fivehospital/spread_by_arm.csv` | `analyze_sweep.py` |
-| Per-hospital contrasts | `results/camelyon17_fivehospital/contrasts_folds.csv` | `analyze_sweep.py` |
-| Table III | `results/camelyon17_center2/results_raw.csv` | `run_arm.py` → `aggregate.py` |
-| Table III CIs | `results/camelyon17_center2/bootstrap_ci.csv` | `bootstrap_ci.py` |
-| Sharpness analysis | `results/camelyon17_center2/flatness_metrics.csv` | `flatness.py` |
-| Table IV | `results/nct_crc_he/crc_results_summary.csv` | `run_all_crc.py` → `aggregate_crc.py` |
-| Table IV decomposition | `results/nct_crc_he/crc_interaction.csv` | `mechanisms.py` |
-| Site characterization | `results/site_characterization/site_shift.csv` | `site_shift.py` |
-
-Note on Table IV: the decomposition printed in the paper is computed from the
-seed-averaged arm means in `crc_results_summary.csv`. `crc_interaction.csv`
-holds the paired bootstrap estimate of the same terms, which differs slightly
-(interaction +0.078 vs. +0.087) because it resamples patches rather than
-averaging seeds. `check_release.py` verifies the published values against the
-estimator the paper used.
+`make check` and `make figures` provide shortcuts.
 
 ## Reproducing from raw data
 
-Datasets are public and are not redistributed here:
+Datasets are public and are **not** redistributed here:
 
-* **Camelyon17-WILDS** — CC0, via the WILDS benchmark. `protocol/data_manifest.json`
-  and `protocol/hospital_splits_manifest.json` record the exact patch and patient
-  assignment; `src/verify_cache.py` checks a rebuilt cache is sample-identical to
-  the one the runs used.
-* **NCT-CRC-HE** — CC-BY, from Zenodo. `protocol/crc_data_manifest.json` and the
-  `protocol/crc_rg_index_*.json` shard indices record the assignment.
+- **Camelyon17-WILDS** — CC0, via the [WILDS benchmark](https://wilds.stanford.edu/).
+  `protocol/data_manifest.json` records the exact patch assignment.
+- **MIDOG 2021** — CC-BY, from [Zenodo](https://zenodo.org/records/4573978).
+- **Multi-scanner canine SCC** — CC-BY, from [Zenodo](https://zenodo.org/records/7548828).
+- **NCT-CRC-HE / CRC-VAL-HE-7K** — CC-BY, from [Zenodo](https://zenodo.org/records/1214456).
+- **PatchCamelyon** — CC0, from [Zenodo](https://zenodo.org/records/2546921).
 
-Both are de-identified public releases; no new patient data were collected and
-no IRB approval was required.
+All are de-identified public releases; no new patient data were collected and
+no ethics approval was required.
+
+### Camelyon17 full pipeline
 
 ```bash
-python src/prepare_data.py              # build the Camelyon17 patch cache
-python src/verify_cache.py              # confirm it matches the shipped manifest
-python src/make_matched_folds.py        # five-hospital fold protocol
-python src/materialize_fold_cache.py    # per-fold caches
-bash   src/run_folds.sh                 # 20 runs: 4 arms x 5 held-out hospitals
-python src/analyze_sweep.py             # -> results/camelyon17_fivehospital/*.csv
+# 1. Download and prepare data
+python src/materialize_wilds_folds.py --wilds_dir ./data/wilds/camelyon17_v1.0
+
+# 2. Self-supervised pre-training (one per fold)
+python src/pretrain_ssl_gpu_ext.py --fold 0 --data_root ./data/cache/fold0
+
+# 3. Run all arms across all folds
+python src/drive_folds_ext.py --data_root ./data/cache --out_root ./data/runs
+
+# 4. Aggregate results
+python src/aggregate_ext.py --runs_root ./data/runs
+
+# 5. Evaluate on PatchCamelyon
+python src/eval_pcam.py --pcam_root ./data/pcam --runs_root ./data/runs
 ```
 
-**Compute.** Everything is CPU-only; there is no GPU code path in the reported
-experiments. On the 10-core macOS host used for the paper: the five-hospital
-sweep is 20 runs / 23.3 h wall (38 min median per run), the center-2 experiment
-is 6 longer runs / 91.3 h, and the NCT-CRC-HE replication is 8 runs / 27.9 h —
-about 143 CPU-hours in total, read from the `wall_s` fields of the shipped run
-records.
+### MIDOG and canine cohorts
 
-## What is not in this repository
+```bash
+python src/fetch_midog.py               # Download MIDOG data
+python src/prepare_midog.py             # Prepare patches
+python src/prepare_canine.py            # Prepare canine cohort
+# Then run the same drive_folds_ext.py / aggregate pipeline
+```
 
-Stated explicitly so the release is not read as more complete than it is.
+See `slurm/` for example SLURM job scripts.
 
-* **Per-run JSON records for the five-hospital sweep were not retained.** Only
-  the aggregated tables (`results_folds.csv`, `contrasts_folds.csv`,
-  `spread_by_arm.csv`) survive for that experiment, so Table II and Fig. 1 are
-  reproducible from the shipped data but the underlying 20 run records are not
-  included. Per-run JSON *is* shipped for the center-2 experiment
-  (`runs/camelyon17_center2/`).
-* **One seed per arm per hospital in the sweep.** The five-hospital design trades
-  seed replication for site coverage; between-hospital variation is therefore
-  estimated across hospitals, not across seeds, and per-hospital interaction
-  estimates carry no within-hospital error bar.
-* **No trained model weights.** Checkpoints were not retained; the pipeline
-  retrains from scratch.
-* **The chest-radiograph task is incomplete** and is not reported in the paper.
-  Its partial results are kept in `results/chest_xray_incomplete/` with a note,
-  and its scripts in `src/*_cxr.py`, for provenance only. Do not cite them.
-* **The manuscript itself is not included.** The submitted PDF, its design/
-  revision-history notes, and citation metadata are tracked separately from
-  this code release.
+### Compute
+
+At compact-model scale (0.58M-parameter CNN, 64×64 input):
+- **Camelyon17 grid**: 180 GPU jobs, 0.53 H100-hours
+- **Full study (3 cohorts)**: 388 GPU jobs, 1.23 H100-hours
+
+## Methods tested
+
+| Arm | Type | Reference |
+|---|---|---|
+| ERM (baseline) | Supervised | — |
+| SAM | Optimizer | Foret et al., 2021 |
+| SSL (SimCLR) | Pre-training | Chen et al., 2020 |
+| SSL + SAM | Pre-training + optimizer | — |
+| GroupDRO | Domain generalization | Sagawa et al., 2020 |
+| DeepCORAL | Domain generalization | Sun & Saenko, 2016 |
+| IRMv1 | Domain generalization | Arjovsky et al., 2019 |
+| MixStyle | Domain generalization | Zhou et al., 2021 |
+| Macenko + ERM | Stain normalization | Macenko et al., 2009 |
+| Fish | Gradient matching | Shi et al., 2022 |
+| LISA | Selective augmentation | Yao et al., 2022 |
+| ERM + H&E jitter | Augmentation | Tellez et al., 2019 |
+| Frozen probe (ImageNet) | Transfer learning | He et al., 2016 |
+| TIA-style | Challenge winner | Jahanifar et al., 2024 |
+| RotInv | Dihedral invariance | Lafarge & Koelzer, 2021 |
 
 ## Citation
 
-Code is MIT-licensed (`LICENSE`); the result tables are not covered by that
-licence.
+If you use this code or these experimental records, please cite:
+
+```bibtex
+@article{chatterjee2026domcomplete,
+  title   = {Domain-Complete Evaluation of Distribution Shift in Histopathology},
+  author  = {Chatterjee, Ayan and Mukherjee, Amitava},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2026},
+  note    = {Under review}
+}
+```
+
+## License
+
+Code is MIT-licensed (see `LICENSE`).

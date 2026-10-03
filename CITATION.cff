@@ -1,40 +1,38 @@
 cff-version: 1.2.0
 message: "If you use this code or these result records, please cite the manuscript below."
-title: "Self-Supervised Pre-Training Drives Cross-Hospital Generalization in Histopathology (code and result records)"
+title: "Domain-Complete Evaluation of Distribution Shift in Histopathology (code and result records)"
 abstract: >-
-  Four-arm factorial (supervised baseline, self-supervised pre-training,
-  sharpness-aware minimization, and both) evaluated on Camelyon17-WILDS with each
-  of the five hospitals held out in turn, plus a colorectal-cancer replication on
-  NCT-CRC-HE. Contains the pipeline, the aggregated result tables, the fold
-  protocol and a checker that re-derives every published table.
+  Eleven robustness interventions evaluated on three histopathology cohorts
+  (Camelyon17-WILDS, MIDOG 2021, multi-scanner canine SCC) with each domain
+  held out in turn. Contains the full pipeline, 388 experimental records,
+  variance-decomposition and power code, and the scripts that regenerate every
+  table and figure in the paper.
 type: software
 license: MIT
 authors:
   - family-names: Chatterjee
     given-names: Ayan
-    affiliation: "Indian Institute of Technology Bhubaneswar, Odisha, India"
-  - family-names: Paluh
-    given-names: Janet
-    affiliation: "State University of New York at Albany, NY, USA"
+    affiliation: "Indian Institute of Technology Bhubaneswar, India"
   - family-names: Mukherjee
     given-names: Amitava
     affiliation: "Birla Institute of Technology & Science, Pilani - Dubai Campus, UAE"
 keywords:
   - histopathology
   - domain generalization
+  - distribution shift
   - self-supervised learning
-  - sharpness-aware minimization
+  - stain normalization
+  - cross-hospital evaluation
   - Camelyon17
+  - MIDOG
 preferred-citation:
   type: article
-  title: "Self-Supervised Pre-Training Drives Cross-Hospital Generalization in Histopathology"
+  title: "Domain-Complete Evaluation of Distribution Shift in Histopathology"
   status: submitted
-  journal: "IEEE Transactions on Medical Imaging"
+  journal: "Transactions on Machine Learning Research"
   year: 2026
   authors:
     - family-names: Chatterjee
       given-names: Ayan
-    - family-names: Paluh
-      given-names: Janet
     - family-names: Mukherjee
       given-names: Amitava

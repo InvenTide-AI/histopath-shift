@@ -1,0 +1,41 @@
+[
+ {
+  "cohort": "Camelyon17",
+  "K": 5,
+  "sigma_site": 0.0743,
+  "sigma_run": 0.0676,
+  "icc": 0.548,
+  "erm_worst": 0.724,
+  "best_arm": "probe_resnet50",
+  "best_worst": 0.9291,
+  "ssl_effect": 0.0957,
+  "ssl_p": 0.0446,
+  "K_for_010": 8
+ },
+ {
+  "cohort": "MIDOG 2021",
+  "K": 3,
+  "sigma_site": 0.0254,
+  "sigma_run": 0.0389,
+  "icc": 0.299,
+  "erm_worst": 0.7542,
+  "best_arm": "macenko",
+  "best_worst": 0.8647,
+  "ssl_effect": 0.0275,
+  "ssl_p": 0.1733,
+  "K_for_010": 4
+ },
+ {
+  "cohort": "Canine SCC",
+  "K": 5,
+  "sigma_site": 0.0497,
+  "sigma_run": 0.0396,
+  "icc": 0.612,
+  "erm_worst": 0.6944,
+  "best_arm": "probe_resnet50",
+  "best_worst": 0.7919,
+  "ssl_effect": 0.0116,
+  "ssl_p": 0.4253,
+  "K_for_010": 5
+ }
+]

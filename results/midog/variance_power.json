@@ -1,0 +1,57 @@
+{
+ "label": "MIDOG 2021 (scanner-complete, same lab)",
+ "K": 3,
+ "variance": {
+  "baseline": {
+   "sigma_site": 0.02537266097105958,
+   "sigma_seed": 0.014354196697780413,
+   "sigma_resid": 0.03614055175205109,
+   "icc_site": 0.29860183227820586
+  },
+  "sam": {
+   "sigma_site": 0.028520344055876362,
+   "sigma_seed": 0.015620282489998558,
+   "sigma_resid": 0.01130432611444436,
+   "icc_site": 0.6863113188301768
+  },
+  "ssl": {
+   "sigma_site": 0.012523070925614464,
+   "sigma_seed": 0.008754820329432074,
+   "sigma_resid": 0.02239716538313711,
+   "icc_site": 0.21333936746215704
+  },
+  "ssl_sam": {
+   "sigma_site": 0.0139363512975921,
+   "sigma_seed": 0.008495513424784364,
+   "sigma_resid": 0.015143080622216653,
+   "icc_site": 0.39180663046728215
+  }
+ },
+ "power": [
+  {
+   "delta": 0.05,
+   "K_1seed": 9,
+   "K_3seed": 6
+  },
+  {
+   "delta": 0.075,
+   "K_1seed": 6,
+   "K_3seed": 4
+  },
+  {
+   "delta": 0.1,
+   "K_1seed": 4,
+   "K_3seed": 4
+  },
+  {
+   "delta": 0.15,
+   "K_1seed": 4,
+   "K_3seed": 3
+  },
+  {
+   "delta": 0.2,
+   "K_1seed": 3,
+   "K_3seed": 3
+  }
+ ]
+}

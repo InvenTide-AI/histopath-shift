@@ -1,0 +1,57 @@
+{
+ "label": "Camelyon17-WILDS (hospital-complete)",
+ "K": 5,
+ "variance": {
+  "baseline": {
+   "sigma_site": 0.07434577862321837,
+   "sigma_seed": 0.01850737229217699,
+   "sigma_resid": 0.06496750479029348,
+   "icc_site": 0.5477670225326785
+  },
+  "sam": {
+   "sigma_site": 0.027804662366099617,
+   "sigma_seed": 0.0554803605102049,
+   "sigma_resid": 0.11861792800175322,
+   "icc_site": 0.043138371133238096
+  },
+  "ssl": {
+   "sigma_site": 0.02028795599103864,
+   "sigma_seed": 0.0,
+   "sigma_resid": 0.027103421360023985,
+   "icc_site": 0.35910170691873666
+  },
+  "ssl_sam": {
+   "sigma_site": 0.027454519739772136,
+   "sigma_seed": 0.0,
+   "sigma_resid": 0.011789467373169958,
+   "icc_site": 0.844309430305497
+  }
+ },
+ "power": [
+  {
+   "delta": 0.05,
+   "K_1seed": 34,
+   "K_3seed": 25
+  },
+  {
+   "delta": 0.075,
+   "K_1seed": 17,
+   "K_3seed": 12
+  },
+  {
+   "delta": 0.1,
+   "K_1seed": 11,
+   "K_3seed": 8
+  },
+  {
+   "delta": 0.15,
+   "K_1seed": 6,
+   "K_3seed": 5
+  },
+  {
+   "delta": 0.2,
+   "K_1seed": 5,
+   "K_3seed": 4
+  }
+ ]
+}
