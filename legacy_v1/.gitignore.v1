@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Data (not shipped — download separately)
+data/
+
+# LaTeX build artifacts
+paper/tmlr/*.aux
+paper/tmlr/*.bbl
+paper/tmlr/*.blg
+paper/tmlr/*.log
+paper/tmlr/*.out
+paper/tmlr/*.fls
+paper/tmlr/*.fdb_latexmk
+paper/tmlr/*.synctex.gz
+paper/tmlr/*.toc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environments
+.env
+*.env
+venv/
+.venv/

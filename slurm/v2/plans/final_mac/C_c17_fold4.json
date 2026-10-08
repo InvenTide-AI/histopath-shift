@@ -1,0 +1,128 @@
+{
+ "tier": "C",
+ "cohort": "c17",
+ "fold": 4,
+ "phase": "final",
+ "jobs": [
+  {
+   "arm": "macenko",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko",
+   "seed": 3,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko",
+   "seed": 4,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 3,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 4,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 3,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 4,
+   "hp": {},
+   "tta": [],
+   "pcam": true,
+   "phase": "final"
+  }
+ ]
+}

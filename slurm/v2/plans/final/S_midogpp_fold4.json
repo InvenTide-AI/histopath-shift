@@ -1,0 +1,626 @@
+{
+ "tier": "S",
+ "cohort": "midogpp",
+ "fold": 4,
+ "phase": "final",
+ "jobs": [
+  {
+   "arm": "erm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [
+    "bnadapt"
+   ],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [
+    "bnadapt"
+   ],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [
+    "bnadapt"
+   ],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "sam",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "rho": 0.05
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "sam",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "rho": 0.05
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "sam",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "rho": 0.05
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "groupdro",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "eta": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "groupdro",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "eta": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "groupdro",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "eta": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "irm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "irm_lambda": 1.0
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "irm",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "irm_lambda": 1.0
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "irm",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "irm_lambda": 1.0
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "coral",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "coral_lambda": 1.0
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "coral",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "coral_lambda": 1.0
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "coral",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "coral_lambda": 1.0
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "ms_alpha": 0.1,
+    "ms_p": 0.5
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "ms_alpha": 0.1,
+    "ms_p": 0.5
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "ms_alpha": 0.1,
+    "ms_p": 0.5
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "fish",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "meta_lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "fish",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "meta_lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "fish",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "meta_lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "lisa",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "lisa_alpha": 0.5,
+    "p_sel": 0.5
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "lisa",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "lisa_alpha": 0.5,
+    "p_sel": 0.5
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "lisa",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "lisa_alpha": 0.5,
+    "p_sel": 0.5
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "simclr",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "simclr",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "simclr",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter_lunit_bt",
+   "seed": 1,
+   "hp": {
+    "lr": 0.1,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter_lunit_bt",
+   "seed": 2,
+   "hp": {
+    "lr": 0.1,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm_lunit_dino",
+   "seed": 0,
+   "hp": {
+    "lr": 3e-05
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm_lunit_dino",
+   "seed": 1,
+   "hp": {
+    "lr": 3e-05
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "erm_lunit_dino",
+   "seed": 2,
+   "hp": {
+    "lr": 3e-05
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter_lunit_dino",
+   "seed": 0,
+   "hp": {
+    "lr": 3e-05,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter_lunit_dino",
+   "seed": 1,
+   "hp": {
+    "lr": 3e-05,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "he_jitter_lunit_dino",
+   "seed": 2,
+   "hp": {
+    "lr": 3e-05,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "probe_resnet50_imagenet",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_imagenet",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_imagenet",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_bt",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_bt",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_bt",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_s16_lunit_dino",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_s16_lunit_dino",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_s16_lunit_dino",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  }
+ ]
+}

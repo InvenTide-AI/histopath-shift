@@ -1,0 +1,14 @@
+% DomainBed (Gulrajani & Lopez-Paz, arXiv 2007.01434v1, App. 'Domain generalization accuracies per algorithm, dataset, and domain'), selection=training_domain; accuracy in pp; 3 trials; SD from SE via DomainBed's np.std(x/sqrt(n)) (ddof=0): sd = SE*n/sqrt(n-1); one-way model env x trial
+\begin{tabular}{lrrrrrl}
+\toprule
+Dataset & $K$ & $\hat\sigma_\text{env}$ (ERM) & $\hat\sigma_\text{run}$ (ERM) & ICC (ERM) & exact 95\% CI & ICC range over algorithms (min alg.) \\
+\midrule
+Colored MNIST & 3 & 36.3 & 0.4 & 1.00 & [1.00, 1.00] & 1.00--1.00 (ADA) \\
+Rotated MNIST & 6 & 1.5 & 0.2 & 0.98 & [0.92, 1.00] & 0.87--0.99 (C-DANN) \\
+VLCS & 4 & 14.5 & 2.2 & 0.98 & [0.89, 1.00] & 0.96--0.99 (MMD) \\
+PACS & 4 & 9.2 & 1.7 & 0.97 & [0.84, 1.00] & 0.84--0.99 (C-DANN) \\
+Office-Home & 4 & 11.5 & 1.4 & 0.98 & [0.92, 1.00] & 0.97--0.99 (IRM) \\
+TerraIncognita & 4 & 8.9 & 2.5 & 0.93 & [0.67, 0.99] & 0.51--0.95 (MMD) \\
+DomainNet & 6 & 20.3 & 1.0 & 1.00 & [0.99, 1.00] & 0.91--1.00 (IRM) \\
+\bottomrule
+\end{tabular}

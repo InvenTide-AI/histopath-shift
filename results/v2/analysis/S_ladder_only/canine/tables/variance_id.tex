@@ -1,0 +1,16 @@
+% canine, selection=id; REML; sigma_domain CI: MLS (Burdick-Graybill); sigma_run CI: chi2; ICC CI: exact F; Bayes: half-Cauchy posterior median [95% equal-tailed CrI]; dagger: REML/ANOVA estimate at the zero boundary, one-sided 95% upper credible bound [0, q95] shown instead
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Arm & $\hat\sigma_\text{dom}$ & 95\% CI & $\hat\sigma_\text{run}$ & 95\% CI & ICC(1) & exact 95\% CI & ICC$_\text{Bayes}$ & 95\% CrI \\
+\midrule
+probe\_convnext\_tiny\_imagenet & 0.034 & [0.021, 0.099] & 0.003 & [0.002, 0.005] & 0.99 & [0.96, 1.00] & 0.99 & [0.96, 1.00] \\
+probe\_resnet18\_imagenet & 0.044 & [0.025, 0.128] & 0.016 & [0.011, 0.027] & 0.89 & [0.60, 0.99] & 0.90 & [0.57, 0.99] \\
+probe\_resnet50\_imagenet & 0.037 & [0.022, 0.106] & 0.007 & [0.005, 0.012] & 0.96 & [0.85, 1.00] & 0.97 & [0.85, 1.00] \\
+probe\_resnet50\_lunit\_bt & 0.028 & [0.017, 0.082] & 0.006 & [0.004, 0.011] & 0.95 & [0.80, 0.99] & 0.96 & [0.80, 1.00] \\
+probe\_resnet50\_lunit\_mocov2 & 0.041 & [0.024, 0.119] & 0.012 & [0.008, 0.021] & 0.92 & [0.71, 0.99] & 0.93 & [0.70, 0.99] \\
+probe\_resnet50\_lunit\_swav & 0.051 & [0.030, 0.149] & 0.011 & [0.008, 0.020] & 0.95 & [0.82, 0.99] & 0.96 & [0.80, 0.99] \\
+probe\_vit\_b16\_imagenet & 0.054 & [0.032, 0.157] & 0.010 & [0.007, 0.017] & 0.97 & [0.88, 1.00] & 0.97 & [0.87, 1.00] \\
+probe\_vit\_b16\_swag & 0.022 & [0.013, 0.064] & 0.003 & [0.002, 0.006] & 0.98 & [0.90, 1.00] & 0.98 & [0.90, 1.00] \\
+probe\_vit\_s16\_lunit\_dino & 0.030 & [0.018, 0.085] & 0.004 & [0.002, 0.006] & 0.99 & [0.94, 1.00] & 0.99 & [0.94, 1.00] \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,79 @@
+%% Appendix: stain-normalization granularity (MedIA revision, v2 pipeline).
+%% Final numbers: results/v2/analysis/{C,S}/{cohort}/summary_id.csv (snapshot 1381bdd759f9),
+%% ID-validation selection. Pre-fix per-tile numbers: $V2/runs_quarantine_macenko_prefix (tier C,
+%% c17 fold 4). Tile-makeup diagnostic: revision/macenko_resolution.md section 4 ($V2/runs_diag/macgroup).
+\section{Stain-normalization granularity}
+\label{app:macenko}
+
+\paragraph{Per-slide and per-tile estimation} Our Macenko arms estimate one
+stain matrix per slide and scanner (Section~\ref{M-sec:setup-arms}). The per-tile
+variant runs the same estimator on every tile separately, with the
+non-negativity clamp, and maps it to a reference fitted on 256 training tiles.
+A tile with less than 5\% tissue keeps the reference matrix. Both variants use
+no labels. Both were run with the full protocol: 5 seeds at the compact tier,
+3 at the standard tier, all 20 folds.
+
+\paragraph{Result} Table~\ref{tab:macenko} gives the worst-domain AUROC of each
+variant. The two differ mainly on Camelyon17 center~4. There, per-tile
+normalization gives an off-site AUROC of 0.524 at the compact tier and 0.557 at
+the standard tier. With per-slide normalization the scores are 0.952 and 0.976.
+The model is not the cause: standard-tier ERM without normalization scores 0.977
+on center~4. On the other four Camelyon17 centers, the per-tile variant is
+within 0.018 of the per-slide one at the compact tier and equal or better at
+the standard tier, by up to 0.034. On canine cSCC, per-slide normalization is
+higher by 0.027 (compact) and 0.036 (standard). On the two MIDOG cohorts the
+variants differ by at most 0.026. On Camelyon17 the choice of granularity alone moves the arm from rank 4 of 20
+to last at the compact tier, and from rank 10 of 21 to last at the standard
+tier. The failing domain has the palest tissue: center-4 tiles are 27--34\% tissue pixels,
+against 58--83\% in the other centers. A per-tile estimate rests on the
+1,100--1,400 tissue pixels of a 64~px tile, usually of a single tissue type.
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{Worst-domain AUROC (ID-validation selection) of the stain-normalization
+arms, with ERM and H\&E jitter for reference, and the off-site AUROC on
+Camelyon17 center~4 (C17 c4). Means over 5 seeds (compact tier) and 3 seeds
+(standard tier). $^{\dagger}$Transductive.}
+\label{tab:macenko}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}lcccccccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{Compact tier} & \multicolumn{5}{c}{Standard tier} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}
+Arm & C17 c4 & C17 & Canine & MIDOG21 & MIDOG++ & C17 c4 & C17 & Canine & MIDOG21 & MIDOG++ \\
+\midrule
+ERM & 0.698 & 0.698 & 0.551 & 0.765 & 0.766 & 0.977 & 0.895 & 0.534 & 0.847 & 0.870 \\
+H\&E jitter & 0.917 & 0.904 & 0.674 & 0.864 & 0.809 & 0.985 & 0.958 & 0.850 & 0.875 & 0.880 \\
+Macenko (slide)$^{\dagger}$ & 0.952 & 0.904 & 0.698 & 0.870 & 0.828 & 0.976 & 0.915 & 0.819 & 0.860 & 0.873 \\
+TIA-style$^{\dagger}$ & 0.982 & 0.889 & 0.730 & 0.864 & 0.810 & 0.960 & 0.934 & 0.823 & 0.871 & 0.877 \\
+Macenko (tile) & 0.524 & 0.524 & 0.671 & 0.844 & 0.816 & 0.557 & 0.557 & 0.783 & 0.846 & 0.877 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Negative concentrations} The earlier version of this pipeline used
+per-tile estimation with unconstrained least-squares concentrations, as in
+Macenko's reference code. In a 64~px tile the estimated hematoxylin and eosin
+vectors are often nearly collinear (cosine 0.95--0.98). Eosin-rich pixels then
+receive large negative hematoxylin values and come out saturated pink after
+reconstruction. On center~4 this artifact affected 90\% of tumor tiles but
+54\% of normal tiles. The off-site AUROC on center~4 was 0.42 (5 seeds, compact
+tier), below every arm of Table~\ref{tab:macenko}. Clamping the concentrations at zero removes the
+artifact but not the unreliable per-tile stain matrix. The per-slide estimate
+removes both. The earlier records are kept apart and are not used in any table.
+
+\paragraph{Dependence on the tile set} The per-slide estimate of a test slide
+uses that slide's own unlabeled tiles. In Camelyon17 those tiles are the
+benchmark's patches, sampled from annotated regions and class-balanced. The
+share of tumor tiles per test slide therefore ranges from 0 to 0.93. To bound
+the effect of this makeup, we fixed the trained weights of five compact-tier
+runs on center~4 (seeds 0--4, final configuration) and re-estimated each test
+slide's stain matrix from different subsets of its tiles. Labels were used only
+to form these diagnostic subsets. The mean off-site AUROC was 0.945 with all
+tiles, 0.948 with only negative tiles and 0.934 with only positive tiles: a
+spread of 0.014. With no per-slide estimate, using only the reference, it fell
+to 0.560. For TIA-style the corresponding values were 0.981, 0.972, 0.978 and
+0.897. The trained models therefore rely on the per-slide normalization, but
+not much on which tiles of the slide feed it. A label-independent tissue sample
+of each whole-slide image would match deployment more closely. It is not
+available, because the cohorts are distributed as patches.

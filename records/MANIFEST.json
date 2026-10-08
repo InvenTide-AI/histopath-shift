@@ -1,0 +1,58 @@
+[
+ {
+  "file": "records/v2_final_runs.tar.xz",
+  "n_records": 3400,
+  "bytes": 7863988,
+  "sha256": "faf53649854516adbb49330df2ae8ce91b0e7e4d219988cdb99f2556944fd8f5",
+  "content": "final runs (3,400): runs/{C,S}/<cohort>/fold<t>/"
+ },
+ {
+  "file": "records/v2_tuning_runs.tar.xz",
+  "n_records": 1378,
+  "bytes": 2940824,
+  "sha256": "fa3ac85b262cdb48d13b3a3c752e24802571428cc0ca164d4b2b34e7c94bccb8",
+  "content": "tuning runs (1,378), seed 0"
+ },
+ {
+  "file": "records/v2_quarantine_bt_lr.tar.xz",
+  "n_records": 120,
+  "bytes": 280896,
+  "sha256": "370c4a27f375357eb1d1e0653621a8277268e7eccb83fdd54fb73d39ae50272c",
+  "content": "Barlow Twins fine-tunes with the inherited ImageNet LR (Appendix, tab:tuning-bt)"
+ },
+ {
+  "file": "records/v2_quarantine_macenko_prefix.tar.xz",
+  "n_records": 230,
+  "bytes": 519736,
+  "sha256": "2539ef60ecfe0fbb616a22bd92f77e083aa7c63654d91929585171c131c73c4c",
+  "content": "pre-fix per-tile Macenko / TIA-style records (Appendix, app:macenko)"
+ },
+ {
+  "file": "records/v2_diagnostics_macenko.tar.xz",
+  "n_records": 131,
+  "bytes": 424808,
+  "sha256": "65cabdf870e990733c189a01c88c85557c9bdfd623cfcd503d04c4ef52996af4",
+  "content": "Macenko diagnostic runs (tile-set dependence; Appendix, app:macenko)"
+ },
+ {
+  "file": "records/v2_test_predictions_C.tar",
+  "n_records": 1840,
+  "bytes": 55377920,
+  "sha256": "2e29958e5c4c45034ed85717385908764a0ca3fb73d7cd8fa97274ee19b208d3",
+  "content": "test labels + ID-selected test probabilities, tier C (site acceptance test)"
+ },
+ {
+  "file": "records/v2_test_predictions_S.tar",
+  "n_records": 1560,
+  "bytes": 51077120,
+  "sha256": "8da96aa9cd2298924d49010cf01176cf6a92a83bf6189965d318040bc2144810",
+  "content": "test labels + ID-selected test probabilities, tier S (site acceptance test)"
+ },
+ {
+  "file": "legacy_v1/records/v1_fivehospital_case_study.tar.xz",
+  "n_records": 60,
+  "bytes": 26352,
+  "sha256": "f66ee271cf862145454f3426becff2b99a0c3e522107ae8117e4d542afdb6ac7",
+  "content": "v1 five-hospital grid, ERM/SAM/SimCLR/SimCLR+SAM x 3 seeds (case study)"
+ }
+]

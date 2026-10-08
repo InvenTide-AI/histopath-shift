@@ -1,0 +1,80 @@
+{
+ "tier": "S",
+ "cohort": "midogpp",
+ "fold": 0,
+ "phase": "tune",
+ "jobs": [
+  {
+   "arm": "erm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.001
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.003
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.03
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm",
+   "seed": 0,
+   "hp": {
+    "lr": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_dino",
+   "seed": 0,
+   "hp": {
+    "lr": 1e-05
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_dino",
+   "seed": 0,
+   "hp": {
+    "lr": 3e-05
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_dino",
+   "seed": 0,
+   "hp": {
+    "lr": 0.0001
+   },
+   "phase": "tune",
+   "pcam": false
+  }
+ ]
+}

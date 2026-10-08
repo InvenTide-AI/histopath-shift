@@ -1,0 +1,525 @@
+C c17 fold0 macenko__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko__default__s0
+C c17 fold0 macenko__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko__default__s1
+C c17 fold0 macenko__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko__default__s2
+C c17 fold0 macenko__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko__default__s3
+C c17 fold0 macenko__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko__default__s4
+C c17 fold0 macenko_tile__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko_tile__default__s0
+C c17 fold0 macenko_tile__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko_tile__default__s1
+C c17 fold0 macenko_tile__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko_tile__default__s2
+C c17 fold0 macenko_tile__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko_tile__default__s3
+C c17 fold0 macenko_tile__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/macenko_tile__default__s4
+C c17 fold0 tia_style__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/tia_style__default__s0
+C c17 fold0 tia_style__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/tia_style__default__s1
+C c17 fold0 tia_style__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/tia_style__default__s2
+C c17 fold0 tia_style__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/tia_style__default__s3
+C c17 fold0 tia_style__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold0/tia_style__default__s4
+C c17 fold1 macenko__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko__default__s0
+C c17 fold1 macenko__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko__default__s1
+C c17 fold1 macenko__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko__default__s2
+C c17 fold1 macenko__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko__default__s3
+C c17 fold1 macenko__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko__default__s4
+C c17 fold1 macenko_tile__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko_tile__default__s0
+C c17 fold1 macenko_tile__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko_tile__default__s1
+C c17 fold1 macenko_tile__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko_tile__default__s2
+C c17 fold1 macenko_tile__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko_tile__default__s3
+C c17 fold1 macenko_tile__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/macenko_tile__default__s4
+C c17 fold1 tia_style__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/tia_style__default__s0
+C c17 fold1 tia_style__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/tia_style__default__s1
+C c17 fold1 tia_style__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/tia_style__default__s2
+C c17 fold1 tia_style__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/tia_style__default__s3
+C c17 fold1 tia_style__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold1/tia_style__default__s4
+C c17 fold2 macenko__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko__default__s0
+C c17 fold2 macenko__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko__default__s1
+C c17 fold2 macenko__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko__default__s2
+C c17 fold2 macenko__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko__default__s3
+C c17 fold2 macenko__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko__default__s4
+C c17 fold2 macenko_tile__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko_tile__default__s0
+C c17 fold2 macenko_tile__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko_tile__default__s1
+C c17 fold2 macenko_tile__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko_tile__default__s2
+C c17 fold2 macenko_tile__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko_tile__default__s3
+C c17 fold2 macenko_tile__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/macenko_tile__default__s4
+C c17 fold2 tia_style__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/tia_style__default__s0
+C c17 fold2 tia_style__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/tia_style__default__s1
+C c17 fold2 tia_style__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/tia_style__default__s2
+C c17 fold2 tia_style__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/tia_style__default__s3
+C c17 fold2 tia_style__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold2/tia_style__default__s4
+C c17 fold3 macenko__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko__default__s0
+C c17 fold3 macenko__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko__default__s1
+C c17 fold3 macenko__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko__default__s2
+C c17 fold3 macenko__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko__default__s3
+C c17 fold3 macenko__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko__default__s4
+C c17 fold3 macenko_tile__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko_tile__default__s0
+C c17 fold3 macenko_tile__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko_tile__default__s1
+C c17 fold3 macenko_tile__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko_tile__default__s2
+C c17 fold3 macenko_tile__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko_tile__default__s3
+C c17 fold3 macenko_tile__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/macenko_tile__default__s4
+C c17 fold3 tia_style__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/tia_style__default__s0
+C c17 fold3 tia_style__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/tia_style__default__s1
+C c17 fold3 tia_style__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/tia_style__default__s2
+C c17 fold3 tia_style__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/tia_style__default__s3
+C c17 fold3 tia_style__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold3/tia_style__default__s4
+C c17 fold4 macenko__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko__default__s0
+C c17 fold4 macenko__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko__default__s1
+C c17 fold4 macenko__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko__default__s2
+C c17 fold4 macenko__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko__default__s3
+C c17 fold4 macenko__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko__default__s4
+C c17 fold4 macenko_tile__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko_tile__default__s0
+C c17 fold4 macenko_tile__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko_tile__default__s1
+C c17 fold4 macenko_tile__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko_tile__default__s2
+C c17 fold4 macenko_tile__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko_tile__default__s3
+C c17 fold4 macenko_tile__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/macenko_tile__default__s4
+C c17 fold4 tia_style__default__s0 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/tia_style__default__s0
+C c17 fold4 tia_style__default__s1 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/tia_style__default__s1
+C c17 fold4 tia_style__default__s2 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/tia_style__default__s2
+C c17 fold4 tia_style__default__s3 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/tia_style__default__s3
+C c17 fold4 tia_style__default__s4 hp={} pcam=True -> $HISTOPATH_DATA/v2/runs/C/c17/fold4/tia_style__default__s4
+C canine fold0 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko__default__s0
+C canine fold0 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko__default__s1
+C canine fold0 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko__default__s2
+C canine fold0 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko__default__s3
+C canine fold0 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko__default__s4
+C canine fold0 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko_tile__default__s0
+C canine fold0 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko_tile__default__s1
+C canine fold0 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko_tile__default__s2
+C canine fold0 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko_tile__default__s3
+C canine fold0 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/macenko_tile__default__s4
+C canine fold0 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/tia_style__default__s0
+C canine fold0 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/tia_style__default__s1
+C canine fold0 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/tia_style__default__s2
+C canine fold0 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/tia_style__default__s3
+C canine fold0 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold0/tia_style__default__s4
+C canine fold1 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko__default__s0
+C canine fold1 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko__default__s1
+C canine fold1 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko__default__s2
+C canine fold1 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko__default__s3
+C canine fold1 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko__default__s4
+C canine fold1 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko_tile__default__s0
+C canine fold1 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko_tile__default__s1
+C canine fold1 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko_tile__default__s2
+C canine fold1 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko_tile__default__s3
+C canine fold1 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/macenko_tile__default__s4
+C canine fold1 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/tia_style__default__s0
+C canine fold1 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/tia_style__default__s1
+C canine fold1 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/tia_style__default__s2
+C canine fold1 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/tia_style__default__s3
+C canine fold1 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold1/tia_style__default__s4
+C canine fold2 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko__default__s0
+C canine fold2 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko__default__s1
+C canine fold2 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko__default__s2
+C canine fold2 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko__default__s3
+C canine fold2 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko__default__s4
+C canine fold2 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko_tile__default__s0
+C canine fold2 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko_tile__default__s1
+C canine fold2 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko_tile__default__s2
+C canine fold2 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko_tile__default__s3
+C canine fold2 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/macenko_tile__default__s4
+C canine fold2 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/tia_style__default__s0
+C canine fold2 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/tia_style__default__s1
+C canine fold2 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/tia_style__default__s2
+C canine fold2 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/tia_style__default__s3
+C canine fold2 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold2/tia_style__default__s4
+C canine fold3 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko__default__s0
+C canine fold3 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko__default__s1
+C canine fold3 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko__default__s2
+C canine fold3 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko__default__s3
+C canine fold3 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko__default__s4
+C canine fold3 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko_tile__default__s0
+C canine fold3 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko_tile__default__s1
+C canine fold3 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko_tile__default__s2
+C canine fold3 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko_tile__default__s3
+C canine fold3 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/macenko_tile__default__s4
+C canine fold3 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/tia_style__default__s0
+C canine fold3 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/tia_style__default__s1
+C canine fold3 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/tia_style__default__s2
+C canine fold3 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/tia_style__default__s3
+C canine fold3 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold3/tia_style__default__s4
+C canine fold4 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko__default__s0
+C canine fold4 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko__default__s1
+C canine fold4 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko__default__s2
+C canine fold4 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko__default__s3
+C canine fold4 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko__default__s4
+C canine fold4 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko_tile__default__s0
+C canine fold4 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko_tile__default__s1
+C canine fold4 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko_tile__default__s2
+C canine fold4 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko_tile__default__s3
+C canine fold4 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/macenko_tile__default__s4
+C canine fold4 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/tia_style__default__s0
+C canine fold4 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/tia_style__default__s1
+C canine fold4 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/tia_style__default__s2
+C canine fold4 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/tia_style__default__s3
+C canine fold4 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/canine/fold4/tia_style__default__s4
+C midog21sn fold0 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko__default__s0
+C midog21sn fold0 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko__default__s1
+C midog21sn fold0 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko__default__s2
+C midog21sn fold0 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko__default__s3
+C midog21sn fold0 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko__default__s4
+C midog21sn fold0 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko_tile__default__s0
+C midog21sn fold0 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko_tile__default__s1
+C midog21sn fold0 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko_tile__default__s2
+C midog21sn fold0 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko_tile__default__s3
+C midog21sn fold0 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/macenko_tile__default__s4
+C midog21sn fold0 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/tia_style__default__s0
+C midog21sn fold0 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/tia_style__default__s1
+C midog21sn fold0 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/tia_style__default__s2
+C midog21sn fold0 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/tia_style__default__s3
+C midog21sn fold0 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold0/tia_style__default__s4
+C midog21sn fold1 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko__default__s0
+C midog21sn fold1 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko__default__s1
+C midog21sn fold1 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko__default__s2
+C midog21sn fold1 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko__default__s3
+C midog21sn fold1 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko__default__s4
+C midog21sn fold1 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko_tile__default__s0
+C midog21sn fold1 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko_tile__default__s1
+C midog21sn fold1 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko_tile__default__s2
+C midog21sn fold1 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko_tile__default__s3
+C midog21sn fold1 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/macenko_tile__default__s4
+C midog21sn fold1 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/tia_style__default__s0
+C midog21sn fold1 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/tia_style__default__s1
+C midog21sn fold1 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/tia_style__default__s2
+C midog21sn fold1 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/tia_style__default__s3
+C midog21sn fold1 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold1/tia_style__default__s4
+C midog21sn fold2 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko__default__s0
+C midog21sn fold2 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko__default__s1
+C midog21sn fold2 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko__default__s2
+C midog21sn fold2 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko__default__s3
+C midog21sn fold2 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko__default__s4
+C midog21sn fold2 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko_tile__default__s0
+C midog21sn fold2 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko_tile__default__s1
+C midog21sn fold2 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko_tile__default__s2
+C midog21sn fold2 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko_tile__default__s3
+C midog21sn fold2 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/macenko_tile__default__s4
+C midog21sn fold2 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/tia_style__default__s0
+C midog21sn fold2 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/tia_style__default__s1
+C midog21sn fold2 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/tia_style__default__s2
+C midog21sn fold2 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/tia_style__default__s3
+C midog21sn fold2 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21sn/fold2/tia_style__default__s4
+C midogpp fold0 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko__default__s0
+C midogpp fold0 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko__default__s1
+C midogpp fold0 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko__default__s2
+C midogpp fold0 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko__default__s3
+C midogpp fold0 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko__default__s4
+C midogpp fold0 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko_tile__default__s0
+C midogpp fold0 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko_tile__default__s1
+C midogpp fold0 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko_tile__default__s2
+C midogpp fold0 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko_tile__default__s3
+C midogpp fold0 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/macenko_tile__default__s4
+C midogpp fold0 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/tia_style__default__s0
+C midogpp fold0 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/tia_style__default__s1
+C midogpp fold0 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/tia_style__default__s2
+C midogpp fold0 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/tia_style__default__s3
+C midogpp fold0 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold0/tia_style__default__s4
+C midogpp fold1 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko__default__s0
+C midogpp fold1 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko__default__s1
+C midogpp fold1 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko__default__s2
+C midogpp fold1 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko__default__s3
+C midogpp fold1 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko__default__s4
+C midogpp fold1 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko_tile__default__s0
+C midogpp fold1 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko_tile__default__s1
+C midogpp fold1 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko_tile__default__s2
+C midogpp fold1 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko_tile__default__s3
+C midogpp fold1 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/macenko_tile__default__s4
+C midogpp fold1 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/tia_style__default__s0
+C midogpp fold1 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/tia_style__default__s1
+C midogpp fold1 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/tia_style__default__s2
+C midogpp fold1 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/tia_style__default__s3
+C midogpp fold1 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold1/tia_style__default__s4
+C midogpp fold2 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko__default__s0
+C midogpp fold2 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko__default__s1
+C midogpp fold2 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko__default__s2
+C midogpp fold2 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko__default__s3
+C midogpp fold2 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko__default__s4
+C midogpp fold2 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko_tile__default__s0
+C midogpp fold2 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko_tile__default__s1
+C midogpp fold2 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko_tile__default__s2
+C midogpp fold2 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko_tile__default__s3
+C midogpp fold2 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/macenko_tile__default__s4
+C midogpp fold2 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/tia_style__default__s0
+C midogpp fold2 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/tia_style__default__s1
+C midogpp fold2 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/tia_style__default__s2
+C midogpp fold2 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/tia_style__default__s3
+C midogpp fold2 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold2/tia_style__default__s4
+C midogpp fold3 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko__default__s0
+C midogpp fold3 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko__default__s1
+C midogpp fold3 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko__default__s2
+C midogpp fold3 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko__default__s3
+C midogpp fold3 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko__default__s4
+C midogpp fold3 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko_tile__default__s0
+C midogpp fold3 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko_tile__default__s1
+C midogpp fold3 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko_tile__default__s2
+C midogpp fold3 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko_tile__default__s3
+C midogpp fold3 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/macenko_tile__default__s4
+C midogpp fold3 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/tia_style__default__s0
+C midogpp fold3 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/tia_style__default__s1
+C midogpp fold3 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/tia_style__default__s2
+C midogpp fold3 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/tia_style__default__s3
+C midogpp fold3 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold3/tia_style__default__s4
+C midogpp fold4 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko__default__s0
+C midogpp fold4 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko__default__s1
+C midogpp fold4 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko__default__s2
+C midogpp fold4 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko__default__s3
+C midogpp fold4 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko__default__s4
+C midogpp fold4 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko_tile__default__s0
+C midogpp fold4 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko_tile__default__s1
+C midogpp fold4 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko_tile__default__s2
+C midogpp fold4 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko_tile__default__s3
+C midogpp fold4 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/macenko_tile__default__s4
+C midogpp fold4 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/tia_style__default__s0
+C midogpp fold4 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/tia_style__default__s1
+C midogpp fold4 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/tia_style__default__s2
+C midogpp fold4 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/tia_style__default__s3
+C midogpp fold4 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold4/tia_style__default__s4
+C midogpp fold5 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko__default__s0
+C midogpp fold5 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko__default__s1
+C midogpp fold5 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko__default__s2
+C midogpp fold5 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko__default__s3
+C midogpp fold5 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko__default__s4
+C midogpp fold5 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko_tile__default__s0
+C midogpp fold5 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko_tile__default__s1
+C midogpp fold5 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko_tile__default__s2
+C midogpp fold5 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko_tile__default__s3
+C midogpp fold5 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/macenko_tile__default__s4
+C midogpp fold5 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/tia_style__default__s0
+C midogpp fold5 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/tia_style__default__s1
+C midogpp fold5 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/tia_style__default__s2
+C midogpp fold5 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/tia_style__default__s3
+C midogpp fold5 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold5/tia_style__default__s4
+C midogpp fold6 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko__default__s0
+C midogpp fold6 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko__default__s1
+C midogpp fold6 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko__default__s2
+C midogpp fold6 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko__default__s3
+C midogpp fold6 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko__default__s4
+C midogpp fold6 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko_tile__default__s0
+C midogpp fold6 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko_tile__default__s1
+C midogpp fold6 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko_tile__default__s2
+C midogpp fold6 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko_tile__default__s3
+C midogpp fold6 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/macenko_tile__default__s4
+C midogpp fold6 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/tia_style__default__s0
+C midogpp fold6 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/tia_style__default__s1
+C midogpp fold6 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/tia_style__default__s2
+C midogpp fold6 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/tia_style__default__s3
+C midogpp fold6 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midogpp/fold6/tia_style__default__s4
+C midog21 fold0 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko__default__s0
+C midog21 fold0 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko__default__s1
+C midog21 fold0 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko__default__s2
+C midog21 fold0 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko__default__s3
+C midog21 fold0 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko__default__s4
+C midog21 fold0 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko_tile__default__s0
+C midog21 fold0 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko_tile__default__s1
+C midog21 fold0 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko_tile__default__s2
+C midog21 fold0 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko_tile__default__s3
+C midog21 fold0 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/macenko_tile__default__s4
+C midog21 fold0 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/tia_style__default__s0
+C midog21 fold0 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/tia_style__default__s1
+C midog21 fold0 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/tia_style__default__s2
+C midog21 fold0 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/tia_style__default__s3
+C midog21 fold0 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold0/tia_style__default__s4
+C midog21 fold1 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko__default__s0
+C midog21 fold1 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko__default__s1
+C midog21 fold1 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko__default__s2
+C midog21 fold1 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko__default__s3
+C midog21 fold1 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko__default__s4
+C midog21 fold1 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko_tile__default__s0
+C midog21 fold1 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko_tile__default__s1
+C midog21 fold1 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko_tile__default__s2
+C midog21 fold1 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko_tile__default__s3
+C midog21 fold1 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/macenko_tile__default__s4
+C midog21 fold1 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/tia_style__default__s0
+C midog21 fold1 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/tia_style__default__s1
+C midog21 fold1 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/tia_style__default__s2
+C midog21 fold1 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/tia_style__default__s3
+C midog21 fold1 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold1/tia_style__default__s4
+C midog21 fold2 macenko__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko__default__s0
+C midog21 fold2 macenko__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko__default__s1
+C midog21 fold2 macenko__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko__default__s2
+C midog21 fold2 macenko__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko__default__s3
+C midog21 fold2 macenko__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko__default__s4
+C midog21 fold2 macenko_tile__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko_tile__default__s0
+C midog21 fold2 macenko_tile__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko_tile__default__s1
+C midog21 fold2 macenko_tile__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko_tile__default__s2
+C midog21 fold2 macenko_tile__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko_tile__default__s3
+C midog21 fold2 macenko_tile__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/macenko_tile__default__s4
+C midog21 fold2 tia_style__default__s0 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/tia_style__default__s0
+C midog21 fold2 tia_style__default__s1 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/tia_style__default__s1
+C midog21 fold2 tia_style__default__s2 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/tia_style__default__s2
+C midog21 fold2 tia_style__default__s3 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/tia_style__default__s3
+C midog21 fold2 tia_style__default__s4 hp={} pcam=False -> $HISTOPATH_DATA/v2/runs/C/midog21/fold2/tia_style__default__s4
+S c17 fold0 macenko__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/macenko__selected__s0
+S c17 fold0 macenko__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/macenko__selected__s1
+S c17 fold0 macenko__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/macenko__selected__s2
+S c17 fold0 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/macenko_tile__selected__s0
+S c17 fold0 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/macenko_tile__selected__s1
+S c17 fold0 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/macenko_tile__selected__s2
+S c17 fold0 tia_style__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/tia_style__selected__s0
+S c17 fold0 tia_style__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/tia_style__selected__s1
+S c17 fold0 tia_style__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold0/tia_style__selected__s2
+S c17 fold1 macenko__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/macenko__selected__s0
+S c17 fold1 macenko__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/macenko__selected__s1
+S c17 fold1 macenko__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/macenko__selected__s2
+S c17 fold1 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/macenko_tile__selected__s0
+S c17 fold1 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/macenko_tile__selected__s1
+S c17 fold1 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/macenko_tile__selected__s2
+S c17 fold1 tia_style__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/tia_style__selected__s0
+S c17 fold1 tia_style__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/tia_style__selected__s1
+S c17 fold1 tia_style__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold1/tia_style__selected__s2
+S c17 fold2 macenko__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/macenko__selected__s0
+S c17 fold2 macenko__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/macenko__selected__s1
+S c17 fold2 macenko__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/macenko__selected__s2
+S c17 fold2 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/macenko_tile__selected__s0
+S c17 fold2 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/macenko_tile__selected__s1
+S c17 fold2 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/macenko_tile__selected__s2
+S c17 fold2 tia_style__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/tia_style__selected__s0
+S c17 fold2 tia_style__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/tia_style__selected__s1
+S c17 fold2 tia_style__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold2/tia_style__selected__s2
+S c17 fold3 macenko__selected__s0 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/macenko__selected__s0
+S c17 fold3 macenko__selected__s1 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/macenko__selected__s1
+S c17 fold3 macenko__selected__s2 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/macenko__selected__s2
+S c17 fold3 macenko_tile__selected__s0 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/macenko_tile__selected__s0
+S c17 fold3 macenko_tile__selected__s1 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/macenko_tile__selected__s1
+S c17 fold3 macenko_tile__selected__s2 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/macenko_tile__selected__s2
+S c17 fold3 tia_style__selected__s0 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/tia_style__selected__s0
+S c17 fold3 tia_style__selected__s1 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/tia_style__selected__s1
+S c17 fold3 tia_style__selected__s2 hp={"lr": 0.1} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold3/tia_style__selected__s2
+S c17 fold4 macenko__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/macenko__selected__s0
+S c17 fold4 macenko__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/macenko__selected__s1
+S c17 fold4 macenko__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/macenko__selected__s2
+S c17 fold4 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/macenko_tile__selected__s0
+S c17 fold4 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/macenko_tile__selected__s1
+S c17 fold4 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/macenko_tile__selected__s2
+S c17 fold4 tia_style__selected__s0 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/tia_style__selected__s0
+S c17 fold4 tia_style__selected__s1 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/tia_style__selected__s1
+S c17 fold4 tia_style__selected__s2 hp={"lr": 0.03} pcam=True -> $HISTOPATH_DATA/v2/runs/S/c17/fold4/tia_style__selected__s2
+S canine fold0 macenko__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/macenko__selected__s0
+S canine fold0 macenko__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/macenko__selected__s1
+S canine fold0 macenko__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/macenko__selected__s2
+S canine fold0 macenko_tile__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/macenko_tile__selected__s0
+S canine fold0 macenko_tile__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/macenko_tile__selected__s1
+S canine fold0 macenko_tile__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/macenko_tile__selected__s2
+S canine fold0 tia_style__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/tia_style__selected__s0
+S canine fold0 tia_style__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/tia_style__selected__s1
+S canine fold0 tia_style__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold0/tia_style__selected__s2
+S canine fold1 macenko__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/macenko__selected__s0
+S canine fold1 macenko__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/macenko__selected__s1
+S canine fold1 macenko__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/macenko__selected__s2
+S canine fold1 macenko_tile__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/macenko_tile__selected__s0
+S canine fold1 macenko_tile__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/macenko_tile__selected__s1
+S canine fold1 macenko_tile__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/macenko_tile__selected__s2
+S canine fold1 tia_style__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/tia_style__selected__s0
+S canine fold1 tia_style__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/tia_style__selected__s1
+S canine fold1 tia_style__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold1/tia_style__selected__s2
+S canine fold2 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/macenko__selected__s0
+S canine fold2 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/macenko__selected__s1
+S canine fold2 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/macenko__selected__s2
+S canine fold2 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/macenko_tile__selected__s0
+S canine fold2 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/macenko_tile__selected__s1
+S canine fold2 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/macenko_tile__selected__s2
+S canine fold2 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/tia_style__selected__s0
+S canine fold2 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/tia_style__selected__s1
+S canine fold2 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold2/tia_style__selected__s2
+S canine fold3 macenko__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/macenko__selected__s0
+S canine fold3 macenko__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/macenko__selected__s1
+S canine fold3 macenko__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/macenko__selected__s2
+S canine fold3 macenko_tile__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/macenko_tile__selected__s0
+S canine fold3 macenko_tile__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/macenko_tile__selected__s1
+S canine fold3 macenko_tile__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/macenko_tile__selected__s2
+S canine fold3 tia_style__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/tia_style__selected__s0
+S canine fold3 tia_style__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/tia_style__selected__s1
+S canine fold3 tia_style__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold3/tia_style__selected__s2
+S canine fold4 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/macenko__selected__s0
+S canine fold4 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/macenko__selected__s1
+S canine fold4 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/macenko__selected__s2
+S canine fold4 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/macenko_tile__selected__s0
+S canine fold4 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/macenko_tile__selected__s1
+S canine fold4 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/macenko_tile__selected__s2
+S canine fold4 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/tia_style__selected__s0
+S canine fold4 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/tia_style__selected__s1
+S canine fold4 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/canine/fold4/tia_style__selected__s2
+S midog21sn fold0 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/macenko__selected__s0
+S midog21sn fold0 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/macenko__selected__s1
+S midog21sn fold0 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/macenko__selected__s2
+S midog21sn fold0 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/macenko_tile__selected__s0
+S midog21sn fold0 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/macenko_tile__selected__s1
+S midog21sn fold0 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/macenko_tile__selected__s2
+S midog21sn fold0 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/tia_style__selected__s0
+S midog21sn fold0 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/tia_style__selected__s1
+S midog21sn fold0 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold0/tia_style__selected__s2
+S midog21sn fold1 macenko__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/macenko__selected__s0
+S midog21sn fold1 macenko__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/macenko__selected__s1
+S midog21sn fold1 macenko__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/macenko__selected__s2
+S midog21sn fold1 macenko_tile__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/macenko_tile__selected__s0
+S midog21sn fold1 macenko_tile__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/macenko_tile__selected__s1
+S midog21sn fold1 macenko_tile__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/macenko_tile__selected__s2
+S midog21sn fold1 tia_style__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/tia_style__selected__s0
+S midog21sn fold1 tia_style__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/tia_style__selected__s1
+S midog21sn fold1 tia_style__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold1/tia_style__selected__s2
+S midog21sn fold2 macenko__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/macenko__selected__s0
+S midog21sn fold2 macenko__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/macenko__selected__s1
+S midog21sn fold2 macenko__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/macenko__selected__s2
+S midog21sn fold2 macenko_tile__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/macenko_tile__selected__s0
+S midog21sn fold2 macenko_tile__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/macenko_tile__selected__s1
+S midog21sn fold2 macenko_tile__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/macenko_tile__selected__s2
+S midog21sn fold2 tia_style__selected__s0 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/tia_style__selected__s0
+S midog21sn fold2 tia_style__selected__s1 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/tia_style__selected__s1
+S midog21sn fold2 tia_style__selected__s2 hp={"lr": 0.01} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midog21sn/fold2/tia_style__selected__s2
+S midogpp fold0 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/macenko__selected__s0
+S midogpp fold0 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/macenko__selected__s1
+S midogpp fold0 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/macenko__selected__s2
+S midogpp fold0 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/macenko_tile__selected__s0
+S midogpp fold0 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/macenko_tile__selected__s1
+S midogpp fold0 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/macenko_tile__selected__s2
+S midogpp fold0 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/tia_style__selected__s0
+S midogpp fold0 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/tia_style__selected__s1
+S midogpp fold0 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold0/tia_style__selected__s2
+S midogpp fold1 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/macenko__selected__s0
+S midogpp fold1 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/macenko__selected__s1
+S midogpp fold1 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/macenko__selected__s2
+S midogpp fold1 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/macenko_tile__selected__s0
+S midogpp fold1 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/macenko_tile__selected__s1
+S midogpp fold1 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/macenko_tile__selected__s2
+S midogpp fold1 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/tia_style__selected__s0
+S midogpp fold1 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/tia_style__selected__s1
+S midogpp fold1 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold1/tia_style__selected__s2
+S midogpp fold2 macenko__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/macenko__selected__s0
+S midogpp fold2 macenko__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/macenko__selected__s1
+S midogpp fold2 macenko__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/macenko__selected__s2
+S midogpp fold2 macenko_tile__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/macenko_tile__selected__s0
+S midogpp fold2 macenko_tile__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/macenko_tile__selected__s1
+S midogpp fold2 macenko_tile__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/macenko_tile__selected__s2
+S midogpp fold2 tia_style__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/tia_style__selected__s0
+S midogpp fold2 tia_style__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/tia_style__selected__s1
+S midogpp fold2 tia_style__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold2/tia_style__selected__s2
+S midogpp fold3 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/macenko__selected__s0
+S midogpp fold3 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/macenko__selected__s1
+S midogpp fold3 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/macenko__selected__s2
+S midogpp fold3 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/macenko_tile__selected__s0
+S midogpp fold3 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/macenko_tile__selected__s1
+S midogpp fold3 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/macenko_tile__selected__s2
+S midogpp fold3 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/tia_style__selected__s0
+S midogpp fold3 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/tia_style__selected__s1
+S midogpp fold3 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold3/tia_style__selected__s2
+S midogpp fold4 macenko__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/macenko__selected__s0
+S midogpp fold4 macenko__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/macenko__selected__s1
+S midogpp fold4 macenko__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/macenko__selected__s2
+S midogpp fold4 macenko_tile__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/macenko_tile__selected__s0
+S midogpp fold4 macenko_tile__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/macenko_tile__selected__s1
+S midogpp fold4 macenko_tile__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/macenko_tile__selected__s2
+S midogpp fold4 tia_style__selected__s0 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/tia_style__selected__s0
+S midogpp fold4 tia_style__selected__s1 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/tia_style__selected__s1
+S midogpp fold4 tia_style__selected__s2 hp={"lr": 0.1} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold4/tia_style__selected__s2
+S midogpp fold5 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/macenko__selected__s0
+S midogpp fold5 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/macenko__selected__s1
+S midogpp fold5 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/macenko__selected__s2
+S midogpp fold5 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/macenko_tile__selected__s0
+S midogpp fold5 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/macenko_tile__selected__s1
+S midogpp fold5 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/macenko_tile__selected__s2
+S midogpp fold5 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/tia_style__selected__s0
+S midogpp fold5 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/tia_style__selected__s1
+S midogpp fold5 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold5/tia_style__selected__s2
+S midogpp fold6 macenko__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/macenko__selected__s0
+S midogpp fold6 macenko__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/macenko__selected__s1
+S midogpp fold6 macenko__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/macenko__selected__s2
+S midogpp fold6 macenko_tile__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/macenko_tile__selected__s0
+S midogpp fold6 macenko_tile__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/macenko_tile__selected__s1
+S midogpp fold6 macenko_tile__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/macenko_tile__selected__s2
+S midogpp fold6 tia_style__selected__s0 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/tia_style__selected__s0
+S midogpp fold6 tia_style__selected__s1 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/tia_style__selected__s1
+S midogpp fold6 tia_style__selected__s2 hp={"lr": 0.03} pcam=False -> $HISTOPATH_DATA/v2/runs/S/midogpp/fold6/tia_style__selected__s2

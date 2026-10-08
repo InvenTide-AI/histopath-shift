@@ -1,0 +1,44 @@
+{
+ "same_task": {
+  "pairs": [
+   "c17-canine",
+   "midog21sn-midogpp"
+  ],
+  "mean_tau": 0.6944444444444444
+ },
+ "neither": {
+  "pairs": [
+   "c17-midog21sn",
+   "canine-midogpp"
+  ],
+  "mean_tau": 0.5833333333333333
+ },
+ "same_shift": {
+  "pairs": [
+   "c17-midogpp",
+   "canine-midog21sn"
+  ],
+  "mean_tau": 0.5833333333333333
+ },
+ "same_task_minus_same_shift": {
+  "point": 0.11111111111111116,
+  "ci": [
+   -0.05555555555555558,
+   0.2222222222222222
+  ]
+ },
+ "same_task_minus_neither": {
+  "point": 0.11111111111111116,
+  "ci": [
+   -0.02777777777777779,
+   0.22222222222222232
+  ]
+ },
+ "same_shift_minus_neither": {
+  "point": 0.0,
+  "ci": [
+   -0.05555555555555558,
+   0.05555555555555558
+  ]
+ }
+}

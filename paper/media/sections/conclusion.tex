@@ -1,0 +1,38 @@
+%% Conclusion (MedIA revision, v2 pipeline).
+\section{Conclusion}
+\label{sec:conclusion}
+
+We asked whether pathology models can be trained once and then used at new
+hospitals and scanners without retraining, and how a practitioner can tell.
+Holding out every domain of four public cohorts, repeating every run and
+selecting models without test data, we found that the train-once strategy can
+work well: the best standard-scale method of each cohort kept a worst-site
+AUROC between 0.88 and 0.99 without seeing labels from the test site. It is
+not guaranteed, however. No method was best on every cohort, ERM fell to near
+chance on one scanner, and with three to seven sites few differences between
+methods could be confirmed, because most of the uncertainty comes from the
+sites, not from the seeds.
+
+Fine-tuned pathology foundation models with color augmentation were the most
+reliable recipe on average, and color augmentation alone was close behind.
+Re-estimating batch-normalization statistics on unlabeled images of the new
+site helped mainly under severe scanner shift. Under the primary selection
+rule, domain-generalization objectives never reached the top five, and frozen
+foundation-model features were weak for mitotic figures. At the standard
+scale, rankings agreed more between cohorts that share a task than between
+cohorts that share a type of shift, so evidence from one task transfers poorly
+to another.
+
+Because development results cannot guarantee performance at a new site, we
+proposed a site acceptance test that combines them with a small labeled sample
+from that site. Validated on every held-out site, it kept false acceptance at
+or below 2.1\% at standard scale and needed about half as many labels as local
+labels alone, whereas the development results alone accepted 8.6\% of the
+sites that fell below an AUROC of 0.80.
+
+The roadmap of Section~\ref{sec:roadmap} turns these results into six steps:
+define a worst-site target, collect many sites, train once with a strong
+recipe, adapt without labels where the pipeline allows it, validate by holding
+out whole sites, and accept each new site with the site acceptance test. The
+protocol, the diagnostics and all per-run records are released so that other
+cohorts and methods can be added to the same analysis.

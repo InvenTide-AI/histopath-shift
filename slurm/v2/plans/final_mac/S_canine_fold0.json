@@ -1,0 +1,116 @@
+{
+ "tier": "S",
+ "cohort": "canine",
+ "fold": 0,
+ "phase": "final",
+ "jobs": [
+  {
+   "arm": "macenko",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko",
+   "seed": 1,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko",
+   "seed": 2,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 1,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 2,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 1,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 2,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  }
+ ]
+}

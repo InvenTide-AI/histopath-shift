@@ -1,0 +1,98 @@
+%% Supplementary: site acceptance test (Section 3.7 and 5.7 of the main text).
+%% Numbers: results/v2/site_acceptance/sat_numbers.json; tables: paper/media/tables/tab_sat_*.tex,
+%% both from src/v2/site_acceptance.py (evaluate, tables --plan-check).
+\section{Site acceptance test: further results}
+\label{sup:sat}
+
+\paragraph{Compact tier} Fig.~\ref{fig:sat-C} and Table~\ref{tab:sat-C} repeat
+the validation of the main text for the 1,600 compact-tier runs. The compact
+models differ more between sites, so the development prior is wider and adds
+less. The test was as safe as at the standard tier, with false acceptance of at
+most 0.4\%, and its gain over local labels alone was confined to small samples.
+
+\paragraph{Cohorts} Table~\ref{tab:sat-cohorts} breaks down false acceptance and
+power at a target of 0.85 by cohort. What governs the gain is where the
+development sites score relative to the target. The median prior center is an
+AUROC of 0.971 on standard-tier Camelyon17 and 0.897 on MIDOG++, where the test
+gains most, but 0.869 on the canine cohort and 0.861 on MIDOG~2021, where it
+gains little. When the development sites score below the target, the prior is
+pessimistic and costs power: on the compact-tier canine cohort the test
+accepted no good site at a target of 0.85, against 5--8\% for local labels
+alone. MIDOG~2021 priors rest on only two development sites.
+
+\paragraph{Robust variant} The $\epsilon$-contaminated prior replaces the
+development prior $\pi$ by $(1-\epsilon)\pi+\epsilon\,\mathcal N(0,2^2)$ on the
+logit scale, with $\epsilon=0.1$; the vague component is centered at an AUROC of
+0.5. The local evidence then moves the posterior faster when it contradicts the
+development sites. Table~\ref{tab:sat-robust} gives its operating
+characteristics. We added the variant after the first validation showed false
+acceptance above 5\% in one subgroup (standard-tier Camelyon17 at a target of
+0.90 with at most 50 labels), so its validation is not independent of that
+observation. In that subgroup it reduced false acceptance from 8.7\% to 5.4\%
+(25 labels), from 5.7\% to 4.5\% (50) and from 3.3\% to 2.8\% (100).
+
+\paragraph{Label planner} The planner simulates equal-variance binormal scores
+at a prevalence of 0.5, with a margin of 0.02 above the target and a target
+power of 0.8. We drew 150 priors per tier at random and kept those with at
+least one run 0.02 above a target of 0.85 (114 standard-tier and 44
+compact-tier priors; 28 of the 44 are Camelyon17), and compared the planner's predicted acceptance rate of good
+sites (true AUROC at least 0.02 above a target of 0.85) with the observed rate.
+At the compact tier the two agreed within 5 percentage points at every sample
+size. At the standard tier the planner was optimistic by 3 to 7 points
+(predicted 75\% against 68\% observed at 100 labels, and 85\% against 78\% at
+200). A practitioner should therefore add a margin to the planned sample size.
+
+\paragraph{Assumptions} The development prior treats the new site as
+exchangeable with the development sites. In the validation, the prior for site
+$t$ uses only the other folds' results at their own held-out sites; site $t$
+enters those folds only as training data, so its test labels inform neither
+the prior nor the decision, but the development results are not independent of
+site $t$. Local samples are drawn without replacement from the same test
+patches that define the truth, which for MIDOG~2021 and 400 labels is up to a
+third of them; this flatters the agreement between estimate and truth
+somewhat. The decision threshold is a posterior probability; the reported
+false-acceptance rates are empirical, not guaranteed. A new site that differs in a way none
+of the development sites does, for example a new stain protocol, is exactly
+the case that the local labels must catch. Labeled patches were drawn at
+random from the site's test patches; in practice patches come in clusters from
+a few slides, which increases the variance of the local AUROC, so labels should
+be spread over many slides. The test concerns patch-level AUROC, not a
+clinical endpoint.
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_sat_C}
+  \caption{Validation of the site acceptance test at the compact tier, as in
+  Fig.~\ref{M-fig:sat}.}
+  \label{fig:sat-C}
+\end{figure}
+
+\begin{table}[width=\linewidth,pos=tbp]
+\caption{Site acceptance test at the compact tier (1,600 runs), as in
+Table~\ref{M-tab:sat}.}
+\label{tab:sat-C}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/tab_sat_C}
+\end{table}
+
+\begin{table}[width=\linewidth,pos=tbp]
+\caption{Robust variant ($\epsilon=0.1$) at the standard tier (top) and the
+compact tier (bottom), as in Table~\ref{M-tab:sat}. The variant was added after
+the first validation and is therefore not independently validated.}
+\label{tab:sat-robust}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/tab_sat_robust_S}\\[6pt]
+\input{tables/tab_sat_robust_C}
+\end{table}
+
+\begin{table}[width=\linewidth,pos=tbp]
+\caption{False acceptance (\%) / power (\%) by cohort at a target of 0.85, with
+50 and 100 local labels, for the site acceptance test, its robust variant and
+local labels alone. Bad: number of runs whose true site AUROC is below 0.85.}
+\label{tab:sat-cohorts}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/tab_sat_cohorts}
+\end{table}

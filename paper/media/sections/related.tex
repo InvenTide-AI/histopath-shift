@@ -1,0 +1,207 @@
+%% Related work (MedIA revision). Every factual statement about a cited paper is
+%% traced to its source in sections/related_claims.md.
+\section{Related work}
+\label{sec:related}
+
+\subsection{Site and center effects}
+\label{sec:related-site}
+
+Performance loss at institutions not seen in training is documented across
+medical imaging. \citet{zech2018variable} trained pneumonia classifiers on chest
+radiographs from three hospital systems. Internal performance exceeded external
+performance in three of five comparisons, and for two of the systems the
+networks identified the system a radiograph came from with more than 99.9\%
+accuracy. In a systematic review of 86 externally validated radiology
+algorithms, 81\% performed worse on external data and 24\% lost at least 0.10
+on the unit scale \citep{yu2022external}. In histopathology,
+\citet{howard2021site} showed that the submitting site of TCGA slides can be
+identified by deep networks even after common color normalization and
+augmentation. These site signatures biased the accuracy of survival, mutation
+and stage prediction. The authors proposed splits in which no site contributes
+to both training and validation. \citet{stacke2019closer} proposed a
+model-specific distance between domains, computed in the learned
+representation. \citet{stacke2021measuring} developed it into the
+\emph{representation shift} and showed that it correlates highly with the drop
+in performance across many types of domain shift. These studies show that site
+effects exist and can be detected, but not how much of the spread in reported
+performance they account for relative to the training method. Our variance
+decomposition estimates this.
+
+Mitotic-figure detection has been studied directly under domain shift. The
+MIDOG~2021 challenge trained on 200 breast cancer cases from four scanners (one
+of them without labels) and
+tested on 100 cases from four scanners, two of which were not seen in training.
+The winning method reached an F1 score of 0.748 \citep{aubreville2023midog}.
+MIDOG~2022 extended the shift across tumor types, laboratories and species
+(as its title states) and evaluated nine methods on ten independent domains. Domain characteristics
+absent from the training data (a new species, a new cell morphology and a new
+scanner) led to small but significant drops in performance
+\citep{aubreville2024midog2022}. The method that won both editions combined a
+two-stage detector with domain-generalization measures
+\citep{jahanifar2024mitosis}. MIDOG++ \citep{aubreville2023midogpp} released
+503 images of seven tumor types and found that leave-one-domain-out training
+generalized considerably better than training on a single domain. The
+multi-scanner canine cutaneous squamous cell carcinoma dataset
+\citep{wilm2023canine} digitized the same slides with five scanners, which
+isolates the acquisition shift. We use these cohorts, but our question is not
+the challenges' question of which detector is best. We ask how much of a
+comparison between methods is decided by the domains themselves.
+
+\subsection{Domain generalization benchmarks and protocols}
+\label{sec:related-dg}
+
+Leave-one-domain-out evaluation with repeated runs is established practice in
+domain generalization (DG); \citet{zhou2023domain} survey the field. DomainBed
+\citep{gulrajani2021domainbed} evaluated fourteen algorithms on seven
+multi-domain datasets. It trained on the remaining domains for every choice of held-out test
+domain, and it repeated the whole study three times, redrawing hyperparameters,
+weight initializations and data splits. The authors argued that a DG algorithm
+without a model-selection rule is incomplete. They compared three rules:
+validation data pooled from the training domains, leave-one-domain-out
+cross-validation over the training domains, and an oracle validation set drawn
+from the test domain. With training-domain or oracle selection, no algorithm
+improved on the average accuracy of empirical risk minimization (ERM) by more
+than one point, and the authors found no improvement over ERM statistically
+significant. Under leave-one-domain-out selection, however, CORAL led ERM by
+1.8 points \citep[Table~3]{gulrajani2021domainbed}.
+Training-domain validation also outperformed leave-one-domain-out
+cross-validation across multiple datasets and algorithms.
+
+WILDS \citep{koh2021wilds} made Camelyon17 \citep{bandi2019camelyon17} a DG
+benchmark with three training hospitals, one out-of-distribution (OOD)
+validation hospital and one test hospital. The test hospital was chosen because
+its patches were the most visually distinctive. ERM test accuracy had a
+standard deviation of 6.4 points over ten seeds, and CORAL, IRM and GroupDRO
+performed comparably to or worse than ERM. WILDS therefore asks for ten seeds
+per Camelyon17 submission and warns that so few test domains invite overfitting
+to them. WILDS~2.0 \citep{sagawa2022extending} added unlabeled patches from the
+training, validation and test hospitals. On Camelyon17, ERM reached 70.8\% OOD
+accuracy without data augmentation and 82.0\% with it. SwAV pre-training on
+unlabeled target-hospital patches reached 91.4\% (standard deviation 2.0) and
+Noisy Student reached 86.7\%. CORAL, DANN, Pseudo-Label and FixMatch all fell
+below augmented ERM \citep[Table~2]{sagawa2022extending}. These figures come
+from one held-out hospital. The best arm also sees unlabeled images from that
+hospital, so it is unsupervised adaptation rather than DG.
+\citet{wiles2022fine} distinguished spurious correlation, low-data drift and
+unseen data shift, and trained more than 85,000 models covering 19 methods on
+six datasets, Camelyon17 among them. Pre-training and augmentation often helped
+substantially, but the best methods differed across datasets and shifts. On
+Camelyon17, color jitter hurt performance, and pre-training was not the best
+choice under unseen data shift.
+
+We adopt leave-one-domain-out evaluation and training-domain model selection
+from this literature and claim neither as new. Our contribution is diagnostic.
+We decompose performance into between-domain and between-run variance with
+interval estimates, and we analyze how stable method rankings are across
+held-out domains and cohorts. We use a factorial cohort design that crosses task
+(tumor versus mitotic figure) with shift type (institutional versus
+acquisition-only). Ranking agreement can then be compared between cohorts that
+share a task and cohorts that share a shift type.
+
+\subsection{Stain normalization and augmentation}
+\label{sec:related-stain}
+
+Differences in staining between laboratories degrade networks applied to
+slides from an unseen laboratory \citep{tellez2019stain}.
+\citet{reinhard2001color} transferred color by matching per-channel means and
+standard deviations in the decorrelated $l\alpha\beta$ space. Color
+deconvolution \citep{ruifrok2001deconvolution} separates up to three stains in
+RGB images using stain-specific absorption, and it is the basis of HED-space
+augmentation \citep{tellez2019stain}. \citet{macenko2009} estimate the stain
+vectors of each slide from its optical densities. Pixels are projected onto the
+plane of the two leading singular vectors, the vectors are taken at robust
+angular extremes, and per-stain intensities are rescaled to a common
+pseudo-maximum. \citet{vahadane2016structure} factorize images into sparse,
+non-negative stain density maps and recombine them with a target image's stain
+color basis. StainGAN \citep{shaban2019staingan} learns the mapping with a
+CycleGAN-style model, so no single reference slide has to be chosen. Instead of normalizing,
+\citet{tellez2018whole} perturbed the hematoxylin and eosin channels directly
+and, together with ensembling, obtained a stain-invariant mitosis detector.
+Across four tasks and nine laboratories, \citet{tellez2019stain} found HSV or
+HED color augmentation essential. The top-ranked configuration used no
+normalization, although normalization made classifiers less sensitive to the
+choice of augmentation. Normalization also leaves site information in place
+\citep{howard2021site}. We therefore evaluate per-slide Macenko normalization,
+a per-tile variant, H\&E jitter and their combination as separate arms.
+
+\subsection{Self-supervision and pathology foundation models}
+\label{sec:related-fm}
+
+\citet{ciga2022ssl} pre-trained SimCLR on 57 unlabeled histopathology datasets.
+Linear classifiers on these features beat ImageNet features by more than 28\%
+in F1 on average. \citet{kang2023benchmarking} compared MoCo~v2,
+SwAV, Barlow Twins and DINO pre-trained on 19 million patches from 20,994 TCGA
+slides, and domain-aligned pre-training outperformed ImageNet pre-training in
+both linear and fine-tuning evaluation. Foundation models extend this further:
+\begin{itemize}
+  \item CTransPath, a convolutional network combined with a multi-scale Swin
+    Transformer \citep{wang2022ctranspath};
+  \item Phikon, an iBOT ViT-Base trained on more than 40 million images from 16
+    cancer types \citep{filiot2023phikon};
+  \item UNI, trained on more than 100 million images from over 100,000
+    whole-slide images (WSIs) covering 20 tissue types \citep{chen2024uni};
+  \item CONCH, trained on more than 1.17 million image--caption pairs
+    \citep{lu2024conch};
+  \item Virchow, a 632-million-parameter ViT trained with DINOv2 on about
+    1.5 million WSIs \citep{vorontsov2024virchow};
+  \item Prov-GigaPath, trained on 1.3 billion tiles from 171,189 slides from a
+    network of 28 cancer centers \citep{xu2024gigapath}.
+\end{itemize}
+
+Scale does not by itself remove center effects. \citet{komen2024batch} found
+hospital signatures in foundation-model embeddings that dominated feature-space
+distances and were not removed by stain normalization. All ten public
+foundation models evaluated by \citet{dejong2025unrobust} encoded the medical
+center strongly. Only one had a robustness index above one, meaning that
+biological features outweighed center features, and then only slightly.
+The PathoROB benchmark found robustness deficits in all 20 models it evaluated
+\citep{komen2026robust}. More robust models, vision--language alignment and
+post-hoc robustification reduced, but did not eliminate, the risk of the
+resulting downstream errors. Our analysis is complementary. We measure how the
+downstream performance of frozen and fine-tuned pathology encoders
+\citep{kang2023benchmarking} varies across held-out domains, under the same
+protocol and diagnostics as every other arm.
+
+\subsection{Test-time adaptation}
+\label{sec:related-tta}
+
+AdaBN adapts a trained network without labels by replacing its
+batch-normalization (BN) statistics with target-domain statistics, and it adds
+no parameters \citep{li2017adabn}. \citet{schneider2020bn} showed that
+re-estimating BN statistics on corrupted images improved ImageNet-C robustness
+for 25 architectures, and argued that adapted results should be reported in OOD
+evaluations. Prediction-time BN improved accuracy and calibration under
+covariate shift, but its results were mixed when combined with pre-training and
+weaker under more natural shifts \citep{nado2020bn}. TENT \citep{wang2021tent}
+minimizes prediction entropy online, updating normalization statistics and
+channel-wise affine parameters on each batch. Because these methods estimate
+statistics from test batches, which depend on batch composition, our protocol
+shuffles the test stream with a fixed seed before any adaptation.
+
+\subsection{Variance, rankings and statistical reporting}
+\label{sec:related-stats}
+
+Data sampling, parameter initialization and hyperparameter choice each have a
+marked effect on benchmark results \citep{bouthillier2021variance}, and
+test-set scores alone do not settle which model is best \citep{dodge2019show}.
+In biomedical image analysis challenges, an algorithm's rank is generally not
+robust to the test data, the ranking scheme or the annotators
+\citep{maierhein2018rankings}. challengeR provides bootstrap analyses of ranking
+stability \citep{wiesenfarth2021challenger}. \citet{varoquaux2018cv} showed
+that cross-validation error bars are large (about $\pm 10\%$ with 100 samples)
+and that the standard error across folds strongly underestimates them. In two
+Kaggle medical-imaging challenges with test sets below 1,000 cases, the
+difference between the public and private leaderboards was larger than the gap
+between the winner and the top-10\% entry \citep{varoquaux2022failures}. Any variance estimator computed only from the
+results of a cross-validation experiment is biased, and ignoring
+training-set variability can make an algorithm look significantly better than
+it is \citep{nadeau2003inference}. Cross-validation estimates the average error
+of models fit to other training sets from the same population (proved for
+least-squares linear models), and the correlation between folds makes
+the usual intervals too narrow \citep{bates2023cv}. Leave-one-domain-out
+designs are an extreme case. There are few folds ($K=3$ to $7$ here), the folds
+share training domains, and the held-out domain is both a nuisance factor and
+the quantity of interest. We therefore report between-domain and between-run
+variance components with intervals and run a fold-dependence sensitivity
+analysis on paired contrasts. We also give bootstrap intervals for method ranks
+(over seeds and over domains) and for Kendall's $\tau$ between cohort rankings.

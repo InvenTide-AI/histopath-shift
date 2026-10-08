@@ -1,0 +1,68 @@
+{
+ "cohort": "canine",
+ "selection": "ood",
+ "K": 5,
+ "domains": [
+  "cs2",
+  "p1000",
+  "nz20",
+  "nz210",
+  "gt450"
+ ],
+ "design": [
+  [
+   "1",
+   "2",
+   "3"
+  ],
+  [
+   "2",
+   "3",
+   "4"
+  ],
+  [
+   "0",
+   "3",
+   "4"
+  ],
+  [
+   "0",
+   "1",
+   "4"
+  ],
+  [
+   "0",
+   "1",
+   "2"
+  ]
+ ],
+ "arms": [
+  "augonly",
+  "compute_matched",
+  "coral",
+  "erm",
+  "fish",
+  "groupdro",
+  "he_jitter",
+  "irm",
+  "lisa",
+  "macenko",
+  "macenko_tile",
+  "mixstyle",
+  "sam",
+  "simclr",
+  "simclr_sam",
+  "tia_style"
+ ],
+ "notes": [],
+ "ref": "erm",
+ "B": 10000,
+ "prior_scale": 0.1,
+ "higher_better": true,
+ "snapshot": {
+  "id": "1381bdd759f9",
+  "created": "2026-10-05 14:15",
+  "source": "$HISTOPATH_DATA/v2",
+  "snapshot": "$HISTOPATH_DATA/v2/snap_final2_20261005"
+ }
+}

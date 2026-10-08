@@ -1,0 +1,44 @@
+{
+ "arms": [
+  "coral",
+  "erm_lunit_bt",
+  "erm_lunit_dino",
+  "fish",
+  "groupdro",
+  "he_jitter",
+  "he_jitter_lunit_bt",
+  "he_jitter_lunit_dino",
+  "irm",
+  "lisa",
+  "macenko",
+  "macenko_tile",
+  "mixstyle",
+  "probe_resnet50_imagenet",
+  "probe_resnet50_lunit_bt",
+  "probe_vit_s16_lunit_dino",
+  "sam",
+  "simclr",
+  "tia_style"
+ ],
+ "cohort": {
+  "T": 385.6332679441833,
+  "p": 9.999000099990002e-05,
+  "B": 10000,
+  "method": "wild",
+  "groups": [
+   "c17",
+   "canine",
+   "midogpp"
+  ],
+  "n_per_group": [
+   5,
+   5,
+   7
+  ],
+  "n_rows": 17,
+  "n_arms": 19
+ },
+ "task_shift_2x2": {
+  "note": "needs the 4 cohorts of the 2x2 design; have ['c17', 'canine', 'midogpp']"
+ }
+}

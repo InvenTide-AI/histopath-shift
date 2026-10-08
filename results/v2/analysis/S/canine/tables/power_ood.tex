@@ -1,0 +1,26 @@
+% canine, selection=ood; K for 80% power (two-sided paired t, alpha .05), s=3 seeds; left block independent folds, right block rho=0.5 x training overlap (observed-design VIF held fixed, sigma_Delta divided by sqrt(1 - rbar_obs) as in the contrasts' fold-dependence CI); sigma_Delta column = independent-fold value; seed-paired run noise where arm and ref share seeds; deltas=[0.02, 0.05, 0.1, 0.2]
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Arm & $\sigma_\Delta$ & $\Delta$=0.02 & $\Delta$=0.05 & $\Delta$=0.1 & $\Delta$=0.2 & $\Delta$=0.02 & $\Delta$=0.05 & $\Delta$=0.1 & $\Delta$=0.2 \\
+\midrule
+coral & 0.054 & 60 & 12 & 5 & 3 & 157 & 27 & 9 & 4 \\
+erm\_lunit\_bt & 0.116 & 266 & 45 & 13 & 5 & 705 & 115 & 31 & 10 \\
+erm\_lunit\_dino & 0.116 & 266 & 45 & 13 & 5 & 706 & 115 & 31 & 10 \\
+fish & 0.115 & 263 & 44 & 13 & 5 & 698 & 114 & 30 & 10 \\
+groupdro & 0.049 & 49 & 10 & 5 & 3 & 126 & 22 & 8 & 4 \\
+he\_jitter & 0.102 & 207 & 35 & 11 & 5 & 548 & 90 & 24 & 8 \\
+he\_jitter\_lunit\_bt & 0.129 & 328 & 55 & 16 & 6 & 871 & 141 & 37 & 11 \\
+he\_jitter\_lunit\_dino & 0.112 & 247 & 42 & 12 & 5 & 654 & 107 & 29 & 9 \\
+irm & 0.033 & 24 & 6 & 4 & 3 & 59 & 12 & 5 & 3 \\
+lisa & 0.056 & 64 & 12 & 5 & 3 & 168 & 29 & 9 & 4 \\
+macenko & 0.107 & 228 & 39 & 12 & 5 & 604 & 99 & 27 & 9 \\
+macenko\_tile & 0.115 & 260 & 44 & 13 & 5 & 688 & 112 & 30 & 9 \\
+mixstyle & 0.060 & 72 & 14 & 6 & 3 & 188 & 32 & 10 & 5 \\
+probe\_resnet50\_imagenet & 0.114 & 259 & 44 & 13 & 5 & 687 & 112 & 30 & 9 \\
+probe\_resnet50\_lunit\_bt & 0.123 & 301 & 50 & 14 & 6 & 797 & 130 & 34 & 11 \\
+probe\_vit\_s16\_lunit\_dino & 0.118 & 273 & 46 & 13 & 5 & 725 & 118 & 31 & 10 \\
+sam & 0.060 & 73 & 14 & 6 & 3 & 192 & 33 & 10 & 5 \\
+simclr & 0.043 & 38 & 8 & 4 & 3 & 98 & 18 & 7 & 4 \\
+tia\_style & 0.110 & 239 & 40 & 12 & 5 & 634 & 103 & 28 & 9 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,263 @@
+%% Materials and experimental setup (MedIA revision, v2 pipeline).
+%% Counts are read from the fold-cache manifests
+%% ($V2/cache{64,96}/{cohort}/fold*/manifest.json); training details from src/v2/.
+\section{Materials and experimental setup}
+\label{sec:setup}
+
+\subsection{Cohorts}
+\label{sec:setup-cohorts}
+
+The four primary cohorts form a $2\times2$ design that crosses the task (tumor
+versus non-tumor tissue, or mitotic figure versus non-mitotic look-alike) with
+the shift type. Under an \emph{institutional} shift, domains differ in center,
+staining, scanner and patients together. Under an \emph{acquisition-only}
+shift, the domains are scanners within one laboratory
+(Fig.~\ref{fig:design}, Table~\ref{tab:cohorts}). All splits are row-shuffled with a fixed seed.
+Within a fold, the labeled splits are pairwise disjoint in their groups
+(patient, slide or image), and the unlabeled pool shares no group with the
+validation or test splits. A verification script recomputes these conditions
+from the stored group identifiers. It also checks that every labeled split
+contains both classes, that ID validation covers every training domain and that
+no patch is duplicated within or across splits. Every fold passes.
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_design}
+  \caption{Study design. (a) The four cohorts cross the task with the type of
+  shift, one cohort per cell. (b) Leave-one-domain-out folds for $K=5$: fold $t$
+  tests domain $t$, validates out of distribution on domain $(t-1)\bmod K$ and
+  holds out ID-validation groups of every training domain. (c) Every run is
+  checkpointed ten times and evaluated under four selection rules; the
+  positions of the selected checkpoints are illustrative.}
+  \label{fig:design}
+\end{figure}
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{Cohorts and per-fold split sizes (number of patches; a range is
+the minimum--maximum over folds). Counts are identical at 64 and 96~px. ID-val:
+group-disjoint validation split of the training domains; OOD-val: held-out
+validation domain $(t-1)\bmod K$. The un-normalized MIDOG~2021 variant, used as
+a compact-tier sensitivity analysis, has the same split sizes as MIDOG~2021.}
+\label{tab:cohorts}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{2.5cm}*{4}{>{\raggedright\arraybackslash}p{3.05cm}}@{}}
+\toprule
+ & Camelyon17-WILDS & Canine cSCC & MIDOG 2021 & MIDOG++ \\
+\midrule
+Task (pos.\ vs neg.) & tumor vs normal (lymph node) & SCC tumor vs non-tumor tissue
+  & mitotic figure vs look-alike & mitotic figure vs look-alike \\
+Domain & hospital & scanner (same 44 slides) & scanner (one lab) & tumor type \\
+$K$ & 5 & 5 & 3 & 7 \\
+Shift type & institutional & acquisition-only & acquisition-only
+  & institutional and biological \\
+Disjoint group & patient & slide & image & image \\
+OOD-val domain & yes & yes & none & yes \\
+Scale normalization & none (native patch) & per scanner, to CS2 & 0.25\,\textmu m/px & 0.25\,\textmu m/px \\
+\midrule
+Train & 30,000 & 22,872--26,596 & 2,160--2,544 & 11,854--17,940 \\
+ID-val & 12,000 & 3,895--4,780 & 597--716 & 2,555--3,891 \\
+OOD-val & 12,000 & 2,197--3,745 & -- & 1,806--8,216 \\
+Test & 25,000 & 2,197--3,745 & 1,175--1,648 & 1,806--8,216 \\
+Unlabeled pool & 40,000 & 40,000 & 25,200 & 40,000 \\
+Positive rate, train & 0.50 & 0.52--0.55 & 0.35--0.39 & 0.42--0.49 \\
+Positive rate, test & 0.50 & 0.51--0.59 & 0.35--0.43 & 0.27--0.63 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Cohort construction} Camelyon17-WILDS provides $96\times96$~px
+lymph-node patches from five hospitals \citep{koh2021wilds,bandi2019camelyon17};
+ID validation holds out whole patients of every training hospital. In the
+canine cohort, each of 44 slides was digitized with five scanners
+\citep{wilm2023canine}. The slides are split into five groups, so that a test
+domain is a new scanner and a set of slides that is absent from training under
+every scanner, and magnification is normalized to the CS2 scanner. MIDOG~2021
+\citep{aubreville2023midog} has 150 annotated breast cancer images from one
+laboratory, 50 per scanner. The scanners' resolutions differ by about 11\%, so
+the primary cache normalizes every image to 0.25~\textmu m/px; the
+un-normalized cache is a compact-tier sensitivity analysis. MIDOG++
+\citep{aubreville2023midogpp} provides 503 images of seven tumor types from two
+species, and its 150 breast cancer images are the MIDOG~2021 images. Mitosis
+patches are centered on annotated mitotic figures and non-mitotic look-alikes.
+The unlabeled pools used for self-supervision come only from the training
+domains and exclude all validation and test groups, so the self-supervised arms
+remain domain generalization methods. Sampling, scale normalization, the
+MIDOG++ domains and the handling of objects near image borders are detailed in
+Supplementary Section~\ref{S-sup:setup}.
+
+\subsection{Model tiers}
+\label{sec:setup-models}
+
+\paragraph{Compact tier (C)} The compact model is a four-stage convolutional
+network on 64~px input with 583,394 parameters. Stages 1--3 each apply two
+$3\times3$ convolution--batch normalization--ReLU blocks followed by $2\times2$
+max pooling, with 32, 64 and 128 channels. Stage 4 is one such block with 256
+channels, followed by global average pooling and a linear layer with two
+outputs. It is trained from random initialization, and inputs are normalized
+with ImageNet channel statistics.
+
+\paragraph{Standard tier (S)} ResNet-50 \citep{he2016resnet} with ImageNet
+initialization \citep{deng2009imagenet} is fine-tuned end to end at the native
+96~px. Two pathology foundation models of \citet{kang2023benchmarking} are also
+used: a Barlow Twins ResNet-50, fine-tuned at 96~px, and a DINO ViT-S/16
+\citep{dosovitskiy2021vit}, fine-tuned on inputs upsampled bilinearly to
+224~px. Their inputs are normalized with the channel statistics released with
+the weights. Frozen linear probes on ImageNet ResNet-50, Barlow Twins ResNet-50
+and DINO ViT-S/16 follow one rule: the input is upsampled to 224~px, and
+features are extracted in fp32 and standardized with the training-split mean
+and SD. A linear head is trained with SGD (learning rate 0.05, momentum 0.9,
+weight decay $10^{-4}$, 1,200 steps of 128) and selected like every other arm.
+A supplementary representation ladder applies the same probe to nine frozen
+backbones. \citet{kang2023benchmarking} pre-trained on 19 million patches from
+20,994 TCGA whole-slide images, and the released checkpoints are these
+TCGA-only models. None of our cohorts comes from TCGA. Camelyon17 comes
+from Dutch hospitals, the canine slides from the veterinary CATCH collection
+\citep{wilm2023canine}, and
+MIDOG++ from veterinary laboratories and UMC Utrecht. The pre-training images
+therefore do not overlap with ours, although some organs (breast, skin) occur in
+both.
+
+\subsection{Optimization and checkpointing}
+\label{sec:setup-optim}
+
+Training uses the fixed budget of Section~\ref{sec:protocol-lodo}: batches of
+128 drawn without replacement and reshuffled every epoch, and a cosine schedule.
+The compact tier uses SGD (momentum 0.9, weight decay $10^{-4}$) with a fixed,
+untuned learning rate of 0.02. The standard-tier ResNet-50 arms use SGD with
+the same momentum and weight decay. Their learning rate is selected per fold
+from $\{10^{-3},3\times10^{-3},10^{-2},3\times10^{-2},10^{-1}\}$ on ImageNet
+ERM and shared by every ImageNet ResNet-50 arm of the fold. The grid was extended
+upward twice because the selected rate sat on its upper edge. The Barlow Twins
+fine-tunes have their own per-fold rate, selected on Barlow Twins ERM from
+$\{3\times10^{-4},10^{-3},3\times10^{-3},10^{-2},3\times10^{-2}\}$. Inheriting
+the ImageNet rate made their training fail on some folds
+(Supplementary Section~\ref{S-app:tuning}). The ViT uses
+AdamW (weight decay 0.05, 5\% linear warm-up) with a learning rate selected per
+fold from $\{10^{-5},3\times10^{-5},10^{-4}\}$. Every arm except the frozen
+probes receives a random dihedral augmentation (flips and rotations by
+multiples of $90^\circ$, drawn per batch). The standard tier trains in
+bfloat16 autocast and the compact tier in fp32. Evaluation is always in fp32,
+with float64 probabilities. TF32 is enabled, and kernels are not forced to be
+deterministic. At each checkpoint the record stores eight metrics per split
+(AUROC, average precision, accuracy, balanced accuracy, F1, ECE, Brier score,
+negative log-likelihood) and the ID-validation AUROC of each training domain.
+Predictions at the selected checkpoints and the ID-selected weights are also
+saved. A run whose loss or predictions become non-finite is stopped, marked as
+diverged and kept in the analysis, with non-finite probabilities scored as 0.5.
+Six of the 3,400 final runs diverged, all IRM: two at the compact tier and
+four at the standard tier. Camelyon17 models are also scored on the
+PatchCamelyon test split \citep{veeling2018pcam}, center-cropped to 64~px at the
+compact tier. This score is never used for selection.
+
+\subsection{Arms}
+\label{sec:setup-arms}
+
+Table~\ref{tab:arms} lists every arm with its implementation and grid. Arms
+that combine two components inherit the tuned value of their parent:
+SimCLR+SAM takes $\rho$ from SAM, and the foundation-model H\&E-jitter arms
+take $s$ from standard-tier H\&E jitter.
+
+\begin{table}[width=\linewidth,pos=p]
+\caption{Arms, implementations and hyperparameter grids. Grids are searched
+per fold with seed~0 and selected by ID-validation AUROC; values outside a
+grid are fixed. Tier: C = compact CNN (64~px), S = standard (96~px). All
+fine-tuned arms also receive the shared dihedral augmentation. $^{\dagger}$Transductive: uses the unlabeled images of the test domain.}
+\label{tab:arms}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}p{7.4cm}>{\raggedright\arraybackslash}p{4.4cm}l@{}}
+\toprule
+Arm & Implementation & Grid / fixed values & Tier \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Baseline and controls}}\\
+ERM & Cross-entropy. & C: lr 0.02; S: lr $\in\{10^{-3},3{\times}10^{-3},\dots,10^{-1}\}$ & C, S \\
+Augmentation-only & SimCLR's view augmentation (random resized crop, flips, rotations, color jitter, grayscale) applied to supervised batches; no contrastive loss. & crop scale $[0.4,1]$; jitter 0.4 with prob.\ 0.8; hue offset 0.08; grayscale prob.\ 0.2 & C \\
+Compute-matched ERM & ERM for $1{,}200+\lceil I_{\text{SSL}}/128\rceil$ steps; $I_{\text{SSL}}$ = images passed through the encoder during SimCLR pre-training (two views per image). & 4,944 steps ($|U|=40{,}000$); 3,552 steps (MIDOG~2021, $|U|=25{,}200$) & C \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Optimization and self-supervision}}\\
+SAM \citep{foret2021sam} & SGD base optimizer; batch-norm statistics updated on the unperturbed pass only. & $\rho\in\{0.02,0.05,0.1\}$ & C, S \\
+SimCLR \citep{chen2020simclr} & NT-Xent pre-training on the fold's unlabeled pool (C: from scratch; S: continued from ImageNet), 2-layer projection head, then ERM fine-tuning. & $\tau=0.5$, batch 256, 6 epochs, lr 0.05 (C) / 0.01 (S) & C, S \\
+SimCLR+SAM & SimCLR initialization, SAM fine-tuning. & $\rho$ from SAM & C \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Domain-aware training (uses training-domain labels)}}\\
+GroupDRO \citep{sagawa2020groupdro} & Weights over training domains, $q_k\leftarrow q_k e^{\eta L_k}$, loss $\sum_k q_kL_k$; domains absent from a batch are not updated. & $\eta\in\{10^{-3},10^{-2},10^{-1}\}$ & C, S \\
+IRMv1 \citep{arjovsky2019irm} & Split-batch penalty per domain, averaged over domains; weight 1 for the first 25\% of steps, then $\lambda$, with optimizer reset. & $\lambda\in\{1,10,100\}$ & C, S \\
+DeepCORAL \citep{sun2016coral} & Squared differences of feature means and covariances, averaged over pairs of training domains. & $\lambda\in\{0.1,1,10\}$ & C, S \\
+MixStyle \citep{zhou2021mixstyle} & Random mixing of instance feature statistics after stages 1 and 2 (C) or ResNet layers 1 and 2 (S); identity at evaluation. & $p\in\{0.5,1\}\times\alpha\in\{0.1,0.3\}$ & C, S \\
+Fish \citep{shi2022fish} & Inner copy takes one SGD step per training domain in the batch (random order, persistent inner optimizer); $\theta\leftarrow\theta+\epsilon(\tilde\theta-\theta)$ for parameters, batch-norm buffers copied. & $\epsilon\in\{0.01,0.05,0.1,0.5\}$ & C, S \\
+LISA \citep{yao2022lisa} & Per batch, intra-label mixup across domains (prob.\ $p_{\text{sel}}$) or intra-domain mixup across labels; $\lambda\sim\mathrm{Beta}(\alpha,\alpha)$, soft labels. & $\alpha\in\{0.5,2\}\times p_{\text{sel}}\in\{0.5,1\}$ & C, S \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Stain normalization and color augmentation}}\\
+Macenko$^{\dagger}$ \citep{macenko2009} & One stain estimate per slide and scanner, mapped to a reference fitted with the same estimator on the training slides; every split. & $I_0=240$, OD threshold 0.15, angle percentile 1; $\le$256 tiles per slide & C, S \\
+H\&E jitter & Per-image brightness, contrast and saturation factors $\sim U[1-s,1+s]$ and per-channel offsets $\sim U[-s/5,s/5]$. & $s\in\{0.2,0.4\}$ & C, S \\
+TIA-style$^{\dagger}$ & Per-slide Macenko normalization followed by H\&E jitter. & $s=0.3$ & C, S \\
+Per-tile Macenko & One stain estimate per tile (Supplementary Section~\ref{S-app:macenko}). & as Macenko & C, S \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Test-time adaptation (on the ID-selected checkpoint)}}\\
+BN-adapt$^{\dagger}$ \citep{schneider2020bn} & Batch-norm statistics re-estimated (cumulative average) on the shuffled test stream in batches of 128, then prediction. & on ERM, SimCLR, H\&E jitter (C); ERM (S) & C, S \\
+TENT$^{\dagger}$ \citep{wang2021tent} & Online entropy minimization of batch-norm affine parameters (Adam, lr $10^{-3}$, one step per batch of 128, shuffled stream); a batch is predicted before its update. & on ERM & C \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Pathology foundation models \citep{kang2023benchmarking}}}\\
+Barlow Twins RN50: ERM, +H\&E jitter & Fine-tuned at 96~px. & lr $\in\{3{\times}10^{-4},\dots,3{\times}10^{-2}\}$ on BT ERM; $s$ from H\&E jitter & S \\
+DINO ViT-S/16: ERM, +H\&E jitter & Fine-tuned at 224~px, AdamW. & lr $\in\{10^{-5},3{\times}10^{-5},10^{-4}\}$; $s$ from H\&E jitter & S \\
+Frozen probes & Linear head on frozen ImageNet RN50, Barlow Twins RN50 or DINO ViT-S/16 features at 224~px. & lr 0.05 & S \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Controls for self-supervision} The augmentation-only control
+applies SimCLR's view augmentation to labeled batches without the contrastive
+loss, which separates the effect of the augmentations from that of
+pre-training. The compute-matched control gives ERM as many images through the
+encoder as SimCLR receives in pre-training and fine-tuning together
+(Table~\ref{tab:arms}).
+
+\paragraph{Stain normalization} As in common practice, Macenko's stain matrix
+\citep{macenko2009} is estimated once per slide imaged on one scanner, from the
+pooled tissue pixels of up to 256 of its tiles, with concentrations clamped at
+zero, and is mapped to a reference fitted with the same estimator on the
+training slides. No labels are used, but the method is transductive: each test
+slide is normalized from its own tiles. The per-tile variant estimates the
+stain matrix on every tile separately. Implementation details are in
+Supplementary Section~\ref{S-sup:setup}, and the effect of the granularity in
+Supplementary Section~\ref{S-app:macenko}. Our H\&E jitter perturbs RGB color; it
+is not an augmentation in HED space.
+
+\paragraph{Test-time adaptation} BN-adapt and TENT process the test split in a
+seed-specific random order. Each batch of 128 therefore contains both classes
+in roughly the test domain's proportion. A label-sorted stream would give
+single-class batches and an uninformative adapted AUROC.
+
+\paragraph{Transductive arms} BN-adapt, TENT, Macenko and TIA-style use the
+unlabeled images of the test domain at prediction time; the other arms see one
+test image at a time. The four transductive arms are marked in every table and
+figure and are not directly comparable with the inductive arms.
+
+\paragraph{Dropped arm} The rotation-invariance arm of the previous version was
+dropped. In this pipeline it reduced to the dihedral augmentation that every arm
+receives, so it was identical to ERM.
+
+\subsection{Seeds, compute and availability}
+\label{sec:setup-compute}
+
+Final runs use seeds 0--4 at the compact tier and 0--2 at the standard tier.
+Tuning uses seed~0 and is stored separately from the final runs. The planned
+design has the following runs:
+\begin{itemize}
+  \item tuning: 520 at the compact tier (26 configurations, 20 folds) plus 78
+    for the un-normalized MIDOG~2021 cohort; at the standard tier, 160
+    learning-rate runs (100 ResNet-50, 60 ViT), 100 Barlow Twins
+    learning-rate runs and 520 method-grid runs;
+  \item final: 1,600 at the compact tier (16 arms, 5 seeds, 20 folds), 240 for
+    the un-normalized MIDOG~2021 sensitivity analysis, and 1,200 at the standard
+    tier (20 arms, 3 seeds, 20 folds);
+  \item representation ladder: 360 runs.
+\end{itemize}
+Test-time adaptation is evaluated within the run of the base arm. All 4,778 runs
+(1,378 tuning and 3,400 final, the ladder included) completed. They ran on
+NVIDIA H100 NVL GPUs and used about 34 GPU-hours, not counting development
+and diagnostic runs. Each
+record contains the full hyperparameters, a SHA-256 hash of the training code
+and a fingerprint of the fold cache. A record whose fingerprint or
+hyperparameters do not match the job is recomputed. Code, fold-construction
+scripts, all run records and the scripts that regenerate every table and figure
+are available at \coderepo\ \TBD{Zenodo DOI of the archived release}.

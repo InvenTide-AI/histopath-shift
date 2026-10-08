@@ -1,0 +1,83 @@
+{
+ "tier": "S",
+ "cohort": "midogpp",
+ "fold": 3,
+ "phase": "final",
+ "jobs": [
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold (erm_lunit_bt own LR grid, tune_lr_bt)"
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 1,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold (erm_lunit_bt own LR grid, tune_lr_bt)"
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 2,
+   "hp": {
+    "lr": 0.01
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold (erm_lunit_bt own LR grid, tune_lr_bt)"
+  },
+  {
+   "arm": "he_jitter_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold (erm_lunit_bt own LR grid, tune_lr_bt)"
+  },
+  {
+   "arm": "he_jitter_lunit_bt",
+   "seed": 1,
+   "hp": {
+    "lr": 0.01,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold (erm_lunit_bt own LR grid, tune_lr_bt)"
+  },
+  {
+   "arm": "he_jitter_lunit_bt",
+   "seed": 2,
+   "hp": {
+    "lr": 0.01,
+    "jitter": 0.2
+   },
+   "tta": [],
+   "pcam": false,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold (erm_lunit_bt own LR grid, tune_lr_bt)"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+% midog21sn, selection=last; mean CI: t-interval over domain means (df K-1); worst (= min over domains) CI: seed-within-domain bootstrap (observed domains only); domain-bootstrap CIs are supplementary (summary csv)
+\begin{tabular}{lrrrrrrr}
+\toprule
+Arm & Mean & 95\% CI & Worst & 95\% CI & SD$_\text{dom}$ & SD$_\text{seed}$ & Rank$_\text{worst}$ \\
+\midrule
+probe\_resnet50\_lunit\_bt & 0.796 & [0.748, 0.843] & 0.776 & [0.774, 0.777] & 0.019 & 0.001 & 1.0 \\
+probe\_vit\_s16\_lunit\_dino & 0.745 & [0.718, 0.771] & 0.733 & [0.731, 0.734] & 0.011 & 0.002 & 2.0 \\
+probe\_resnet50\_lunit\_mocov2 & 0.738 & [0.708, 0.769] & 0.726 & [0.723, 0.727] & 0.012 & 0.003 & 3.0 \\
+probe\_vit\_b16\_swag & 0.712 & [0.663, 0.760] & 0.691 & [0.690, 0.691] & 0.019 & 0.001 & 4.0 \\
+probe\_vit\_b16\_imagenet & 0.713 & [0.632, 0.793] & 0.689 & [0.688, 0.690] & 0.032 & 0.001 & 5.0 \\
+probe\_convnext\_tiny\_imagenet & 0.714 & [0.602, 0.826] & 0.662 & [0.662, 0.663] & 0.045 & 0.001 & 6.0 \\
+probe\_resnet18\_imagenet & 0.673 & [0.628, 0.718] & 0.660 & [0.659, 0.660] & 0.018 & 0.001 & 7.0 \\
+probe\_resnet50\_lunit\_swav & 0.653 & [0.582, 0.725] & 0.622 & [0.617, 0.628] & 0.029 & 0.003 & 8.0 \\
+probe\_resnet50\_imagenet & 0.636 & [0.538, 0.734] & 0.594 & [0.593, 0.595] & 0.039 & 0.002 & 9.0 \\
+\bottomrule
+\end{tabular}

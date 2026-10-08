@@ -1,0 +1,148 @@
+%% Supplementary: cohort and arm details moved from Section 5 of the main text.
+\section{Additional details of the cohorts and arms}
+\label{sup:setup}
+
+\subsection{Cohorts}
+\label{sup:cohorts}
+
+\paragraph{Camelyon17-WILDS} The cohort consists of $96\times96$~px
+lymph-node patches labeled tumor or normal from five hospitals
+\citep{koh2021wilds,bandi2019camelyon17}. In fold $t$, the test split is a
+class-balanced sample of 25,000 patches of hospital $t$, the OOD-validation
+split 12,000 patches of hospital $(t-1)\bmod5$, and the training split 30,000
+class-balanced patches of the other three hospitals. ID validation (12,000
+patches) holds out $\max(1,\lfloor n_c/5\rfloor)$ of the $n_c$ patients of
+every training hospital $c$. The patients are redrawn with a seeded generator
+until the held-out set has at least 1,000 patches of each class and at most
+40\% of the hospital's tumor patches, because patients contribute between 5
+and 56,666 tumor patches. The 64~px cache is the central crop of the native
+patch.
+
+\paragraph{Canine cutaneous squamous cell carcinoma} Each of 44 slides was
+digitized with five scanners \citep{wilm2023canine}: cs2 (Aperio ScanScope
+CS2), gt450 (Aperio GT450), p1000 (3DHistech Pannoramic~1000), nz20 (Hamamatsu
+NanoZoomer 2.0-HT) and nz210 (NanoZoomer S210). A domain is a scanner. The
+slides are randomly split into five groups. Fold $t$ tests scanner $t$ on slide
+group $t$, validates on scanner $(t-1)\bmod5$ with slide group $(t-1)\bmod5$,
+and trains on the remaining three scanners and slide groups. A test domain is
+therefore a new scanner and a set of slides that is absent from training under
+every scanner. Four training slides (15\%) form the ID-validation split. Per
+image, about 420 candidate centers are drawn, half in carcinoma polygons and
+half in non-tumor tissue polygons, allocated in proportion to polygon area. Negative centers that fall inside any tumor polygon
+are dropped. A patch is kept if it lies inside the image at both sizes and its
+64~px crop passes an intensity filter (mean $\le225$, SD $\ge10$), and
+duplicate centers are removed. Magnification is normalized to cs2: the factor
+of each scanner is the median over slides of the square root of its
+annotation-area ratio to cs2. Crops of 64/65/71/73/62~px (cs2, p1000, nz20,
+nz210, gt450) are resized bilinearly to 64~px, and crops of
+96/98/107/110/92~px to 96~px. Factors recomputed without each fold's test and
+validation slides give the same crop sizes.
+
+\paragraph{MIDOG 2021} The training set of the MIDOG~2021 challenge
+\citep{aubreville2023midog} contains 150 annotated human breast cancer images
+from one laboratory, 50 from each of three scanners (Hamamatsu NanoZoomer XR,
+NanoZoomer S360 and Aperio ScanScope CS2). A domain is a scanner ($K=3$), and
+there is no OOD-validation domain. Patches are centered on the annotated
+bounding boxes of mitotic figures and non-mitotic look-alikes. ID validation
+holds out 15\% of the images of every training scanner (eight per scanner),
+fixed per scanner. The TIFF resolutions are 0.2263--0.2274 (XR), 0.2298 (S360)
+and 0.2533 (CS2)~\textmu m/px, a difference of about 11\%. The primary cache
+therefore normalizes every image to 0.25~\textmu m/px: it crops
+$\mathrm{round}(P\cdot0.25/\mathrm{mpp})$~px (63--71 and 95--106~px) and
+resizes bilinearly to $P\in\{64,96\}$. The un-normalized cache keeps the
+magnification difference as part of the shift, as in the challenge. It is run
+at the compact tier as a sensitivity analysis.
+
+\paragraph{MIDOG++} MIDOG++ \citep{aubreville2023midogpp} provides 503
+annotated 2~mm$^2$ regions of interest from seven tumor types in two species
+(Table~\ref{tab:midogpp}). Its 150 breast cancer images have pixel data
+identical to the MIDOG~2021 images. A domain is a tumor type ($K=7$), and
+laboratory, scanner and species vary with it. Task, patch centering, scale
+normalization and ID validation follow MIDOG~2021. For the 3DHistech images,
+whose $x$ and $y$ resolutions differ by 0.4\%, the geometric mean is used.
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{MIDOG++ domains \citep[scanners and laboratories from Table~1
+of][]{aubreville2023midogpp}. Counts are the annotated mitotic figures and
+non-mitotic look-alikes used in this study; resolution is from the TIFF tags.
+Fold $t$ tests domain $t$ and validates on domain $(t-1)\bmod 7$.}
+\label{tab:midogpp}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}llrrr>{\raggedright\arraybackslash}p{2.75cm}>{\raggedright\arraybackslash}p{2.2cm}l@{}}
+\toprule
+Tumor type & Species & Images & Mitotic & Look-alike & Scanner & Laboratory & \textmu m/px \\
+\midrule
+Mast cell tumor & canine & 50 & 2,327 & 1,366 & Aperio ScanScope CS2 & FU Berlin & 0.2533 \\
+Lung cancer & canine & 44 & 855 & 951 & 3DHistech Pannoramic Scan II & VMU Vienna & 0.2487 \\
+Lymphosarcoma & canine & 55 & 3,959 & 4,257 & 3DHistech Pannoramic Scan II & VMU Vienna & 0.2487 \\
+Soft tissue sarcoma & canine & 100 & 1,286 & 2,375 & 3DHistech Pannoramic Scan II & AMC New York, VMU Vienna & 0.2487 \\
+Breast cancer & human & 150 & 1,721 & 2,714 & Hamamatsu XR, S360; Aperio CS2 & UMC Utrecht & 0.2263--0.2533 \\
+Melanoma & human & 49 & 1,150 & 925 & Hamamatsu XR & UMC Utrecht & 0.2263--0.2274 \\
+Neuroendocrine tumor & human & 55 & 639 & 1,761 & Hamamatsu XR & UMC Utrecht & 0.2263--0.2274 \\
+\midrule
+Total & & 503 & 11,937 & 14,349 & & & \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Mirror padding} MIDOG objects closer to the image border than
+half a crop are cut from a reflect-padded copy of the image. The object
+therefore stays centered, and its 64 and 96~px patches are concentric. At
+96~px this affects 111 of 4,435 MIDOG~2021 patches and 617 of 26,286 MIDOG++
+patches, at similar rates in both classes (MIDOG++: 2.43\% of positives,
+2.28\% of negatives). The padding of each row is stored for a sensitivity
+analysis that excludes these patches.
+
+\paragraph{Unlabeled pools} The pool used for self-supervised pre-training
+comes only from the training domains and excludes ID-validation groups, the
+validation domain and the test domain. The arms that use it therefore remain
+domain generalization methods and do not adapt to the test domain. On
+Camelyon17 the pool consists of 40,000 patches of non-ID-validation training
+patients that are not in the training split. On the other cohorts it consists
+of random tissue crops (mean $<220$, SD $>12$) from non-ID-validation training
+images. The crops are drawn with image-specific seeds, at most 800 per canine
+image and 300 per MIDOG image, and subsampled to 40,000. MIDOG~2021 yields
+only 25,200.
+
+
+\subsection{Self-supervision controls and stain normalization}
+\label{sup:arms}
+
+\paragraph{Controls for self-supervision} The augmentation-only control
+applies SimCLR's view augmentation to labeled batches without the contrastive
+loss. It separates the effect of the augmentations from that of pre-training.
+As in the SimCLR views, crop and flip parameters are drawn per batch and color
+factors per image. The compute-matched control gives ERM as many images through
+the encoder as SimCLR receives in pre-training and fine-tuning together.
+Pre-training runs 6 epochs of $\lfloor|U|/256\rfloor$ steps on two views of 256
+images, so $I_{\text{SSL}}=479{,}232$ for $|U|=40{,}000$ and 301,056 for
+MIDOG~2021. SimCLR is pre-trained separately for every fold and seed, with SGD
+(momentum 0.9, weight decay $10^{-4}$), a cosine schedule and projection heads
+of 256--256--128 (C) or 2048--2048--128 (S). It is then fine-tuned with the ERM
+recipe.
+
+\paragraph{Stain normalization} As in common practice, Macenko's stain matrix
+\citep{macenko2009} is estimated once per slide. A group is a slide imaged on
+one scanner: a Camelyon17 slide, a MIDOG image, a canine slide on one of its
+three scanners, or a PatchCamelyon whole-slide image. For each group, up to 256
+tiles are drawn in a content-hashed order that does not depend on row order.
+Their tissue pixels (optical density $\ge0.15$ in every channel; at most
+200,000, subsampled with a fixed seed) are pooled. Macenko's estimator is then
+applied once: the plane of the two leading eigenvectors, then the 1st and 99th
+angular percentiles. The two directions are labeled hematoxylin and eosin by
+matching them to the reference. Concentrations are the least-squares solution
+clamped at zero, because without the clamp eosin-rich pixels received large
+negative hematoxylin values on pale tiles. The group's maximal concentrations
+are the per-stain 99th percentiles over its pooled pixels. Every tile is
+rescaled to the reference maxima and reconstructed with the reference matrix. A
+group with too little tissue keeps the reference. The reference is fitted per
+fold with the same estimator on every training group: its stain matrix is the
+elementwise median of the aligned group matrices, and its maxima are the median
+group maxima. No labels are used. The method is transductive, however: each
+test slide is normalized from its own tiles, which are the benchmark's patches
+from annotated regions rather than a label-independent sample of the slide.
+Section~\ref{app:macenko} reports how much the estimate depends on that tile
+set, and a per-tile variant that estimates the stain matrix on every tile
+separately. Our H\&E jitter perturbs RGB color; it is not an augmentation in
+HED space.
+

@@ -1,0 +1,67 @@
+%% Supplementary material for the Medical Image Analysis submission (CAS single column).
+%% Build: see Makefile (`make supp`). Cross-references to the main text use xr (prefix M-).
+\PassOptionsToPackage{hyperfootnotes=false}{hyperref}
+\documentclass[a4paper,fleqn]{cas-sc}
+\usepackage[authoryear]{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{xr-hyper}
+\externaldocument[M-]{main}
+\graphicspath{{figs/}}
+\renewcommand{\sfdefault}{lmss}
+\newcommand{\papertitle}{Train once, deploy across hospitals? A
+  domain-complete evaluation and an evidence-graded roadmap for cross-site
+  generalization in computational pathology}
+\newcommand{\doilink}[1]{\href{https://doi.org/#1}{doi:#1}}
+\newcommand{\coderepo}{\url{https://github.com/InvenTide-AI/histopath-shift}}
+\newcommand{\TBD}[1]{\textcolor{red}{[TBD: #1]}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+\shorttitle{Supplementary material}
+\shortauthors{A. Chatterjee and A. Mukherjee}
+\title[mode=title]{Supplementary material for: \papertitle}
+\author[1]{Ayan Chatterjee}[orcid=0000-0002-8662-4863]
+\cormark[1]
+\ead{ayanchatterjee@iitbbs.ac.in}
+\affiliation[1]{organization={School of Electrical and Computer Sciences, Indian Institute of Technology Bhubaneswar},
+  city={Bhubaneswar}, state={Odisha}, country={India}}
+\author[2]{Amitava Mukherjee}
+\affiliation[2]{organization={Department of Computer Science, Birla Institute of Technology and Science, Pilani -- Dubai Campus},
+  city={Dubai}, country={United Arab Emirates}}
+\cortext[1]{Corresponding author}
+\maketitle
+
+% Supplementary numbering: sections, figures, tables and equations carry the prefix S.
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+
+This document supplements the main article. Sections, figures, tables and
+equations numbered with the prefix S are in this document; numbers without the
+prefix refer to the main article.
+
+\input{supp/s_sat}
+\clearpage
+\input{sections/app_results}
+\clearpage
+\input{sections/app_tuning}
+\clearpage
+\input{sections/app_macenko}
+\clearpage
+\input{sections/app_domainbed}
+\clearpage
+\input{supp/s_protocol}
+\clearpage
+\input{supp/s_setup}
+
+\bibliographystyle{cas-model2-names}
+\bibliography{main}
+\end{document}

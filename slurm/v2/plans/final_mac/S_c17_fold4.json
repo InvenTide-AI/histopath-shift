@@ -1,0 +1,116 @@
+{
+ "tier": "S",
+ "cohort": "c17",
+ "fold": 4,
+ "phase": "final",
+ "jobs": [
+  {
+   "arm": "macenko",
+   "seed": 0,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko",
+   "seed": 1,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko",
+   "seed": 2,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 0,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 1,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "macenko_tile",
+   "seed": 2,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 0,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 1,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  },
+  {
+   "arm": "tia_style",
+   "seed": 2,
+   "hp": {
+    "lr": 0.03
+   },
+   "tta": [],
+   "pcam": true,
+   "phase": "final",
+   "hpkey": "selected",
+   "hp_source": "select_hparams:per_fold"
+  }
+ ]
+}

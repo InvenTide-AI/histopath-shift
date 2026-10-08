@@ -1,0 +1,28 @@
+{
+ "source_url": "https://arxiv.org/e-print/2007.01434",
+ "arxiv_versions_available": [
+  "v1"
+ ],
+ "note_versions": "e-print requests for v2..v5 return \"No document\"; only v1 (2020-07-06) source exists on arXiv",
+ "eprint_sha256": "c76db5455277454d1309e4fcb4fbd90bf56a70eaafce6ca07eb394e69e93081d",
+ "tex_file": "results/v2/external/src_2007.01434/extracted/paper.tex",
+ "tex_sha256": "7451178f9e3e661bede8f8e9d14804fc292ec1e2c1eb8ec6b6fc7b2e991c17bf",
+ "tables": "Appendix \"Domain generalization accuracies per algorithm, dataset, and domain\" (paper.tex lines 935-1381): 7 datasets x 3 selection rules x 9 algorithms; 837 \"mean $\\pm$ SE\" cells, all parsed (837 $\\pm$ in the appendix)",
+ "n_trials": 3,
+ "n_trials_source": "paper.tex lines 522-524: \"We therefore repeat our entire study three times making every random choice anew: hyperparameters, weight initializations, and dataset splits. Every number we report is a mean over these repetitions, together with their estimated standard error.\"",
+ "se_convention": "DomainBed initial public release (github.com/facebookresearch/DomainBed commit 8ff97a7, 2020-07-20) domainbed/scripts/collect_results.py format_mean: err = 100 * np.std(list(data) / np.sqrt(len(data))) -> SE = SD_ddof0/sqrt(n); hence sample SD (ddof=1) = SE*n/sqrt(n-1) [columns code_*]; spec convention sd = SE*sqrt(n) (= SD_ddof0) in columns alt_*",
+ "format_mean_source": "def format_mean(data, latex):\n    \"\"\"Given a list of datapoints, return a string describing their mean and\n    standard error\"\"\"\n    if len(data) == 0:\n        return 'X'\n    mean = 100 * np.mean(list(data))\n    err = 100 * np.std(list(data) / np.sqrt(len(data)))\n    if latex:\n        return \"{:.1f} $\\\\pm$ {:.1f}\".format(mean, err)",
+ "caveats": [
+  "values rounded to 0.1 pp in the source; SE reported as 0.0 means SE < 0.05 (n_se_zero column)",
+  "Colored MNIST training-domain table names the adversarial algorithms ADA/CondADA, the other two tables DANN/C-DANN (verbatim from source)",
+  "run variance includes hyperparameter-search, initialisation and data-split randomness (whole study repeated)",
+  "environment = held-out test environment of a leave-one-environment-out fold (as in the v2 histopathology design)"
+ ],
+ "priors_bayes": "half-Cauchy(10 pp) and half-normal(25 pp) on both SDs",
+ "analysis": "src/v2/analyze_v2.py domainbed",
+ "se_convention_inference": "Inferred, not stated in the paper: the arXiv source (v1, submitted 2020-07-02; 'v1 (2020-07-06)' above is the listing date) gives no formula for the reported SE. The formula is taken from the first public code release, DomainBed commit 8ff97a7 dated 2020-07-20T17:38:36Z (GitHub API), 18 days after the arXiv submission; we assume the paper tables were produced with the same collect_results.format_mean. The alt_* columns (sd = SE*sqrt(n)) bracket the alternative.",
+ "reading_notes": [
+  "training-domain selection: 63 groups (7 datasets x 9 algorithms), 54 excluding Colored MNIST; 8 groups have code_icc_lo < 0.5 in both counts (none is Colored MNIST)",
+  "leave-one-domain-out selection, Rotated MNIST: only DANN is unstable across trials (code_icc 0.000, code_sigma_run 14.96); C-DANN has code_icc 0.988 [0.953, 0.998] - one environment scores 73.7 +- 0.0, which inflates sigma_env (9.8), but its trials agree"
+ ]
+}

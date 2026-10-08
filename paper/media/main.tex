@@ -1,0 +1,218 @@
+%% Medical Image Analysis (Elsevier) submission -- CAS single-column template (cas-sc, v2.4).
+%% Build: see Makefile (pdflatex -> bibtex -> pdflatex x2).
+%% Placeholders that the authors must fill are marked TODO-AUTHORS (grep for it).
+% hyperfootnotes=false: avoids hyperref "Ignoring empty anchor" warnings from the
+% unmarked CAS front-matter footnotes (e-mail, corresponding author).
+\PassOptionsToPackage{hyperfootnotes=false}{hyperref}
+\documentclass[a4paper,fleqn]{cas-sc}
+% Review option (double spacing after \maketitle), if the editors ask for it:
+%\documentclass[a4paper,fleqn,review]{cas-sc}
+% If the front matter runs over one page, add the longmktitle option.
+
+% MedIA (Harvard): 1 author (Allan, 2000); 2 authors (Allan and Jones, 1999);
+% >= 3 authors Kramer et al. (2010). The CAS sample's longnamesfirst option
+% prints the FULL author list at the first citation (e.g. 23 names for WILDS),
+% which contradicts that rule, so it is off here:
+%\usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage[authoryear]{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{xr-hyper}
+\externaldocument[S-]{supplementary}
+\graphicspath{{figs/}}
+% cas-sc leaves sans-serif on T1 cmss, which is only available as bitmap (Type 3)
+% fonts in TinyTeX; Latin Modern Sans is the same design in Type 1.
+\renewcommand{\sfdefault}{lmss}
+
+%%% ------------------------------------------------------------------
+%%% Title and short title in macros, so they are changed in one place.
+%%% ------------------------------------------------------------------
+\newcommand{\papertitle}{Train once, deploy across hospitals? A
+  domain-complete evaluation and an evidence-graded roadmap for cross-site
+  generalization in computational pathology}
+\newcommand{\papershorttitle}{A roadmap for cross-site generalization in
+  computational pathology}
+\newcommand{\doilink}[1]{\href{https://doi.org/#1}{doi:#1}}
+\newcommand{\coderepo}{\url{https://github.com/InvenTide-AI/histopath-shift}}
+
+%%% Visible marker for author-supplied content (remove before submission).
+\newcommand{\todoauthors}[1]{\textcolor{red}{[TODO-AUTHORS: #1]}}
+%%% Visible marker for numbers known only after the v2 runs (remove before submission).
+\newcommand{\TBD}[1]{\textcolor{red}{[TBD: #1]}}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+\shorttitle{\papershorttitle}
+\shortauthors{A. Chatterjee and A. Mukherjee}
+
+\title[mode = title]{\papertitle}
+
+%%% ---------------------------- Authors -----------------------------
+\author[1]{Ayan Chatterjee}[orcid=0000-0002-8662-4863]
+\cormark[1]
+\ead{ayanchatterjee@iitbbs.ac.in}
+% CRediT roles (TODO-AUTHORS: confirm; the 14 CRediT roles are listed in submission/declarations_checklist.md)
+\credit{\protect\todoauthors{confirm these roles} Conceptualization, Methodology, Software,
+  Formal analysis, Investigation, Data curation, Visualization,
+  Writing -- original draft}
+
+\affiliation[1]{organization={School of Electrical and Computer Sciences, Indian Institute of Technology Bhubaneswar},
+  city={Bhubaneswar},
+  state={Odisha},
+  country={India}}
+
+\author[2]{Amitava Mukherjee}% TODO-AUTHORS: add [orcid=XXXX-XXXX-XXXX-XXXX] if wanted
+% Only the corresponding author's e-mail is printed (author request, 2026-10-06):
+% \ead{amitava@dubai.bits-pilani.ac.in}
+\credit{\protect\todoauthors{confirm these roles} Conceptualization, Methodology, Supervision,
+  Writing -- review \& editing}
+
+\affiliation[2]{organization={Department of Computer Science, Birla Institute of Technology and Science, Pilani -- Dubai Campus},
+  city={Dubai},
+  country={United Arab Emirates}}
+
+\cortext[1]{Corresponding author}
+
+%%% ---------------------------- Abstract ----------------------------
+\begin{abstract}
+% Every number follows Section 5 and results/v2/analysis/paper_numbers.json, results/v2/site_acceptance/.
+Practitioners want pathology models that work at new hospitals and scanners
+without retraining, yet the methods proposed for this are usually compared on
+one held-out site with one training run each. We test the train-once strategy
+directly and propose a statistical test for accepting each new site. Every
+domain of four public cohorts that cross the task (tumor versus mitotic figure)
+with the type of shift (scanners versus institutions) is held out in turn, and
+up to 21 methods, including pathology foundation models, are run with several
+seeds at two model scales (4,778 runs). Without retraining, the best
+standard-scale method of each cohort reached a worst-site area under the ROC
+curve (AUROC) of 0.88--0.99, against 0.53--0.90 for empirical risk minimization
+(ERM). No method was best everywhere, none beat ERM after correction for
+multiple comparisons, and the held-out site explained most of the variance of
+a run. Fine-tuned foundation models with color augmentation were the most
+reliable choice on average. Because development results cannot guarantee
+performance at a new site, we propose an empirical-Bayes site acceptance test.
+It combines the spread of performance across development sites with a small
+labeled sample from the new site and accepts the site if its AUROC is likely
+to reach a target. Validated on every held-out site at standard scale, it kept false
+acceptance at or below 2.1\% and needed about half as many labels as local
+labels alone,
+whereas the development results alone accepted 8.6\% of the sites below a
+target AUROC of 0.80. We condense the
+findings into a six-step, evidence-graded roadmap for building, adapting,
+validating and accepting models across sites.
+\end{abstract}
+
+%%% Graphical abstract (mandatory for MedIA as a SEPARATE file, >= 531 x 1328 px).
+%%% Including it here is optional; it prints as its own page before the title.
+%\begin{graphicalabstract}
+%\includegraphics[width=\textwidth]{graphical_abstract}
+%\end{graphicalabstract}
+
+%%% Highlights (mandatory; 3-5 bullets, each <= 85 characters incl. spaces).
+%%% Also supplied as a separate editable file: submission/highlights.txt.
+\begin{highlights}
+\item Models trained once can work at unseen sites, but no recipe wins everywhere
+\item Judge a pathology model by its worst hospital or scanner, not by its average
+\item Default recipe: fine-tune a pathology foundation model with color jitter
+\item A site acceptance test checks each new hospital with a few local labels
+\item At standard scale it needs about half the labels, with $\le$2.1\% false acceptance
+\end{highlights}
+
+%%% Keywords (at most 6; American spelling; no multi-concept "and"/"of" terms).
+\begin{keywords}
+Computational pathology \sep Domain generalization \sep Multi-site validation \sep
+Foundation models \sep Test-time adaptation \sep Evaluation methodology
+\end{keywords}
+
+\maketitle
+
+%%% ---------------------------- Main text ---------------------------
+\input{sections/intro}
+\input{sections/related}
+\input{sections/protocol}
+\input{sections/setup}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+%%% ---------------------------- Appendices --------------------------
+%%% (lettered; equations, figures and tables numbered A.1, B.1, ...)
+%%% Supplementary material: separate file supplementary.tex (cross-references via xr, prefix S-).
+
+%%% ---------------------------- Back matter (MedIA order) -----------
+%%% CRediT is printed from the \credit{} entries above.
+\printcredits
+
+\section*{Declaration of competing interest}
+% MedIA also requires the Elsevier declaration-tool .docx at the Attach Files
+% step (see submission/declarations_checklist.md); its text must match this one.
+The authors declare that they have no known competing financial interests or
+personal relationships that could have appeared to influence the work reported
+in this paper.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the
+public, commercial, or not-for-profit sectors.
+
+\section*{Data and code availability}
+All data used in this study are public. Camelyon17-WILDS
+\citep{koh2021wilds,bandi2019camelyon17} and PatchCamelyon
+\citep{veeling2018pcam} are released under CC0~1.0. NCT-CRC-HE-100K and
+CRC-VAL-HE-7K \citetext{\citealp{kather2018nct,kather2019predicting};
+Zenodo, \doilink{10.5281/zenodo.1214456}} are released under CC~BY~4.0. The MIDOG~2021 training
+set \citetext{\citealp{aubreville2023midog}; Zenodo,
+\doilink{10.5281/zenodo.4643381}} and the multi-scanner canine cutaneous
+squamous cell carcinoma cohort \citetext{\citealp{wilm2023canine}; Zenodo,
+\doilink{10.5281/zenodo.7418555}} are released under CC~BY~4.0. MIDOG++ \citetext{\citealp{aubreville2023midogpp}; figshare,
+\doilink{10.6084/m9.figshare.c.6615571.v1}} is publicly available; the collection record is licensed
+CC~BY~4.0 and its constituent image and label files CC0~1.0. The pretrained
+pathology weights of \citet{kang2023benchmarking} (ResNet-50 Barlow Twins,
+SwAV and MoCo~v2; ViT-S/16 DINO) were obtained from
+\url{https://github.com/lunit-io/benchmark-ssl-pathology} and are used under
+the Lunit Inc.\ Public License, which permits non-commercial research use only.
+The ImageNet-1k weights of the ResNet, ConvNeXt and ViT backbones are the
+torchvision defaults, and the SWAG ViT-B/16 weights \citep{singh2022swag},
+also obtained through torchvision, are released under CC~BY-NC~4.0
+(non-commercial use).
+Code, the fold-materialization scripts for all cohorts, the per-run records
+of every job, the variance-decomposition, interval and power code, and the
+script that regenerates every table and figure from those records are
+available at \coderepo.
+The release contains the records of all 4,778 runs and the test-set
+predictions of every final run, from which the site acceptance test is
+validated.
+\todoauthors{archive the release on Zenodo and cite the code as software with
+its DOI.}
+
+\section*{Acknowledgements}
+\todoauthors{acknowledgements (computing resources, colleagues), or delete
+this section.}
+
+%%% Elsevier: placed at the end of the core manuscript, immediately above the
+%%% references (hence after the Acknowledgements).
+\section*{Declaration of generative AI and AI-assisted technologies in the writing process}
+% TODO-AUTHORS: confirm the tool and the reason (Elsevier wording, do not paraphrase).
+During the preparation of this work the authors used Claude (Anthropic) in
+order to assist with code review, analysis scripting, drafting of the
+manuscript text and language editing.
+After using this tool/service, the authors reviewed and edited the content as
+needed and take full responsibility for the content of the publication.
+\todoauthors{confirm}
+
+%%% ---------------------------- References --------------------------
+\bibliographystyle{cas-model2-names}
+\bibliography{main}
+
+%%% Author vitae (<= 100 words each) go in a separate editable file for MedIA;
+%%% the CAS \bio environment is available if the editors want them inline.
+%\bio{}
+%\endbio
+
+\end{document}

@@ -1,0 +1,12 @@
+{
+ "id": "1381bdd759f9",
+ "created": "2026-10-05 14:15",
+ "source": "$HISTOPATH_DATA/v2",
+ "snapshot": "$HISTOPATH_DATA/v2/snap_final2_20261005",
+ "counts": {
+  "c17": 390,
+  "canine": 390,
+  "midog21sn": 234,
+  "midogpp": 546
+ }
+}

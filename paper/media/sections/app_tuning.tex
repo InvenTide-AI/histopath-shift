@@ -1,0 +1,311 @@
+%% Appendix: hyperparameter tuning and diverged runs (MedIA revision, v2 pipeline).
+%% Every number is computed from results/v2/tuning_results.csv (one row per seed-0
+%% tuning record in $V2/runs_tune, 1,378 rows) and results/v2/selected_hparams.json,
+%% both written by src/v2/select_hparams.py; divergence steps from the
+%% `diverged_at_step` field of the records. Test AUROC of tuning runs is not reported.
+\section{Hyperparameter tuning and diverged runs}
+\label{app:tuning}
+
+\paragraph{Protocol} Hyperparameters are tuned with seed~0 on the grids of
+Table~\ref{M-tab:arms}, separately for every fold
+(Section~\ref{M-sec:protocol-lodo}). Each fold keeps the configuration with the
+highest ID-validation AUROC at the ID-selected checkpoint of its own tuning
+run. Diverged runs are excluded unless every configuration of the fold
+diverged. In that case the highest ID-validation AUROC among the diverged runs
+is used, and ties are broken by a fixed ordering of the configurations. Test
+data are never used. The tuning records are kept apart from the final runs.
+The compact tier has 26 configurations, which gives 520 tuning runs on the 20
+folds of the four primary cohorts and 78 on the three folds of the
+un-normalized MIDOG~2021 sensitivity cohort. The standard tier has 160
+learning-rate runs (five ResNet-50 and three ViT rates on 20 folds), 100
+Barlow Twins learning-rate runs (five rates on 20 folds; Section~\ref{app:tuning-bt})
+and 520 method-grid runs. All 1,378 tuning records are present, and every
+arm has a selection in every fold. The following arms have no tuning grid: compact-tier ERM (learning rate 0.02),
+augmentation-only, compute-matched ERM, SimCLR, the Macenko family (per-slide
+Macenko, per-tile Macenko and TIA-style), BN-adapt, TENT and the frozen probes.
+Their values are fixed as in Table~\ref{M-tab:arms}, except that every
+standard-tier ResNet-50 arm takes its fold's tuned learning rate
+(Section~\ref{app:tuning-lr}). Further arms inherit tuned values: SimCLR+SAM inherits $\rho$ from SAM, Barlow Twins with H\&E jitter the
+fold's Barlow Twins ERM learning rate, and the foundation-model H\&E-jitter arms $s$
+from standard-tier H\&E jitter.
+
+\paragraph{Grid edges} A selected value is \emph{at the edge} when it is the
+smallest or largest value of its grid axis. We flag an axis value when it is an
+edge value and is selected on more than half (at least 11) of the 20 primary
+folds, since the optimum may then lie outside the grid. On two-value axes every
+value is an edge, so a flag there only shows that one value dominates.
+
+\subsection{Standard-tier learning rate}
+\label{app:tuning-lr}
+
+At the standard tier the base learning rate is selected first, on ImageNet ERM,
+and is shared by every ResNet-50 arm of the fold. The method grids are then run
+at that rate. Every stage-2 tuning run used its fold's selected rate. The
+ResNet-50 grid was extended twice because the optimum sat on its upper edge
+(Tables~\ref{tab:tuning-lr} and~\ref{tab:tuning-lr-folds}). On the initial grid
+$\{10^{-3},3\times10^{-3},10^{-2}\}$, $10^{-2}$ was selected on 19 of 20 folds.
+After $3\times10^{-2}$ was added, it was selected on 16 of 20 folds. Its
+ID-validation AUROC exceeded that of $10^{-2}$ on the same 16 folds, by a
+median of $+0.0035$ (range $-0.018$ to $+0.046$). The per-cohort medians ranged
+from $-0.0019$ (MIDOG~2021) to $+0.0084$ (MIDOG++). Since $3\times10^{-2}$ was
+again an edge on most folds, $10^{-1}$ was added. The ID-validation AUROC of
+$10^{-1}$ minus that of $3\times10^{-2}$ had a median of $-0.0023$ (range
+$-0.022$ to $+0.013$) and was positive on only 5 of 20 folds. The final picks are
+$3\times10^{-2}$ on 12 folds, $10^{-1}$ on 5 and $10^{-2}$ on 3. The best
+ID-validation AUROC of a fold rose by a median of 0.0035 with the first
+extension and did not change in the median with the second (15 of 20 folds
+unchanged). The five folds that select $10^{-1}$ still sit on the upper edge.
+Their gain over $3\times10^{-2}$ is 0.0012--0.0133 (median 0.0052), and the
+grid was not extended further. The ViT learning rate was selected from
+$\{10^{-5},3\times10^{-5},10^{-4}\}$ without extension: $3\times10^{-5}$ on 15
+folds, $10^{-5}$ on 3 and $10^{-4}$ on 2. None of the 160 learning-rate runs
+diverged. The per-fold picks under the shorter grids in
+Table~\ref{tab:tuning-lr-folds} are recomputed from the final records, by
+restricting each fold to the rates of the shorter grid.
+
+\paragraph{Barlow Twins learning rate}
+\label{app:tuning-bt}
+The Barlow Twins fine-tunes first inherited the fold's ImageNet ResNet-50 rate.
+On 17 of 20 folds the ImageNet rate is $3\times10^{-2}$ or $10^{-1}$, and with it
+training failed on several folds: the ID-validation AUROC was much lower than
+at smaller rates, and single runs reached an off-site AUROC of only 0.49 on
+MIDOG++. We therefore gave them their own per-fold rate,
+selected on Barlow Twins ERM (seed~0) from
+$\{3\times10^{-4},10^{-3},3\times10^{-3},10^{-2},3\times10^{-2}\}$ and shared
+with Barlow Twins plus H\&E jitter. None of the 100 runs diverged. The picks
+are $10^{-2}$ on 16 folds, $3\times10^{-2}$ on 3 (Camelyon17 folds 0--2) and
+$3\times10^{-3}$ on 1 (canine fold 4). The optimum is interior on every fold. The
+records with the inherited rate are kept apart from the final runs.
+Table~\ref{tab:tuning-bt} compares them with the final records. On the 6 folds
+where both rates agree, the records are identical. The tuned rate raises the
+mean off-site AUROC most on MIDOG++, from 0.715 to 0.891 for ERM and from 0.687
+to 0.896 with H\&E jitter. A pretrained backbone that inherits the learning
+rate of a different initialization can therefore look much worse than it is.
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{Barlow Twins fine-tunes with the inherited ImageNet ResNet-50
+learning rate and with their own tuned rate: mean ID-validation AUROC and
+mean off-site (test) AUROC at the ID-selected checkpoint, over folds and
+seeds~0--2.}
+\label{tab:tuning-bt}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}llcccc@{}}
+\toprule
+ & & \multicolumn{2}{c}{ID-validation} & \multicolumn{2}{c}{Off-site} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Arm & Cohort & inherited & tuned & inherited & tuned \\
+\midrule
+BT ERM & Camelyon17 & 0.968 & 0.983 & 0.937 & 0.954 \\
+ & Canine cSCC & 0.825 & 0.925 & 0.776 & 0.885 \\
+ & MIDOG 2021 & 0.865 & 0.894 & 0.829 & 0.885 \\
+ & MIDOG++ & 0.775 & 0.924 & 0.715 & 0.891 \\
+\addlinespace
+BT + H\&E jitter & Camelyon17 & 0.892 & 0.981 & 0.887 & 0.957 \\
+ & Canine cSCC & 0.759 & 0.920 & 0.782 & 0.913 \\
+ & MIDOG 2021 & 0.842 & 0.895 & 0.817 & 0.891 \\
+ & MIDOG++ & 0.766 & 0.927 & 0.687 & 0.896 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{Standard-tier learning-rate selection: number of folds (of 20) that
+select each rate on the initial grid (to $10^{-2}$), after the first extension
+(to $3\times10^{-2}$) and on the final grid (to $10^{-1}$), with the final
+picks per cohort. Div.: diverged runs at that rate (of 20). Seed~0, ID-validation
+AUROC. -- : rate not in the grid.}
+\label{tab:tuning-lr}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}llcccccccc@{}}
+\toprule
+ & & \multicolumn{2}{c}{Shorter grids} & \multicolumn{5}{c}{Final grid} & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-9}
+Backbone & Rate & to $10^{-2}$ & to $3{\times}10^{-2}$ & C17 & Canine & MIDOG21 & MIDOG++ & All & Div. \\
+\midrule
+ResNet-50 (SGD) & $10^{-3}$ & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ & $3{\times}10^{-3}$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ & $10^{-2}$ & 19 & 4 & 0 & 1 & 2 & 0 & 3 & 0 \\
+ & $3{\times}10^{-2}$ & -- & 16 & 4 & 2 & 1 & 5 & 12 & 0 \\
+ & $10^{-1}$ & -- & -- & 1 & 2 & 0 & 2 & 5 & 0 \\
+\addlinespace
+DINO ViT-S/16 (AdamW) & $10^{-5}$ & & & 1 & 0 & 2 & 0 & 3 & 0 \\
+ & $3{\times}10^{-5}$ & & & 3 & 4 & 1 & 7 & 15 & 0 \\
+ & $10^{-4}$ & & & 1 & 1 & 0 & 0 & 2 & 0 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{Per-fold learning-rate picks at the standard tier (fold $t$ tests
+domain $t$). ResNet-50 rates are given as decimals and ViT rates in units of
+$10^{-5}$. The rows for the shorter ResNet-50 grids restrict each fold's
+final tuning records to the rates of that grid.}
+\label{tab:tuning-lr-folds}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}llccccccc@{}}
+\toprule
+Cohort & Selection & Fold 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+\midrule
+Camelyon17 & ResNet-50, grid to $10^{-2}$ & 0.01 & 0.01 & 0.003 & 0.01 & 0.01 & & \\
+ & ResNet-50, grid to $3{\times}10^{-2}$ & 0.03 & 0.03 & 0.03 & 0.01 & 0.03 & & \\
+ & ResNet-50, final & 0.03 & 0.03 & 0.03 & 0.1 & 0.03 & & \\
+ & ViT-S/16 & 1 & 3 & 10 & 3 & 3 & & \\
+\addlinespace
+Canine cSCC & ResNet-50, grid to $10^{-2}$ & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & & \\
+ & ResNet-50, grid to $3{\times}10^{-2}$ & 0.01 & 0.03 & 0.03 & 0.03 & 0.03 & & \\
+ & ResNet-50, final & 0.01 & 0.1 & 0.03 & 0.1 & 0.03 & & \\
+ & ViT-S/16 & 3 & 10 & 3 & 3 & 3 & & \\
+\addlinespace
+MIDOG 2021 & ResNet-50, grid to $10^{-2}$ & 0.01 & 0.01 & 0.01 & & & & \\
+ & ResNet-50, grid to $3{\times}10^{-2}$ & 0.03 & 0.01 & 0.01 & & & & \\
+ & ResNet-50, final & 0.03 & 0.01 & 0.01 & & & & \\
+ & ViT-S/16 & 3 & 1 & 1 & & & & \\
+\addlinespace
+MIDOG++ & ResNet-50, grid to $10^{-2}$ & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 \\
+ & ResNet-50, grid to $3{\times}10^{-2}$ & 0.03 & 0.03 & 0.03 & 0.03 & 0.03 & 0.03 & 0.03 \\
+ & ResNet-50, final & 0.03 & 0.03 & 0.1 & 0.03 & 0.1 & 0.03 & 0.03 \\
+ & ViT-S/16 & 3 & 3 & 3 & 3 & 3 & 3 & 3 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\subsection{Method grids}
+\label{app:tuning-grids}
+
+Tables~\ref{tab:tuning-c} and~\ref{tab:tuning-s} count how often each grid
+value is selected. At the compact tier, the flagged edges are the smallest
+values of IRMv1's $\lambda$ (19 of 20 folds) and SAM's $\rho$ (17), the largest
+Fish step $\epsilon=0.5$ (13), and the dominant values of the two-value axes
+of H\&E jitter, LISA and MixStyle. DeepCORAL and GroupDRO are not flagged. At
+the standard tier, with the stronger backbone, SAM, Fish, DeepCORAL and
+GroupDRO are not flagged. Their largest edge counts are 10 of 20 folds, for
+Fish $\epsilon=0.5$ and DeepCORAL $\lambda=10$. IRMv1 $\lambda=1$ (18) and the
+two-value axes of LISA, MixStyle and H\&E jitter are flagged. On the un-normalized
+MIDOG~2021 cohort, the per-fold selections match those of the primary MIDOG~2021
+cohort on all 3 folds for IRMv1 and H\&E jitter, on 2 of 3 for GroupDRO, SAM,
+Fish, MixStyle and LISA, and on 1 of 3 for DeepCORAL.
+
+\paragraph{Diverged runs} Every diverged tuning run is an IRMv1 run: 29 of the
+598 compact-tier runs and 32 of the 680 standard-tier runs. Divergence was
+detected at a checkpoint, when the training loss or a prediction became
+non-finite (Section~\ref{M-sec:setup-optim}). The IRMv1 penalty weight is 1 for
+the first 300 steps and $\lambda$ afterwards. At the compact tier, $\lambda=100$
+diverged on all 20 primary folds and on the 3 un-normalized MIDOG~2021 folds.
+$\lambda=10$ diverged on 6 of 20 (Camelyon17 4, MIDOG~2021 1, MIDOG++ 1), and
+$\lambda=1$ never diverged. Divergence was detected at step 360, the first
+checkpoint after the switch, in 27 of the 29 runs and at step 480 in the other
+2. Divergence therefore enforces part of the preference for $\lambda=1$, but
+not all of it. On the 14 primary folds where $\lambda=10$ completed,
+$\lambda=1$ still had the higher ID-validation AUROC on 13. At the standard
+tier, $\lambda=100$ diverged on all 20 folds, $\lambda=10$ on 11 and
+$\lambda=1$ on 1. The divergences were detected between steps 240 and 600 (240:
+3 runs; 360: 23; 480: 5; 600: 1). They became more frequent at larger fold
+learning rates: 3 of 9 runs at $10^{-2}$, 20 of 36 at $3\times10^{-2}$ and 9 of
+15 at $10^{-1}$. On the 9 folds where $\lambda=10$ completed, $\lambda=1$ had
+the higher ID-validation AUROC on 7. On MIDOG++ fold~4 (learning rate
+$10^{-1}$), all three IRMv1 configurations diverged at step 240, before the
+penalty weight changes. Their runs are therefore identical, with
+ID-validation AUROC 0.643 at their selected checkpoint (step 120). The fold
+falls back to $\lambda=1$ by the tie-break and is the only fold of either tier
+in which every configuration diverged. No other arm had a diverged tuning run.
+
+\begin{table}[width=\linewidth,pos=p]
+\caption{Compact-tier selections: number of folds that select each grid value
+(seed~0, ID-validation AUROC, learning rate 0.02). C17, Canine, MIDOG21,
+MIDOG++: 5, 5, 3 and 7 folds; All: the 20 primary folds. Div.: diverged
+tuning runs of that value (of 20). MIDOG21u: the un-normalized MIDOG~2021
+sensitivity cohort (3 folds), with its diverged runs (of 3). Edge flag: an
+edge value of a grid axis selected on more than half of the 20 primary folds,
+with its count.}
+\label{tab:tuning-c}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}ll*{8}{c}>{\raggedright\arraybackslash}p{2.6cm}@{}}
+\toprule
+ & & & & & & & & \multicolumn{2}{c}{MIDOG21u} & \\
+\cmidrule(lr){9-10}
+Arm & Value & C17 & Canine & MIDOG21 & MIDOG++ & All & Div. & Sel. & Div. & Edge flag \\
+\midrule
+GroupDRO & $\eta{=}10^{-3}$ & 3 & 2 & 0 & 5 & 10 & 0 & 0 & 0 & none \\
+ & $\eta{=}10^{-2}$ & 1 & 2 & 2 & 2 & 7 & 0 & 1 & 0 &  \\
+ & $\eta{=}10^{-1}$ & 1 & 1 & 1 & 0 & 3 & 0 & 2 & 0 &  \\
+\addlinespace
+IRMv1 & $\lambda{=}1$ & 4 & 5 & 3 & 7 & 19 & 0 & 3 & 0 & $\lambda{=}1$ (19) \\
+ & $\lambda{=}10$ & 1 & 0 & 0 & 0 & 1 & 6 & 0 & 0 &  \\
+ & $\lambda{=}100$ & 0 & 0 & 0 & 0 & 0 & 20 & 0 & 3 &  \\
+\addlinespace
+DeepCORAL & $\lambda{=}0.1$ & 2 & 1 & 1 & 0 & 4 & 0 & 1 & 0 & none \\
+ & $\lambda{=}1$ & 1 & 3 & 2 & 6 & 12 & 0 & 2 & 0 &  \\
+ & $\lambda{=}10$ & 2 & 1 & 0 & 1 & 4 & 0 & 0 & 0 &  \\
+\addlinespace
+SAM & $\rho{=}0.02$ & 3 & 5 & 2 & 7 & 17 & 0 & 3 & 0 & $\rho{=}0.02$ (17) \\
+ & $\rho{=}0.05$ & 2 & 0 & 1 & 0 & 3 & 0 & 0 & 0 &  \\
+ & $\rho{=}0.1$ & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 &  \\
+\addlinespace
+Fish & $\epsilon{=}0.01$ & 2 & 0 & 0 & 0 & 2 & 0 & 0 & 0 & $\epsilon{=}0.5$ (13) \\
+ & $\epsilon{=}0.05$ & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 &  \\
+ & $\epsilon{=}0.1$ & 2 & 1 & 0 & 1 & 4 & 0 & 1 & 0 &  \\
+ & $\epsilon{=}0.5$ & 0 & 4 & 3 & 6 & 13 & 0 & 2 & 0 &  \\
+\addlinespace
+MixStyle & $p{=}0.5$, $\alpha{=}0.1$ & 1 & 0 & 1 & 0 & 2 & 0 & 2 & 0 & $\alpha{=}0.3$ (13) \\
+ & $p{=}0.5$, $\alpha{=}0.3$ & 1 & 0 & 1 & 6 & 8 & 0 & 1 & 0 &  \\
+ & $p{=}1$, $\alpha{=}0.1$ & 2 & 2 & 1 & 0 & 5 & 0 & 0 & 0 &  \\
+ & $p{=}1$, $\alpha{=}0.3$ & 1 & 3 & 0 & 1 & 5 & 0 & 0 & 0 &  \\
+\addlinespace
+LISA & $\alpha{=}0.5$, $p_{\text{sel}}{=}0.5$ & 2 & 2 & 3 & 2 & 9 & 0 & 2 & 0 & $\alpha{=}0.5$ (16); $p_{\text{sel}}{=}0.5$ (11) \\
+ & $\alpha{=}0.5$, $p_{\text{sel}}{=}1$ & 1 & 1 & 0 & 5 & 7 & 0 & 1 & 0 &  \\
+ & $\alpha{=}2$, $p_{\text{sel}}{=}0.5$ & 1 & 1 & 0 & 0 & 2 & 0 & 0 & 0 &  \\
+ & $\alpha{=}2$, $p_{\text{sel}}{=}1$ & 1 & 1 & 0 & 0 & 2 & 0 & 0 & 0 &  \\
+\addlinespace
+H\&E jitter & $s{=}0.2$ & 4 & 5 & 3 & 7 & 19 & 0 & 3 & 0 & $s{=}0.2$ (19) \\
+ & $s{=}0.4$ & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 &  \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[width=\linewidth,pos=p]
+\caption{Standard-tier (ResNet-50) selections at each fold's selected learning
+rate (Table~\ref{tab:tuning-lr-folds}). Columns as in
+Table~\ref{tab:tuning-c}. $^{a}$Includes MIDOG++ fold~4, where all three IRMv1
+configurations diverged and $\lambda=1$ is kept by the tie-break.}
+\label{tab:tuning-s}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}ll*{6}{c}>{\raggedright\arraybackslash}p{3.6cm}@{}}
+\toprule
+Arm & Value & C17 & Canine & MIDOG21 & MIDOG++ & All & Div. & Edge flag \\
+\midrule
+GroupDRO & $\eta{=}10^{-3}$ & 0 & 2 & 1 & 4 & 7 & 0 & none \\
+ & $\eta{=}10^{-2}$ & 3 & 3 & 1 & 3 & 10 & 0 &  \\
+ & $\eta{=}10^{-1}$ & 2 & 0 & 1 & 0 & 3 & 0 &  \\
+\addlinespace
+IRMv1 & $\lambda{=}1$ & 5 & 5 & 1 & 7$^{a}$ & 18$^{a}$ & 1 & $\lambda{=}1$ (18) \\
+ & $\lambda{=}10$ & 0 & 0 & 2 & 0 & 2 & 11 &  \\
+ & $\lambda{=}100$ & 0 & 0 & 0 & 0 & 0 & 20 &  \\
+\addlinespace
+DeepCORAL & $\lambda{=}0.1$ & 1 & 2 & 1 & 2 & 6 & 0 & none \\
+ & $\lambda{=}1$ & 2 & 1 & 0 & 1 & 4 & 0 &  \\
+ & $\lambda{=}10$ & 2 & 2 & 2 & 4 & 10 & 0 &  \\
+\addlinespace
+SAM & $\rho{=}0.02$ & 1 & 2 & 1 & 3 & 7 & 0 & none \\
+ & $\rho{=}0.05$ & 2 & 2 & 1 & 2 & 7 & 0 &  \\
+ & $\rho{=}0.1$ & 2 & 1 & 1 & 2 & 6 & 0 &  \\
+\addlinespace
+Fish & $\epsilon{=}0.01$ & 1 & 1 & 0 & 1 & 3 & 0 & none \\
+ & $\epsilon{=}0.05$ & 0 & 1 & 0 & 1 & 2 & 0 &  \\
+ & $\epsilon{=}0.1$ & 1 & 2 & 1 & 1 & 5 & 0 &  \\
+ & $\epsilon{=}0.5$ & 3 & 1 & 2 & 4 & 10 & 0 &  \\
+\addlinespace
+MixStyle & $p{=}0.5$, $\alpha{=}0.1$ & 2 & 3 & 0 & 5 & 10 & 0 & $p{=}0.5$ (17); $\alpha{=}0.1$ (12) \\
+ & $p{=}0.5$, $\alpha{=}0.3$ & 2 & 2 & 1 & 2 & 7 & 0 &  \\
+ & $p{=}1$, $\alpha{=}0.1$ & 1 & 0 & 1 & 0 & 2 & 0 &  \\
+ & $p{=}1$, $\alpha{=}0.3$ & 0 & 0 & 1 & 0 & 1 & 0 &  \\
+\addlinespace
+LISA & $\alpha{=}0.5$, $p_{\text{sel}}{=}0.5$ & 1 & 0 & 1 & 2 & 4 & 0 & $\alpha{=}0.5$ (19); $p_{\text{sel}}{=}1$ (16) \\
+ & $\alpha{=}0.5$, $p_{\text{sel}}{=}1$ & 3 & 5 & 2 & 5 & 15 & 0 &  \\
+ & $\alpha{=}2$, $p_{\text{sel}}{=}0.5$ & 0 & 0 & 0 & 0 & 0 & 0 &  \\
+ & $\alpha{=}2$, $p_{\text{sel}}{=}1$ & 1 & 0 & 0 & 0 & 1 & 0 &  \\
+\addlinespace
+H\&E jitter & $s{=}0.2$ & 3 & 4 & 2 & 6 & 15 & 0 & $s{=}0.2$ (15) \\
+ & $s{=}0.4$ & 2 & 1 & 1 & 1 & 5 & 0 &  \\
+\bottomrule
+\end{tabular*}
+\end{table}

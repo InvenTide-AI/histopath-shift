@@ -1,0 +1,838 @@
+dataset,selection,selection_text,algorithm,env,mean,se,cell,source_file,line
+Colored MNIST,training_domain,training domain validation set,ERM,0.1,72.7,0.2,72.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,945
+Colored MNIST,training_domain,training domain validation set,ERM,0.2,73.2,0.3,73.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,945
+Colored MNIST,training_domain,training domain validation set,ERM,0.9,10.0,0.0,10.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,945
+Colored MNIST,training_domain,training domain validation set,IRM,0.1,72.0,0.3,72.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,946
+Colored MNIST,training_domain,training domain validation set,IRM,0.2,73.2,0.0,73.2 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,946
+Colored MNIST,training_domain,training domain validation set,IRM,0.9,10.1,0.2,10.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,946
+Colored MNIST,training_domain,training domain validation set,DRO,0.1,72.7,0.3,72.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,947
+Colored MNIST,training_domain,training domain validation set,DRO,0.2,73.1,0.3,73.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,947
+Colored MNIST,training_domain,training domain validation set,DRO,0.9,10.0,0.0,10.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,947
+Colored MNIST,training_domain,training domain validation set,Mixup,0.1,72.4,0.2,72.4 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,948
+Colored MNIST,training_domain,training domain validation set,Mixup,0.2,73.3,0.3,73.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,948
+Colored MNIST,training_domain,training domain validation set,Mixup,0.9,10.0,0.1,10.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,948
+Colored MNIST,training_domain,training domain validation set,MLDG,0.1,71.4,0.4,71.4 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,949
+Colored MNIST,training_domain,training domain validation set,MLDG,0.2,73.3,0.0,73.3 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,949
+Colored MNIST,training_domain,training domain validation set,MLDG,0.9,10.0,0.0,10.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,949
+Colored MNIST,training_domain,training domain validation set,CORAL,0.1,71.8,0.4,71.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,950
+Colored MNIST,training_domain,training domain validation set,CORAL,0.2,73.3,0.2,73.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,950
+Colored MNIST,training_domain,training domain validation set,CORAL,0.9,10.1,0.1,10.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,950
+Colored MNIST,training_domain,training domain validation set,MMD,0.1,72.1,0.2,72.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,951
+Colored MNIST,training_domain,training domain validation set,MMD,0.2,72.8,0.2,72.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,951
+Colored MNIST,training_domain,training domain validation set,MMD,0.9,10.5,0.2,10.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,951
+Colored MNIST,training_domain,training domain validation set,ADA,0.1,72.0,0.3,72.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,952
+Colored MNIST,training_domain,training domain validation set,ADA,0.2,72.4,0.5,72.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,952
+Colored MNIST,training_domain,training domain validation set,ADA,0.9,10.0,0.2,10.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,952
+Colored MNIST,training_domain,training domain validation set,CondADA,0.1,72.2,0.3,72.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,953
+Colored MNIST,training_domain,training domain validation set,CondADA,0.2,73.2,0.2,73.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,953
+Colored MNIST,training_domain,training domain validation set,CondADA,0.9,10.4,0.3,10.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,953
+Colored MNIST,loo,leave-one-domain-out cross-validation,ERM,0.1,46.0,3.4,46.0 $\pm$ 3.4,results/v2/external/src_2007.01434/extracted/paper.tex,965
+Colored MNIST,loo,leave-one-domain-out cross-validation,ERM,0.2,46.6,3.8,46.6 $\pm$ 3.8,results/v2/external/src_2007.01434/extracted/paper.tex,965
+Colored MNIST,loo,leave-one-domain-out cross-validation,ERM,0.9,10.0,0.1,10.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,965
+Colored MNIST,loo,leave-one-domain-out cross-validation,IRM,0.1,49.3,0.9,49.3 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,966
+Colored MNIST,loo,leave-one-domain-out cross-validation,IRM,0.2,49.5,0.2,49.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,966
+Colored MNIST,loo,leave-one-domain-out cross-validation,IRM,0.9,10.0,0.2,10.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,966
+Colored MNIST,loo,leave-one-domain-out cross-validation,DRO,0.1,36.7,10.9,36.7 $\pm$ 10.9,results/v2/external/src_2007.01434/extracted/paper.tex,967
+Colored MNIST,loo,leave-one-domain-out cross-validation,DRO,0.2,49.9,0.3,49.9 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,967
+Colored MNIST,loo,leave-one-domain-out cross-validation,DRO,0.9,10.2,0.1,10.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,967
+Colored MNIST,loo,leave-one-domain-out cross-validation,Mixup,0.1,43.0,5.1,43.0 $\pm$ 5.1,results/v2/external/src_2007.01434/extracted/paper.tex,968
+Colored MNIST,loo,leave-one-domain-out cross-validation,Mixup,0.2,40.7,8.0,40.7 $\pm$ 8.0,results/v2/external/src_2007.01434/extracted/paper.tex,968
+Colored MNIST,loo,leave-one-domain-out cross-validation,Mixup,0.9,10.0,0.1,10.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,968
+Colored MNIST,loo,leave-one-domain-out cross-validation,MLDG,0.1,50.3,0.4,50.3 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,969
+Colored MNIST,loo,leave-one-domain-out cross-validation,MLDG,0.2,50.1,0.3,50.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,969
+Colored MNIST,loo,leave-one-domain-out cross-validation,MLDG,0.9,10.1,0.1,10.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,969
+Colored MNIST,loo,leave-one-domain-out cross-validation,CORAL,0.1,24.5,10.6,24.5 $\pm$ 10.6,results/v2/external/src_2007.01434/extracted/paper.tex,970
+Colored MNIST,loo,leave-one-domain-out cross-validation,CORAL,0.2,47.2,2.4,47.2 $\pm$ 2.4,results/v2/external/src_2007.01434/extracted/paper.tex,970
+Colored MNIST,loo,leave-one-domain-out cross-validation,CORAL,0.9,18.1,6.8,18.1 $\pm$ 6.8,results/v2/external/src_2007.01434/extracted/paper.tex,970
+Colored MNIST,loo,leave-one-domain-out cross-validation,MMD,0.1,50.1,0.3,50.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,971
+Colored MNIST,loo,leave-one-domain-out cross-validation,MMD,0.2,55.0,4.2,55.0 $\pm$ 4.2,results/v2/external/src_2007.01434/extracted/paper.tex,971
+Colored MNIST,loo,leave-one-domain-out cross-validation,MMD,0.9,22.8,10.5,22.8 $\pm$ 10.5,results/v2/external/src_2007.01434/extracted/paper.tex,971
+Colored MNIST,loo,leave-one-domain-out cross-validation,DANN,0.1,50.2,0.3,50.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,972
+Colored MNIST,loo,leave-one-domain-out cross-validation,DANN,0.2,39.9,7.7,39.9 $\pm$ 7.7,results/v2/external/src_2007.01434/extracted/paper.tex,972
+Colored MNIST,loo,leave-one-domain-out cross-validation,DANN,0.9,10.2,0.0,10.2 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,972
+Colored MNIST,loo,leave-one-domain-out cross-validation,C-DANN,0.1,50.5,0.0,50.5 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,973
+Colored MNIST,loo,leave-one-domain-out cross-validation,C-DANN,0.2,49.4,0.0,49.4 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,973
+Colored MNIST,loo,leave-one-domain-out cross-validation,C-DANN,0.9,11.8,1.1,11.8 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,973
+Colored MNIST,oracle,test-domain validation set,ERM,0.1,72.3,0.6,72.3 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,985
+Colored MNIST,oracle,test-domain validation set,ERM,0.2,73.1,0.3,73.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,985
+Colored MNIST,oracle,test-domain validation set,ERM,0.9,30.0,0.3,30.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,985
+Colored MNIST,oracle,test-domain validation set,IRM,0.1,72.7,0.1,72.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,986
+Colored MNIST,oracle,test-domain validation set,IRM,0.2,72.8,0.3,72.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,986
+Colored MNIST,oracle,test-domain validation set,IRM,0.9,65.2,0.8,65.2 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,986
+Colored MNIST,oracle,test-domain validation set,DRO,0.1,73.3,0.2,73.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,987
+Colored MNIST,oracle,test-domain validation set,DRO,0.2,72.9,0.2,72.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,987
+Colored MNIST,oracle,test-domain validation set,DRO,0.9,37.4,1.9,37.4 $\pm$ 1.9,results/v2/external/src_2007.01434/extracted/paper.tex,987
+Colored MNIST,oracle,test-domain validation set,Mixup,0.1,72.6,0.6,72.6 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,988
+Colored MNIST,oracle,test-domain validation set,Mixup,0.2,73.7,0.2,73.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,988
+Colored MNIST,oracle,test-domain validation set,Mixup,0.9,28.8,0.5,28.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,988
+Colored MNIST,oracle,test-domain validation set,MLDG,0.1,71.2,0.2,71.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,989
+Colored MNIST,oracle,test-domain validation set,MLDG,0.2,73.6,0.2,73.6 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,989
+Colored MNIST,oracle,test-domain validation set,MLDG,0.9,30.4,0.5,30.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,989
+Colored MNIST,oracle,test-domain validation set,CORAL,0.1,71.2,0.1,71.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,990
+Colored MNIST,oracle,test-domain validation set,CORAL,0.2,72.2,0.5,72.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,990
+Colored MNIST,oracle,test-domain validation set,CORAL,0.9,29.4,1.3,29.4 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,990
+Colored MNIST,oracle,test-domain validation set,MMD,0.1,67.3,2.6,67.3 $\pm$ 2.6,results/v2/external/src_2007.01434/extracted/paper.tex,991
+Colored MNIST,oracle,test-domain validation set,MMD,0.2,72.8,0.3,72.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,991
+Colored MNIST,oracle,test-domain validation set,MMD,0.9,50.2,0.3,50.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,991
+Colored MNIST,oracle,test-domain validation set,DANN,0.1,72.6,0.4,72.6 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,992
+Colored MNIST,oracle,test-domain validation set,DANN,0.2,73.0,0.3,73.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,992
+Colored MNIST,oracle,test-domain validation set,DANN,0.9,29.3,1.2,29.3 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,992
+Colored MNIST,oracle,test-domain validation set,C-DANN,0.1,72.4,0.0,72.4 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,993
+Colored MNIST,oracle,test-domain validation set,C-DANN,0.2,73.1,0.5,73.1 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,993
+Colored MNIST,oracle,test-domain validation set,C-DANN,0.9,40.5,3.8,40.5 $\pm$ 3.8,results/v2/external/src_2007.01434/extracted/paper.tex,993
+Rotated MNIST,training_domain,training domain validation set,ERM,0$^{\circ}$,95.6,0.1,95.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1008
+Rotated MNIST,training_domain,training domain validation set,ERM,15$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1008
+Rotated MNIST,training_domain,training domain validation set,ERM,30$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1008
+Rotated MNIST,training_domain,training domain validation set,ERM,45$^{\circ}$,99.1,0.1,99.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1008
+Rotated MNIST,training_domain,training domain validation set,ERM,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1008
+Rotated MNIST,training_domain,training domain validation set,ERM,75$^{\circ}$,96.7,0.2,96.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1008
+Rotated MNIST,training_domain,training domain validation set,IRM,0$^{\circ}$,95.9,0.2,95.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1009
+Rotated MNIST,training_domain,training domain validation set,IRM,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1009
+Rotated MNIST,training_domain,training domain validation set,IRM,30$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1009
+Rotated MNIST,training_domain,training domain validation set,IRM,45$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1009
+Rotated MNIST,training_domain,training domain validation set,IRM,60$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1009
+Rotated MNIST,training_domain,training domain validation set,IRM,75$^{\circ}$,95.5,0.3,95.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1009
+Rotated MNIST,training_domain,training domain validation set,DRO,0$^{\circ}$,95.9,0.1,95.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1010
+Rotated MNIST,training_domain,training domain validation set,DRO,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1010
+Rotated MNIST,training_domain,training domain validation set,DRO,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1010
+Rotated MNIST,training_domain,training domain validation set,DRO,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1010
+Rotated MNIST,training_domain,training domain validation set,DRO,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1010
+Rotated MNIST,training_domain,training domain validation set,DRO,75$^{\circ}$,96.9,0.1,96.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1010
+Rotated MNIST,training_domain,training domain validation set,Mixup,0$^{\circ}$,96.1,0.2,96.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1011
+Rotated MNIST,training_domain,training domain validation set,Mixup,15$^{\circ}$,99.1,0.0,99.1 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1011
+Rotated MNIST,training_domain,training domain validation set,Mixup,30$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1011
+Rotated MNIST,training_domain,training domain validation set,Mixup,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1011
+Rotated MNIST,training_domain,training domain validation set,Mixup,60$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1011
+Rotated MNIST,training_domain,training domain validation set,Mixup,75$^{\circ}$,96.6,0.1,96.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1011
+Rotated MNIST,training_domain,training domain validation set,MLDG,0$^{\circ}$,95.9,0.2,95.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1012
+Rotated MNIST,training_domain,training domain validation set,MLDG,15$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1012
+Rotated MNIST,training_domain,training domain validation set,MLDG,30$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1012
+Rotated MNIST,training_domain,training domain validation set,MLDG,45$^{\circ}$,99.1,0.0,99.1 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1012
+Rotated MNIST,training_domain,training domain validation set,MLDG,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1012
+Rotated MNIST,training_domain,training domain validation set,MLDG,75$^{\circ}$,96.0,0.2,96.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1012
+Rotated MNIST,training_domain,training domain validation set,CORAL,0$^{\circ}$,95.7,0.2,95.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1013
+Rotated MNIST,training_domain,training domain validation set,CORAL,15$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1013
+Rotated MNIST,training_domain,training domain validation set,CORAL,30$^{\circ}$,99.1,0.1,99.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1013
+Rotated MNIST,training_domain,training domain validation set,CORAL,45$^{\circ}$,99.1,0.0,99.1 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1013
+Rotated MNIST,training_domain,training domain validation set,CORAL,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1013
+Rotated MNIST,training_domain,training domain validation set,CORAL,75$^{\circ}$,96.7,0.2,96.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1013
+Rotated MNIST,training_domain,training domain validation set,MMD,0$^{\circ}$,96.6,0.1,96.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1014
+Rotated MNIST,training_domain,training domain validation set,MMD,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1014
+Rotated MNIST,training_domain,training domain validation set,MMD,30$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1014
+Rotated MNIST,training_domain,training domain validation set,MMD,45$^{\circ}$,99.1,0.1,99.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1014
+Rotated MNIST,training_domain,training domain validation set,MMD,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1014
+Rotated MNIST,training_domain,training domain validation set,MMD,75$^{\circ}$,96.2,0.1,96.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1014
+Rotated MNIST,training_domain,training domain validation set,DANN,0$^{\circ}$,95.6,0.3,95.6 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1015
+Rotated MNIST,training_domain,training domain validation set,DANN,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1015
+Rotated MNIST,training_domain,training domain validation set,DANN,30$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1015
+Rotated MNIST,training_domain,training domain validation set,DANN,45$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1015
+Rotated MNIST,training_domain,training domain validation set,DANN,60$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1015
+Rotated MNIST,training_domain,training domain validation set,DANN,75$^{\circ}$,95.9,0.5,95.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1015
+Rotated MNIST,training_domain,training domain validation set,C-DANN,0$^{\circ}$,96.0,0.5,96.0 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1016
+Rotated MNIST,training_domain,training domain validation set,C-DANN,15$^{\circ}$,98.8,0.0,98.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1016
+Rotated MNIST,training_domain,training domain validation set,C-DANN,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1016
+Rotated MNIST,training_domain,training domain validation set,C-DANN,45$^{\circ}$,99.1,0.0,99.1 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1016
+Rotated MNIST,training_domain,training domain validation set,C-DANN,60$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1016
+Rotated MNIST,training_domain,training domain validation set,C-DANN,75$^{\circ}$,96.5,0.3,96.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1016
+Rotated MNIST,loo,leave-one-domain-out cross-validation,ERM,0$^{\circ}$,95.9,0.2,95.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1028
+Rotated MNIST,loo,leave-one-domain-out cross-validation,ERM,15$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1028
+Rotated MNIST,loo,leave-one-domain-out cross-validation,ERM,30$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1028
+Rotated MNIST,loo,leave-one-domain-out cross-validation,ERM,45$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1028
+Rotated MNIST,loo,leave-one-domain-out cross-validation,ERM,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1028
+Rotated MNIST,loo,leave-one-domain-out cross-validation,ERM,75$^{\circ}$,96.3,0.1,96.3 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1028
+Rotated MNIST,loo,leave-one-domain-out cross-validation,IRM,0$^{\circ}$,95.5,0.4,95.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1029
+Rotated MNIST,loo,leave-one-domain-out cross-validation,IRM,15$^{\circ}$,98.7,0.2,98.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1029
+Rotated MNIST,loo,leave-one-domain-out cross-validation,IRM,30$^{\circ}$,98.7,0.1,98.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1029
+Rotated MNIST,loo,leave-one-domain-out cross-validation,IRM,45$^{\circ}$,98.5,0.3,98.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1029
+Rotated MNIST,loo,leave-one-domain-out cross-validation,IRM,60$^{\circ}$,98.7,0.1,98.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1029
+Rotated MNIST,loo,leave-one-domain-out cross-validation,IRM,75$^{\circ}$,96.1,0.1,96.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1029
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DRO,0$^{\circ}$,95.5,0.5,95.5 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1030
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DRO,15$^{\circ}$,98.4,0.5,98.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1030
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DRO,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1030
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DRO,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1030
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DRO,60$^{\circ}$,98.8,0.2,98.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1030
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DRO,75$^{\circ}$,96.6,0.1,96.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1030
+Rotated MNIST,loo,leave-one-domain-out cross-validation,Mixup,0$^{\circ}$,95.9,0.3,95.9 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1031
+Rotated MNIST,loo,leave-one-domain-out cross-validation,Mixup,15$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1031
+Rotated MNIST,loo,leave-one-domain-out cross-validation,Mixup,30$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1031
+Rotated MNIST,loo,leave-one-domain-out cross-validation,Mixup,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1031
+Rotated MNIST,loo,leave-one-domain-out cross-validation,Mixup,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1031
+Rotated MNIST,loo,leave-one-domain-out cross-validation,Mixup,75$^{\circ}$,96.5,0.0,96.5 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1031
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MLDG,0$^{\circ}$,95.8,0.4,95.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1032
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MLDG,15$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1032
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MLDG,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1032
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MLDG,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1032
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MLDG,60$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1032
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MLDG,75$^{\circ}$,96.2,0.1,96.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1032
+Rotated MNIST,loo,leave-one-domain-out cross-validation,CORAL,0$^{\circ}$,96.2,0.1,96.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1033
+Rotated MNIST,loo,leave-one-domain-out cross-validation,CORAL,15$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1033
+Rotated MNIST,loo,leave-one-domain-out cross-validation,CORAL,30$^{\circ}$,99.1,0.0,99.1 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1033
+Rotated MNIST,loo,leave-one-domain-out cross-validation,CORAL,45$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1033
+Rotated MNIST,loo,leave-one-domain-out cross-validation,CORAL,60$^{\circ}$,98.7,0.2,98.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1033
+Rotated MNIST,loo,leave-one-domain-out cross-validation,CORAL,75$^{\circ}$,96.5,0.2,96.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1033
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MMD,0$^{\circ}$,96.5,0.2,96.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1034
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MMD,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1034
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MMD,30$^{\circ}$,98.8,0.2,98.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1034
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MMD,45$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1034
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MMD,60$^{\circ}$,98.7,0.1,98.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1034
+Rotated MNIST,loo,leave-one-domain-out cross-validation,MMD,75$^{\circ}$,96.4,0.1,96.4 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1034
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DANN,0$^{\circ}$,85.5,4.7,85.5 $\pm$ 4.7,results/v2/external/src_2007.01434/extracted/paper.tex,1035
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DANN,15$^{\circ}$,78.1,16.5,78.1 $\pm$ 16.5,results/v2/external/src_2007.01434/extracted/paper.tex,1035
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DANN,30$^{\circ}$,98.1,0.6,98.1 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1035
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DANN,45$^{\circ}$,98.7,0.0,98.7 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1035
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DANN,60$^{\circ}$,93.8,1.8,93.8 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1035
+Rotated MNIST,loo,leave-one-domain-out cross-validation,DANN,75$^{\circ}$,95.9,0.7,95.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1035
+Rotated MNIST,loo,leave-one-domain-out cross-validation,C-DANN,0$^{\circ}$,73.7,0.0,73.7 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1036
+Rotated MNIST,loo,leave-one-domain-out cross-validation,C-DANN,15$^{\circ}$,98.7,0.0,98.7 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1036
+Rotated MNIST,loo,leave-one-domain-out cross-validation,C-DANN,30$^{\circ}$,98.7,0.1,98.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1036
+Rotated MNIST,loo,leave-one-domain-out cross-validation,C-DANN,45$^{\circ}$,97.0,0.0,97.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1036
+Rotated MNIST,loo,leave-one-domain-out cross-validation,C-DANN,60$^{\circ}$,98.3,0.4,98.3 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1036
+Rotated MNIST,loo,leave-one-domain-out cross-validation,C-DANN,75$^{\circ}$,94.6,1.2,94.6 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1036
+Rotated MNIST,oracle,test-domain validation set,ERM,0$^{\circ}$,96.0,0.2,96.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1048
+Rotated MNIST,oracle,test-domain validation set,ERM,15$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1048
+Rotated MNIST,oracle,test-domain validation set,ERM,30$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1048
+Rotated MNIST,oracle,test-domain validation set,ERM,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1048
+Rotated MNIST,oracle,test-domain validation set,ERM,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1048
+Rotated MNIST,oracle,test-domain validation set,ERM,75$^{\circ}$,96.8,0.1,96.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1048
+Rotated MNIST,oracle,test-domain validation set,IRM,0$^{\circ}$,96.0,0.2,96.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1049
+Rotated MNIST,oracle,test-domain validation set,IRM,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1049
+Rotated MNIST,oracle,test-domain validation set,IRM,30$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1049
+Rotated MNIST,oracle,test-domain validation set,IRM,45$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1049
+Rotated MNIST,oracle,test-domain validation set,IRM,60$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1049
+Rotated MNIST,oracle,test-domain validation set,IRM,75$^{\circ}$,95.7,0.3,95.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1049
+Rotated MNIST,oracle,test-domain validation set,DRO,0$^{\circ}$,96.2,0.1,96.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1050
+Rotated MNIST,oracle,test-domain validation set,DRO,15$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1050
+Rotated MNIST,oracle,test-domain validation set,DRO,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1050
+Rotated MNIST,oracle,test-domain validation set,DRO,45$^{\circ}$,98.7,0.1,98.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1050
+Rotated MNIST,oracle,test-domain validation set,DRO,60$^{\circ}$,99.1,0.0,99.1 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1050
+Rotated MNIST,oracle,test-domain validation set,DRO,75$^{\circ}$,96.8,0.1,96.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1050
+Rotated MNIST,oracle,test-domain validation set,Mixup,0$^{\circ}$,95.8,0.3,95.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1051
+Rotated MNIST,oracle,test-domain validation set,Mixup,15$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1051
+Rotated MNIST,oracle,test-domain validation set,Mixup,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1051
+Rotated MNIST,oracle,test-domain validation set,Mixup,45$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1051
+Rotated MNIST,oracle,test-domain validation set,Mixup,60$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1051
+Rotated MNIST,oracle,test-domain validation set,Mixup,75$^{\circ}$,96.5,0.1,96.5 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1051
+Rotated MNIST,oracle,test-domain validation set,MLDG,0$^{\circ}$,96.2,0.1,96.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1052
+Rotated MNIST,oracle,test-domain validation set,MLDG,15$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1052
+Rotated MNIST,oracle,test-domain validation set,MLDG,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1052
+Rotated MNIST,oracle,test-domain validation set,MLDG,45$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1052
+Rotated MNIST,oracle,test-domain validation set,MLDG,60$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1052
+Rotated MNIST,oracle,test-domain validation set,MLDG,75$^{\circ}$,96.1,0.2,96.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1052
+Rotated MNIST,oracle,test-domain validation set,CORAL,0$^{\circ}$,96.4,0.1,96.4 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1053
+Rotated MNIST,oracle,test-domain validation set,CORAL,15$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1053
+Rotated MNIST,oracle,test-domain validation set,CORAL,30$^{\circ}$,99.0,0.1,99.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1053
+Rotated MNIST,oracle,test-domain validation set,CORAL,45$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1053
+Rotated MNIST,oracle,test-domain validation set,CORAL,60$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1053
+Rotated MNIST,oracle,test-domain validation set,CORAL,75$^{\circ}$,96.8,0.2,96.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1053
+Rotated MNIST,oracle,test-domain validation set,MMD,0$^{\circ}$,95.7,0.4,95.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1054
+Rotated MNIST,oracle,test-domain validation set,MMD,15$^{\circ}$,98.8,0.0,98.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1054
+Rotated MNIST,oracle,test-domain validation set,MMD,30$^{\circ}$,98.9,0.1,98.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1054
+Rotated MNIST,oracle,test-domain validation set,MMD,45$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1054
+Rotated MNIST,oracle,test-domain validation set,MMD,60$^{\circ}$,99.0,0.0,99.0 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1054
+Rotated MNIST,oracle,test-domain validation set,MMD,75$^{\circ}$,96.3,0.2,96.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1054
+Rotated MNIST,oracle,test-domain validation set,DANN,0$^{\circ}$,96.0,0.1,96.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1055
+Rotated MNIST,oracle,test-domain validation set,DANN,15$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1055
+Rotated MNIST,oracle,test-domain validation set,DANN,30$^{\circ}$,98.6,0.1,98.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1055
+Rotated MNIST,oracle,test-domain validation set,DANN,45$^{\circ}$,98.7,0.1,98.7 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1055
+Rotated MNIST,oracle,test-domain validation set,DANN,60$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1055
+Rotated MNIST,oracle,test-domain validation set,DANN,75$^{\circ}$,96.4,0.1,96.4 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1055
+Rotated MNIST,oracle,test-domain validation set,C-DANN,0$^{\circ}$,95.8,0.2,95.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1056
+Rotated MNIST,oracle,test-domain validation set,C-DANN,15$^{\circ}$,98.8,0.0,98.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1056
+Rotated MNIST,oracle,test-domain validation set,C-DANN,30$^{\circ}$,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1056
+Rotated MNIST,oracle,test-domain validation set,C-DANN,45$^{\circ}$,98.6,0.1,98.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1056
+Rotated MNIST,oracle,test-domain validation set,C-DANN,60$^{\circ}$,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1056
+Rotated MNIST,oracle,test-domain validation set,C-DANN,75$^{\circ}$,96.1,0.2,96.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1056
+VLCS,training_domain,training domain validation set,ERM,C,97.6,1.0,97.6 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1071
+VLCS,training_domain,training domain validation set,ERM,L,63.3,0.9,63.3 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1071
+VLCS,training_domain,training domain validation set,ERM,S,72.2,0.5,72.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1071
+VLCS,training_domain,training domain validation set,ERM,V,76.4,1.5,76.4 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1071
+VLCS,training_domain,training domain validation set,IRM,C,97.6,0.3,97.6 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1072
+VLCS,training_domain,training domain validation set,IRM,L,65.0,0.9,65.0 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1072
+VLCS,training_domain,training domain validation set,IRM,S,72.9,0.5,72.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1072
+VLCS,training_domain,training domain validation set,IRM,V,76.9,1.3,76.9 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1072
+VLCS,training_domain,training domain validation set,DRO,C,97.7,0.4,97.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1073
+VLCS,training_domain,training domain validation set,DRO,L,62.5,1.1,62.5 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1073
+VLCS,training_domain,training domain validation set,DRO,S,70.1,0.7,70.1 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1073
+VLCS,training_domain,training domain validation set,DRO,V,78.4,0.9,78.4 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1073
+VLCS,training_domain,training domain validation set,Mixup,C,97.9,0.3,97.9 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1074
+VLCS,training_domain,training domain validation set,Mixup,L,64.5,0.6,64.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1074
+VLCS,training_domain,training domain validation set,Mixup,S,71.5,0.9,71.5 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1074
+VLCS,training_domain,training domain validation set,Mixup,V,76.9,1.3,76.9 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1074
+VLCS,training_domain,training domain validation set,MLDG,C,98.1,0.3,98.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1075
+VLCS,training_domain,training domain validation set,MLDG,L,63.0,0.9,63.0 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1075
+VLCS,training_domain,training domain validation set,MLDG,S,73.5,0.6,73.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1075
+VLCS,training_domain,training domain validation set,MLDG,V,73.7,0.3,73.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1075
+VLCS,training_domain,training domain validation set,CORAL,C,98.8,0.1,98.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1076
+VLCS,training_domain,training domain validation set,CORAL,L,64.6,0.8,64.6 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1076
+VLCS,training_domain,training domain validation set,CORAL,S,71.7,1.4,71.7 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1076
+VLCS,training_domain,training domain validation set,CORAL,V,75.8,0.4,75.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1076
+VLCS,training_domain,training domain validation set,MMD,C,97.1,0.4,97.1 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1077
+VLCS,training_domain,training domain validation set,MMD,L,63.4,0.7,63.4 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1077
+VLCS,training_domain,training domain validation set,MMD,S,71.4,0.8,71.4 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1077
+VLCS,training_domain,training domain validation set,MMD,V,74.9,2.5,74.9 $\pm$ 2.5,results/v2/external/src_2007.01434/extracted/paper.tex,1077
+VLCS,training_domain,training domain validation set,DANN,C,98.5,0.2,98.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1078
+VLCS,training_domain,training domain validation set,DANN,L,64.9,1.1,64.9 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1078
+VLCS,training_domain,training domain validation set,DANN,S,73.1,0.7,73.1 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1078
+VLCS,training_domain,training domain validation set,DANN,V,78.3,0.3,78.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1078
+VLCS,training_domain,training domain validation set,C-DANN,C,97.5,0.1,97.5 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1079
+VLCS,training_domain,training domain validation set,C-DANN,L,65.2,0.4,65.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1079
+VLCS,training_domain,training domain validation set,C-DANN,S,73.4,1.1,73.4 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1079
+VLCS,training_domain,training domain validation set,C-DANN,V,76.9,0.2,76.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1079
+VLCS,loo,leave-one-domain-out cross-validation,ERM,C,97.8,0.0,97.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1091
+VLCS,loo,leave-one-domain-out cross-validation,ERM,L,63.3,1.6,63.3 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1091
+VLCS,loo,leave-one-domain-out cross-validation,ERM,S,70.3,1.6,70.3 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1091
+VLCS,loo,leave-one-domain-out cross-validation,ERM,V,75.9,1.4,75.9 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1091
+VLCS,loo,leave-one-domain-out cross-validation,IRM,C,98.9,0.0,98.9 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1092
+VLCS,loo,leave-one-domain-out cross-validation,IRM,L,63.6,0.8,63.6 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1092
+VLCS,loo,leave-one-domain-out cross-validation,IRM,S,71.1,2.2,71.1 $\pm$ 2.2,results/v2/external/src_2007.01434/extracted/paper.tex,1092
+VLCS,loo,leave-one-domain-out cross-validation,IRM,V,75.4,1.5,75.4 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1092
+VLCS,loo,leave-one-domain-out cross-validation,DRO,C,99.2,0.2,99.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1093
+VLCS,loo,leave-one-domain-out cross-validation,DRO,L,62.0,1.6,62.0 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1093
+VLCS,loo,leave-one-domain-out cross-validation,DRO,S,73.4,0.8,73.4 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1093
+VLCS,loo,leave-one-domain-out cross-validation,DRO,V,75.5,1.0,75.5 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1093
+VLCS,loo,leave-one-domain-out cross-validation,Mixup,C,97.9,0.7,97.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1094
+VLCS,loo,leave-one-domain-out cross-validation,Mixup,L,65.5,0.8,65.5 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1094
+VLCS,loo,leave-one-domain-out cross-validation,Mixup,S,73.3,0.8,73.3 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1094
+VLCS,loo,leave-one-domain-out cross-validation,Mixup,V,77.8,0.5,77.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1094
+VLCS,loo,leave-one-domain-out cross-validation,MLDG,C,96.3,1.1,96.3 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1095
+VLCS,loo,leave-one-domain-out cross-validation,MLDG,L,65.1,0.9,65.1 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1095
+VLCS,loo,leave-one-domain-out cross-validation,MLDG,S,71.9,1.5,71.9 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1095
+VLCS,loo,leave-one-domain-out cross-validation,MLDG,V,75.0,0.5,75.0 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1095
+VLCS,loo,leave-one-domain-out cross-validation,CORAL,C,97.5,0.1,97.5 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1096
+VLCS,loo,leave-one-domain-out cross-validation,CORAL,L,64.0,0.2,64.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1096
+VLCS,loo,leave-one-domain-out cross-validation,CORAL,S,69.7,2.0,69.7 $\pm$ 2.0,results/v2/external/src_2007.01434/extracted/paper.tex,1096
+VLCS,loo,leave-one-domain-out cross-validation,CORAL,V,76.7,0.3,76.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1096
+VLCS,loo,leave-one-domain-out cross-validation,MMD,C,97.7,0.4,97.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1097
+VLCS,loo,leave-one-domain-out cross-validation,MMD,L,63.1,1.9,63.1 $\pm$ 1.9,results/v2/external/src_2007.01434/extracted/paper.tex,1097
+VLCS,loo,leave-one-domain-out cross-validation,MMD,S,68.6,1.5,68.6 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1097
+VLCS,loo,leave-one-domain-out cross-validation,MMD,V,77.5,1.2,77.5 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1097
+VLCS,loo,leave-one-domain-out cross-validation,DANN,C,95.3,1.8,95.3 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1098
+VLCS,loo,leave-one-domain-out cross-validation,DANN,L,61.3,1.8,61.3 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1098
+VLCS,loo,leave-one-domain-out cross-validation,DANN,S,74.3,1.0,74.3 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1098
+VLCS,loo,leave-one-domain-out cross-validation,DANN,V,79.7,0.9,79.7 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1098
+VLCS,loo,leave-one-domain-out cross-validation,C-DANN,C,92.3,4.2,92.3 $\pm$ 4.2,results/v2/external/src_2007.01434/extracted/paper.tex,1099
+VLCS,loo,leave-one-domain-out cross-validation,C-DANN,L,60.3,1.5,60.3 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1099
+VLCS,loo,leave-one-domain-out cross-validation,C-DANN,S,68.4,2.1,68.4 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1099
+VLCS,loo,leave-one-domain-out cross-validation,C-DANN,V,74.9,1.3,74.9 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1099
+VLCS,oracle,test-domain validation set,ERM,C,97.7,0.3,97.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1111
+VLCS,oracle,test-domain validation set,ERM,L,65.2,0.4,65.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1111
+VLCS,oracle,test-domain validation set,ERM,S,73.2,0.7,73.2 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1111
+VLCS,oracle,test-domain validation set,ERM,V,75.2,0.4,75.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1111
+VLCS,oracle,test-domain validation set,IRM,C,97.6,0.5,97.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1112
+VLCS,oracle,test-domain validation set,IRM,L,64.7,1.1,64.7 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1112
+VLCS,oracle,test-domain validation set,IRM,S,69.7,0.5,69.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1112
+VLCS,oracle,test-domain validation set,IRM,V,76.6,0.7,76.6 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1112
+VLCS,oracle,test-domain validation set,DRO,C,97.8,0.0,97.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1113
+VLCS,oracle,test-domain validation set,DRO,L,66.4,0.5,66.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1113
+VLCS,oracle,test-domain validation set,DRO,S,68.7,1.2,68.7 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1113
+VLCS,oracle,test-domain validation set,DRO,V,76.8,1.0,76.8 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1113
+VLCS,oracle,test-domain validation set,Mixup,C,98.3,0.3,98.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1114
+VLCS,oracle,test-domain validation set,Mixup,L,66.7,0.5,66.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1114
+VLCS,oracle,test-domain validation set,Mixup,S,73.3,1.1,73.3 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1114
+VLCS,oracle,test-domain validation set,Mixup,V,76.3,0.8,76.3 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1114
+VLCS,oracle,test-domain validation set,MLDG,C,98.4,0.2,98.4 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1115
+VLCS,oracle,test-domain validation set,MLDG,L,65.9,0.5,65.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1115
+VLCS,oracle,test-domain validation set,MLDG,S,70.7,0.8,70.7 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1115
+VLCS,oracle,test-domain validation set,MLDG,V,76.1,0.6,76.1 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1115
+VLCS,oracle,test-domain validation set,CORAL,C,98.1,0.1,98.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1116
+VLCS,oracle,test-domain validation set,CORAL,L,67.1,0.8,67.1 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1116
+VLCS,oracle,test-domain validation set,CORAL,S,70.1,0.6,70.1 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1116
+VLCS,oracle,test-domain validation set,CORAL,V,75.8,0.5,75.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1116
+VLCS,oracle,test-domain validation set,MMD,C,98.1,0.3,98.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1117
+VLCS,oracle,test-domain validation set,MMD,L,66.2,0.2,66.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1117
+VLCS,oracle,test-domain validation set,MMD,S,70.5,1.0,70.5 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1117
+VLCS,oracle,test-domain validation set,MMD,V,77.2,0.6,77.2 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1117
+VLCS,oracle,test-domain validation set,DANN,C,98.2,0.3,98.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1118
+VLCS,oracle,test-domain validation set,DANN,L,67.8,1.1,67.8 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1118
+VLCS,oracle,test-domain validation set,DANN,S,74.2,0.7,74.2 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1118
+VLCS,oracle,test-domain validation set,DANN,V,80.1,0.6,80.1 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1118
+VLCS,oracle,test-domain validation set,C-DANN,C,98.9,0.3,98.9 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1119
+VLCS,oracle,test-domain validation set,C-DANN,L,68.8,0.6,68.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1119
+VLCS,oracle,test-domain validation set,C-DANN,S,73.7,0.6,73.7 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1119
+VLCS,oracle,test-domain validation set,C-DANN,V,79.3,0.6,79.3 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1119
+PACS,training_domain,training domain validation set,ERM,A,88.1,0.1,88.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1134
+PACS,training_domain,training domain validation set,ERM,C,77.9,1.3,77.9 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1134
+PACS,training_domain,training domain validation set,ERM,P,97.8,0.0,97.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1134
+PACS,training_domain,training domain validation set,ERM,S,79.1,0.9,79.1 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1134
+PACS,training_domain,training domain validation set,IRM,A,85.0,1.6,85.0 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1135
+PACS,training_domain,training domain validation set,IRM,C,77.6,0.9,77.6 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1135
+PACS,training_domain,training domain validation set,IRM,P,96.7,0.3,96.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1135
+PACS,training_domain,training domain validation set,IRM,S,78.5,2.6,78.5 $\pm$ 2.6,results/v2/external/src_2007.01434/extracted/paper.tex,1135
+PACS,training_domain,training domain validation set,DRO,A,86.4,0.3,86.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1136
+PACS,training_domain,training domain validation set,DRO,C,79.9,0.8,79.9 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1136
+PACS,training_domain,training domain validation set,DRO,P,98.0,0.3,98.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1136
+PACS,training_domain,training domain validation set,DRO,S,72.1,0.7,72.1 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1136
+PACS,training_domain,training domain validation set,Mixup,A,86.5,0.4,86.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1137
+PACS,training_domain,training domain validation set,Mixup,C,76.6,1.5,76.6 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1137
+PACS,training_domain,training domain validation set,Mixup,P,97.7,0.2,97.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1137
+PACS,training_domain,training domain validation set,Mixup,S,76.5,1.2,76.5 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1137
+PACS,training_domain,training domain validation set,MLDG,A,89.1,0.9,89.1 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1138
+PACS,training_domain,training domain validation set,MLDG,C,78.8,0.7,78.8 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1138
+PACS,training_domain,training domain validation set,MLDG,P,97.0,0.9,97.0 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1138
+PACS,training_domain,training domain validation set,MLDG,S,74.4,2.0,74.4 $\pm$ 2.0,results/v2/external/src_2007.01434/extracted/paper.tex,1138
+PACS,training_domain,training domain validation set,CORAL,A,87.7,0.6,87.7 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1139
+PACS,training_domain,training domain validation set,CORAL,C,79.2,1.1,79.2 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1139
+PACS,training_domain,training domain validation set,CORAL,P,97.6,0.0,97.6 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1139
+PACS,training_domain,training domain validation set,CORAL,S,79.4,0.7,79.4 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1139
+PACS,training_domain,training domain validation set,MMD,A,84.5,0.6,84.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1140
+PACS,training_domain,training domain validation set,MMD,C,79.7,0.7,79.7 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1140
+PACS,training_domain,training domain validation set,MMD,P,97.5,0.4,97.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1140
+PACS,training_domain,training domain validation set,MMD,S,78.1,1.3,78.1 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1140
+PACS,training_domain,training domain validation set,DANN,A,85.9,0.5,85.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1141
+PACS,training_domain,training domain validation set,DANN,C,79.9,1.4,79.9 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1141
+PACS,training_domain,training domain validation set,DANN,P,97.6,0.2,97.6 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1141
+PACS,training_domain,training domain validation set,DANN,S,75.2,2.8,75.2 $\pm$ 2.8,results/v2/external/src_2007.01434/extracted/paper.tex,1141
+PACS,training_domain,training domain validation set,C-DANN,A,84.0,0.9,84.0 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1142
+PACS,training_domain,training domain validation set,C-DANN,C,78.5,1.5,78.5 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1142
+PACS,training_domain,training domain validation set,C-DANN,P,97.0,0.4,97.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1142
+PACS,training_domain,training domain validation set,C-DANN,S,71.8,3.9,71.8 $\pm$ 3.9,results/v2/external/src_2007.01434/extracted/paper.tex,1142
+PACS,loo,leave-one-domain-out cross-validation,ERM,A,83.9,1.6,83.9 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1154
+PACS,loo,leave-one-domain-out cross-validation,ERM,C,78.6,2.0,78.6 $\pm$ 2.0,results/v2/external/src_2007.01434/extracted/paper.tex,1154
+PACS,loo,leave-one-domain-out cross-validation,ERM,P,97.3,0.1,97.3 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1154
+PACS,loo,leave-one-domain-out cross-validation,ERM,S,73.5,1.1,73.5 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1154
+PACS,loo,leave-one-domain-out cross-validation,IRM,A,82.5,2.6,82.5 $\pm$ 2.6,results/v2/external/src_2007.01434/extracted/paper.tex,1155
+PACS,loo,leave-one-domain-out cross-validation,IRM,C,78.0,0.3,78.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1155
+PACS,loo,leave-one-domain-out cross-validation,IRM,P,96.7,1.1,96.7 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1155
+PACS,loo,leave-one-domain-out cross-validation,IRM,S,74.4,1.3,74.4 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1155
+PACS,loo,leave-one-domain-out cross-validation,DRO,A,87.1,0.3,87.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1156
+PACS,loo,leave-one-domain-out cross-validation,DRO,C,77.6,1.9,77.6 $\pm$ 1.9,results/v2/external/src_2007.01434/extracted/paper.tex,1156
+PACS,loo,leave-one-domain-out cross-validation,DRO,P,97.2,0.4,97.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1156
+PACS,loo,leave-one-domain-out cross-validation,DRO,S,70.7,3.0,70.7 $\pm$ 3.0,results/v2/external/src_2007.01434/extracted/paper.tex,1156
+PACS,loo,leave-one-domain-out cross-validation,Mixup,A,88.0,0.5,88.0 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1157
+PACS,loo,leave-one-domain-out cross-validation,Mixup,C,74.3,4.0,74.3 $\pm$ 4.0,results/v2/external/src_2007.01434/extracted/paper.tex,1157
+PACS,loo,leave-one-domain-out cross-validation,Mixup,P,97.2,0.2,97.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1157
+PACS,loo,leave-one-domain-out cross-validation,Mixup,S,75.3,0.2,75.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1157
+PACS,loo,leave-one-domain-out cross-validation,MLDG,A,85.8,0.7,85.8 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1158
+PACS,loo,leave-one-domain-out cross-validation,MLDG,C,77.3,0.5,77.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1158
+PACS,loo,leave-one-domain-out cross-validation,MLDG,P,96.8,0.5,96.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1158
+PACS,loo,leave-one-domain-out cross-validation,MLDG,S,69.9,3.6,69.9 $\pm$ 3.6,results/v2/external/src_2007.01434/extracted/paper.tex,1158
+PACS,loo,leave-one-domain-out cross-validation,CORAL,A,86.0,1.1,86.0 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1159
+PACS,loo,leave-one-domain-out cross-validation,CORAL,C,75.5,2.3,75.5 $\pm$ 2.3,results/v2/external/src_2007.01434/extracted/paper.tex,1159
+PACS,loo,leave-one-domain-out cross-validation,CORAL,P,96.2,0.9,96.2 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1159
+PACS,loo,leave-one-domain-out cross-validation,CORAL,S,76.6,2.1,76.6 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1159
+PACS,loo,leave-one-domain-out cross-validation,MMD,A,85.9,0.5,85.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1160
+PACS,loo,leave-one-domain-out cross-validation,MMD,C,78.1,2.1,78.1 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1160
+PACS,loo,leave-one-domain-out cross-validation,MMD,P,96.2,1.3,96.2 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1160
+PACS,loo,leave-one-domain-out cross-validation,MMD,S,71.1,3.0,71.1 $\pm$ 3.0,results/v2/external/src_2007.01434/extracted/paper.tex,1160
+PACS,loo,leave-one-domain-out cross-validation,DANN,A,86.7,0.3,86.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1161
+PACS,loo,leave-one-domain-out cross-validation,DANN,C,78.5,0.5,78.5 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1161
+PACS,loo,leave-one-domain-out cross-validation,DANN,P,97.4,0.4,97.4 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1161
+PACS,loo,leave-one-domain-out cross-validation,DANN,S,73.3,2.3,73.3 $\pm$ 2.3,results/v2/external/src_2007.01434/extracted/paper.tex,1161
+PACS,loo,leave-one-domain-out cross-validation,C-DANN,A,83.6,3.8,83.6 $\pm$ 3.8,results/v2/external/src_2007.01434/extracted/paper.tex,1162
+PACS,loo,leave-one-domain-out cross-validation,C-DANN,C,75.9,1.8,75.9 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1162
+PACS,loo,leave-one-domain-out cross-validation,C-DANN,P,97.4,0.5,97.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1162
+PACS,loo,leave-one-domain-out cross-validation,C-DANN,S,70.0,3.6,70.0 $\pm$ 3.6,results/v2/external/src_2007.01434/extracted/paper.tex,1162
+PACS,oracle,test-domain validation set,ERM,A,87.8,0.4,87.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1174
+PACS,oracle,test-domain validation set,ERM,C,82.8,0.5,82.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1174
+PACS,oracle,test-domain validation set,ERM,P,97.6,0.4,97.6 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1174
+PACS,oracle,test-domain validation set,ERM,S,80.4,0.6,80.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1174
+PACS,oracle,test-domain validation set,IRM,A,85.7,1.0,85.7 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1175
+PACS,oracle,test-domain validation set,IRM,C,79.3,1.1,79.3 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1175
+PACS,oracle,test-domain validation set,IRM,P,97.6,0.4,97.6 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1175
+PACS,oracle,test-domain validation set,IRM,S,75.9,1.0,75.9 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1175
+PACS,oracle,test-domain validation set,DRO,A,88.2,0.7,88.2 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1176
+PACS,oracle,test-domain validation set,DRO,C,82.4,0.8,82.4 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1176
+PACS,oracle,test-domain validation set,DRO,P,97.7,0.2,97.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1176
+PACS,oracle,test-domain validation set,DRO,S,80.6,0.9,80.6 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1176
+PACS,oracle,test-domain validation set,Mixup,A,87.4,1.0,87.4 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1177
+PACS,oracle,test-domain validation set,Mixup,C,80.7,1.0,80.7 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1177
+PACS,oracle,test-domain validation set,Mixup,P,97.9,0.2,97.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1177
+PACS,oracle,test-domain validation set,Mixup,S,79.7,1.0,79.7 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1177
+PACS,oracle,test-domain validation set,MLDG,A,87.1,0.9,87.1 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1178
+PACS,oracle,test-domain validation set,MLDG,C,81.3,1.5,81.3 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1178
+PACS,oracle,test-domain validation set,MLDG,P,97.6,0.4,97.6 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1178
+PACS,oracle,test-domain validation set,MLDG,S,81.2,1.0,81.2 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1178
+PACS,oracle,test-domain validation set,CORAL,A,87.4,0.6,87.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1179
+PACS,oracle,test-domain validation set,CORAL,C,82.2,0.3,82.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1179
+PACS,oracle,test-domain validation set,CORAL,P,97.6,0.1,97.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1179
+PACS,oracle,test-domain validation set,CORAL,S,80.2,0.4,80.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1179
+PACS,oracle,test-domain validation set,MMD,A,87.6,1.2,87.6 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1180
+PACS,oracle,test-domain validation set,MMD,C,83.0,0.4,83.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1180
+PACS,oracle,test-domain validation set,MMD,P,97.8,0.1,97.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1180
+PACS,oracle,test-domain validation set,MMD,S,80.1,1.0,80.1 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1180
+PACS,oracle,test-domain validation set,DANN,A,86.4,1.4,86.4 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1181
+PACS,oracle,test-domain validation set,DANN,C,80.6,1.0,80.6 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1181
+PACS,oracle,test-domain validation set,DANN,P,97.7,0.2,97.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1181
+PACS,oracle,test-domain validation set,DANN,S,77.1,1.3,77.1 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1181
+PACS,oracle,test-domain validation set,C-DANN,A,87.0,1.2,87.0 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1182
+PACS,oracle,test-domain validation set,C-DANN,C,80.8,0.9,80.8 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1182
+PACS,oracle,test-domain validation set,C-DANN,P,97.4,0.5,97.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1182
+PACS,oracle,test-domain validation set,C-DANN,S,77.6,0.1,77.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1182
+Office-Home,training_domain,training domain validation set,ERM,A,62.7,1.1,62.7 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1197
+Office-Home,training_domain,training domain validation set,ERM,C,53.4,0.6,53.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1197
+Office-Home,training_domain,training domain validation set,ERM,P,76.5,0.4,76.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1197
+Office-Home,training_domain,training domain validation set,ERM,R,77.3,0.3,77.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1197
+Office-Home,training_domain,training domain validation set,IRM,A,61.8,1.0,61.8 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1198
+Office-Home,training_domain,training domain validation set,IRM,C,52.3,1.0,52.3 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1198
+Office-Home,training_domain,training domain validation set,IRM,P,75.2,0.8,75.2 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1198
+Office-Home,training_domain,training domain validation set,IRM,R,77.2,1.1,77.2 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1198
+Office-Home,training_domain,training domain validation set,DRO,A,61.6,0.7,61.6 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1199
+Office-Home,training_domain,training domain validation set,DRO,C,52.9,0.2,52.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1199
+Office-Home,training_domain,training domain validation set,DRO,P,75.5,0.5,75.5 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1199
+Office-Home,training_domain,training domain validation set,DRO,R,77.7,0.2,77.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1199
+Office-Home,training_domain,training domain validation set,Mixup,A,64.7,0.7,64.7 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1200
+Office-Home,training_domain,training domain validation set,Mixup,C,54.7,0.6,54.7 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1200
+Office-Home,training_domain,training domain validation set,Mixup,P,77.3,0.3,77.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1200
+Office-Home,training_domain,training domain validation set,Mixup,R,79.2,0.3,79.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1200
+Office-Home,training_domain,training domain validation set,MLDG,A,63.7,0.3,63.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1201
+Office-Home,training_domain,training domain validation set,MLDG,C,54.5,0.6,54.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1201
+Office-Home,training_domain,training domain validation set,MLDG,P,75.9,0.4,75.9 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1201
+Office-Home,training_domain,training domain validation set,MLDG,R,78.6,0.1,78.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1201
+Office-Home,training_domain,training domain validation set,CORAL,A,64.4,0.3,64.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1202
+Office-Home,training_domain,training domain validation set,CORAL,C,55.3,0.5,55.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1202
+Office-Home,training_domain,training domain validation set,CORAL,P,76.7,0.5,76.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1202
+Office-Home,training_domain,training domain validation set,CORAL,R,77.9,0.5,77.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1202
+Office-Home,training_domain,training domain validation set,MMD,A,63.0,0.1,63.0 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1203
+Office-Home,training_domain,training domain validation set,MMD,C,53.7,0.9,53.7 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1203
+Office-Home,training_domain,training domain validation set,MMD,P,76.1,0.3,76.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1203
+Office-Home,training_domain,training domain validation set,MMD,R,78.1,0.5,78.1 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1203
+Office-Home,training_domain,training domain validation set,DANN,A,59.3,1.1,59.3 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1204
+Office-Home,training_domain,training domain validation set,DANN,C,51.7,0.2,51.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1204
+Office-Home,training_domain,training domain validation set,DANN,P,74.1,0.8,74.1 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1204
+Office-Home,training_domain,training domain validation set,DANN,R,76.6,0.6,76.6 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1204
+Office-Home,training_domain,training domain validation set,C-DANN,A,61.0,1.4,61.0 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1205
+Office-Home,training_domain,training domain validation set,C-DANN,C,51.1,0.7,51.1 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1205
+Office-Home,training_domain,training domain validation set,C-DANN,P,74.1,0.3,74.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1205
+Office-Home,training_domain,training domain validation set,C-DANN,R,76.0,0.7,76.0 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1205
+Office-Home,loo,leave-one-domain-out cross-validation,ERM,A,62.3,0.5,62.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1217
+Office-Home,loo,leave-one-domain-out cross-validation,ERM,C,54.1,0.5,54.1 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1217
+Office-Home,loo,leave-one-domain-out cross-validation,ERM,P,75.3,0.2,75.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1217
+Office-Home,loo,leave-one-domain-out cross-validation,ERM,R,77.4,0.5,77.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1217
+Office-Home,loo,leave-one-domain-out cross-validation,IRM,A,62.1,0.9,62.1 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1218
+Office-Home,loo,leave-one-domain-out cross-validation,IRM,C,51.4,0.6,51.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1218
+Office-Home,loo,leave-one-domain-out cross-validation,IRM,P,75.5,0.7,75.5 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1218
+Office-Home,loo,leave-one-domain-out cross-validation,IRM,R,77.6,0.8,77.6 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1218
+Office-Home,loo,leave-one-domain-out cross-validation,DRO,A,62.7,0.7,62.7 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1219
+Office-Home,loo,leave-one-domain-out cross-validation,DRO,C,52.8,1.0,52.8 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1219
+Office-Home,loo,leave-one-domain-out cross-validation,DRO,P,75.4,0.1,75.4 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1219
+Office-Home,loo,leave-one-domain-out cross-validation,DRO,R,77.7,0.2,77.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1219
+Office-Home,loo,leave-one-domain-out cross-validation,Mixup,A,63.8,0.4,63.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1220
+Office-Home,loo,leave-one-domain-out cross-validation,Mixup,C,52.9,0.4,52.9 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1220
+Office-Home,loo,leave-one-domain-out cross-validation,Mixup,P,77.3,0.4,77.3 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1220
+Office-Home,loo,leave-one-domain-out cross-validation,Mixup,R,78.7,0.4,78.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1220
+Office-Home,loo,leave-one-domain-out cross-validation,MLDG,A,62.9,0.5,62.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1221
+Office-Home,loo,leave-one-domain-out cross-validation,MLDG,C,53.5,0.7,53.5 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1221
+Office-Home,loo,leave-one-domain-out cross-validation,MLDG,P,76.0,0.4,76.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1221
+Office-Home,loo,leave-one-domain-out cross-validation,MLDG,R,77.9,0.6,77.9 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1221
+Office-Home,loo,leave-one-domain-out cross-validation,CORAL,A,64.4,0.3,64.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1222
+Office-Home,loo,leave-one-domain-out cross-validation,CORAL,C,55.4,0.1,55.4 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1222
+Office-Home,loo,leave-one-domain-out cross-validation,CORAL,P,76.2,0.2,76.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1222
+Office-Home,loo,leave-one-domain-out cross-validation,CORAL,R,78.4,0.4,78.4 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1222
+Office-Home,loo,leave-one-domain-out cross-validation,MMD,A,62.2,0.3,62.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1223
+Office-Home,loo,leave-one-domain-out cross-validation,MMD,C,52.7,1.0,52.7 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1223
+Office-Home,loo,leave-one-domain-out cross-validation,MMD,P,75.5,0.4,75.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1223
+Office-Home,loo,leave-one-domain-out cross-validation,MMD,R,78.1,0.3,78.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1223
+Office-Home,loo,leave-one-domain-out cross-validation,DANN,A,61.1,0.1,61.1 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1224
+Office-Home,loo,leave-one-domain-out cross-validation,DANN,C,51.6,0.5,51.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1224
+Office-Home,loo,leave-one-domain-out cross-validation,DANN,P,73.6,0.5,73.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1224
+Office-Home,loo,leave-one-domain-out cross-validation,DANN,R,75.8,0.3,75.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1224
+Office-Home,loo,leave-one-domain-out cross-validation,C-DANN,A,60.0,0.4,60.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1225
+Office-Home,loo,leave-one-domain-out cross-validation,C-DANN,C,50.2,0.7,50.2 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1225
+Office-Home,loo,leave-one-domain-out cross-validation,C-DANN,P,72.1,1.0,72.1 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1225
+Office-Home,loo,leave-one-domain-out cross-validation,C-DANN,R,76.4,0.5,76.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1225
+Office-Home,oracle,test-domain validation set,ERM,A,61.2,1.4,61.2 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1237
+Office-Home,oracle,test-domain validation set,ERM,C,54.0,0.5,54.0 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1237
+Office-Home,oracle,test-domain validation set,ERM,P,75.9,0.7,75.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1237
+Office-Home,oracle,test-domain validation set,ERM,R,77.3,0.4,77.3 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1237
+Office-Home,oracle,test-domain validation set,IRM,A,62.4,0.9,62.4 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1238
+Office-Home,oracle,test-domain validation set,IRM,C,53.4,0.7,53.4 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1238
+Office-Home,oracle,test-domain validation set,IRM,P,75.5,0.8,75.5 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1238
+Office-Home,oracle,test-domain validation set,IRM,R,77.7,0.6,77.7 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1238
+Office-Home,oracle,test-domain validation set,DRO,A,63.6,0.5,63.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1239
+Office-Home,oracle,test-domain validation set,DRO,C,54.4,0.7,54.4 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1239
+Office-Home,oracle,test-domain validation set,DRO,P,75.9,0.1,75.9 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1239
+Office-Home,oracle,test-domain validation set,DRO,R,77.0,0.4,77.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1239
+Office-Home,oracle,test-domain validation set,Mixup,A,65.1,0.6,65.1 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1240
+Office-Home,oracle,test-domain validation set,Mixup,C,54.6,0.7,54.6 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1240
+Office-Home,oracle,test-domain validation set,Mixup,P,76.8,0.6,76.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1240
+Office-Home,oracle,test-domain validation set,Mixup,R,77.7,0.6,77.7 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1240
+Office-Home,oracle,test-domain validation set,MLDG,A,61.0,0.9,61.0 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1241
+Office-Home,oracle,test-domain validation set,MLDG,C,54.3,0.3,54.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1241
+Office-Home,oracle,test-domain validation set,MLDG,P,75.8,0.5,75.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1241
+Office-Home,oracle,test-domain validation set,MLDG,R,78.6,0.1,78.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1241
+Office-Home,oracle,test-domain validation set,CORAL,A,65.0,0.5,65.0 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1242
+Office-Home,oracle,test-domain validation set,CORAL,C,54.3,0.8,54.3 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1242
+Office-Home,oracle,test-domain validation set,CORAL,P,76.8,0.4,76.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1242
+Office-Home,oracle,test-domain validation set,CORAL,R,78.2,0.2,78.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1242
+Office-Home,oracle,test-domain validation set,MMD,A,62.4,0.2,62.4 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1243
+Office-Home,oracle,test-domain validation set,MMD,C,53.6,0.5,53.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1243
+Office-Home,oracle,test-domain validation set,MMD,P,75.8,0.4,75.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1243
+Office-Home,oracle,test-domain validation set,MMD,R,76.4,0.3,76.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1243
+Office-Home,oracle,test-domain validation set,DANN,A,60.5,0.9,60.5 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1244
+Office-Home,oracle,test-domain validation set,DANN,C,51.9,0.4,51.9 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1244
+Office-Home,oracle,test-domain validation set,DANN,P,73.7,0.4,73.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1244
+Office-Home,oracle,test-domain validation set,DANN,R,76.4,0.6,76.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1244
+Office-Home,oracle,test-domain validation set,C-DANN,A,60.0,0.5,60.0 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1245
+Office-Home,oracle,test-domain validation set,C-DANN,C,52.0,0.4,52.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1245
+Office-Home,oracle,test-domain validation set,C-DANN,P,74.2,0.5,74.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1245
+Office-Home,oracle,test-domain validation set,C-DANN,R,76.3,0.4,76.3 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1245
+TerraIncognita,training_domain,training domain validation set,ERM,L100,50.8,1.8,50.8 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1260
+TerraIncognita,training_domain,training domain validation set,ERM,L38,42.5,0.7,42.5 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1260
+TerraIncognita,training_domain,training domain validation set,ERM,L43,57.9,0.6,57.9 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1260
+TerraIncognita,training_domain,training domain validation set,ERM,L46,37.6,1.2,37.6 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1260
+TerraIncognita,training_domain,training domain validation set,IRM,L100,52.2,3.1,52.2 $\pm$ 3.1,results/v2/external/src_2007.01434/extracted/paper.tex,1261
+TerraIncognita,training_domain,training domain validation set,IRM,L38,43.4,2.4,43.4 $\pm$ 2.4,results/v2/external/src_2007.01434/extracted/paper.tex,1261
+TerraIncognita,training_domain,training domain validation set,IRM,L43,57.7,1.5,57.7 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1261
+TerraIncognita,training_domain,training domain validation set,IRM,L46,38.1,0.7,38.1 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1261
+TerraIncognita,training_domain,training domain validation set,DRO,L100,47.2,1.6,47.2 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1262
+TerraIncognita,training_domain,training domain validation set,DRO,L38,40.1,1.6,40.1 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1262
+TerraIncognita,training_domain,training domain validation set,DRO,L43,57.6,0.9,57.6 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1262
+TerraIncognita,training_domain,training domain validation set,DRO,L46,43.0,0.7,43.0 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1262
+TerraIncognita,training_domain,training domain validation set,Mixup,L100,60.6,1.3,60.6 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1263
+TerraIncognita,training_domain,training domain validation set,Mixup,L38,41.1,1.8,41.1 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1263
+TerraIncognita,training_domain,training domain validation set,Mixup,L43,58.5,0.8,58.5 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1263
+TerraIncognita,training_domain,training domain validation set,Mixup,L46,35.2,1.1,35.2 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1263
+TerraIncognita,training_domain,training domain validation set,MLDG,L100,48.5,3.3,48.5 $\pm$ 3.3,results/v2/external/src_2007.01434/extracted/paper.tex,1264
+TerraIncognita,training_domain,training domain validation set,MLDG,L38,42.8,0.4,42.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1264
+TerraIncognita,training_domain,training domain validation set,MLDG,L43,56.8,0.9,56.8 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1264
+TerraIncognita,training_domain,training domain validation set,MLDG,L46,36.3,0.5,36.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1264
+TerraIncognita,training_domain,training domain validation set,CORAL,L100,48.6,0.9,48.6 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1265
+TerraIncognita,training_domain,training domain validation set,CORAL,L38,42.2,3.5,42.2 $\pm$ 3.5,results/v2/external/src_2007.01434/extracted/paper.tex,1265
+TerraIncognita,training_domain,training domain validation set,CORAL,L43,55.9,0.6,55.9 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1265
+TerraIncognita,training_domain,training domain validation set,CORAL,L46,38.7,0.7,38.7 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1265
+TerraIncognita,training_domain,training domain validation set,MMD,L100,52.2,5.8,52.2 $\pm$ 5.8,results/v2/external/src_2007.01434/extracted/paper.tex,1266
+TerraIncognita,training_domain,training domain validation set,MMD,L38,47.0,0.6,47.0 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1266
+TerraIncognita,training_domain,training domain validation set,MMD,L43,57.8,1.3,57.8 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1266
+TerraIncognita,training_domain,training domain validation set,MMD,L46,40.3,0.5,40.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1266
+TerraIncognita,training_domain,training domain validation set,DANN,L100,49.0,3.8,49.0 $\pm$ 3.8,results/v2/external/src_2007.01434/extracted/paper.tex,1267
+TerraIncognita,training_domain,training domain validation set,DANN,L38,46.3,1.7,46.3 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1267
+TerraIncognita,training_domain,training domain validation set,DANN,L43,57.6,0.8,57.6 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1267
+TerraIncognita,training_domain,training domain validation set,DANN,L46,40.6,1.7,40.6 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1267
+TerraIncognita,training_domain,training domain validation set,C-DANN,L100,49.5,3.8,49.5 $\pm$ 3.8,results/v2/external/src_2007.01434/extracted/paper.tex,1268
+TerraIncognita,training_domain,training domain validation set,C-DANN,L38,44.8,1.0,44.8 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1268
+TerraIncognita,training_domain,training domain validation set,C-DANN,L43,57.3,1.1,57.3 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1268
+TerraIncognita,training_domain,training domain validation set,C-DANN,L46,38.8,1.7,38.8 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1268
+TerraIncognita,loo,leave-one-domain-out cross-validation,ERM,L100,47.5,0.2,47.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1280
+TerraIncognita,loo,leave-one-domain-out cross-validation,ERM,L38,43.8,0.2,43.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1280
+TerraIncognita,loo,leave-one-domain-out cross-validation,ERM,L43,55.4,1.3,55.4 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1280
+TerraIncognita,loo,leave-one-domain-out cross-validation,ERM,L46,38.3,1.3,38.3 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1280
+TerraIncognita,loo,leave-one-domain-out cross-validation,IRM,L100,44.2,2.7,44.2 $\pm$ 2.7,results/v2/external/src_2007.01434/extracted/paper.tex,1281
+TerraIncognita,loo,leave-one-domain-out cross-validation,IRM,L38,41.3,0.6,41.3 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1281
+TerraIncognita,loo,leave-one-domain-out cross-validation,IRM,L43,54.3,2.0,54.3 $\pm$ 2.0,results/v2/external/src_2007.01434/extracted/paper.tex,1281
+TerraIncognita,loo,leave-one-domain-out cross-validation,IRM,L46,36.0,1.7,36.0 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1281
+TerraIncognita,loo,leave-one-domain-out cross-validation,DRO,L100,31.8,0.3,31.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1282
+TerraIncognita,loo,leave-one-domain-out cross-validation,DRO,L38,43.7,1.2,43.7 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1282
+TerraIncognita,loo,leave-one-domain-out cross-validation,DRO,L43,58.0,0.7,58.0 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1282
+TerraIncognita,loo,leave-one-domain-out cross-validation,DRO,L46,36.6,1.3,36.6 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1282
+TerraIncognita,loo,leave-one-domain-out cross-validation,Mixup,L100,49.6,4.8,49.6 $\pm$ 4.8,results/v2/external/src_2007.01434/extracted/paper.tex,1283
+TerraIncognita,loo,leave-one-domain-out cross-validation,Mixup,L38,44.4,0.9,44.4 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1283
+TerraIncognita,loo,leave-one-domain-out cross-validation,Mixup,L43,55.0,1.4,55.0 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1283
+TerraIncognita,loo,leave-one-domain-out cross-validation,Mixup,L46,35.2,1.9,35.2 $\pm$ 1.9,results/v2/external/src_2007.01434/extracted/paper.tex,1283
+TerraIncognita,loo,leave-one-domain-out cross-validation,MLDG,L100,50.9,5.1,50.9 $\pm$ 5.1,results/v2/external/src_2007.01434/extracted/paper.tex,1284
+TerraIncognita,loo,leave-one-domain-out cross-validation,MLDG,L38,39.9,0.9,39.9 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1284
+TerraIncognita,loo,leave-one-domain-out cross-validation,MLDG,L43,58.0,1.8,58.0 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1284
+TerraIncognita,loo,leave-one-domain-out cross-validation,MLDG,L46,34.6,1.0,34.6 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1284
+TerraIncognita,loo,leave-one-domain-out cross-validation,CORAL,L100,51.8,2.2,51.8 $\pm$ 2.2,results/v2/external/src_2007.01434/extracted/paper.tex,1285
+TerraIncognita,loo,leave-one-domain-out cross-validation,CORAL,L38,42.1,1.1,42.1 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1285
+TerraIncognita,loo,leave-one-domain-out cross-validation,CORAL,L43,59.6,0.8,59.6 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1285
+TerraIncognita,loo,leave-one-domain-out cross-validation,CORAL,L46,38.7,2.3,38.7 $\pm$ 2.3,results/v2/external/src_2007.01434/extracted/paper.tex,1285
+TerraIncognita,loo,leave-one-domain-out cross-validation,MMD,L100,51.5,1.7,51.5 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1286
+TerraIncognita,loo,leave-one-domain-out cross-validation,MMD,L38,37.4,2.0,37.4 $\pm$ 2.0,results/v2/external/src_2007.01434/extracted/paper.tex,1286
+TerraIncognita,loo,leave-one-domain-out cross-validation,MMD,L43,58.9,0.9,58.9 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1286
+TerraIncognita,loo,leave-one-domain-out cross-validation,MMD,L46,37.4,1.8,37.4 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1286
+TerraIncognita,loo,leave-one-domain-out cross-validation,DANN,L100,47.2,4.5,47.2 $\pm$ 4.5,results/v2/external/src_2007.01434/extracted/paper.tex,1287
+TerraIncognita,loo,leave-one-domain-out cross-validation,DANN,L38,40.6,0.0,40.6 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1287
+TerraIncognita,loo,leave-one-domain-out cross-validation,DANN,L43,55.7,2.6,55.7 $\pm$ 2.6,results/v2/external/src_2007.01434/extracted/paper.tex,1287
+TerraIncognita,loo,leave-one-domain-out cross-validation,DANN,L46,39.4,1.3,39.4 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1287
+TerraIncognita,loo,leave-one-domain-out cross-validation,C-DANN,L100,43.2,3.5,43.2 $\pm$ 3.5,results/v2/external/src_2007.01434/extracted/paper.tex,1288
+TerraIncognita,loo,leave-one-domain-out cross-validation,C-DANN,L38,30.9,4.1,30.9 $\pm$ 4.1,results/v2/external/src_2007.01434/extracted/paper.tex,1288
+TerraIncognita,loo,leave-one-domain-out cross-validation,C-DANN,L43,50.4,4.4,50.4 $\pm$ 4.4,results/v2/external/src_2007.01434/extracted/paper.tex,1288
+TerraIncognita,loo,leave-one-domain-out cross-validation,C-DANN,L46,37.8,1.5,37.8 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1288
+TerraIncognita,oracle,test-domain validation set,ERM,L100,59.9,1.0,59.9 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1300
+TerraIncognita,oracle,test-domain validation set,ERM,L38,48.7,0.4,48.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1300
+TerraIncognita,oracle,test-domain validation set,ERM,L43,58.9,0.3,58.9 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1300
+TerraIncognita,oracle,test-domain validation set,ERM,L46,43.3,0.9,43.3 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1300
+TerraIncognita,oracle,test-domain validation set,IRM,L100,56.8,2.0,56.8 $\pm$ 2.0,results/v2/external/src_2007.01434/extracted/paper.tex,1301
+TerraIncognita,oracle,test-domain validation set,IRM,L38,46.5,0.3,46.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1301
+TerraIncognita,oracle,test-domain validation set,IRM,L43,57.9,0.6,57.9 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1301
+TerraIncognita,oracle,test-domain validation set,IRM,L46,42.4,0.5,42.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1301
+TerraIncognita,oracle,test-domain validation set,DRO,L100,61.2,1.2,61.2 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1302
+TerraIncognita,oracle,test-domain validation set,DRO,L38,47.5,0.6,47.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1302
+TerraIncognita,oracle,test-domain validation set,DRO,L43,59.5,0.6,59.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1302
+TerraIncognita,oracle,test-domain validation set,DRO,L46,44.1,0.8,44.1 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1302
+TerraIncognita,oracle,test-domain validation set,Mixup,L100,65.1,1.8,65.1 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1303
+TerraIncognita,oracle,test-domain validation set,Mixup,L38,46.8,0.6,46.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1303
+TerraIncognita,oracle,test-domain validation set,Mixup,L43,59.5,0.3,59.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1303
+TerraIncognita,oracle,test-domain validation set,Mixup,L46,40.0,1.1,40.0 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1303
+TerraIncognita,oracle,test-domain validation set,MLDG,L100,58.7,0.5,58.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1304
+TerraIncognita,oracle,test-domain validation set,MLDG,L38,48.9,0.7,48.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1304
+TerraIncognita,oracle,test-domain validation set,MLDG,L43,59.5,0.4,59.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1304
+TerraIncognita,oracle,test-domain validation set,MLDG,L46,42.4,0.6,42.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1304
+TerraIncognita,oracle,test-domain validation set,CORAL,L100,60.5,1.0,60.5 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1305
+TerraIncognita,oracle,test-domain validation set,CORAL,L38,47.6,1.8,47.6 $\pm$ 1.8,results/v2/external/src_2007.01434/extracted/paper.tex,1305
+TerraIncognita,oracle,test-domain validation set,CORAL,L43,59.1,0.3,59.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1305
+TerraIncognita,oracle,test-domain validation set,CORAL,L46,43.2,0.5,43.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1305
+TerraIncognita,oracle,test-domain validation set,MMD,L100,60.0,1.6,60.0 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1306
+TerraIncognita,oracle,test-domain validation set,MMD,L38,46.7,0.8,46.7 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1306
+TerraIncognita,oracle,test-domain validation set,MMD,L43,60.0,1.0,60.0 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1306
+TerraIncognita,oracle,test-domain validation set,MMD,L46,44.2,0.4,44.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1306
+TerraIncognita,oracle,test-domain validation set,DANN,L100,57.6,1.3,57.6 $\pm$ 1.3,results/v2/external/src_2007.01434/extracted/paper.tex,1307
+TerraIncognita,oracle,test-domain validation set,DANN,L38,48.1,1.1,48.1 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1307
+TerraIncognita,oracle,test-domain validation set,DANN,L43,58.2,0.5,58.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1307
+TerraIncognita,oracle,test-domain validation set,DANN,L46,42.7,1.4,42.7 $\pm$ 1.4,results/v2/external/src_2007.01434/extracted/paper.tex,1307
+TerraIncognita,oracle,test-domain validation set,C-DANN,L100,56.3,2.6,56.3 $\pm$ 2.6,results/v2/external/src_2007.01434/extracted/paper.tex,1308
+TerraIncognita,oracle,test-domain validation set,C-DANN,L38,46.9,1.5,46.9 $\pm$ 1.5,results/v2/external/src_2007.01434/extracted/paper.tex,1308
+TerraIncognita,oracle,test-domain validation set,C-DANN,L43,57.8,0.8,57.8 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1308
+TerraIncognita,oracle,test-domain validation set,C-DANN,L46,43.3,0.5,43.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1308
+DomainNet,training_domain,training domain validation set,ERM,clipart,58.4,0.3,58.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1324
+DomainNet,training_domain,training domain validation set,ERM,infograph,19.2,0.4,19.2 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1324
+DomainNet,training_domain,training domain validation set,ERM,painting,46.3,0.5,46.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1324
+DomainNet,training_domain,training domain validation set,ERM,quickdraw,12.8,0.0,12.8 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1324
+DomainNet,training_domain,training domain validation set,ERM,real,60.6,0.5,60.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1324
+DomainNet,training_domain,training domain validation set,ERM,sketch,49.7,0.8,49.7 $\pm$ 0.8,results/v2/external/src_2007.01434/extracted/paper.tex,1324
+DomainNet,training_domain,training domain validation set,IRM,clipart,51.0,3.3,51.0 $\pm$ 3.3,results/v2/external/src_2007.01434/extracted/paper.tex,1325
+DomainNet,training_domain,training domain validation set,IRM,infograph,16.8,1.0,16.8 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1325
+DomainNet,training_domain,training domain validation set,IRM,painting,38.8,2.1,38.8 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1325
+DomainNet,training_domain,training domain validation set,IRM,quickdraw,11.8,0.5,11.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1325
+DomainNet,training_domain,training domain validation set,IRM,real,51.5,3.6,51.5 $\pm$ 3.6,results/v2/external/src_2007.01434/extracted/paper.tex,1325
+DomainNet,training_domain,training domain validation set,IRM,sketch,44.2,3.1,44.2 $\pm$ 3.1,results/v2/external/src_2007.01434/extracted/paper.tex,1325
+DomainNet,training_domain,training domain validation set,DRO,clipart,47.8,0.6,47.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1326
+DomainNet,training_domain,training domain validation set,DRO,infograph,17.1,0.6,17.1 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1326
+DomainNet,training_domain,training domain validation set,DRO,painting,36.6,0.7,36.6 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1326
+DomainNet,training_domain,training domain validation set,DRO,quickdraw,8.8,0.4,8.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1326
+DomainNet,training_domain,training domain validation set,DRO,real,51.5,0.6,51.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1326
+DomainNet,training_domain,training domain validation set,DRO,sketch,40.7,0.3,40.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1326
+DomainNet,training_domain,training domain validation set,Mixup,clipart,55.3,0.3,55.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1327
+DomainNet,training_domain,training domain validation set,Mixup,infograph,18.2,0.3,18.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1327
+DomainNet,training_domain,training domain validation set,Mixup,painting,45.0,1.0,45.0 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1327
+DomainNet,training_domain,training domain validation set,Mixup,quickdraw,12.5,0.3,12.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1327
+DomainNet,training_domain,training domain validation set,Mixup,real,57.1,1.2,57.1 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1327
+DomainNet,training_domain,training domain validation set,Mixup,sketch,49.2,0.3,49.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1327
+DomainNet,training_domain,training domain validation set,MLDG,clipart,59.5,0.0,59.5 $\pm$ 0.0,results/v2/external/src_2007.01434/extracted/paper.tex,1328
+DomainNet,training_domain,training domain validation set,MLDG,infograph,19.8,0.4,19.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1328
+DomainNet,training_domain,training domain validation set,MLDG,painting,48.3,0.5,48.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1328
+DomainNet,training_domain,training domain validation set,MLDG,quickdraw,13.0,0.4,13.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1328
+DomainNet,training_domain,training domain validation set,MLDG,real,59.5,1.0,59.5 $\pm$ 1.0,results/v2/external/src_2007.01434/extracted/paper.tex,1328
+DomainNet,training_domain,training domain validation set,MLDG,sketch,50.4,0.7,50.4 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1328
+DomainNet,training_domain,training domain validation set,CORAL,clipart,58.7,0.2,58.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1329
+DomainNet,training_domain,training domain validation set,CORAL,infograph,20.9,0.3,20.9 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1329
+DomainNet,training_domain,training domain validation set,CORAL,painting,47.3,0.3,47.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1329
+DomainNet,training_domain,training domain validation set,CORAL,quickdraw,13.6,0.3,13.6 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1329
+DomainNet,training_domain,training domain validation set,CORAL,real,60.2,0.3,60.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1329
+DomainNet,training_domain,training domain validation set,CORAL,sketch,50.2,0.6,50.2 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1329
+DomainNet,training_domain,training domain validation set,MMD,clipart,54.6,1.7,54.6 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1330
+DomainNet,training_domain,training domain validation set,MMD,infograph,19.3,0.3,19.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1330
+DomainNet,training_domain,training domain validation set,MMD,painting,44.9,1.1,44.9 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1330
+DomainNet,training_domain,training domain validation set,MMD,quickdraw,11.4,0.5,11.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1330
+DomainNet,training_domain,training domain validation set,MMD,real,59.5,0.2,59.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1330
+DomainNet,training_domain,training domain validation set,MMD,sketch,47.0,1.6,47.0 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1330
+DomainNet,training_domain,training domain validation set,DANN,clipart,53.8,0.7,53.8 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1331
+DomainNet,training_domain,training domain validation set,DANN,infograph,17.8,0.3,17.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1331
+DomainNet,training_domain,training domain validation set,DANN,painting,43.5,0.3,43.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1331
+DomainNet,training_domain,training domain validation set,DANN,quickdraw,11.9,0.5,11.9 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1331
+DomainNet,training_domain,training domain validation set,DANN,real,56.4,0.3,56.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1331
+DomainNet,training_domain,training domain validation set,DANN,sketch,46.7,0.5,46.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1331
+DomainNet,training_domain,training domain validation set,C-DANN,clipart,53.4,0.4,53.4 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1332
+DomainNet,training_domain,training domain validation set,C-DANN,infograph,18.3,0.7,18.3 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1332
+DomainNet,training_domain,training domain validation set,C-DANN,painting,44.8,0.3,44.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1332
+DomainNet,training_domain,training domain validation set,C-DANN,quickdraw,12.9,0.2,12.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1332
+DomainNet,training_domain,training domain validation set,C-DANN,real,57.5,0.4,57.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1332
+DomainNet,training_domain,training domain validation set,C-DANN,sketch,46.7,0.2,46.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1332
+DomainNet,loo,leave-one-domain-out cross-validation,ERM,clipart,56.0,1.1,56.0 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1344
+DomainNet,loo,leave-one-domain-out cross-validation,ERM,infograph,19.6,0.2,19.6 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1344
+DomainNet,loo,leave-one-domain-out cross-validation,ERM,painting,47.3,0.3,47.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1344
+DomainNet,loo,leave-one-domain-out cross-validation,ERM,quickdraw,12.5,0.3,12.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1344
+DomainNet,loo,leave-one-domain-out cross-validation,ERM,real,60.5,0.5,60.5 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1344
+DomainNet,loo,leave-one-domain-out cross-validation,ERM,sketch,49.1,0.2,49.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1344
+DomainNet,loo,leave-one-domain-out cross-validation,IRM,clipart,49.0,2.4,49.0 $\pm$ 2.4,results/v2/external/src_2007.01434/extracted/paper.tex,1345
+DomainNet,loo,leave-one-domain-out cross-validation,IRM,infograph,16.7,0.9,16.7 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1345
+DomainNet,loo,leave-one-domain-out cross-validation,IRM,painting,38.8,2.1,38.8 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1345
+DomainNet,loo,leave-one-domain-out cross-validation,IRM,quickdraw,10.2,0.6,10.2 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1345
+DomainNet,loo,leave-one-domain-out cross-validation,IRM,real,53.2,2.1,53.2 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1345
+DomainNet,loo,leave-one-domain-out cross-validation,IRM,sketch,43.7,2.1,43.7 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1345
+DomainNet,loo,leave-one-domain-out cross-validation,DRO,clipart,47.3,0.7,47.3 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1346
+DomainNet,loo,leave-one-domain-out cross-validation,DRO,infograph,16.8,0.3,16.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1346
+DomainNet,loo,leave-one-domain-out cross-validation,DRO,painting,35.2,0.1,35.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1346
+DomainNet,loo,leave-one-domain-out cross-validation,DRO,quickdraw,8.8,0.4,8.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1346
+DomainNet,loo,leave-one-domain-out cross-validation,DRO,real,50.1,2.3,50.1 $\pm$ 2.3,results/v2/external/src_2007.01434/extracted/paper.tex,1346
+DomainNet,loo,leave-one-domain-out cross-validation,DRO,sketch,38.9,0.7,38.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1346
+DomainNet,loo,leave-one-domain-out cross-validation,Mixup,clipart,54.4,0.6,54.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1347
+DomainNet,loo,leave-one-domain-out cross-validation,Mixup,infograph,18.1,0.3,18.1 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1347
+DomainNet,loo,leave-one-domain-out cross-validation,Mixup,painting,45.2,0.3,45.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1347
+DomainNet,loo,leave-one-domain-out cross-validation,Mixup,quickdraw,12.1,0.4,12.1 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1347
+DomainNet,loo,leave-one-domain-out cross-validation,Mixup,real,57.9,1.1,57.9 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1347
+DomainNet,loo,leave-one-domain-out cross-validation,Mixup,sketch,48.6,0.1,48.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1347
+DomainNet,loo,leave-one-domain-out cross-validation,MLDG,clipart,58.7,0.4,58.7 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1348
+DomainNet,loo,leave-one-domain-out cross-validation,MLDG,infograph,20.3,0.1,20.3 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1348
+DomainNet,loo,leave-one-domain-out cross-validation,MLDG,painting,48.8,0.1,48.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1348
+DomainNet,loo,leave-one-domain-out cross-validation,MLDG,quickdraw,13.0,0.4,13.0 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1348
+DomainNet,loo,leave-one-domain-out cross-validation,MLDG,real,61.2,0.2,61.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1348
+DomainNet,loo,leave-one-domain-out cross-validation,MLDG,sketch,50.3,0.2,50.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1348
+DomainNet,loo,leave-one-domain-out cross-validation,CORAL,clipart,57.9,0.7,57.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1349
+DomainNet,loo,leave-one-domain-out cross-validation,CORAL,infograph,20.8,0.3,20.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1349
+DomainNet,loo,leave-one-domain-out cross-validation,CORAL,painting,47.5,0.4,47.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1349
+DomainNet,loo,leave-one-domain-out cross-validation,CORAL,quickdraw,13.5,0.3,13.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1349
+DomainNet,loo,leave-one-domain-out cross-validation,CORAL,real,61.0,0.3,61.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1349
+DomainNet,loo,leave-one-domain-out cross-validation,CORAL,sketch,50.6,0.5,50.6 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1349
+DomainNet,loo,leave-one-domain-out cross-validation,MMD,clipart,54.0,2.2,54.0 $\pm$ 2.2,results/v2/external/src_2007.01434/extracted/paper.tex,1350
+DomainNet,loo,leave-one-domain-out cross-validation,MMD,infograph,19.3,0.3,19.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1350
+DomainNet,loo,leave-one-domain-out cross-validation,MMD,painting,44.9,1.1,44.9 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1350
+DomainNet,loo,leave-one-domain-out cross-validation,MMD,quickdraw,11.4,0.5,11.4 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1350
+DomainNet,loo,leave-one-domain-out cross-validation,MMD,real,59.5,0.2,59.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1350
+DomainNet,loo,leave-one-domain-out cross-validation,MMD,sketch,47.0,1.6,47.0 $\pm$ 1.6,results/v2/external/src_2007.01434/extracted/paper.tex,1350
+DomainNet,loo,leave-one-domain-out cross-validation,DANN,clipart,53.1,0.4,53.1 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1351
+DomainNet,loo,leave-one-domain-out cross-validation,DANN,infograph,17.5,0.6,17.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1351
+DomainNet,loo,leave-one-domain-out cross-validation,DANN,painting,42.8,0.4,42.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1351
+DomainNet,loo,leave-one-domain-out cross-validation,DANN,quickdraw,10.2,0.5,10.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1351
+DomainNet,loo,leave-one-domain-out cross-validation,DANN,real,56.4,0.3,56.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1351
+DomainNet,loo,leave-one-domain-out cross-validation,DANN,sketch,44.9,0.9,44.9 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1351
+DomainNet,loo,leave-one-domain-out cross-validation,C-DANN,clipart,53.4,0.4,53.4 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1352
+DomainNet,loo,leave-one-domain-out cross-validation,C-DANN,infograph,18.3,0.7,18.3 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1352
+DomainNet,loo,leave-one-domain-out cross-validation,C-DANN,painting,44.2,0.5,44.2 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1352
+DomainNet,loo,leave-one-domain-out cross-validation,C-DANN,quickdraw,12.9,0.2,12.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1352
+DomainNet,loo,leave-one-domain-out cross-validation,C-DANN,real,57.1,0.2,57.1 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1352
+DomainNet,loo,leave-one-domain-out cross-validation,C-DANN,sketch,46.7,0.2,46.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1352
+DomainNet,oracle,test-domain validation set,ERM,clipart,58.4,0.3,58.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1365
+DomainNet,oracle,test-domain validation set,ERM,infograph,19.8,0.2,19.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1365
+DomainNet,oracle,test-domain validation set,ERM,painting,47.3,0.3,47.3 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1365
+DomainNet,oracle,test-domain validation set,ERM,quickdraw,13.4,0.2,13.4 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1365
+DomainNet,oracle,test-domain validation set,ERM,real,60.7,0.5,60.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1365
+DomainNet,oracle,test-domain validation set,ERM,sketch,49.9,0.7,49.9 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1365
+DomainNet,oracle,test-domain validation set,IRM,clipart,51.0,3.3,51.0 $\pm$ 3.3,results/v2/external/src_2007.01434/extracted/paper.tex,1366
+DomainNet,oracle,test-domain validation set,IRM,infograph,16.7,0.9,16.7 $\pm$ 0.9,results/v2/external/src_2007.01434/extracted/paper.tex,1366
+DomainNet,oracle,test-domain validation set,IRM,painting,38.8,2.1,38.8 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1366
+DomainNet,oracle,test-domain validation set,IRM,quickdraw,11.8,0.5,11.8 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1366
+DomainNet,oracle,test-domain validation set,IRM,real,53.2,2.1,53.2 $\pm$ 2.1,results/v2/external/src_2007.01434/extracted/paper.tex,1366
+DomainNet,oracle,test-domain validation set,IRM,sketch,44.7,2.7,44.7 $\pm$ 2.7,results/v2/external/src_2007.01434/extracted/paper.tex,1366
+DomainNet,oracle,test-domain validation set,DRO,clipart,47.8,0.6,47.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1367
+DomainNet,oracle,test-domain validation set,DRO,infograph,17.2,0.6,17.2 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1367
+DomainNet,oracle,test-domain validation set,DRO,painting,36.3,0.5,36.3 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1367
+DomainNet,oracle,test-domain validation set,DRO,quickdraw,9.0,0.2,9.0 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1367
+DomainNet,oracle,test-domain validation set,DRO,real,52.8,0.3,52.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1367
+DomainNet,oracle,test-domain validation set,DRO,sketch,40.7,0.3,40.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1367
+DomainNet,oracle,test-domain validation set,Mixup,clipart,55.8,0.6,55.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1368
+DomainNet,oracle,test-domain validation set,Mixup,infograph,19.2,0.2,19.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1368
+DomainNet,oracle,test-domain validation set,Mixup,painting,46.2,0.6,46.2 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1368
+DomainNet,oracle,test-domain validation set,Mixup,quickdraw,12.8,0.2,12.8 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1368
+DomainNet,oracle,test-domain validation set,Mixup,real,58.7,0.6,58.7 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1368
+DomainNet,oracle,test-domain validation set,Mixup,sketch,49.2,0.3,49.2 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1368
+DomainNet,oracle,test-domain validation set,MLDG,clipart,59.3,0.2,59.3 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1369
+DomainNet,oracle,test-domain validation set,MLDG,infograph,20.3,0.1,20.3 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1369
+DomainNet,oracle,test-domain validation set,MLDG,painting,48.8,0.1,48.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1369
+DomainNet,oracle,test-domain validation set,MLDG,quickdraw,14.0,0.3,14.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1369
+DomainNet,oracle,test-domain validation set,MLDG,real,61.2,0.2,61.2 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1369
+DomainNet,oracle,test-domain validation set,MLDG,sketch,51.2,0.1,51.2 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1369
+DomainNet,oracle,test-domain validation set,CORAL,clipart,58.8,0.1,58.8 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1370
+DomainNet,oracle,test-domain validation set,CORAL,infograph,20.8,0.3,20.8 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1370
+DomainNet,oracle,test-domain validation set,CORAL,painting,47.5,0.4,47.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1370
+DomainNet,oracle,test-domain validation set,CORAL,quickdraw,13.6,0.2,13.6 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1370
+DomainNet,oracle,test-domain validation set,CORAL,real,61.0,0.3,61.0 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1370
+DomainNet,oracle,test-domain validation set,CORAL,sketch,50.8,0.4,50.8 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1370
+DomainNet,oracle,test-domain validation set,MMD,clipart,54.6,1.7,54.6 $\pm$ 1.7,results/v2/external/src_2007.01434/extracted/paper.tex,1371
+DomainNet,oracle,test-domain validation set,MMD,infograph,19.6,0.1,19.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1371
+DomainNet,oracle,test-domain validation set,MMD,painting,44.9,1.1,44.9 $\pm$ 1.1,results/v2/external/src_2007.01434/extracted/paper.tex,1371
+DomainNet,oracle,test-domain validation set,MMD,quickdraw,12.6,0.1,12.6 $\pm$ 0.1,results/v2/external/src_2007.01434/extracted/paper.tex,1371
+DomainNet,oracle,test-domain validation set,MMD,real,59.7,0.2,59.7 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1371
+DomainNet,oracle,test-domain validation set,MMD,sketch,47.5,1.2,47.5 $\pm$ 1.2,results/v2/external/src_2007.01434/extracted/paper.tex,1371
+DomainNet,oracle,test-domain validation set,DANN,clipart,53.8,0.7,53.8 $\pm$ 0.7,results/v2/external/src_2007.01434/extracted/paper.tex,1372
+DomainNet,oracle,test-domain validation set,DANN,infograph,17.5,0.6,17.5 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1372
+DomainNet,oracle,test-domain validation set,DANN,painting,43.5,0.3,43.5 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1372
+DomainNet,oracle,test-domain validation set,DANN,quickdraw,11.8,0.6,11.8 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1372
+DomainNet,oracle,test-domain validation set,DANN,real,56.4,0.3,56.4 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1372
+DomainNet,oracle,test-domain validation set,DANN,sketch,46.7,0.5,46.7 $\pm$ 0.5,results/v2/external/src_2007.01434/extracted/paper.tex,1372
+DomainNet,oracle,test-domain validation set,C-DANN,clipart,53.4,0.4,53.4 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1373
+DomainNet,oracle,test-domain validation set,C-DANN,infograph,18.4,0.6,18.4 $\pm$ 0.6,results/v2/external/src_2007.01434/extracted/paper.tex,1373
+DomainNet,oracle,test-domain validation set,C-DANN,painting,44.7,0.3,44.7 $\pm$ 0.3,results/v2/external/src_2007.01434/extracted/paper.tex,1373
+DomainNet,oracle,test-domain validation set,C-DANN,quickdraw,12.9,0.2,12.9 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1373
+DomainNet,oracle,test-domain validation set,C-DANN,real,57.5,0.4,57.5 $\pm$ 0.4,results/v2/external/src_2007.01434/extracted/paper.tex,1373
+DomainNet,oracle,test-domain validation set,C-DANN,sketch,46.5,0.2,46.5 $\pm$ 0.2,results/v2/external/src_2007.01434/extracted/paper.tex,1373

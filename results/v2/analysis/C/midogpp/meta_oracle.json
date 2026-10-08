@@ -1,0 +1,94 @@
+{
+ "cohort": "midogpp",
+ "selection": "oracle",
+ "K": 7,
+ "domains": [
+  "canine cutaneous mast cell tumor",
+  "canine lung cancer",
+  "canine lymphosarcoma",
+  "canine soft tissue sarcoma",
+  "human breast cancer",
+  "human melanoma",
+  "human neuroendocrine tumor"
+ ],
+ "design": [
+  [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  [
+   "2",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  [
+   "0",
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  [
+   "0",
+   "1",
+   "4",
+   "5",
+   "6"
+  ],
+  [
+   "0",
+   "1",
+   "2",
+   "5",
+   "6"
+  ],
+  [
+   "0",
+   "1",
+   "2",
+   "3",
+   "6"
+  ],
+  [
+   "0",
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ ],
+ "arms": [
+  "augonly",
+  "compute_matched",
+  "coral",
+  "erm",
+  "fish",
+  "groupdro",
+  "he_jitter",
+  "irm",
+  "lisa",
+  "macenko",
+  "macenko_tile",
+  "mixstyle",
+  "sam",
+  "simclr",
+  "simclr_sam",
+  "tia_style"
+ ],
+ "notes": [],
+ "ref": "erm",
+ "B": 10000,
+ "prior_scale": 0.1,
+ "higher_better": true,
+ "snapshot": {
+  "id": "1381bdd759f9",
+  "created": "2026-10-05 14:15",
+  "source": "$HISTOPATH_DATA/v2",
+  "snapshot": "$HISTOPATH_DATA/v2/snap_final2_20261005"
+ }
+}

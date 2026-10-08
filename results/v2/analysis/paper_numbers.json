@@ -1,0 +1,1042 @@
+{
+ "n_arms_S": {
+  "c17": 21,
+  "canine": 21,
+  "midog21sn": 21,
+  "midogpp": 21
+ },
+ "n_arms_C": {
+  "c17": 20,
+  "canine": 20,
+  "midog21sn": 20,
+  "midogpp": 20
+ },
+ "evidence": {
+  "S/c17": {
+   "K": 5,
+   "seeds": 3,
+   "n_arms": 20,
+   "icc_median": 0.7283887493730511,
+   "icc_q1": 0.4031732050553387,
+   "icc_q3": 0.9315627769103272,
+   "icc_lo_gt_half": 7,
+   "icc_lo_zero": 7,
+   "erm_icc": 0.7948918753335382,
+   "erm_icc_ci": [
+    0.3783354235768902,
+    0.9736070365952214
+   ],
+   "erm_sd_domain": 0.0358202690699869,
+   "erm_sd_run": 0.0181955943719897,
+   "raw_up": 0,
+   "raw_down": 0,
+   "holm_up": 0,
+   "holm_down": 0,
+   "top_arm": "he_jitter_lunit_dino",
+   "top_gain": 0.0361064631466666,
+   "top_n_improved": 5,
+   "sd_delta_median": 0.035932158108881,
+   "kmin05_median": 7.0,
+   "kmin05_rho05_median": 14.0
+  },
+  "S/canine": {
+   "K": 5,
+   "seeds": 3,
+   "n_arms": 20,
+   "icc_median": 0.9511437709003796,
+   "icc_q1": 0.9194851765415226,
+   "icc_q3": 0.9761351723254132,
+   "icc_lo_gt_half": 20,
+   "icc_lo_zero": 0,
+   "erm_icc": 0.9519309558605528,
+   "erm_icc_ci": [
+    0.8066961522991407,
+    0.9944057077539374
+   ],
+   "erm_sd_domain": 0.1493411990620591,
+   "erm_sd_run": 0.0335590495312198,
+   "raw_up": 0,
+   "raw_down": 0,
+   "holm_up": 0,
+   "holm_down": 0,
+   "top_arm": "probe_vit_s16_lunit_dino",
+   "top_gain": 0.1454792711388413,
+   "top_n_improved": 5,
+   "sd_delta_median": 0.1263616873109695,
+   "kmin05_median": 53.0,
+   "kmin05_rho05_median": 137.0
+  },
+  "S/midog21sn": {
+   "K": 3,
+   "seeds": 3,
+   "n_arms": 20,
+   "icc_median": 0.7568063974633792,
+   "icc_q1": 0.70611509391893,
+   "icc_q3": 0.8454264569038842,
+   "icc_lo_gt_half": 3,
+   "icc_lo_zero": 5,
+   "erm_icc": 0.7160741693637305,
+   "erm_icc_ci": [
+    0.0565837510879551,
+    0.9911483213327676
+   ],
+   "erm_sd_domain": 0.0155520719428125,
+   "erm_sd_run": 0.0097929086908433,
+   "raw_up": 4,
+   "raw_down": 3,
+   "holm_up": 0,
+   "holm_down": 0,
+   "top_arm": "he_jitter_lunit_bt",
+   "top_gain": 0.0307404428835329,
+   "top_n_improved": 3,
+   "sd_delta_median": 0.012606958135992451,
+   "kmin05_median": 3.0,
+   "kmin05_rho05_median": 4.0
+  },
+  "S/midogpp": {
+   "K": 7,
+   "seeds": 3,
+   "n_arms": 20,
+   "icc_median": 0.9489975209092282,
+   "icc_q1": 0.8993752725637449,
+   "icc_q3": 0.9669448513998864,
+   "icc_lo_gt_half": 18,
+   "icc_lo_zero": 0,
+   "erm_icc": 0.9426147672664044,
+   "erm_icc_ci": [
+    0.8166216190505495,
+    0.9888190891449092
+   ],
+   "erm_sd_domain": 0.0198002506891077,
+   "erm_sd_run": 0.0048854395385324,
+   "raw_up": 2,
+   "raw_down": 4,
+   "holm_up": 0,
+   "holm_down": 3,
+   "top_arm": "sam",
+   "top_gain": 0.0102569967624781,
+   "top_n_improved": 7,
+   "sd_delta_median": 0.012164469511968201,
+   "kmin05_median": 3.0,
+   "kmin05_rho05_median": 5.0
+  },
+  "C/c17": {
+   "K": 5,
+   "seeds": 5,
+   "n_arms": 19,
+   "icc_median": 0.8102773894451477,
+   "icc_q1": 0.6713234808915384,
+   "icc_q3": 0.8882124023163687,
+   "icc_lo_gt_half": 11,
+   "icc_lo_zero": 1,
+   "erm_icc": 0.6170709662321451,
+   "erm_icc_ci": [
+    0.2397710347168662,
+    0.9386725370964322
+   ],
+   "erm_sd_domain": 0.1013277790962318,
+   "erm_sd_run": 0.0798215423856654,
+   "raw_up": 0,
+   "raw_down": 1,
+   "holm_up": 0,
+   "holm_down": 0,
+   "top_arm": "tia_style",
+   "top_gain": 0.106727939712,
+   "top_n_improved": 4,
+   "sd_delta_median": 0.0935794766005269,
+   "kmin05_median": 30.0,
+   "kmin05_rho05_median": 76.0
+  },
+  "C/canine": {
+   "K": 5,
+   "seeds": 5,
+   "n_arms": 19,
+   "icc_median": 0.7987094324946559,
+   "icc_q1": 0.6794289257004102,
+   "icc_q3": 0.8806993695480669,
+   "icc_lo_gt_half": 10,
+   "icc_lo_zero": 1,
+   "erm_icc": 0.7743506781860033,
+   "erm_icc_ci": [
+    0.4545288265584639,
+    0.9686390238460738
+   ],
+   "erm_sd_domain": 0.1025174073067292,
+   "erm_sd_run": 0.0553408453687485,
+   "raw_up": 0,
+   "raw_down": 0,
+   "holm_up": 0,
+   "holm_down": 0,
+   "top_arm": "bnadapt@erm",
+   "top_gain": 0.1225268540250331,
+   "top_n_improved": 5,
+   "sd_delta_median": 0.1031797160388353,
+   "kmin05_median": 36.0,
+   "kmin05_rho05_median": 92.0
+  },
+  "C/midog21sn": {
+   "K": 3,
+   "seeds": 5,
+   "n_arms": 19,
+   "icc_median": 0.7225650345823424,
+   "icc_q1": 0.3757999889817051,
+   "icc_q3": 0.8293722269596661,
+   "icc_lo_gt_half": 3,
+   "icc_lo_zero": 6,
+   "erm_icc": 0.6870752777672441,
+   "erm_icc_ci": [
+    0.2126713190844526,
+    0.9894984335850336
+   ],
+   "erm_sd_domain": 0.0367636914319459,
+   "erm_sd_run": 0.0248105783999255,
+   "raw_up": 7,
+   "raw_down": 0,
+   "holm_up": 0,
+   "holm_down": 0,
+   "top_arm": "bnadapt@he_jitter",
+   "top_gain": 0.0906884434691965,
+   "top_n_improved": 3,
+   "sd_delta_median": 0.0279839227199377,
+   "kmin05_median": 5.0,
+   "kmin05_rho05_median": 8.0
+  },
+  "C/midogpp": {
+   "K": 7,
+   "seeds": 5,
+   "n_arms": 19,
+   "icc_median": 0.8525088992889056,
+   "icc_q1": 0.7936287961658157,
+   "icc_q3": 0.9232607225373247,
+   "icc_lo_gt_half": 16,
+   "icc_lo_zero": 0,
+   "erm_icc": 0.8494627748882239,
+   "erm_icc_ci": [
+    0.644500273207519,
+    0.9671945086892488
+   ],
+   "erm_sd_domain": 0.032563341353403,
+   "erm_sd_run": 0.0137081465596284,
+   "raw_up": 5,
+   "raw_down": 7,
+   "holm_up": 2,
+   "holm_down": 3,
+   "top_arm": "compute_matched",
+   "top_gain": 0.0597970885340995,
+   "top_n_improved": 7,
+   "sd_delta_median": 0.0234932587324082,
+   "kmin05_median": 4.0,
+   "kmin05_rho05_median": 10.0
+  }
+ },
+ "selection": {
+  "S/c17": {
+   "n_common": 20,
+   "tau_ood": 0.8421052631578948,
+   "tau_last": 0.8315789473684211,
+   "tau_oracle": 0.8526315789473685,
+   "top_id": "erm_lunit_dino",
+   "top_ood": "erm_lunit_dino",
+   "top_last": "erm_lunit_dino",
+   "top_oracle": "erm_lunit_dino",
+   "same_top": true
+  },
+  "S/canine": {
+   "n_common": 20,
+   "tau_ood": 0.8947368421052632,
+   "tau_last": 0.968421052631579,
+   "tau_oracle": 0.8736842105263158,
+   "top_id": "probe_vit_s16_lunit_dino",
+   "top_ood": "probe_vit_s16_lunit_dino",
+   "top_last": "probe_vit_s16_lunit_dino",
+   "top_oracle": "he_jitter_lunit_dino",
+   "same_top": false
+  },
+  "S/midog21sn": {
+   "n_common": 20,
+   "tau_last": 0.8526315789473685,
+   "tau_oracle": 0.8526315789473685,
+   "top_id": "he_jitter_lunit_bt",
+   "top_last": "he_jitter",
+   "top_oracle": "he_jitter_lunit_bt",
+   "same_top": false
+  },
+  "S/midogpp": {
+   "n_common": 20,
+   "tau_ood": 0.968421052631579,
+   "tau_last": 0.9894736842105263,
+   "tau_oracle": 0.9578947368421054,
+   "top_id": "sam",
+   "top_ood": "sam",
+   "top_last": "sam",
+   "top_oracle": "sam",
+   "same_top": true
+  },
+  "C/c17": {
+   "n_common": 16,
+   "tau_ood": 0.5833333333333334,
+   "tau_last": 0.6333333333333333,
+   "tau_oracle": 0.5333333333333333,
+   "top_id": "simclr_sam",
+   "top_ood": "macenko",
+   "top_last": "he_jitter",
+   "top_oracle": "macenko",
+   "same_top": false
+  },
+  "C/canine": {
+   "n_common": 16,
+   "tau_ood": 0.38333333333333336,
+   "tau_last": 0.9,
+   "tau_oracle": 0.31666666666666665,
+   "top_id": "augonly",
+   "top_ood": "augonly",
+   "top_last": "augonly",
+   "top_oracle": "augonly",
+   "same_top": true
+  },
+  "C/midog21sn": {
+   "n_common": 16,
+   "tau_last": 0.9166666666666666,
+   "tau_oracle": 0.8499999999999999,
+   "top_id": "macenko",
+   "top_last": "macenko",
+   "top_oracle": "macenko",
+   "same_top": true
+  },
+  "C/midogpp": {
+   "n_common": 16,
+   "tau_ood": 1.0,
+   "tau_last": 1.0,
+   "tau_oracle": 0.9833333333333333,
+   "top_id": "compute_matched",
+   "top_ood": "compute_matched",
+   "top_last": "compute_matched",
+   "top_oracle": "compute_matched",
+   "same_top": true
+  }
+ },
+ "pcam": {
+  "C": {
+   "tia_style": {
+    "mean": 0.8024684158003046,
+    "min": 0.7302136100100982
+   },
+   "augonly": {
+    "mean": 0.7765198930705888,
+    "min": 0.7251050424953813
+   },
+   "he_jitter": {
+    "mean": 0.7678522439478337,
+    "min": 0.6636609484232459
+   },
+   "macenko": {
+    "mean": 0.7647548470384907,
+    "min": 0.6773805979328203
+   },
+   "simclr_sam": {
+    "mean": 0.7613422937161192,
+    "min": 0.7239663704274302
+   },
+   "macenko_tile": {
+    "mean": 0.7564814083560891,
+    "min": 0.6863656115975789
+   },
+   "simclr": {
+    "mean": 0.7428757604245554,
+    "min": 0.700600581353264
+   },
+   "mixstyle": {
+    "mean": 0.7386819814719897,
+    "min": 0.7027219803384581
+   },
+   "irm": {
+    "mean": 0.7159067822226597,
+    "min": 0.6746424043829657
+   },
+   "erm": {
+    "mean": 0.6983319932157832,
+    "min": 0.6408433072318213
+   },
+   "groupdro": {
+    "mean": 0.6971440099181849,
+    "min": 0.6336537307092279
+   },
+   "coral": {
+    "mean": 0.6914009424993627,
+    "min": 0.6206903681674154
+   },
+   "sam": {
+    "mean": 0.6896972164331511,
+    "min": 0.5438624998527113
+   },
+   "lisa": {
+    "mean": 0.6724297760764472,
+    "min": 0.5759367653016056
+   },
+   "compute_matched": {
+    "mean": 0.6517916527308187,
+    "min": 0.5418132325591459
+   },
+   "fish": {
+    "mean": 0.6466476693218045,
+    "min": 0.5814527459114214
+   }
+  },
+  "S": {
+   "he_jitter_lunit_dino": {
+    "mean": 0.9076630660971883,
+    "min": 0.8946237129589987
+   },
+   "erm_lunit_dino": {
+    "mean": 0.9048510821078086,
+    "min": 0.8740751271310495
+   },
+   "probe_resnet50_lunit_bt": {
+    "mean": 0.8888197309728717,
+    "min": 0.8659372202962282
+   },
+   "probe_vit_s16_lunit_dino": {
+    "mean": 0.8860968640151607,
+    "min": 0.8665108393593299
+   },
+   "tia_style": {
+    "mean": 0.8581243282112929,
+    "min": 0.8381850206767494
+   },
+   "he_jitter_lunit_bt": {
+    "mean": 0.8496708273907647,
+    "min": 0.7806552266780514
+   },
+   "he_jitter": {
+    "mean": 0.843181584089613,
+    "min": 0.8006342304165561
+   },
+   "erm_lunit_bt": {
+    "mean": 0.8380525508196713,
+    "min": 0.7912404863938088
+   },
+   "macenko_tile": {
+    "mean": 0.8372132016598443,
+    "min": 0.7839068636724216
+   },
+   "probe_resnet50_imagenet": {
+    "mean": 0.8195699546197843,
+    "min": 0.8064913874544626
+   },
+   "groupdro": {
+    "mean": 0.7912936198465056,
+    "min": 0.7377460859078598
+   },
+   "mixstyle": {
+    "mean": 0.7804319934590447,
+    "min": 0.7018168750741589
+   },
+   "sam": {
+    "mean": 0.7803769870542202,
+    "min": 0.6844364455741613
+   },
+   "coral": {
+    "mean": 0.772319974043762,
+    "min": 0.7073851718078309
+   },
+   "erm": {
+    "mean": 0.7718471793601107,
+    "min": 0.6647805853718842
+   },
+   "lisa": {
+    "mean": 0.7559620524774264,
+    "min": 0.6306703558918615
+   },
+   "simclr": {
+    "mean": 0.753216747719623,
+    "min": 0.6562563366811492
+   },
+   "irm": {
+    "mean": 0.7531396423920088,
+    "min": 0.6688779012921596
+   },
+   "macenko": {
+    "mean": 0.7521075645583519,
+    "min": 0.6337677608726681
+   },
+   "fish": {
+    "mean": 0.7290895767213998,
+    "min": 0.6180493848438804
+   }
+  }
+ },
+ "simclr_sam_interaction_C": {
+  "c17": {
+   "K": 5,
+   "per_domain": {
+    "center0": -0.0034451065599999664,
+    "center1": -0.007390579200000191,
+    "center2": 0.0658083008,
+    "center3": 0.007417886079999825,
+    "center4": 0.05676081408000011
+   },
+   "mean": 0.023830263039999956,
+   "ci": [
+    -0.019337118213600738,
+    0.06699764429360065
+   ],
+   "p": 0.2001153586211768
+  },
+  "canine": {
+   "K": 5,
+   "per_domain": {
+    "cs2": 0.0537958421329463,
+    "gt450": -0.049638597204036405,
+    "nz20": -0.07397982765172917,
+    "nz210": -0.0069073444204498236,
+    "p1000": 0.042463419259778035
+   },
+   "mean": -0.006853301576698212,
+   "ci": [
+    -0.07611715617285209,
+    0.06241055301945567
+   ],
+   "p": 0.7971403098399369
+  },
+  "midog21sn": {
+   "K": 3,
+   "per_domain": {
+    "AperioCS2": -0.009651225712272171,
+    "HamamatsuS360": -0.016065936829074978,
+    "HamamatsuXR": -0.012660018865382039
+   },
+   "mean": -0.012792393802243063,
+   "ci": [
+    -0.020764994531243287,
+    -0.004819793073242838
+   ],
+   "p": 0.020342860898456123
+  },
+  "midogpp": {
+   "K": 7,
+   "per_domain": {
+    "canine cutaneous mast cell tumor": -0.0025260469590856482,
+    "canine lung cancer": 0.0054049599990159125,
+    "canine lymphosarcoma": 0.011531149414218289,
+    "canine soft tissue sarcoma": -0.001793762789555453,
+    "human breast cancer": 0.0035206433852578156,
+    "human melanoma": 0.011884935370152672,
+    "human neuroendocrine tumor": -0.004364606466485066
+   },
+   "mean": 0.0033796102790740745,
+   "ci": [
+    -0.002761202366597687,
+    0.009520422924745836
+   ],
+   "p": 0.2267278869140744
+  }
+ },
+ "extra": {
+  "C/c17": {
+   "erm_seed_range_by_domain": {
+    "center0": [
+     0.9269235552,
+     0.9420625024
+    ],
+    "center1": [
+     0.7069825279999999,
+     0.8697390432
+    ],
+    "center2": [
+     0.5992151135999999,
+     0.9286110208
+    ],
+    "center3": [
+     0.953824576,
+     0.9675058944
+    ],
+    "center4": [
+     0.5919119488000001,
+     0.7967059839999999
+    ]
+   },
+   "erm_worst": 0.69764977344,
+   "erm_worst_domain": "center4",
+   "erm_mean": 0.8440378004479999,
+   "most_common_worst_domain": [
+    "center1",
+    9,
+    20
+   ],
+   "rank_ci_width_domain_median": 5.5,
+   "rank_ci_width_seed_median": 4.5,
+   "pbest_top": [
+    "simclr_sam",
+    0.434
+   ],
+   "ece_erm": 0.1710478027011713,
+   "ece_best": [
+    "bnadapt@he_jitter",
+    0.02404014047882
+   ],
+   "ece_tia_vs_jitter": [
+    0.0672154278339809,
+    0.0592657891303273
+   ],
+   "oldham_negative": 12,
+   "n_response": 19,
+   "pm_p_lt05": 7,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.125
+  },
+  "C/canine": {
+   "erm_seed_range_by_domain": {
+    "cs2": [
+     0.7470226787562224,
+     0.8463984054017358
+    ],
+    "gt450": [
+     0.5295447212486748,
+     0.7187972132549639
+    ],
+    "nz20": [
+     0.4376835237472453,
+     0.6597088841185553
+    ],
+    "nz210": [
+     0.7733177565427513,
+     0.8064671518225723
+    ],
+    "p1000": [
+     0.725711117919092,
+     0.7838907610836361
+    ]
+   },
+   "erm_worst": 0.5505039663383353,
+   "erm_worst_domain": "nz20",
+   "erm_mean": 0.713636129640078,
+   "most_common_worst_domain": [
+    "nz20",
+    10,
+    20
+   ],
+   "rank_ci_width_domain_median": 7.0,
+   "rank_ci_width_seed_median": 3.0,
+   "pbest_top": [
+    "bnadapt@simclr",
+    0.6772
+   ],
+   "ece_erm": 0.2322229858603142,
+   "ece_best": [
+    "bnadapt@he_jitter",
+    0.0339063125643646
+   ],
+   "ece_tia_vs_jitter": [
+    0.0473645402190759,
+    0.0649995288679664
+   ],
+   "oldham_negative": 17,
+   "n_response": 19,
+   "pm_p_lt05": 6,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.0625
+  },
+  "C/midog21sn": {
+   "erm_seed_range_by_domain": {
+    "AperioCS2": [
+     0.6989218388200946,
+     0.8065775067955302
+    ],
+    "HamamatsuS360": [
+     0.7807988884805581,
+     0.8086803607925056
+    ],
+    "HamamatsuXR": [
+     0.8281872082909678,
+     0.8519833151621321
+    ]
+   },
+   "erm_worst": 0.7645342545051848,
+   "erm_worst_domain": "AperioCS2",
+   "erm_mean": 0.8007543259388722,
+   "most_common_worst_domain": [
+    "AperioCS2",
+    18,
+    20
+   ],
+   "rank_ci_width_domain_median": 4.0,
+   "rank_ci_width_seed_median": 4.0,
+   "pbest_top": [
+    "bnadapt@he_jitter",
+    1.0
+   ],
+   "ece_erm": 0.2681818415199871,
+   "ece_best": [
+    "tia_style",
+    0.0361388514503695
+   ],
+   "ece_tia_vs_jitter": [
+    0.0361388514503695,
+    0.0826709531755662
+   ],
+   "oldham_negative": 16,
+   "n_response": 19,
+   "pm_p_lt05": 6,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.25
+  },
+  "C/midogpp": {
+   "erm_seed_range_by_domain": {
+    "canine cutaneous mast cell tumor": [
+     0.8388105510397076,
+     0.8657931180281639
+    ],
+    "canine lung cancer": [
+     0.8085001322092473,
+     0.8218717139852787
+    ],
+    "canine lymphosarcoma": [
+     0.8080198710496472,
+     0.8463817792224659
+    ],
+    "canine soft tissue sarcoma": [
+     0.8478277809609561,
+     0.8871359580911844
+    ],
+    "human breast cancer": [
+     0.793894571244204,
+     0.8477160414267897
+    ],
+    "human melanoma": [
+     0.8134420681551116,
+     0.8375435957696828
+    ],
+    "human neuroendocrine tumor": [
+     0.7528026382790401,
+     0.7786673349453779
+    ]
+   },
+   "erm_worst": 0.7661086717160812,
+   "erm_worst_domain": "human neuroendocrine tumor",
+   "erm_mean": 0.8268096947574063,
+   "most_common_worst_domain": [
+    "human neuroendocrine tumor",
+    9,
+    20
+   ],
+   "rank_ci_width_domain_median": 4.0,
+   "rank_ci_width_seed_median": 2.0,
+   "pbest_top": [
+    "compute_matched",
+    1.0
+   ],
+   "ece_erm": 0.0959811725206783,
+   "ece_best": [
+    "tia_style",
+    0.0375982736516212
+   ],
+   "ece_tia_vs_jitter": [
+    0.0375982736516212,
+    0.0618742968891911
+   ],
+   "oldham_negative": 10,
+   "n_response": 19,
+   "pm_p_lt05": 0,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.28125
+  },
+  "S/c17": {
+   "erm_seed_range_by_domain": {
+    "center0": [
+     0.9630991552,
+     0.9786643392
+    ],
+    "center1": [
+     0.9293697408,
+     0.9597761024
+    ],
+    "center2": [
+     0.8556144800000001,
+     0.9240663008
+    ],
+    "center3": [
+     0.986231584,
+     0.9903226624
+    ],
+    "center4": [
+     0.9670066624,
+     0.9846818432
+    ]
+   },
+   "erm_worst": 0.8952678080000002,
+   "erm_worst_domain": "center2",
+   "erm_mean": 0.9550464183466668,
+   "most_common_worst_domain": [
+    "center2",
+    10,
+    21
+   ],
+   "rank_ci_width_domain_median": 7.0,
+   "rank_ci_width_seed_median": 6.0,
+   "pbest_top": [
+    "erm_lunit_dino",
+    0.6706
+   ],
+   "ece_erm": 0.0920139286987326,
+   "ece_best": [
+    "he_jitter_lunit_dino",
+    0.0268867768695026
+   ],
+   "ece_tia_vs_jitter": [
+    0.0471627182551539,
+    0.0405297527931092
+   ],
+   "oldham_negative": 15,
+   "n_response": 20,
+   "pm_p_lt05": 7,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.0625
+  },
+  "S/canine": {
+   "erm_seed_range_by_domain": {
+    "cs2": [
+     0.8472629638123403,
+     0.8816698784540976
+    ],
+    "gt450": [
+     0.8600797578584196,
+     0.8728270166088229
+    ],
+    "nz20": [
+     0.7420328011786604,
+     0.7798414035279926
+    ],
+    "nz210": [
+     0.8939737367080625,
+     0.9145264465038002
+    ],
+    "p1000": [
+     0.4605225611624141,
+     0.5984775409572993
+    ]
+   },
+   "erm_worst": 0.5336379418501175,
+   "erm_worst_domain": "p1000",
+   "erm_mean": 0.7853462803449944,
+   "most_common_worst_domain": [
+    "p1000",
+    17,
+    21
+   ],
+   "rank_ci_width_domain_median": 6.0,
+   "rank_ci_width_seed_median": 2.0,
+   "pbest_top": [
+    "probe_vit_s16_lunit_dino",
+    0.9894
+   ],
+   "ece_erm": 0.1803316606333105,
+   "ece_best": [
+    "he_jitter_lunit_bt",
+    0.0556882829810351
+   ],
+   "ece_tia_vs_jitter": [
+    0.0749336364114108,
+    0.0800111112889472
+   ],
+   "oldham_negative": 20,
+   "n_response": 20,
+   "pm_p_lt05": 14,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.0625
+  },
+  "S/midog21sn": {
+   "erm_seed_range_by_domain": {
+    "AperioCS2": [
+     0.8515019379844961,
+     0.8592444377328097
+    ],
+    "HamamatsuS360": [
+     0.8309800584127969,
+     0.8553670786509611
+    ],
+    "HamamatsuXR": [
+     0.8714336465313423,
+     0.8891873185432004
+    ]
+   },
+   "erm_worst": 0.846599249101135,
+   "erm_worst_domain": "HamamatsuS360",
+   "erm_mean": 0.8600386063528155,
+   "most_common_worst_domain": [
+    "AperioCS2",
+    14,
+    21
+   ],
+   "rank_ci_width_domain_median": 3.0,
+   "rank_ci_width_seed_median": 3.0,
+   "pbest_top": [
+    "he_jitter_lunit_bt",
+    0.9622
+   ],
+   "ece_erm": 0.1802876620657028,
+   "ece_best": [
+    "he_jitter_lunit_dino",
+    0.0952538132169219
+   ],
+   "ece_tia_vs_jitter": [
+    0.1216549425432794,
+    0.1290445994028207
+   ],
+   "oldham_negative": 10,
+   "n_response": 20,
+   "pm_p_lt05": 0,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.25
+  },
+  "S/midogpp": {
+   "erm_seed_range_by_domain": {
+    "canine cutaneous mast cell tumor": [
+     0.9086426386785468,
+     0.9124857409454612
+    ],
+    "canine lung cancer": [
+     0.8850160803340281,
+     0.8864734566876357
+    ],
+    "canine lymphosarcoma": [
+     0.8614386847379676,
+     0.8765994264798873
+    ],
+    "canine soft tissue sarcoma": [
+     0.9225423590079398,
+     0.929679954162233
+    ],
+    "human breast cancer": [
+     0.8918464398130168,
+     0.8951805624482689
+    ],
+    "human melanoma": [
+     0.9051807285546416,
+     0.9156108108108107
+    ],
+    "human neuroendocrine tumor": [
+     0.8725364998369294,
+     0.8871622059951355
+    ]
+   },
+   "erm_worst": 0.8695584403039304,
+   "erm_worst_domain": "canine lymphosarcoma",
+   "erm_mean": 0.896767048626638,
+   "most_common_worst_domain": [
+    "canine lymphosarcoma",
+    10,
+    21
+   ],
+   "rank_ci_width_domain_median": 7.0,
+   "rank_ci_width_seed_median": 4.0,
+   "pbest_top": [
+    "sam",
+    0.4464
+   ],
+   "ece_erm": 0.0891732690728777,
+   "ece_best": [
+    "he_jitter_lunit_bt",
+    0.0492976385659848
+   ],
+   "ece_tia_vs_jitter": [
+    0.0551142805529945,
+    0.0800784312186009
+   ],
+   "oldham_negative": 4,
+   "n_response": 20,
+   "pm_p_lt05": 5,
+   "perm_p_lt05": 0,
+   "perm_p_min": 0.078125
+  },
+  "tier_tau/c17": {
+   "n": 14,
+   "tau": 0.6043956043956044,
+   "arms": [
+    "bnadapt@erm",
+    "coral",
+    "erm",
+    "fish",
+    "groupdro",
+    "he_jitter",
+    "irm",
+    "lisa",
+    "macenko",
+    "macenko_tile",
+    "mixstyle",
+    "sam",
+    "simclr",
+    "tia_style"
+   ]
+  },
+  "tier_tau/canine": {
+   "n": 14,
+   "tau": 0.6263736263736264,
+   "arms": [
+    "bnadapt@erm",
+    "coral",
+    "erm",
+    "fish",
+    "groupdro",
+    "he_jitter",
+    "irm",
+    "lisa",
+    "macenko",
+    "macenko_tile",
+    "mixstyle",
+    "sam",
+    "simclr",
+    "tia_style"
+   ]
+  },
+  "tier_tau/midog21sn": {
+   "n": 14,
+   "tau": 0.3186813186813187,
+   "arms": [
+    "bnadapt@erm",
+    "coral",
+    "erm",
+    "fish",
+    "groupdro",
+    "he_jitter",
+    "irm",
+    "lisa",
+    "macenko",
+    "macenko_tile",
+    "mixstyle",
+    "sam",
+    "simclr",
+    "tia_style"
+   ]
+  },
+  "tier_tau/midogpp": {
+   "n": 14,
+   "tau": 0.2967032967032967,
+   "arms": [
+    "bnadapt@erm",
+    "coral",
+    "erm",
+    "fish",
+    "groupdro",
+    "he_jitter",
+    "irm",
+    "lisa",
+    "macenko",
+    "macenko_tile",
+    "mixstyle",
+    "sam",
+    "simclr",
+    "tia_style"
+   ]
+  },
+  "midog21_sens": {
+   "n": 20,
+   "tau_worst": 0.7789473684210527,
+   "tau_mean": 0.8315789473684211,
+   "erm": [
+    0.7645342545051848,
+    0.7721678497514555
+   ],
+   "max_abs_worst_change": 0.038964070450477006
+  }
+ }
+}

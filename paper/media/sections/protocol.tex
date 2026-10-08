@@ -1,0 +1,338 @@
+%% Evaluation protocol (MedIA revision, v2 pipeline).
+%% Every implementation detail below is taken from src/v2/ (run_v2.py, arms.py,
+%% select_hparams.py, stats_v2.py, analyze_v2.py); see the provenance list kept
+%% with the revision notes.
+\section{Evaluation protocol}
+\label{sec:protocol}
+
+A cohort has $K$ domains, and fold $t$ holds out domain $t$ for testing. Every
+arm (a training method or a test-time procedure) is run in every fold with
+several seeds. The cohorts, models and arms are described in
+Section~\ref{sec:setup}.
+
+\subsection{Leave-one-domain-out design}
+\label{sec:protocol-lodo}
+
+Leave-one-domain-out evaluation is standard in domain generalization
+\citep{gulrajani2021domainbed}, and Camelyon17-WILDS adds a held-out validation
+hospital \citep{koh2021wilds}. We follow both. On Camelyon17, the canine
+cohort and MIDOG++, fold $t$ also holds out domain $(t-1)\bmod K$ as an
+out-of-distribution (OOD) validation domain and trains on the remaining $K-2$
+domains. MIDOG~2021 has three labeled scanners, so each fold trains on two and
+has no OOD validation domain. Every domain is the test domain of exactly one
+fold, so the evaluation is \emph{domain-complete}: no single test domain is
+privileged. In every training domain, an in-distribution (ID) validation split
+is held out that is disjoint from training in its groups (patients, slides or
+images; Section~\ref{sec:setup-cohorts}). The study adds four elements to this
+design.
+
+\paragraph{Seed replication} Every arm is run in every fold with five seeds at
+the compact tier and three at the standard tier
+(Section~\ref{sec:setup-models}). The seed fixes the initialization of
+randomly initialized layers, the batch order, the augmentation draws and the
+order of the test stream for test-time adaptation. All arms use the same seed
+values.
+
+\paragraph{Fixed step budget} Every fine-tuned arm is trained for 1,200 steps
+with batch size 128 and a cosine learning-rate schedule. It is evaluated at
+ten checkpoints, at steps $\mathrm{round}(kn/10)$ for $k=1,\dots,10$ and a
+budget of $n$ steps. The only exception is the compute-matched control
+(Section~\ref{sec:setup-arms}), which needs a larger budget by design. With a
+fixed budget, schedule length and early stopping cannot confound method
+comparisons.
+
+\paragraph{All model-selection rules} At each checkpoint we evaluate the ID
+validation, OOD validation and test splits. Four rules select a checkpoint by
+the maximum area under the ROC curve (AUROC) on their selection split, with ties
+going to the earliest checkpoint:
+\begin{enumerate}
+  \item \emph{training-domain (ID) validation}, the primary rule
+    \citep[DomainBed's default;][]{gulrajani2021domainbed}, available in every
+    cohort;
+  \item \emph{leave-one-domain-out validation} on the OOD validation domain
+    (Camelyon17, canine, MIDOG++);
+  \item \emph{last}, the final checkpoint;
+  \item \emph{oracle}, the best test AUROC, reported only as an upper bound.
+\end{enumerate}
+All four rules use the same ten checkpoints of the same runs, so any
+difference between them comes from selection alone.
+
+\paragraph{Per-fold hyperparameter selection} Hyperparameters are tuned with
+seed~0 on the grids of Table~\ref{tab:arms}. Every fold keeps the configuration
+with the highest ID-validation AUROC at the ID-selected checkpoint of its own
+tuning run. Diverged runs are excluded unless every configuration diverged, and
+test data are never used. We do not average ID-validation AUROC over folds,
+because doing so leaks test-domain labels. The test domain of fold $t$ is a
+training domain of the other folds, except for fold $t+1$ when a validation
+domain exists. The ID-validation splits of those folds therefore contain
+labeled patches of domain $t$. In every cohort, some of these patches are
+pixel-identical to rows of fold $t$'s test set.
+Averaging would thus let fold $t$'s test labels influence the hyperparameters
+reported for fold $t$. At the standard tier, the base learning rate is selected
+first, and the method grids are then run at each fold's selected rate. The
+Barlow Twins fine-tunes have their own rate grid (Section~\ref{sec:setup-optim}).
+
+\subsection{Reported quantities}
+\label{sec:protocol-metrics}
+
+Let $y_{ts}$ be the test AUROC (the primary metric) of one arm in fold $t$
+with seed $s=1,\dots,n_t$ under a given selection rule, and
+$\bar y_t=n_t^{-1}\sum_s y_{ts}$. For every arm, cohort, tier and rule we report
+\begin{align}
+  \text{worst domain:}\quad & \min_t \bar y_t, \label{eq:worst}\\
+  \text{across-domain SD:}\quad & s_{\bar y}=\Big[\tfrac{1}{K-1}\textstyle\sum_t(\bar y_t-\hat\mu)^2\Big]^{1/2},
+     \label{eq:sdacross}\\
+  \text{mean:}\quad & \hat\mu = \tfrac{1}{K}\textstyle\sum_t \bar y_t,\qquad
+     \hat\mu \pm t_{0.975,\,K-1}\, s_{\bar y}/\sqrt{K}. \label{eq:mean}
+\end{align}
+With balanced seeds, the interval in \eqref{eq:mean} is exact under model
+\eqref{eq:oneway}, since $\operatorname{Var}(\bar y_t)=\sigma_D^2+\sigma_R^2/n$
+for every domain. Percentile bootstrap intervals \citep{efron1993bootstrap}
+are supplementary only, because the domain bootstrap under-covers for $K\le7$.
+Calibration is reported as the expected calibration error
+\citep{naeini2015ece,guo2017calibration}, with 15 equal-width bins $B_b$ on the
+confidence of the predicted class (decision threshold 0.5):
+\begin{equation}
+  \mathrm{ECE}=\sum_{b=1}^{15}\frac{|B_b|}{N_{\text{test}}}\,
+  \big|\operatorname{acc}(B_b)-\operatorname{conf}(B_b)\big|,
+  \label{eq:ece}
+\end{equation}
+summarized by its mean and maximum over domains.
+
+\subsection{Variance decomposition}
+\label{sec:protocol-variance}
+
+For one arm on one cohort we fit the one-way random-effects model
+\begin{equation}
+  y_{ts}=\mu+b_t+e_{ts},\qquad b_t\sim\mathcal N(0,\sigma_D^2),\quad
+  e_{ts}\sim\mathcal N(0,\sigma_R^2),\qquad s=1,\dots,n_t,
+  \label{eq:oneway}
+\end{equation}
+with all terms independent. Seeds are nested within domains: seed $s$ in
+folds $t$ and $t'$ denotes different runs on different training sets, so no
+crossed seed effect is fitted. $\sigma_D$ is the between-domain and $\sigma_R$
+the between-run SD. With $N=\sum_t n_t$, between- and within-domain mean
+squares $\mathrm{MSB}=\sum_t n_t(\bar y_t-\bar y)^2/(K-1)$ and
+$\mathrm{MSW}=\sum_{t,s}(y_{ts}-\bar y_t)^2/(N-K)$, and
+$n_0=(N-\sum_t n_t^2/N)/(K-1)$ ($n_0=n$ for balanced data), the ANOVA
+estimators \citep{searle1992variance} are
+\begin{equation}
+  \hat\sigma_R^2=\mathrm{MSW},\qquad
+  \hat\sigma_D^2=\max\{(\mathrm{MSB}-\mathrm{MSW})/n_0,\,0\},\qquad
+  \widehat{\mathrm{ICC}}=\frac{\mathrm{MSB}-\mathrm{MSW}}{\mathrm{MSB}+(n_0-1)\,\mathrm{MSW}},
+  \label{eq:anova}
+\end{equation}
+where $\mathrm{ICC}=\sigma_D^2/(\sigma_D^2+\sigma_R^2)$ is ICC(1)
+\citep{shrout1979icc,mcgraw1996icc}, reported truncated at 0. Restricted
+maximum likelihood (REML) estimates \citep{patterson1971reml} are obtained by
+profiling out $\sigma_R^2$ and minimizing over $\gamma=\sigma_D^2/\sigma_R^2\ge0$,
+with the boundary $\gamma=0$ checked explicitly. They coincide with ANOVA for
+balanced data with a positive estimate.
+
+\paragraph{Intervals and boundary estimates} We report the exact $F$-based
+95\% interval for the ICC, the exact $\chi^2$ interval for $\sigma_R$ and the
+modified large-sample interval for $\sigma_D$
+\citep{searle1992variance,mcgraw1996icc,burdick1992confidence}. With $K\le7$,
+$\hat\sigma_D$ is often at or near zero, so we also report a Bayesian grid
+posterior under weakly informative half-normal and half-Cauchy priors (scale
+0.1 AUROC) \citep{gelman2006prior}, with one-sided intervals $[0,q_{0.95}]$ at
+the boundary. The formulas are in Supplementary
+Section~\ref{S-sup:protocol}.
+
+\paragraph{The ICC as a diagnostic} The ICC is the share of an arm's
+single-run variance that is due to which domain is held out. Near one, the
+choice of domains dominates. Near zero, run-to-run noise is as large as the
+differences between domains, and a single-seed result says little about a
+domain. The ICC is conditional on arm, cohort, metric, selection rule and the
+domains at hand, and with $K\le7$ its intervals are wide. It tells us where the
+variance of a reported number comes from. It is not a quality standard, and we
+set no threshold for it. As an external reference point we apply the same
+estimators to DomainBed's published per-environment results
+\citep{gulrajani2021domainbed}. The mean $\pm$ standard error over three
+trials is converted to an SD with the convention of DomainBed's released code
+(Supplementary Section~\ref{S-app:domainbed}).
+
+\subsection{Paired contrasts and fold dependence}
+\label{sec:protocol-contrasts}
+
+Each arm is compared with ERM of the same tier and cohort through
+$d_t=\bar y^{a}_t-\bar y^{\text{ERM}}_t$. We report $\bar d$, the interval
+$\bar d\pm t_{0.975,K-1}s_d/\sqrt K$, the two-sided $p$-value and the number of
+improved domains. The $p$-values are Holm-adjusted over all arms compared with
+ERM within a cohort, tier and selection rule \citep{holm1979}.
+
+The folds of a leave-one-domain-out design share training domains, so the
+$d_t$ are not independent \citep{nadeau2003inference,bates2023cv}. Let $T_i$ be
+the set of training domains of fold $i$ and
+$O_{ij}=|T_i\cap T_j|/\sqrt{|T_i||T_j|}$ the overlap of folds $i$ and $j$. As
+a sensitivity analysis we assume a working correlation
+$\operatorname{corr}(d_i,d_j)=R_{ij}=\rho\,O_{ij}$ for $i\ne j$
+($R_{ii}=1$). Under this assumption
+$\operatorname{Var}(\bar d)=\sigma^2\,\mathbf 1^\top R\mathbf 1/K^2$, and the
+sample variance is biased downward,
+$\mathbb E[s_d^2]=\sigma^2(1-\bar r)$, where $\bar r$ is the mean off-diagonal
+element of $R$. The corrected standard error and the effective number of folds
+are then
+\begin{equation}
+  \widehat{\mathrm{SE}}_\rho(\bar d)=\Big[\frac{s_d^2}{1-\bar r}\,
+  \frac{\mathbf 1^\top R\mathbf 1}{K^2}\Big]^{1/2},\qquad
+  K_{\text{eff}}=\frac{K^2}{\sum_{i,j}R_{ij}},
+  \label{eq:keff}
+\end{equation}
+with $t_{K-1}$ quantiles, in the spirit of the corrected resampled $t$
+statistic of \citet{nadeau2003inference}. Because $\rho$ cannot be estimated
+from $K$ folds, we report $\rho\in\{0,0.25,0.5,1\}$. For our designs,
+$K_{\text{eff}}=3.33$, 2.50 and 1.67 at $\rho=0.25$, 0.5 and 1 for Camelyon17
+and the canine cohort ($K=5$); 3.50, 2.33 and 1.40 for MIDOG++ ($K=7$); and
+2.40, 2.00 and 1.50 for MIDOG~2021 ($K=3$).
+
+\subsection{Power}
+\label{sec:protocol-power}
+
+Power for a paired comparison depends on the variance of the paired
+difference, not on either arm's between-domain SD. Writing
+$y^{a}_{ts}=\mu_a+b_t+(ab)_{t}+e^{a}_{ts}$ and
+$y^{\text{ERM}}_{ts}=\mu_{\text{ERM}}+b_t+e^{\text{ERM}}_{ts}$, the domain
+effect $b_t$ cancels, and with $s$ seeds per arm
+\begin{equation}
+  \sigma_\Delta^2(s)=\operatorname{Var}(d_t)=\sigma_{DA}^2+\sigma_{R,\Delta}^2/s,
+  \qquad \sigma_{R,\Delta}^2=\operatorname{Var}(e^{a}_{ts}-e^{\text{ERM}}_{ts}),
+  \label{eq:diffvar}
+\end{equation}
+where $\sigma_{DA}^2$ is the domain-by-arm interaction variance. Because all
+arms share seed values, their run noise may be correlated, so
+$\sigma^2_{R,\Delta}$ is estimated as the pooled within-domain variance of the
+per-seed differences $y^{a}_{ts}-y^{\text{ERM}}_{ts}$, which is unbiased either
+way, and $\hat\sigma_{DA}^2=\max\{s_d^2-\hat\sigma^2_{R,\Delta}h,0\}$ with
+$h=K^{-1}\sum_t n_t^{-1}$. If seed sets are not aligned, we use
+$\hat\sigma^2_{R,\Delta}=\mathrm{MSW}_a+\mathrm{MSW}_{\text{ERM}}$ and
+$\hat\sigma_{DA}^2=\max\{s_d^2-\mathrm{MSW}_a h_a-\mathrm{MSW}_{\text{ERM}}h_{\text{ERM}},0\}$.
+The power of the two-sided paired $t$ test over $K$ domains to detect a mean
+difference $\delta$ is
+\begin{equation}
+  1-\beta(K)=\Pr\big(|T_{K-1}(\lambda)|>t_{1-\alpha/2,\,K-1}\big),\qquad
+  \lambda=\frac{\delta\sqrt{K_{\text{eff}}}}{\sigma_\Delta(s)},
+  \label{eq:power}
+\end{equation}
+where $T_{K-1}(\lambda)$ is noncentral $t$ with $K-1$ degrees of freedom and
+$K_{\text{eff}}=K$ for independent folds. We report the smallest $K$ that
+reaches 80\% power at $\alpha=0.05$, for
+$\delta\in\{0.02,0.05,0.10,0.20\}$ AUROC and $s\in\{1,3,5,10\}$. For
+$\rho>0$, $\sigma_\Delta$ is first divided by $\sqrt{1-\bar r_{\text{obs}}}$
+(the bias correction of \eqref{eq:keff} for the observed design). The primary
+\emph{ratio} mode then holds the observed inflation $K/K_{\text{eff}}$ fixed as
+$K$ grows. The \emph{design} mode uses $K_{\text{eff}}$ of a hypothetical
+$K$-domain design, which levels off near $1/\rho$ because training sets overlap
+more as $K$ grows, so some targets are unreachable.
+
+\subsection{Rank stability and the task-by-shift decomposition}
+\label{sec:protocol-ranks}
+
+Within a cohort, arms are ranked by worst-domain \eqref{eq:worst} and by mean
+AUROC, with 95\% percentile rank intervals and the probability of ranking first
+from 5,000 bootstrap replicates. Two resampling schemes are used: seeds within
+each (arm, domain) cell, and domains with one shared draw for all arms.
+Agreement between two cohorts' rankings is Kendall's $\tau_b$ over their common
+arms \citep{kendall1938}, with a 95\% interval from 2,000 seed-bootstrap
+replicates and a $p$-value against independent orderings. Of the six cohort
+pairs, two share the task, two the shift type and two neither. We report the
+mean worst-domain $\tau_b$ per class and bootstrap intervals of the differences, which are
+descriptive.
+
+\paragraph{Arm-by-cohort interaction} For the $A$ arms that are run in all
+four cohorts, let $G_{cta}=\bar y^{a}_{ct}-\bar y^{\text{ERM}}_{ct}$ be the
+gain of arm $a$ over ERM in domain $t$ of cohort $c$. Each (cohort, domain) row
+is centered across arms, $E_{cta}=G_{cta}-A^{-1}\sum_{a'}G_{cta'}$, removing
+the domain's average gain. Whether the centered profiles differ between cohorts
+is tested with domains as replicates, using a studentized Welch--James statistic
+and a wild bootstrap that multiplies whole residual rows by Rademacher signs
+(10,000 replicates). This keeps each cohort's variance and the correlation
+between arms.
+
+\paragraph{Task, shift and task $\times$ shift} Task and shift type are
+constant within a cohort, so they can only be assessed with the cohort as the
+unit. Let $\mathbf m_c\in\mathbb R^A$ be the mean of the centered rows of
+cohort $c$, with equal weight for every cohort, and let $s^{f}_c=\pm1$ code
+cohort $c$ for factor
+$f\in\{\text{task},\text{shift},\text{task}\times\text{shift}\}$, with
+$s^{\text{task}\times\text{shift}}_c=s^{\text{task}}_c s^{\text{shift}}_c$.
+Because the four cohorts form a $2\times2$ design with one cohort per cell, the
+between-cohort interaction sum of squares splits exactly into three orthogonal
+contrasts:
+\begin{equation}
+  \sum_{c}\|\mathbf m_c-\bar{\mathbf m}\|^2
+  =\sum_{f}\mathrm{SS}_f,\qquad
+  \mathrm{SS}_f=\|\mathbf L_f\|^2,\quad
+  \mathbf L_f=\tfrac12\sum_c s^{f}_c\,\mathbf m_c .
+  \label{eq:2x2}
+\end{equation}
+We report each $\mathrm{SS}_f$ and its fraction of the total, and the rank
+of the task and shift splits among the three possible two-versus-two splits of
+four cohorts. A cohort-level permutation $p$-value equals rank$/3$ and cannot
+be below $1/3$. We also give an approximate test $F_f=\mathrm{SS}_f/\mathrm{SS}_{\text{task}\times\text{shift}}$
+on $(A-1,A-1)$ degrees of freedom for $f\in\{\text{task},\text{shift}\}$. It
+treats the cohort-level deviations as independent and spherical across arms.
+Its error term has only $A-1$ degrees of freedom and absorbs any genuine
+task-by-shift pattern. With four cohorts, this decomposition describes the
+interaction. It cannot show that rankings are organized by task or by shift
+type, and we do not claim that they are.
+
+\subsection{A site acceptance test for new sites}
+\label{sec:sat}
+
+The diagnostics above describe a method across sites. A practitioner who is
+about to use one trained model at a new hospital or scanner needs a decision
+for that site: is the model's AUROC there at least a target $T$? We propose an
+empirical-Bayes site acceptance test that combines the development evidence
+with a small labeled sample from the new site.
+
+\paragraph{Development prior} Let $z_{sr}=\operatorname{logit}(y_{sr})$ be the
+test AUROC of run $r$ of the method at development site $s$ on the logit scale,
+for $K'$ held-out development sites with $n$ runs each. Under model
+\eqref{eq:oneway} on this scale, with a flat prior on $\mu$ and independent
+half-Cauchy priors on $\sigma_D$ and $\sigma_R$, the AUROC of one run at a new
+site has, on the logit scale, the posterior predictive distribution
+\begin{equation}
+  \theta_{\text{new}}\mid\sigma_D,\sigma_R,\mathbf z\ \sim\
+  \mathcal N\!\Big(\bar z,\ \sigma_D^2+\sigma_R^2+\frac{\sigma_D^2+\sigma_R^2/n}{K'}\Big),
+  \label{eq:sat-prior}
+\end{equation}
+integrated over the grid posterior of $(\sigma_D,\sigma_R)$, where $\bar z$ is
+the grand mean. The result is a scale mixture of normal distributions centered
+at $\bar z$. Its spread grows with the between-site SD and shrinks only slowly
+with $K'$, so few or heterogeneous development sites give a vague prior. The
+half-Cauchy scale is 0.5 on the logit scale (about 0.06 AUROC at an AUROC of
+0.85).
+
+\paragraph{Local evidence} At the new site, $m$ patches are labeled. Their AUROC
+$a_m$ (with a continuity correction that keeps it inside $(0,1)$) gives
+$\hat z_m=\operatorname{logit}(a_m)$ with variance
+$v_m=\operatorname{Var}(a_m)/\{a_m(1-a_m)\}^2$, where $\operatorname{Var}(a_m)$
+is the Hanley--McNeil variance for the observed numbers of positives and
+negatives. Each mixture component is updated conjugately with
+$\hat z_m\sim\mathcal N(\theta,v_m)$, and the component weights are updated by
+their marginal likelihoods.
+
+\paragraph{Decision} The site is accepted if
+$P(\theta\ge\operatorname{logit}T\mid\mathbf z,\hat z_m)\ge 1-\alpha$, with
+$\alpha=0.05$. The posterior also gives a point estimate and a credible interval
+for the site's AUROC. Before any labels are collected, the number of labels
+needed is planned by pre-posterior simulation: sites are drawn from the
+development prior \eqref{eq:sat-prior}, local scores are simulated, and $m$ is
+the smallest sample size for which sites that exceed the target by a chosen
+margin (0.02) are accepted with the chosen probability (0.8). The simulation
+uses equal-variance binormal scores at a prevalence of 0.5.
+
+\paragraph{Validation design} Every held-out site of every cohort plays the
+new site in turn, for every method and seed (the six extra frozen backbones of
+the representation ladder excepted). Its prior is built only from the other
+folds' results of the same method at their own held-out sites, so the new
+site's test labels are never used. Samples that contain only one class are
+discarded (at most 3 of 200). Labeled samples of size $m\in\{25,50,100,200,400\}$ are drawn at
+random, 200 times, from the run's saved test predictions, and the truth is the
+run's AUROC on the full test split. We compare the test with two baselines:
+local labels alone (accept if the one-sided 95\% Wald bound of $\hat z_m$ exceeds
+$\operatorname{logit}T$) and the development prior alone ($m=0$). We report
+the rate of accepting a site whose true AUROC is below $T$ (false acceptance)
+and the rate of accepting a site at or above $T$ (power), for
+$T\in\{0.80,0.85,0.90\}$.

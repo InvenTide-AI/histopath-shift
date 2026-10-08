@@ -1,0 +1,421 @@
+arm,fold,domain,seed,metric,ece,file
+coral,0,canine cutaneous mast cell tumor,0,0.9130881918984031,0.06755453675819934,runs/S/midogpp/fold0/coral__selected__s0.json
+coral,0,canine cutaneous mast cell tumor,1,0.9197110626353941,0.04844452326188667,runs/S/midogpp/fold0/coral__selected__s1.json
+coral,0,canine cutaneous mast cell tumor,2,0.9104729570306183,0.08671436327755835,runs/S/midogpp/fold0/coral__selected__s2.json
+erm,0,canine cutaneous mast cell tumor,0,0.9124857409454611,0.07699302326953425,runs/S/midogpp/fold0/erm__selected__s0.json
+erm,0,canine cutaneous mast cell tumor,1,0.9107139374117954,0.08671184985291616,runs/S/midogpp/fold0/erm__selected__s1.json
+erm,0,canine cutaneous mast cell tumor,2,0.9064933201874236,0.08236484642410749,runs/S/midogpp/fold0/erm__selected__s2.json
+erm_lunit_bt,0,canine cutaneous mast cell tumor,0,0.9070938835655784,0.06340555649468893,runs/S/midogpp/fold0/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,0,canine cutaneous mast cell tumor,1,0.897947639933784,0.09681355572446487,runs/S/midogpp/fold0/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,0,canine cutaneous mast cell tumor,2,0.9020361269230454,0.07675359098693257,runs/S/midogpp/fold0/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,0,canine cutaneous mast cell tumor,0,0.9103332764963592,0.0642007556766439,runs/S/midogpp/fold0/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,0,canine cutaneous mast cell tumor,1,0.9144258532309931,0.05914979222732682,runs/S/midogpp/fold0/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,0,canine cutaneous mast cell tumor,2,0.9117077455373012,0.05937957131348729,runs/S/midogpp/fold0/erm_lunit_dino__selected__s2.json
+fish,0,canine cutaneous mast cell tumor,0,0.9149877213260087,0.06322341349405355,runs/S/midogpp/fold0/fish__selected__s0.json
+fish,0,canine cutaneous mast cell tumor,1,0.8743885044178689,0.08639734077626803,runs/S/midogpp/fold0/fish__selected__s1.json
+fish,0,canine cutaneous mast cell tumor,2,0.9070070551253634,0.026401678812973995,runs/S/midogpp/fold0/fish__selected__s2.json
+groupdro,0,canine cutaneous mast cell tumor,0,0.9165616441028073,0.052949254381931564,runs/S/midogpp/fold0/groupdro__selected__s0.json
+groupdro,0,canine cutaneous mast cell tumor,1,0.9016705666059077,0.0924436429778202,runs/S/midogpp/fold0/groupdro__selected__s1.json
+groupdro,0,canine cutaneous mast cell tumor,2,0.9106648604673258,0.05464045427705027,runs/S/midogpp/fold0/groupdro__selected__s2.json
+he_jitter,0,canine cutaneous mast cell tumor,0,0.9176492017760822,0.06407002929805444,runs/S/midogpp/fold0/he_jitter__selected__s0.json
+he_jitter,0,canine cutaneous mast cell tumor,1,0.9180625806544978,0.07384287934652475,runs/S/midogpp/fold0/he_jitter__selected__s1.json
+he_jitter,0,canine cutaneous mast cell tumor,2,0.912033352188108,0.07620361275208506,runs/S/midogpp/fold0/he_jitter__selected__s2.json
+he_jitter_lunit_bt,0,canine cutaneous mast cell tumor,0,0.9041665696662957,0.04934781757188207,runs/S/midogpp/fold0/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,0,canine cutaneous mast cell tumor,1,0.8964676240026527,0.08726022148451708,runs/S/midogpp/fold0/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,0,canine cutaneous mast cell tumor,2,0.8997383192153227,0.07725282195427463,runs/S/midogpp/fold0/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,0,canine cutaneous mast cell tumor,0,0.9160595492093893,0.07044196803936324,runs/S/midogpp/fold0/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,0,canine cutaneous mast cell tumor,1,0.9206557938164308,0.06775918470011205,runs/S/midogpp/fold0/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,0,canine cutaneous mast cell tumor,2,0.9150493821023935,0.06724584264953751,runs/S/midogpp/fold0/he_jitter_lunit_dino__selected__s2.json
+irm,0,canine cutaneous mast cell tumor,0,0.9149773396646786,0.052676534550120085,runs/S/midogpp/fold0/irm__selected__s0.json
+irm,0,canine cutaneous mast cell tumor,1,0.9204069485403069,0.049326322010592616,runs/S/midogpp/fold0/irm__selected__s1.json
+irm,0,canine cutaneous mast cell tumor,2,0.9131253142025532,0.08298301979348142,runs/S/midogpp/fold0/irm__selected__s2.json
+lisa,0,canine cutaneous mast cell tumor,0,0.9100718473883201,0.059002748901219024,runs/S/midogpp/fold0/lisa__selected__s0.json
+lisa,0,canine cutaneous mast cell tumor,1,0.9067660747441865,0.06313395210714262,runs/S/midogpp/fold0/lisa__selected__s1.json
+lisa,0,canine cutaneous mast cell tumor,2,0.9039362855422468,0.07597941610665634,runs/S/midogpp/fold0/lisa__selected__s2.json
+macenko,0,canine cutaneous mast cell tumor,0,0.9235541649023087,0.05437381713961636,runs/S/midogpp/fold0/macenko__selected__s0.json
+macenko,0,canine cutaneous mast cell tumor,1,0.9149830023890405,0.06915659988874526,runs/S/midogpp/fold0/macenko__selected__s1.json
+macenko,0,canine cutaneous mast cell tumor,2,0.9238574352514658,0.056654131421974244,runs/S/midogpp/fold0/macenko__selected__s2.json
+macenko_tile,0,canine cutaneous mast cell tumor,0,0.9122054360895491,0.06891285215890189,runs/S/midogpp/fold0/macenko_tile__selected__s0.json
+macenko_tile,0,canine cutaneous mast cell tumor,1,0.9110678576844113,0.07074281619657902,runs/S/midogpp/fold0/macenko_tile__selected__s1.json
+macenko_tile,0,canine cutaneous mast cell tumor,2,0.9082185635430031,0.07819321802434631,runs/S/midogpp/fold0/macenko_tile__selected__s2.json
+mixstyle,0,canine cutaneous mast cell tumor,0,0.9188349133382956,0.03464463311040753,runs/S/midogpp/fold0/mixstyle__selected__s0.json
+mixstyle,0,canine cutaneous mast cell tumor,1,0.9127034412375946,0.012823507365817789,runs/S/midogpp/fold0/mixstyle__selected__s1.json
+mixstyle,0,canine cutaneous mast cell tumor,2,0.9208134063111694,0.028360875179910434,runs/S/midogpp/fold0/mixstyle__selected__s2.json
+probe_resnet50_imagenet,0,canine cutaneous mast cell tumor,0,0.6194954386755266,0.3479297865269567,runs/S/midogpp/fold0/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,0,canine cutaneous mast cell tumor,1,0.6196011428636146,0.35171166838647805,runs/S/midogpp/fold0/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,0,canine cutaneous mast cell tumor,2,0.6167351751449186,0.36260811349973143,runs/S/midogpp/fold0/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,0,canine cutaneous mast cell tumor,0,0.797235143370743,0.21049040084546444,runs/S/midogpp/fold0/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,0,canine cutaneous mast cell tumor,1,0.802760703964725,0.20554838019491314,runs/S/midogpp/fold0/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,0,canine cutaneous mast cell tumor,2,0.8032068008061203,0.19676282145321866,runs/S/midogpp/fold0/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,0,canine cutaneous mast cell tumor,0,0.7694830750606698,0.05172350963164036,runs/S/midogpp/fold0/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,0,canine cutaneous mast cell tumor,1,0.7667155758267106,0.05083443820369264,runs/S/midogpp/fold0/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,0,canine cutaneous mast cell tumor,2,0.767330453313669,0.04993782626508373,runs/S/midogpp/fold0/probe_vit_s16_lunit_dino__default__s2.json
+sam,0,canine cutaneous mast cell tumor,0,0.9174491188486298,0.07622617121017405,runs/S/midogpp/fold0/sam__selected__s0.json
+sam,0,canine cutaneous mast cell tumor,1,0.9205985373812164,0.05479786152789158,runs/S/midogpp/fold0/sam__selected__s1.json
+sam,0,canine cutaneous mast cell tumor,2,0.9218116187778458,0.0638018304169543,runs/S/midogpp/fold0/sam__selected__s2.json
+simclr,0,canine cutaneous mast cell tumor,0,0.9185448560126493,0.06895547725754736,runs/S/midogpp/fold0/simclr__selected__s0.json
+simclr,0,canine cutaneous mast cell tumor,1,0.91691462058803,0.08259555838192084,runs/S/midogpp/fold0/simclr__selected__s1.json
+simclr,0,canine cutaneous mast cell tumor,2,0.9088512156925417,0.09430315386485388,runs/S/midogpp/fold0/simclr__selected__s2.json
+tia_style,0,canine cutaneous mast cell tumor,0,0.9179870776630062,0.040846077317779866,runs/S/midogpp/fold0/tia_style__selected__s0.json
+tia_style,0,canine cutaneous mast cell tumor,1,0.9172226098741554,0.058736413621594694,runs/S/midogpp/fold0/tia_style__selected__s1.json
+tia_style,0,canine cutaneous mast cell tumor,2,0.9176539207130504,0.05040731290685381,runs/S/midogpp/fold0/tia_style__selected__s2.json
+coral,1,canine lung cancer,0,0.8867095885525241,0.09174733868050003,runs/S/midogpp/fold1/coral__selected__s0.json
+coral,1,canine lung cancer,1,0.8838932241223459,0.09750563297410483,runs/S/midogpp/fold1/coral__selected__s1.json
+coral,1,canine lung cancer,2,0.887934522601632,0.08762268291041389,runs/S/midogpp/fold1/coral__selected__s2.json
+erm,1,canine lung cancer,0,0.8864267222560432,0.08998369997858993,runs/S/midogpp/fold1/erm__selected__s0.json
+erm,1,canine lung cancer,1,0.887630748796281,0.08165417690028663,runs/S/midogpp/fold1/erm__selected__s1.json
+erm,1,canine lung cancer,2,0.8858204044988038,0.086503900005216,runs/S/midogpp/fold1/erm__selected__s2.json
+erm_lunit_bt,1,canine lung cancer,0,0.8760590575632912,0.06119360305538144,runs/S/midogpp/fold1/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,1,canine lung cancer,1,0.8787930218114512,0.05319278005231073,runs/S/midogpp/fold1/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,1,canine lung cancer,2,0.8759520603120138,0.051723135710538506,runs/S/midogpp/fold1/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,1,canine lung cancer,0,0.8623621795463071,0.10464454989960754,runs/S/midogpp/fold1/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,1,canine lung cancer,1,0.8619907638004932,0.10563541188153809,runs/S/midogpp/fold1/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,1,canine lung cancer,2,0.8629020852165465,0.10292190206893415,runs/S/midogpp/fold1/erm_lunit_dino__selected__s2.json
+fish,1,canine lung cancer,0,0.8848426709957509,0.08383101338865849,runs/S/midogpp/fold1/fish__selected__s0.json
+fish,1,canine lung cancer,1,0.8772470960085106,0.07834264812212735,runs/S/midogpp/fold1/fish__selected__s1.json
+fish,1,canine lung cancer,2,0.8723215328893562,0.09047001497317422,runs/S/midogpp/fold1/fish__selected__s2.json
+groupdro,1,canine lung cancer,0,0.8741638533768703,0.08750068300960216,runs/S/midogpp/fold1/groupdro__selected__s0.json
+groupdro,1,canine lung cancer,1,0.8928748439623418,0.06537151824134345,runs/S/midogpp/fold1/groupdro__selected__s1.json
+groupdro,1,canine lung cancer,2,0.881558962249648,0.08796810614494141,runs/S/midogpp/fold1/groupdro__selected__s2.json
+he_jitter,1,canine lung cancer,0,0.8816364430178144,0.09987040360381762,runs/S/midogpp/fold1/he_jitter__selected__s0.json
+he_jitter,1,canine lung cancer,1,0.8837837671641423,0.09111546154819421,runs/S/midogpp/fold1/he_jitter__selected__s1.json
+he_jitter,1,canine lung cancer,2,0.8859175629223777,0.08850016160171821,runs/S/midogpp/fold1/he_jitter__selected__s2.json
+he_jitter_lunit_bt,1,canine lung cancer,0,0.8743298835943697,0.0723361319761196,runs/S/midogpp/fold1/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,1,canine lung cancer,1,0.8753137663647378,0.05560676949543811,runs/S/midogpp/fold1/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,1,canine lung cancer,2,0.874168772790722,0.0710658780110076,runs/S/midogpp/fold1/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,1,canine lung cancer,0,0.8669765897393324,0.10322612892472864,runs/S/midogpp/fold1/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,1,canine lung cancer,1,0.8672680650100539,0.10644540516353544,runs/S/midogpp/fold1/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,1,canine lung cancer,2,0.8649866868362636,0.10736825468066048,runs/S/midogpp/fold1/he_jitter_lunit_dino__selected__s2.json
+irm,1,canine lung cancer,0,0.8791029448841171,0.09185349567172411,runs/S/midogpp/fold1/irm__selected__s0.json
+irm,1,canine lung cancer,1,0.8886035628854823,0.0685147386324789,runs/S/midogpp/fold1/irm__selected__s1.json
+irm,1,canine lung cancer,2,0.8765768258711975,0.07772812314197015,runs/S/midogpp/fold1/irm__selected__s2.json
+lisa,1,canine lung cancer,0,0.8754810264357002,0.04599149153388743,runs/S/midogpp/fold1/lisa__selected__s0.json
+lisa,1,canine lung cancer,1,0.8725957902115962,0.0383432660308018,runs/S/midogpp/fold1/lisa__selected__s1.json
+lisa,1,canine lung cancer,2,0.8902626352070152,0.02846435816561762,runs/S/midogpp/fold1/lisa__selected__s2.json
+macenko,1,canine lung cancer,0,0.8922217917735101,0.09733728275243383,runs/S/midogpp/fold1/macenko__selected__s0.json
+macenko,1,canine lung cancer,1,0.8941920170211719,0.08424772512727188,runs/S/midogpp/fold1/macenko__selected__s1.json
+macenko,1,canine lung cancer,2,0.8948973379821794,0.09356245356120098,runs/S/midogpp/fold1/macenko__selected__s2.json
+macenko_tile,1,canine lung cancer,0,0.8796760565978563,0.10025406261370046,runs/S/midogpp/fold1/macenko_tile__selected__s0.json
+macenko_tile,1,canine lung cancer,1,0.8782592654085265,0.09098443838564498,runs/S/midogpp/fold1/macenko_tile__selected__s1.json
+macenko_tile,1,canine lung cancer,2,0.8781608771314897,0.087651316033272,runs/S/midogpp/fold1/macenko_tile__selected__s2.json
+mixstyle,1,canine lung cancer,0,0.8827752873245153,0.07522965596932762,runs/S/midogpp/fold1/mixstyle__selected__s0.json
+mixstyle,1,canine lung cancer,1,0.8854711261153234,0.05301033183266275,runs/S/midogpp/fold1/mixstyle__selected__s1.json
+mixstyle,1,canine lung cancer,2,0.8840346572705862,0.0684516344933494,runs/S/midogpp/fold1/mixstyle__selected__s2.json
+probe_resnet50_imagenet,1,canine lung cancer,0,0.6060582581585404,0.27629547314149394,runs/S/midogpp/fold1/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,1,canine lung cancer,1,0.6090898469447366,0.2761909097868067,runs/S/midogpp/fold1/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,1,canine lung cancer,2,0.6068330658402051,0.2719653187756284,runs/S/midogpp/fold1/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,1,canine lung cancer,0,0.7613026607879672,0.2010212098143555,runs/S/midogpp/fold1/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,1,canine lung cancer,1,0.7619138979590583,0.2027187316798457,runs/S/midogpp/fold1/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,1,canine lung cancer,2,0.7559663266121841,0.2102717291832938,runs/S/midogpp/fold1/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,1,canine lung cancer,0,0.7150048271748422,0.08111521041850489,runs/S/midogpp/fold1/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,1,canine lung cancer,1,0.7182996046021116,0.0859389520012156,runs/S/midogpp/fold1/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,1,canine lung cancer,2,0.7138044901949934,0.08642211135890107,runs/S/midogpp/fold1/probe_vit_s16_lunit_dino__default__s2.json
+sam,1,canine lung cancer,0,0.8957723787210753,0.07531601086662651,runs/S/midogpp/fold1/sam__selected__s0.json
+sam,1,canine lung cancer,1,0.8942362917458384,0.06695079416830357,runs/S/midogpp/fold1/sam__selected__s1.json
+sam,1,canine lung cancer,2,0.8901593275161265,0.07385532236987512,runs/S/midogpp/fold1/sam__selected__s2.json
+simclr,1,canine lung cancer,0,0.8827371618671634,0.12057847173912828,runs/S/midogpp/fold1/simclr__selected__s0.json
+simclr,1,canine lung cancer,1,0.883947337674716,0.09729470159007822,runs/S/midogpp/fold1/simclr__selected__s1.json
+simclr,1,canine lung cancer,2,0.887258103197004,0.10492273471543849,runs/S/midogpp/fold1/simclr__selected__s2.json
+tia_style,1,canine lung cancer,0,0.8921012661341402,0.08790437488618816,runs/S/midogpp/fold1/tia_style__selected__s0.json
+tia_style,1,canine lung cancer,1,0.8836890684474945,0.0885100214207988,runs/S/midogpp/fold1/tia_style__selected__s1.json
+tia_style,1,canine lung cancer,2,0.8821431426445538,0.09229428594507218,runs/S/midogpp/fold1/tia_style__selected__s2.json
+coral,2,canine lymphosarcoma,0,0.8736051457199034,0.12588030362975217,runs/S/midogpp/fold2/coral__selected__s0.json
+coral,2,canine lymphosarcoma,1,0.873123612636762,0.16432455242003902,runs/S/midogpp/fold2/coral__selected__s1.json
+coral,2,canine lymphosarcoma,2,0.8788553426675573,0.15332409837478747,runs/S/midogpp/fold2/coral__selected__s2.json
+erm,2,canine lymphosarcoma,0,0.8736697615202288,0.1487573420846581,runs/S/midogpp/fold2/erm__selected__s0.json
+erm,2,canine lymphosarcoma,1,0.8769474855108412,0.14947078305071426,runs/S/midogpp/fold2/erm__selected__s1.json
+erm,2,canine lymphosarcoma,2,0.8595175365442699,0.20458543391686151,runs/S/midogpp/fold2/erm__selected__s2.json
+erm_lunit_bt,2,canine lymphosarcoma,0,0.8745768154592323,0.12439263796845001,runs/S/midogpp/fold2/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,2,canine lymphosarcoma,1,0.8722743806421267,0.07538925595915717,runs/S/midogpp/fold2/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,2,canine lymphosarcoma,2,0.8707579563915142,0.11923939779543517,runs/S/midogpp/fold2/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,2,canine lymphosarcoma,0,0.8977823133441478,0.10798965824188375,runs/S/midogpp/fold2/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,2,canine lymphosarcoma,1,0.9019293838898272,0.09609010910182775,runs/S/midogpp/fold2/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,2,canine lymphosarcoma,2,0.8873497986734239,0.11122836081867327,runs/S/midogpp/fold2/erm_lunit_dino__selected__s2.json
+fish,2,canine lymphosarcoma,0,0.7557460445962946,0.16274061893840644,runs/S/midogpp/fold2/fish__selected__s0.json
+fish,2,canine lymphosarcoma,1,0.7816472495890014,0.10740910032696416,runs/S/midogpp/fold2/fish__selected__s1.json
+fish,2,canine lymphosarcoma,2,0.7853079215826445,0.13966092849883774,runs/S/midogpp/fold2/fish__selected__s2.json
+groupdro,2,canine lymphosarcoma,0,0.8913482054103657,0.13073148135211712,runs/S/midogpp/fold2/groupdro__selected__s0.json
+groupdro,2,canine lymphosarcoma,1,0.8741007708623445,0.1517930962817259,runs/S/midogpp/fold2/groupdro__selected__s1.json
+groupdro,2,canine lymphosarcoma,2,0.8739444825078383,0.15416632505806266,runs/S/midogpp/fold2/groupdro__selected__s2.json
+he_jitter,2,canine lymphosarcoma,0,0.8898194394825562,0.16196037682331593,runs/S/midogpp/fold2/he_jitter__selected__s0.json
+he_jitter,2,canine lymphosarcoma,1,0.8746774475963783,0.16371185174084413,runs/S/midogpp/fold2/he_jitter__selected__s1.json
+he_jitter,2,canine lymphosarcoma,2,0.8809469602775406,0.14738650507729376,runs/S/midogpp/fold2/he_jitter__selected__s2.json
+he_jitter_lunit_bt,2,canine lymphosarcoma,0,0.8771848847919268,0.08761336984099756,runs/S/midogpp/fold2/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,2,canine lymphosarcoma,1,0.8860397711734378,0.06963293034664937,runs/S/midogpp/fold2/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,2,canine lymphosarcoma,2,0.8838995285419976,0.06386952063102078,runs/S/midogpp/fold2/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,2,canine lymphosarcoma,0,0.903960568816035,0.09740051620811893,runs/S/midogpp/fold2/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,2,canine lymphosarcoma,1,0.9097009320873698,0.07051127677602989,runs/S/midogpp/fold2/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,2,canine lymphosarcoma,2,0.8970977062696255,0.08803095527139884,runs/S/midogpp/fold2/he_jitter_lunit_dino__selected__s2.json
+irm,2,canine lymphosarcoma,0,0.8621467884671536,0.17390561971938018,runs/S/midogpp/fold2/irm__selected__s0.json
+irm,2,canine lymphosarcoma,1,0.8562343537348971,0.2111784676425338,runs/S/midogpp/fold2/irm__selected__s1.json
+irm,2,canine lymphosarcoma,2,0.8735411826044297,0.17700279434357424,runs/S/midogpp/fold2/irm__selected__s2.json
+lisa,2,canine lymphosarcoma,0,0.8618208613861732,0.13029956482862973,runs/S/midogpp/fold2/lisa__selected__s0.json
+lisa,2,canine lymphosarcoma,1,0.8743604207633766,0.1315929605520968,runs/S/midogpp/fold2/lisa__selected__s1.json
+lisa,2,canine lymphosarcoma,2,0.8523720021220565,0.1892744454735969,runs/S/midogpp/fold2/lisa__selected__s2.json
+macenko,2,canine lymphosarcoma,0,0.897958419584153,0.07692406008406344,runs/S/midogpp/fold2/macenko__selected__s0.json
+macenko,2,canine lymphosarcoma,1,0.9006573307812169,0.08086033179807121,runs/S/midogpp/fold2/macenko__selected__s1.json
+macenko,2,canine lymphosarcoma,2,0.8960896048485703,0.0752013066187307,runs/S/midogpp/fold2/macenko__selected__s2.json
+macenko_tile,2,canine lymphosarcoma,0,0.8765867881277574,0.08034488043738336,runs/S/midogpp/fold2/macenko_tile__selected__s0.json
+macenko_tile,2,canine lymphosarcoma,1,0.8741409406482217,0.11313429446371176,runs/S/midogpp/fold2/macenko_tile__selected__s1.json
+macenko_tile,2,canine lymphosarcoma,2,0.8800598428940094,0.07792428624340068,runs/S/midogpp/fold2/macenko_tile__selected__s2.json
+mixstyle,2,canine lymphosarcoma,0,0.8627348871860934,0.16036895960863445,runs/S/midogpp/fold2/mixstyle__selected__s0.json
+mixstyle,2,canine lymphosarcoma,1,0.8173719549507421,0.22144935240476005,runs/S/midogpp/fold2/mixstyle__selected__s1.json
+mixstyle,2,canine lymphosarcoma,2,0.8421573655218515,0.21163436859336332,runs/S/midogpp/fold2/mixstyle__selected__s2.json
+probe_resnet50_imagenet,2,canine lymphosarcoma,0,0.5725453575920866,0.28147763926528957,runs/S/midogpp/fold2/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,2,canine lymphosarcoma,1,0.5758710835867975,0.27853600630947306,runs/S/midogpp/fold2/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,2,canine lymphosarcoma,2,0.5742041264753719,0.2833716164625256,runs/S/midogpp/fold2/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,2,canine lymphosarcoma,0,0.7472284182781901,0.20355147279592462,runs/S/midogpp/fold2/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,2,canine lymphosarcoma,1,0.7415992191041094,0.1997683944746404,runs/S/midogpp/fold2/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,2,canine lymphosarcoma,2,0.7459413534179888,0.2065866450182386,runs/S/midogpp/fold2/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,2,canine lymphosarcoma,0,0.7188198057574281,0.10575591201596113,runs/S/midogpp/fold2/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,2,canine lymphosarcoma,1,0.7212448266566936,0.09869764058267033,runs/S/midogpp/fold2/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,2,canine lymphosarcoma,2,0.720963756825526,0.10144634067322378,runs/S/midogpp/fold2/probe_vit_s16_lunit_dino__default__s2.json
+sam,2,canine lymphosarcoma,0,0.8826226396319854,0.13238295232565123,runs/S/midogpp/fold2/sam__selected__s0.json
+sam,2,canine lymphosarcoma,1,0.8847531809931289,0.15926335027559022,runs/S/midogpp/fold2/sam__selected__s1.json
+sam,2,canine lymphosarcoma,2,0.8900622679149086,0.14568363189534583,runs/S/midogpp/fold2/sam__selected__s2.json
+simclr,2,canine lymphosarcoma,0,0.8944677423269034,0.12913412631904225,runs/S/midogpp/fold2/simclr__selected__s0.json
+simclr,2,canine lymphosarcoma,1,0.8722758046818032,0.1774093097448591,runs/S/midogpp/fold2/simclr__selected__s1.json
+simclr,2,canine lymphosarcoma,2,0.8911091447496577,0.14353343746709904,runs/S/midogpp/fold2/simclr__selected__s2.json
+tia_style,2,canine lymphosarcoma,0,0.8950596681524742,0.06558046250431682,runs/S/midogpp/fold2/tia_style__selected__s0.json
+tia_style,2,canine lymphosarcoma,1,0.8888213656742238,0.06901902698378315,runs/S/midogpp/fold2/tia_style__selected__s1.json
+tia_style,2,canine lymphosarcoma,2,0.891973892843269,0.07630366698137744,runs/S/midogpp/fold2/tia_style__selected__s2.json
+coral,3,canine soft tissue sarcoma,0,0.9210130146517149,0.07704875484920133,runs/S/midogpp/fold3/coral__selected__s0.json
+coral,3,canine soft tissue sarcoma,1,0.915897847262012,0.08793060956371096,runs/S/midogpp/fold3/coral__selected__s1.json
+coral,3,canine soft tissue sarcoma,2,0.9238942457231726,0.07756935146260087,runs/S/midogpp/fold3/coral__selected__s2.json
+erm,3,canine soft tissue sarcoma,0,0.927816976344438,0.06886217922456815,runs/S/midogpp/fold3/erm__selected__s0.json
+erm,3,canine soft tissue sarcoma,1,0.9267790783334697,0.0834986163732361,runs/S/midogpp/fold3/erm__selected__s1.json
+erm,3,canine soft tissue sarcoma,2,0.9309512973725137,0.07623069815754958,runs/S/midogpp/fold3/erm__selected__s2.json
+erm_lunit_bt,3,canine soft tissue sarcoma,0,0.9240356879757715,0.031142480581351363,runs/S/midogpp/fold3/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,3,canine soft tissue sarcoma,1,0.9190272571007613,0.02092499298978326,runs/S/midogpp/fold3/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,3,canine soft tissue sarcoma,2,0.9240121142670048,0.02312543664462776,runs/S/midogpp/fold3/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,3,canine soft tissue sarcoma,0,0.9138488990750593,0.05819944410763747,runs/S/midogpp/fold3/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,3,canine soft tissue sarcoma,1,0.9199783907669641,0.06061527560617208,runs/S/midogpp/fold3/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,3,canine soft tissue sarcoma,2,0.915363837275927,0.07908135435082811,runs/S/midogpp/fold3/erm_lunit_dino__selected__s2.json
+fish,3,canine soft tissue sarcoma,0,0.9010657280838177,0.04187848576017539,runs/S/midogpp/fold3/fish__selected__s0.json
+fish,3,canine soft tissue sarcoma,1,0.9135231235164116,0.03990704619238157,runs/S/midogpp/fold3/fish__selected__s1.json
+fish,3,canine soft tissue sarcoma,2,0.9008853237292298,0.05434998772501744,runs/S/midogpp/fold3/fish__selected__s2.json
+groupdro,3,canine soft tissue sarcoma,0,0.9271474175329458,0.0669591246111533,runs/S/midogpp/fold3/groupdro__selected__s0.json
+groupdro,3,canine soft tissue sarcoma,1,0.9234332487517393,0.08259408823831704,runs/S/midogpp/fold3/groupdro__selected__s1.json
+groupdro,3,canine soft tissue sarcoma,2,0.9276048129655399,0.07752324024810159,runs/S/midogpp/fold3/groupdro__selected__s2.json
+he_jitter,3,canine soft tissue sarcoma,0,0.9317482196938693,0.04652897826817248,runs/S/midogpp/fold3/he_jitter__selected__s0.json
+he_jitter,3,canine soft tissue sarcoma,1,0.9348478349840387,0.05691791171060874,runs/S/midogpp/fold3/he_jitter__selected__s1.json
+he_jitter,3,canine soft tissue sarcoma,2,0.9319266595727266,0.06615316776750779,runs/S/midogpp/fold3/he_jitter__selected__s2.json
+he_jitter_lunit_bt,3,canine soft tissue sarcoma,0,0.9266517148236064,0.024956253648012072,runs/S/midogpp/fold3/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,3,canine soft tissue sarcoma,1,0.9208722272243596,0.01923609382818923,runs/S/midogpp/fold3/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,3,canine soft tissue sarcoma,2,0.9242285340099862,0.013489235695008294,runs/S/midogpp/fold3/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,3,canine soft tissue sarcoma,0,0.9212153556519603,0.0501678264540756,runs/S/midogpp/fold3/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,3,canine soft tissue sarcoma,1,0.9241584677089302,0.04811985523864285,runs/S/midogpp/fold3/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,3,canine soft tissue sarcoma,2,0.9230331505279528,0.05746000710232173,runs/S/midogpp/fold3/he_jitter_lunit_dino__selected__s2.json
+irm,3,canine soft tissue sarcoma,0,0.9292958991569125,0.060332011851234,runs/S/midogpp/fold3/irm__selected__s0.json
+irm,3,canine soft tissue sarcoma,1,0.9311202422853401,0.06649793397758182,runs/S/midogpp/fold3/irm__selected__s1.json
+irm,3,canine soft tissue sarcoma,2,0.9249465498894982,0.0704092786373171,runs/S/midogpp/fold3/irm__selected__s2.json
+lisa,3,canine soft tissue sarcoma,0,0.9290418269624292,0.03655236365685551,runs/S/midogpp/fold3/lisa__selected__s0.json
+lisa,3,canine soft tissue sarcoma,1,0.9280514037816158,0.06049126413041034,runs/S/midogpp/fold3/lisa__selected__s1.json
+lisa,3,canine soft tissue sarcoma,2,0.9220273389539166,0.05069409948717306,runs/S/midogpp/fold3/lisa__selected__s2.json
+macenko,3,canine soft tissue sarcoma,0,0.9424906278137022,0.03834970112150768,runs/S/midogpp/fold3/macenko__selected__s0.json
+macenko,3,canine soft tissue sarcoma,1,0.9379749529344356,0.05292253263226407,runs/S/midogpp/fold3/macenko__selected__s1.json
+macenko,3,canine soft tissue sarcoma,2,0.9348691168044527,0.05248601453522504,runs/S/midogpp/fold3/macenko__selected__s2.json
+macenko_tile,3,canine soft tissue sarcoma,0,0.9198651059998364,0.06416464783771966,runs/S/midogpp/fold3/macenko_tile__selected__s0.json
+macenko_tile,3,canine soft tissue sarcoma,1,0.9261052631578947,0.05351225979712757,runs/S/midogpp/fold3/macenko_tile__selected__s1.json
+macenko_tile,3,canine soft tissue sarcoma,2,0.9273369894409429,0.05610809704016441,runs/S/midogpp/fold3/macenko_tile__selected__s2.json
+mixstyle,3,canine soft tissue sarcoma,0,0.9284321846607186,0.05547952722099838,runs/S/midogpp/fold3/mixstyle__selected__s0.json
+mixstyle,3,canine soft tissue sarcoma,1,0.9266346893672752,0.05939006950247893,runs/S/midogpp/fold3/mixstyle__selected__s1.json
+mixstyle,3,canine soft tissue sarcoma,2,0.9097048375214865,0.0643166057703861,runs/S/midogpp/fold3/mixstyle__selected__s2.json
+probe_resnet50_imagenet,3,canine soft tissue sarcoma,0,0.6587407710567242,0.25756425544552214,runs/S/midogpp/fold3/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,3,canine soft tissue sarcoma,1,0.6615558647785872,0.25766019913856175,runs/S/midogpp/fold3/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,3,canine soft tissue sarcoma,2,0.6570009003847098,0.26086707804570275,runs/S/midogpp/fold3/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,3,canine soft tissue sarcoma,0,0.8412291069820741,0.15452390845436836,runs/S/midogpp/fold3/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,3,canine soft tissue sarcoma,1,0.8403722681509371,0.1583781005314115,runs/S/midogpp/fold3/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,3,canine soft tissue sarcoma,2,0.8466212654497831,0.14119872584401208,runs/S/midogpp/fold3/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,3,canine soft tissue sarcoma,0,0.7994519112711795,0.053280720990292324,runs/S/midogpp/fold3/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,3,canine soft tissue sarcoma,1,0.8008260620446919,0.04783102998754329,runs/S/midogpp/fold3/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,3,canine soft tissue sarcoma,2,0.7993749693050667,0.055721820731156606,runs/S/midogpp/fold3/probe_vit_s16_lunit_dino__default__s2.json
+sam,3,canine soft tissue sarcoma,0,0.9339055414586231,0.01535680375267752,runs/S/midogpp/fold3/sam__selected__s0.json
+sam,3,canine soft tissue sarcoma,1,0.9381501186870753,0.02178981015484178,runs/S/midogpp/fold3/sam__selected__s1.json
+sam,3,canine soft tissue sarcoma,2,0.9344713104690187,0.01815010131574136,runs/S/midogpp/fold3/sam__selected__s2.json
+simclr,3,canine soft tissue sarcoma,0,0.9231778669067694,0.07862066947387758,runs/S/midogpp/fold3/simclr__selected__s0.json
+simclr,3,canine soft tissue sarcoma,1,0.9233716951788491,0.08901068303390222,runs/S/midogpp/fold3/simclr__selected__s1.json
+simclr,3,canine soft tissue sarcoma,2,0.9261006793811901,0.08883122688287656,runs/S/midogpp/fold3/simclr__selected__s2.json
+tia_style,3,canine soft tissue sarcoma,0,0.9438752557911108,0.02455579699913619,runs/S/midogpp/fold3/tia_style__selected__s0.json
+tia_style,3,canine soft tissue sarcoma,1,0.9456806089874765,0.025865857042606147,runs/S/midogpp/fold3/tia_style__selected__s1.json
+tia_style,3,canine soft tissue sarcoma,2,0.9488863059670951,0.025806943331738642,runs/S/midogpp/fold3/tia_style__selected__s2.json
+coral,4,human breast cancer,0,0.8978021723929593,0.08661335723766506,runs/S/midogpp/fold4/coral__selected__s0.json
+coral,4,human breast cancer,1,0.8899330606316613,0.10832897427315422,runs/S/midogpp/fold4/coral__selected__s1.json
+coral,4,human breast cancer,2,0.8957900947890229,0.09733002124083168,runs/S/midogpp/fold4/coral__selected__s2.json
+erm,4,human breast cancer,0,0.8918464398130168,0.09400970725037086,runs/S/midogpp/fold4/erm__selected__s0.json
+erm,4,human breast cancer,1,0.8927383652543871,0.10465192072455874,runs/S/midogpp/fold4/erm__selected__s1.json
+erm,4,human breast cancer,2,0.8920911519540361,0.11082115980003207,runs/S/midogpp/fold4/erm__selected__s2.json
+erm_lunit_bt,4,human breast cancer,0,0.9029462656670364,0.04794669236744743,runs/S/midogpp/fold4/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,4,human breast cancer,1,0.9080766567739874,0.056241278912892836,runs/S/midogpp/fold4/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,4,human breast cancer,2,0.9089401073992989,0.04413168880804445,runs/S/midogpp/fold4/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,4,human breast cancer,0,0.8974594041184432,0.09452026977602354,runs/S/midogpp/fold4/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,4,human breast cancer,1,0.9034243428419236,0.07422126510698647,runs/S/midogpp/fold4/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,4,human breast cancer,2,0.8974589759257204,0.08089813830589826,runs/S/midogpp/fold4/erm_lunit_dino__selected__s2.json
+fish,4,human breast cancer,0,0.872947083515137,0.07736676092083682,runs/S/midogpp/fold4/fish__selected__s0.json
+fish,4,human breast cancer,1,0.8865109443918957,0.04187497177123867,runs/S/midogpp/fold4/fish__selected__s1.json
+fish,4,human breast cancer,2,0.8834757002770834,0.07408626656610219,runs/S/midogpp/fold4/fish__selected__s2.json
+groupdro,4,human breast cancer,0,0.8740483951979042,0.09741433088520474,runs/S/midogpp/fold4/groupdro__selected__s0.json
+groupdro,4,human breast cancer,1,0.8682352507946186,0.10359920670204856,runs/S/midogpp/fold4/groupdro__selected__s1.json
+groupdro,4,human breast cancer,2,0.7782212189190959,0.06625042348231659,runs/S/midogpp/fold4/groupdro__selected__s2.json
+he_jitter,4,human breast cancer,0,0.9116242334815023,0.059589353369301455,runs/S/midogpp/fold4/he_jitter__selected__s0.json
+he_jitter,4,human breast cancer,1,0.9049654084508971,0.067470421619867,runs/S/midogpp/fold4/he_jitter__selected__s1.json
+he_jitter,4,human breast cancer,2,0.910000526677049,0.06468994150464821,runs/S/midogpp/fold4/he_jitter__selected__s2.json
+he_jitter_lunit_bt,4,human breast cancer,0,0.9085438150344459,0.02656035146787519,runs/S/midogpp/fold4/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,4,human breast cancer,1,0.9097136375528444,0.04419255349829514,runs/S/midogpp/fold4/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,4,human breast cancer,2,0.9162973147606168,0.027607915630538674,runs/S/midogpp/fold4/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,4,human breast cancer,0,0.9029370595234986,0.07285396603390425,runs/S/midogpp/fold4/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,4,human breast cancer,1,0.9077088392251937,0.05548066431144666,runs/S/midogpp/fold4/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,4,human breast cancer,2,0.9016636143662083,0.06497236651641103,runs/S/midogpp/fold4/he_jitter_lunit_dino__selected__s2.json
+irm,4,human breast cancer,0,0.5,0.11195039458850059,runs/S/midogpp/fold4/irm__selected__s0.json
+irm,4,human breast cancer,1,0.8371896726766369,0.04334734010464875,runs/S/midogpp/fold4/irm__selected__s1.json
+irm,4,human breast cancer,2,0.5,0.11195039458850059,runs/S/midogpp/fold4/irm__selected__s2.json
+lisa,4,human breast cancer,0,0.8757194172982152,0.024487326141078743,runs/S/midogpp/fold4/lisa__selected__s0.json
+lisa,4,human breast cancer,1,0.873043426877743,0.022768554927514777,runs/S/midogpp/fold4/lisa__selected__s1.json
+lisa,4,human breast cancer,2,0.8704789806615322,0.02381948224017752,runs/S/midogpp/fold4/lisa__selected__s2.json
+macenko,4,human breast cancer,0,0.9010251790166726,0.05725960565235122,runs/S/midogpp/fold4/macenko__selected__s0.json
+macenko,4,human breast cancer,1,0.9058650413612761,0.05571885833651691,runs/S/midogpp/fold4/macenko__selected__s1.json
+macenko,4,human breast cancer,2,0.9084391219137473,0.06583326714697704,runs/S/midogpp/fold4/macenko__selected__s2.json
+macenko_tile,4,human breast cancer,0,0.9004466906483138,0.059129541771835666,runs/S/midogpp/fold4/macenko_tile__selected__s0.json
+macenko_tile,4,human breast cancer,1,0.8963882800226257,0.06017825907892658,runs/S/midogpp/fold4/macenko_tile__selected__s1.json
+macenko_tile,4,human breast cancer,2,0.892959312699297,0.06762765244165496,runs/S/midogpp/fold4/macenko_tile__selected__s2.json
+mixstyle,4,human breast cancer,0,0.8773949354221146,0.08169211156054806,runs/S/midogpp/fold4/mixstyle__selected__s0.json
+mixstyle,4,human breast cancer,1,0.9004229259522042,0.05754076969215632,runs/S/midogpp/fold4/mixstyle__selected__s1.json
+mixstyle,4,human breast cancer,2,0.891298781320692,0.0785765283974412,runs/S/midogpp/fold4/mixstyle__selected__s2.json
+probe_resnet50_imagenet,4,human breast cancer,0,0.6281998306925974,0.2851186247930477,runs/S/midogpp/fold4/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,4,human breast cancer,1,0.6318396829318527,0.28266152669188443,runs/S/midogpp/fold4/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,4,human breast cancer,2,0.6256497289325968,0.2868850855039595,runs/S/midogpp/fold4/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,4,human breast cancer,0,0.8294955846907399,0.14872642673414288,runs/S/midogpp/fold4/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,4,human breast cancer,1,0.8305992514334823,0.14858672932863845,runs/S/midogpp/fold4/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,4,human breast cancer,2,0.829607985280447,0.1530761457354171,runs/S/midogpp/fold4/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,4,human breast cancer,0,0.7811821715965208,0.03181234071510026,runs/S/midogpp/fold4/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,4,human breast cancer,1,0.7839962541700618,0.032760386162059674,runs/S/midogpp/fold4/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,4,human breast cancer,2,0.7817315428597365,0.03262919136307199,runs/S/midogpp/fold4/probe_vit_s16_lunit_dino__default__s2.json
+sam,4,human breast cancer,0,0.9171952349001046,0.05918731326201651,runs/S/midogpp/fold4/sam__selected__s0.json
+sam,4,human breast cancer,1,0.9108427817625868,0.08135835878349834,runs/S/midogpp/fold4/sam__selected__s1.json
+sam,4,human breast cancer,2,0.9046703836649614,0.06645715378336764,runs/S/midogpp/fold4/sam__selected__s2.json
+simclr,4,human breast cancer,0,0.9061759092779516,0.085966658250688,runs/S/midogpp/fold4/simclr__selected__s0.json
+simclr,4,human breast cancer,1,0.9061136072367996,0.09948806957486098,runs/S/midogpp/fold4/simclr__selected__s1.json
+simclr,4,human breast cancer,2,0.9142464857152766,0.0854572444553,runs/S/midogpp/fold4/simclr__selected__s2.json
+tia_style,4,human breast cancer,0,0.9165874153302416,0.03300982171137781,runs/S/midogpp/fold4/tia_style__selected__s0.json
+tia_style,4,human breast cancer,1,0.9141152446457712,0.03742434156861324,runs/S/midogpp/fold4/tia_style__selected__s1.json
+tia_style,4,human breast cancer,2,0.9016073070231743,0.027285436009725994,runs/S/midogpp/fold4/tia_style__selected__s2.json
+coral,5,human melanoma,0,0.9185024676850764,0.06994334370757307,runs/S/midogpp/fold5/coral__selected__s0.json
+coral,5,human melanoma,1,0.9223144535840188,0.05915897388716537,runs/S/midogpp/fold5/coral__selected__s1.json
+coral,5,human melanoma,2,0.9196916568742656,0.06328208249669225,runs/S/midogpp/fold5/coral__selected__s2.json
+erm,5,human melanoma,0,0.9101330199764983,0.08903681507326389,runs/S/midogpp/fold5/erm__selected__s0.json
+erm,5,human melanoma,1,0.9051807285546416,0.07725166420498146,runs/S/midogpp/fold5/erm__selected__s1.json
+erm,5,human melanoma,2,0.914703642773208,0.071253943723985,runs/S/midogpp/fold5/erm__selected__s2.json
+erm_lunit_bt,5,human melanoma,0,0.8565316098707403,0.09976484870844954,runs/S/midogpp/fold5/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,5,human melanoma,1,0.9156794359576969,0.044999942464704,runs/S/midogpp/fold5/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,5,human melanoma,2,0.8898650998824912,0.0715479749973815,runs/S/midogpp/fold5/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,5,human melanoma,0,0.924156991774383,0.05327275102076479,runs/S/midogpp/fold5/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,5,human melanoma,1,0.9199012925969448,0.05725549616027576,runs/S/midogpp/fold5/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,5,human melanoma,2,0.9228954171562866,0.06036058961934485,runs/S/midogpp/fold5/erm_lunit_dino__selected__s2.json
+fish,5,human melanoma,0,0.919095652173913,0.04359461087243654,runs/S/midogpp/fold5/fish__selected__s0.json
+fish,5,human melanoma,1,0.9069480611045828,0.04507067590447843,runs/S/midogpp/fold5/fish__selected__s1.json
+fish,5,human melanoma,2,0.908026321974148,0.05720091004483588,runs/S/midogpp/fold5/fish__selected__s2.json
+groupdro,5,human melanoma,0,0.917097062279671,0.06614591429124923,runs/S/midogpp/fold5/groupdro__selected__s0.json
+groupdro,5,human melanoma,1,0.9122594594594595,0.07819390388127968,runs/S/midogpp/fold5/groupdro__selected__s1.json
+groupdro,5,human melanoma,2,0.9216714453584018,0.06583047852003293,runs/S/midogpp/fold5/groupdro__selected__s2.json
+he_jitter,5,human melanoma,0,0.9183022326674499,0.05932180257095032,runs/S/midogpp/fold5/he_jitter__selected__s0.json
+he_jitter,5,human melanoma,1,0.9154914218566392,0.05900268163929065,runs/S/midogpp/fold5/he_jitter__selected__s1.json
+he_jitter,5,human melanoma,2,0.9138209165687426,0.06576228457879527,runs/S/midogpp/fold5/he_jitter__selected__s2.json
+he_jitter_lunit_bt,5,human melanoma,0,0.9106688601645123,0.047825848864827075,runs/S/midogpp/fold5/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,5,human melanoma,1,0.9190016451233842,0.031002550863711585,runs/S/midogpp/fold5/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,5,human melanoma,2,0.9078317273795536,0.05502794003075737,runs/S/midogpp/fold5/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,5,human melanoma,0,0.9300465334900118,0.041754994435016755,runs/S/midogpp/fold5/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,5,human melanoma,1,0.919957696827262,0.05170002572303504,runs/S/midogpp/fold5/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,5,human melanoma,2,0.9251920094007051,0.03999015184728942,runs/S/midogpp/fold5/he_jitter_lunit_dino__selected__s2.json
+irm,5,human melanoma,0,0.913318918918919,0.07076071504643472,runs/S/midogpp/fold5/irm__selected__s0.json
+irm,5,human melanoma,1,0.9200141010575794,0.055140531897937314,runs/S/midogpp/fold5/irm__selected__s1.json
+irm,5,human melanoma,2,0.9188164512338426,0.05974283274412661,runs/S/midogpp/fold5/irm__selected__s2.json
+lisa,5,human melanoma,0,0.9185184488836664,0.06160729328893918,runs/S/midogpp/fold5/lisa__selected__s0.json
+lisa,5,human melanoma,1,0.9123553466509988,0.04765685411055939,runs/S/midogpp/fold5/lisa__selected__s1.json
+lisa,5,human melanoma,2,0.9065287896592245,0.056487124740087144,runs/S/midogpp/fold5/lisa__selected__s2.json
+macenko,5,human melanoma,0,0.9166176263219741,0.06876444469822304,runs/S/midogpp/fold5/macenko__selected__s0.json
+macenko,5,human melanoma,1,0.9107760282021151,0.06526459295588848,runs/S/midogpp/fold5/macenko__selected__s1.json
+macenko,5,human melanoma,2,0.9133988249118684,0.06520107132932443,runs/S/midogpp/fold5/macenko__selected__s2.json
+macenko_tile,5,human melanoma,0,0.9010190364277321,0.08421798059741867,runs/S/midogpp/fold5/macenko_tile__selected__s0.json
+macenko_tile,5,human melanoma,1,0.896039482961222,0.07999964184142566,runs/S/midogpp/fold5/macenko_tile__selected__s1.json
+macenko_tile,5,human melanoma,2,0.900410810810811,0.07181191642083731,runs/S/midogpp/fold5/macenko_tile__selected__s2.json
+mixstyle,5,human melanoma,0,0.920607285546416,0.0449577042835653,runs/S/midogpp/fold5/mixstyle__selected__s0.json
+mixstyle,5,human melanoma,1,0.9209767332549941,0.05350504008677289,runs/S/midogpp/fold5/mixstyle__selected__s1.json
+mixstyle,5,human melanoma,2,0.9135435957696827,0.049675537929305846,runs/S/midogpp/fold5/mixstyle__selected__s2.json
+probe_resnet50_imagenet,5,human melanoma,0,0.6101461809635723,0.34058673908164294,runs/S/midogpp/fold5/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,5,human melanoma,1,0.6160695652173913,0.32532014572478624,runs/S/midogpp/fold5/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,5,human melanoma,2,0.6258980023501763,0.3208012861215266,runs/S/midogpp/fold5/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,5,human melanoma,0,0.8346340775558165,0.1603363689223446,runs/S/midogpp/fold5/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,5,human melanoma,1,0.8385457109283196,0.1556470193701311,runs/S/midogpp/fold5/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,5,human melanoma,2,0.8394669800235017,0.15436877973100538,runs/S/midogpp/fold5/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,5,human melanoma,0,0.8043609870740305,0.14202604483276354,runs/S/midogpp/fold5/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,5,human melanoma,1,0.8045781433607521,0.15756885483295335,runs/S/midogpp/fold5/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,5,human melanoma,2,0.8058387779083431,0.16354325099537495,runs/S/midogpp/fold5/probe_vit_s16_lunit_dino__default__s2.json
+sam,5,human melanoma,0,0.9207971797884842,0.058843337308873755,runs/S/midogpp/fold5/sam__selected__s0.json
+sam,5,human melanoma,1,0.9242594594594593,0.04750746508593341,runs/S/midogpp/fold5/sam__selected__s1.json
+sam,5,human melanoma,2,0.918167802585194,0.058761595153453715,runs/S/midogpp/fold5/sam__selected__s2.json
+simclr,5,human melanoma,0,0.9168958871915392,0.07145879041568723,runs/S/midogpp/fold5/simclr__selected__s0.json
+simclr,5,human melanoma,1,0.9082820211515863,0.08651958234526494,runs/S/midogpp/fold5/simclr__selected__s1.json
+simclr,5,human melanoma,2,0.9179788484136311,0.07715745714786468,runs/S/midogpp/fold5/simclr__selected__s2.json
+tia_style,5,human melanoma,0,0.9098039952996475,0.06748571313498719,runs/S/midogpp/fold5/tia_style__selected__s0.json
+tia_style,5,human melanoma,1,0.9100596944770858,0.06244077734758689,runs/S/midogpp/fold5/tia_style__selected__s1.json
+tia_style,5,human melanoma,2,0.9134928319623973,0.059577984946371586,runs/S/midogpp/fold5/tia_style__selected__s2.json
+coral,6,human neuroendocrine tumor,0,0.8870893351782092,0.06889653559270115,runs/S/midogpp/fold6/coral__selected__s0.json
+coral,6,human neuroendocrine tumor,1,0.8845966200382304,0.057610568912579256,runs/S/midogpp/fold6/coral__selected__s1.json
+coral,6,human neuroendocrine tumor,2,0.8776339023477734,0.05534484660749514,runs/S/midogpp/fold6/coral__selected__s2.json
+erm,6,human neuroendocrine tumor,0,0.8871622059951355,0.045777946936375095,runs/S/midogpp/fold6/erm__selected__s0.json
+erm,6,human neuroendocrine tumor,1,0.8725364998369294,0.0800637298217331,runs/S/midogpp/fold6/erm__selected__s1.json
+erm,6,human neuroendocrine tumor,2,0.8840163195083175,0.04619138774621496,runs/S/midogpp/fold6/erm__selected__s2.json
+erm_lunit_bt,6,human neuroendocrine tumor,0,0.8598978564427132,0.04578432479166855,runs/S/midogpp/fold6/erm_lunit_bt__selected__s0.json
+erm_lunit_bt,6,human neuroendocrine tumor,1,0.8647864218562686,0.04511240394297984,runs/S/midogpp/fold6/erm_lunit_bt__selected__s1.json
+erm_lunit_bt,6,human neuroendocrine tumor,2,0.8622083945403761,0.04746773795907533,runs/S/midogpp/fold6/erm_lunit_bt__selected__s2.json
+erm_lunit_dino,6,human neuroendocrine tumor,0,0.8745777713793647,0.03992951321583458,runs/S/midogpp/fold6/erm_lunit_dino__selected__s0.json
+erm_lunit_dino,6,human neuroendocrine tumor,1,0.884513973867814,0.037573528099775336,runs/S/midogpp/fold6/erm_lunit_dino__selected__s1.json
+erm_lunit_dino,6,human neuroendocrine tumor,2,0.8859767222173346,0.03227504445242904,runs/S/midogpp/fold6/erm_lunit_dino__selected__s2.json
+fish,6,human neuroendocrine tumor,0,0.8454436633048337,0.04653260863331322,runs/S/midogpp/fold6/fish__selected__s0.json
+fish,6,human neuroendocrine tumor,1,0.8520775736506236,0.05683864841979956,runs/S/midogpp/fold6/fish__selected__s1.json
+fish,6,human neuroendocrine tumor,2,0.8703157172576756,0.04809995049101251,runs/S/midogpp/fold6/fish__selected__s2.json
+groupdro,6,human neuroendocrine tumor,0,0.8807024746751694,0.05375904265548506,runs/S/midogpp/fold6/groupdro__selected__s0.json
+groupdro,6,human neuroendocrine tumor,1,0.874256962051189,0.062278384283944874,runs/S/midogpp/fold6/groupdro__selected__s1.json
+groupdro,6,human neuroendocrine tumor,2,0.8779067235769973,0.05301170421507741,runs/S/midogpp/fold6/groupdro__selected__s2.json
+he_jitter,6,human neuroendocrine tumor,0,0.8825055830598456,0.04977138540094408,runs/S/midogpp/fold6/he_jitter__selected__s0.json
+he_jitter,6,human neuroendocrine tumor,1,0.8928674577593646,0.04305696550133524,runs/S/midogpp/fold6/he_jitter__selected__s1.json
+he_jitter,6,human neuroendocrine tumor,2,0.874581326053361,0.056294176571917445,runs/S/midogpp/fold6/he_jitter__selected__s2.json
+he_jitter_lunit_bt,6,human neuroendocrine tumor,0,0.8611775390814189,0.03516097545513765,runs/S/midogpp/fold6/he_jitter_lunit_bt__selected__s0.json
+he_jitter_lunit_bt,6,human neuroendocrine tumor,1,0.8683988593051145,0.035334516440017394,runs/S/midogpp/fold6/he_jitter_lunit_bt__selected__s1.json
+he_jitter_lunit_bt,6,human neuroendocrine tumor,2,0.8702641744847279,0.025684153774125404,runs/S/midogpp/fold6/he_jitter_lunit_bt__selected__s2.json
+he_jitter_lunit_dino,6,human neuroendocrine tumor,0,0.882025702070331,0.03252315615788691,runs/S/midogpp/fold6/he_jitter_lunit_dino__selected__s0.json
+he_jitter_lunit_dino,6,human neuroendocrine tumor,1,0.889426533330845,0.03527031542956764,runs/S/midogpp/fold6/he_jitter_lunit_dino__selected__s1.json
+he_jitter_lunit_dino,6,human neuroendocrine tumor,2,0.8916810853130646,0.029638982957212262,runs/S/midogpp/fold6/he_jitter_lunit_dino__selected__s2.json
+irm,6,human neuroendocrine tumor,0,0.8888577854914204,0.0423191857886761,runs/S/midogpp/fold6/irm__selected__s0.json
+irm,6,human neuroendocrine tumor,1,0.8911025621201497,0.03319320440110108,runs/S/midogpp/fold6/irm__selected__s1.json
+irm,6,human neuroendocrine tumor,2,0.8820328114183238,0.04424393981949123,runs/S/midogpp/fold6/irm__selected__s2.json
+lisa,6,human neuroendocrine tumor,0,0.8714718749750062,0.04481614449246598,runs/S/midogpp/fold6/lisa__selected__s0.json
+lisa,6,human neuroendocrine tumor,1,0.8628509018652263,0.04360967855176866,runs/S/midogpp/fold6/lisa__selected__s1.json
+lisa,6,human neuroendocrine tumor,2,0.8500736261851506,0.044673104318147944,runs/S/midogpp/fold6/lisa__selected__s2.json
+macenko,6,human neuroendocrine tumor,0,0.8739992481864497,0.06783325691441765,runs/S/midogpp/fold6/macenko__selected__s0.json
+macenko,6,human neuroendocrine tumor,1,0.8732172199072408,0.05504281055234686,runs/S/midogpp/fold6/macenko__selected__s1.json
+macenko,6,human neuroendocrine tumor,2,0.8763799910955417,0.06342183716842613,runs/S/midogpp/fold6/macenko__selected__s2.json
+macenko_tile,6,human neuroendocrine tumor,0,0.8750198839576674,0.055309877463458806,runs/S/midogpp/fold6/macenko_tile__selected__s0.json
+macenko_tile,6,human neuroendocrine tumor,1,0.8745111212419321,0.048697225679285555,runs/S/midogpp/fold6/macenko_tile__selected__s1.json
+macenko_tile,6,human neuroendocrine tumor,2,0.8819341692149237,0.04719215687264566,runs/S/midogpp/fold6/macenko_tile__selected__s2.json
+mixstyle,6,human neuroendocrine tumor,0,0.8739201566900296,0.053675631999874455,runs/S/midogpp/fold6/mixstyle__selected__s0.json
+mixstyle,6,human neuroendocrine tumor,1,0.8630952857024792,0.04256712057850659,runs/S/midogpp/fold6/mixstyle__selected__s1.json
+mixstyle,6,human neuroendocrine tumor,2,0.8707120634082748,0.03236330013492081,runs/S/midogpp/fold6/mixstyle__selected__s2.json
+probe_resnet50_imagenet,6,human neuroendocrine tumor,0,0.622786882186551,0.24577009940001981,runs/S/midogpp/fold6/probe_resnet50_imagenet__default__s0.json
+probe_resnet50_imagenet,6,human neuroendocrine tumor,1,0.6210681973092895,0.244760642549062,runs/S/midogpp/fold6/probe_resnet50_imagenet__default__s1.json
+probe_resnet50_imagenet,6,human neuroendocrine tumor,2,0.6194721486849039,0.25225962366172805,runs/S/midogpp/fold6/probe_resnet50_imagenet__default__s2.json
+probe_resnet50_lunit_bt,6,human neuroendocrine tumor,0,0.811109067173563,0.13363420401721718,runs/S/midogpp/fold6/probe_resnet50_lunit_bt__default__s0.json
+probe_resnet50_lunit_bt,6,human neuroendocrine tumor,1,0.8105074385996718,0.1345875446570492,runs/S/midogpp/fold6/probe_resnet50_lunit_bt__default__s1.json
+probe_resnet50_lunit_bt,6,human neuroendocrine tumor,2,0.8113019082378683,0.1327508265872639,runs/S/midogpp/fold6/probe_resnet50_lunit_bt__default__s2.json
+probe_vit_s16_lunit_dino,6,human neuroendocrine tumor,0,0.7375104307465081,0.05992355312908392,runs/S/midogpp/fold6/probe_vit_s16_lunit_dino__default__s0.json
+probe_vit_s16_lunit_dino,6,human neuroendocrine tumor,1,0.7329009072416707,0.06507571296838252,runs/S/midogpp/fold6/probe_vit_s16_lunit_dino__default__s1.json
+probe_vit_s16_lunit_dino,6,human neuroendocrine tumor,2,0.7315412444380459,0.06819190755535975,runs/S/midogpp/fold6/probe_vit_s16_lunit_dino__default__s2.json
+sam,6,human neuroendocrine tumor,0,0.8928559050688762,0.014374350406674823,runs/S/midogpp/fold6/sam__selected__s0.json
+sam,6,human neuroendocrine tumor,1,0.8747270676872135,0.030328257511937608,runs/S/midogpp/fold6/sam__selected__s1.json
+sam,6,human neuroendocrine tumor,2,0.8830876609267568,0.019185982135983,runs/S/midogpp/fold6/sam__selected__s2.json
+simclr,6,human neuroendocrine tumor,0,0.8855003959018164,0.06927469734850725,runs/S/midogpp/fold6/simclr__selected__s0.json
+simclr,6,human neuroendocrine tumor,1,0.8824042748509481,0.055393731136803855,runs/S/midogpp/fold6/simclr__selected__s1.json
+simclr,6,human neuroendocrine tumor,2,0.8804652001859095,0.06750885780095522,runs/S/midogpp/fold6/simclr__selected__s2.json
+tia_style,6,human neuroendocrine tumor,0,0.8740125782139364,0.05355529973649109,runs/S/midogpp/fold6/tia_style__selected__s0.json
+tia_style,6,human neuroendocrine tumor,1,0.8776445663697625,0.05487454244970866,runs/S/midogpp/fold6/tia_style__selected__s1.json
+tia_style,6,human neuroendocrine tumor,2,0.8800848500682942,0.051174706386734256,runs/S/midogpp/fold6/tia_style__selected__s2.json

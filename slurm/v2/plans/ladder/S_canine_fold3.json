@@ -1,0 +1,152 @@
+{
+ "tier": "S",
+ "cohort": "canine",
+ "fold": 3,
+ "phase": "final",
+ "jobs": [
+  {
+   "arm": "probe_convnext_tiny_imagenet",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_convnext_tiny_imagenet",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_convnext_tiny_imagenet",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet18_imagenet",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet18_imagenet",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet18_imagenet",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_mocov2",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_mocov2",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_mocov2",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_swav",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_swav",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_resnet50_lunit_swav",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_b16_imagenet",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_b16_imagenet",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_b16_imagenet",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_b16_swag",
+   "seed": 0,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_b16_swag",
+   "seed": 1,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  },
+  {
+   "arm": "probe_vit_b16_swag",
+   "seed": 2,
+   "hp": {},
+   "tta": [],
+   "pcam": false,
+   "phase": "final"
+  }
+ ]
+}

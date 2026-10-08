@@ -1,0 +1,22 @@
+% canine, selection=ood; K for 80% power (two-sided paired t, alpha .05), s=3 seeds; left block independent folds, right block rho=0.5 x training overlap (observed-design VIF held fixed, sigma_Delta divided by sqrt(1 - rbar_obs) as in the contrasts' fold-dependence CI); sigma_Delta column = independent-fold value; seed-paired run noise where arm and ref share seeds; deltas=[0.02, 0.05, 0.1, 0.2]
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Arm & $\sigma_\Delta$ & $\Delta$=0.02 & $\Delta$=0.05 & $\Delta$=0.1 & $\Delta$=0.2 & $\Delta$=0.02 & $\Delta$=0.05 & $\Delta$=0.1 & $\Delta$=0.2 \\
+\midrule
+augonly & 0.058 & 68 & 13 & 5 & 3 & 176 & 30 & 10 & 5 \\
+compute\_matched & 0.038 & 31 & 7 & 4 & 3 & 77 & 15 & 6 & 4 \\
+coral & 0.037 & 30 & 7 & 4 & 3 & 75 & 14 & 6 & 3 \\
+fish & 0.096 & 185 & 32 & 10 & 5 & 489 & 80 & 22 & 8 \\
+groupdro & 0.036 & 27 & 7 & 4 & 3 & 69 & 13 & 5 & 3 \\
+he\_jitter & 0.069 & 95 & 17 & 6 & 4 & 250 & 42 & 12 & 5 \\
+irm & 0.041 & 36 & 8 & 4 & 3 & 92 & 17 & 6 & 4 \\
+lisa & 0.085 & 143 & 25 & 8 & 4 & 378 & 63 & 18 & 6 \\
+macenko & 0.067 & 90 & 17 & 6 & 4 & 236 & 40 & 12 & 5 \\
+macenko\_tile & 0.075 & 113 & 20 & 7 & 4 & 297 & 50 & 14 & 6 \\
+mixstyle & 0.053 & 57 & 11 & 5 & 3 & 148 & 26 & 8 & 4 \\
+sam & 0.049 & 49 & 10 & 5 & 3 & 127 & 22 & 8 & 4 \\
+simclr & 0.064 & 82 & 15 & 6 & 4 & 213 & 36 & 11 & 5 \\
+simclr\_sam & 0.065 & 86 & 16 & 6 & 4 & 226 & 38 & 12 & 5 \\
+tia\_style & 0.064 & 82 & 15 & 6 & 4 & 215 & 36 & 11 & 5 \\
+\bottomrule
+\end{tabular}

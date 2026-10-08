@@ -1,0 +1,86 @@
+key,source_used,doi,status,notes
+koh2021wilds,PMLR v139 page (proceedings.mlr.press/v139/koh21a); arXiv:2012.07421,,verified,"Authors, pages 5637-5664 match PMLR. No DOI (PMLR). Added publisher=PMLR."
+bandi2019camelyon17,Crossref (api.crossref.org/works/<doi>),10.1109/TMI.2018.2867350,corrected,Added DOI; 36 authors match Crossref. Metadata otherwise unchanged.
+veeling2018pcam,Crossref (api.crossref.org/works/<doi>),10.1007/978-3-030-00934-2_24,corrected,"Added DOI; booktitle set to Crossref/Springer book title (MICCAI 2018, LNCS 11071 confirmed on link.springer.com)."
+chen2020simclr,PMLR v119 page (chen20j); arXiv:2002.05709,,verified,Pages 1597-1607 match PMLR. No DOI.
+foret2021sam,iclr.cc ICLR 2021 paper list; arXiv:2010.01412,,verified,"ICLR 2021, 4 authors confirmed. ICLR has no DOI."
+sagawa2020groupdro,iclr.cc ICLR 2020 paper list; arXiv:1911.08731,,verified,ICLR 2020 confirmed; author order from arXiv (iclr.cc listing reorders Hashimoto/Koh). No DOI.
+arjovsky2019irm,arXiv API; DataCite,10.48550/arXiv.1907.02893,corrected,Preprint only. Added arXiv DataCite DOI.
+sun2016coral,Crossref (api.crossref.org/works/<doi>),10.1007/978-3-319-49409-8_35,corrected,"Added DOI; booktitle = Computer Vision - ECCV 2016 Workshops (Crossref), LNCS 9915 confirmed on Springer."
+zhou2021mixstyle,iclr.cc ICLR 2021 paper list; arXiv:2104.02008,,verified,ICLR 2021 confirmed. No DOI.
+macenko2009,Crossref (api.crossref.org/works/<doi>),10.1109/ISBI.2009.5193250,corrected,Added DOI; booktitle expanded to full ISBI 2009 title.
+shi2022fish,iclr.cc ICLR 2022 paper list,,verified,"ICLR 2022 confirmed, 7 authors. No DOI."
+yao2022lisa,PMLR v162 page (yao22b),,verified,Pages 25407-25437 match PMLR. No DOI.
+taori2020robustness,proceedings.neurips.cc (NeurIPS 2020 vol 33),,verified,"Vol 33, pages 18583-18599 match. No DOI."
+tellez2019stain,Crossref (api.crossref.org/works/<doi>),10.1016/j.media.2019.101544,corrected,Added DOI.
+ciga2022ssl,Crossref (api.crossref.org/works/<doi>),10.1016/j.mlwa.2021.100198,corrected,"Added DOI; title corrected to Crossref wording ""Self supervised ..."" (no hyphen); author Martel, Anne Louise."
+howard2021site,Crossref (api.crossref.org/works/<doi>),10.1038/s41467-021-24698-1,corrected,Added DOI and issue 1; article number 4423.
+zech2018variable,Crossref (api.crossref.org/works/<doi>),10.1371/journal.pmed.1002683,corrected,Added DOI.
+geirhos2020shortcut,Crossref (api.crossref.org/works/<doi>),10.1038/s42256-020-00257-z,corrected,Added DOI and issue 11.
+yu2022external,Crossref (api.crossref.org/works/<doi>),10.1148/ryai.210064,corrected,Added DOI (confirmed in Crossref).
+bouthillier2021variance,proceedings.mlsys.org (MLSys 2021 vol 3),,verified,"16 authors, vol 3, pages 747-769 match. No DOI."
+guo2017calibration,PMLR v70 page (guo17a),,verified,Pages 1321-1330 match. No DOI.
+naeini2015ece,Crossref (api.crossref.org/works/<doi>),10.1609/aaai.v29i1.9602,corrected,"Added DOI, vol 29 issue 1; first author written Pakdaman Naeini, Mahdi (Crossref). Pages 2901-2907 kept (Crossref has no page field)."
+chen2024uni,Crossref (api.crossref.org/works/<doi>),10.1038/s41591-024-02857-3,corrected,Added DOI and issue 3; 20 authors match.
+he2016resnet,Crossref (api.crossref.org/works/<doi>),10.1109/CVPR.2016.90,corrected,Added DOI.
+deng2009imagenet,Crossref (api.crossref.org/works/<doi>),10.1109/CVPR.2009.5206848,corrected,Added DOI.
+kather2018nct,DataCite (api.datacite.org),10.5281/zenodo.1214456,corrected,Zenodo DOI moved from note to doi field; authors/year match DataCite.
+kather2019predicting,Crossref (api.crossref.org/works/<doi>),10.1371/journal.pmed.1002730,corrected,Added DOI; 18 authors match.
+searle1992variance,Crossref (api.crossref.org/works/<doi>),10.1002/9780470316856,corrected,"Added DOI, series (Wiley Series in Probability and Statistics) and address."
+aubreville2023midog,Crossref (api.crossref.org/works/<doi>),10.1016/j.media.2022.102699,corrected,Added DOI; 41 authors match.
+jahanifar2024mitosis,Crossref (api.crossref.org/works/<doi>),10.1016/j.media.2024.103132,corrected,Added DOI.
+lafarge2021rotation,Crossref (api.crossref.org/works/<doi>); arXiv:2109.00823; Springer book page,10.1007/978-3-030-97281-3_9,corrected,"Switched from arXiv preprint to the published LNCS 13166 chapter (pp. 62-67, 2022). Key unchanged; in-text year becomes 2022."
+wilm2023canine,Crossref (api.crossref.org/works/<doi>); arXiv:2301.04423,10.1007/978-3-658-41657-7_46,corrected,"Switched from arXiv to published BVM 2023 chapter (Informatik aktuell, pp. 206-211). Key unchanged."
+wang2021tent,iclr.cc ICLR 2021 paper list; arXiv:2006.10726,,verified,ICLR 2021 confirmed. No DOI.
+schneider2020bn,proceedings.neurips.cc (NeurIPS 2020),,corrected,Added vol 33 and pages 11539-11551.
+nado2020bn,arXiv API; DataCite,10.48550/arXiv.2006.10963,corrected,Preprint only; added arXiv DOI; title capitalisation from arXiv.
+gulrajani2021domainbed,iclr.cc ICLR 2021 paper list; arXiv:2007.01434,,verified,ICLR 2021 confirmed. No DOI.
+dosovitskiy2021vit,iclr.cc ICLR 2021 paper list; arXiv:2010.11929,,verified,12 authors confirmed. No DOI.
+liu2022convnext,Crossref (api.crossref.org/works/<doi>),10.1109/CVPR52688.2022.01167,corrected,Added DOI and pages 11966-11976 (IEEE/Crossref pagination; CVF open-access PDF uses 11976-11986).
+singh2022swag,Crossref (api.crossref.org/works/<doi>),10.1109/CVPR52688.2022.00088,corrected,Added DOI and pages 794-804.
+sagawa2022extending,iclr.cc ICLR 2022 paper list; arXiv:2112.05090,,verified,New. 20 authors in order confirmed by both sources. No DOI.
+wiles2022fine,iclr.cc ICLR 2022 paper list; arXiv:2110.11328,,verified,"New. ICLR 2022 (oral); author names as on iclr.cc (Sylvestre-Alvise Rebuffi, Ali Taylan Cemgil). No DOI."
+zhou2023domain,Crossref (api.crossref.org/works/<doi>); PubMed 35914036,10.1109/TPAMI.2022.3195549,verified,"New. Crossref holds early-access record (2022); final issue TPAMI 45(4):4396-4415, 2023 from PubMed."
+stacke2021measuring,Crossref (api.crossref.org/works/<doi>),10.1109/JBHI.2020.3032060,verified,"New. JBHI 25(2):325-336, 2021."
+stacke2019closer,arXiv API; DataCite,10.48550/arXiv.1909.11575,verified,New. arXiv; comment says accepted to COMPAY 2019 MICCAI workshop (no proceedings DOI found).
+lu2024conch,Crossref (api.crossref.org/works/<doi>),10.1038/s41591-024-02856-4,verified,"New. 13 authors, Nat Med 30(3):863-874."
+vorontsov2024virchow,Crossref (api.crossref.org/works/<doi>),10.1038/s41591-024-03141-0,verified,New. 33 authors match Crossref; Nat Med 30(10):2924-2935.
+filiot2023phikon,Crossref (api.crossref.org/works/<doi>),10.1101/2023.07.21.23292757,corrected,"New. medRxiv preprint; Crossref lists 9 authors - added Camara, Axel (missing from draft)."
+wang2022ctranspath,Crossref (api.crossref.org/works/<doi>),10.1016/j.media.2022.102559,verified,New. MedIA 81:102559.
+kang2023benchmarking,Crossref (api.crossref.org/works/<doi>),10.1109/CVPR52729.2023.00326,verified,New. Lunit benchmark; DOI found via Crossref search (draft guessed .00326 correctly; .00320 is a different paper).
+xu2024gigapath,Crossref (api.crossref.org/works/<doi>),10.1038/s41586-024-07441-w,verified,New. Prov-GigaPath; Nature 630(8015):181-188; 28 authors.
+dejong2025unrobust,arXiv API; DataCite,10.48550/arXiv.2501.18055,verified,New. arXiv preprint (v2); no journal version found in Crossref under this title.
+komen2024batch,arXiv API; DataCite,10.48550/arXiv.2411.05489,verified,New. arXiv; AIM-FM workshop at NeurIPS 2024 (per arXiv comment).
+komen2026robust,Crossref (api.crossref.org/works/<doi>),10.1038/s41467-026-73923-2,verified,"New. Nat Commun 17:5218 (2026), joint journal paper by Komen, de Jong, Teuwen et al. on FM robustness to centre differences."
+reinhard2001color,Crossref (api.crossref.org/works/<doi>),10.1109/38.946629,corrected,New. Issue corrected 5 -> 4 per Crossref.
+ruifrok2001deconvolution,PubMed esummary (PMID 11531144),,verified,New. Anal Quant Cytol Histol 23(4):291-299. No DOI exists; PMID in note.
+vahadane2016structure,Crossref (api.crossref.org/works/<doi>),10.1109/TMI.2016.2529665,verified,New. 10 authors match.
+shaban2019staingan,Crossref (api.crossref.org/works/<doi>),10.1109/ISBI.2019.8759152,verified,New. ISBI 2019 pp. 953-956.
+tellez2018whole,Crossref (api.crossref.org/works/<doi>),10.1109/TMI.2018.2820199,verified,New. Tellez et al. 2018 IEEE TMI 37(9):2126-2136 (introduces H&E colour augmentation); 13 authors.
+ehteshamibejnordi2017camelyon16,Crossref (api.crossref.org/works/<doi>),10.1001/jama.2017.14585,verified,New. Crossref lists 70 names incl. consortium; kept first 7 + {the CAMELYON16 Consortium} as on the article byline. Crossref page field gives only 2199; end page 2210 from the article.
+litjens2018camelyon,Crossref (api.crossref.org/works/<doi>),10.1093/gigascience/giy065,verified,New. 17 authors match.
+aubreville2023midogpp,Crossref (api.crossref.org/works/<doi>),10.1038/s41597-023-02327-4,verified,New. MIDOG++; 12 authors match; Sci Data 10:484.
+aubreville2024midog2022,Crossref (api.crossref.org/works/<doi>),10.1016/j.media.2024.103155,verified,New. MIDOG 2022 challenge report; MedIA 94:103155; 30 authors.
+li2017adabn,Crossref (api.crossref.org/works/<doi>); arXiv:1603.04779,10.1016/j.patcog.2018.03.005,verified,"New. Journal version (Pattern Recognition 80:109-117, 2018) titled ""Adaptive Batch Normalization for practical domain adaptation""; arXiv title ""Revisiting Batch Normalization for Practical Domain Adaptation"". Key kept as li2017adabn; in-text year 2018."
+zhang2018mixup,arXiv API (comment: ICLR camera ready),,verified,"New. ICLR 2018; iclr.cc 2018 JSON not available and OpenReview/dblp blocked, venue taken from arXiv camera-ready comment. No DOI."
+varoquaux2022failures,Crossref (api.crossref.org/works/<doi>),10.1038/s41746-022-00592-y,verified,New. npj Digit Med 5:48.
+varoquaux2018cv,Crossref (api.crossref.org/works/<doi>),10.1016/j.neuroimage.2017.06.061,verified,New. NeuroImage 180:68-77.
+maierhein2018rankings,Crossref (api.crossref.org/works/<doi>),10.1038/s41467-018-07619-7,verified,New. Nat Commun 9:5217; 38 authors match.
+wiesenfarth2021challenger,Crossref (api.crossref.org/works/<doi>),10.1038/s41598-021-82017-6,verified,New. challengeR; Sci Rep 11:2369; 8 authors.
+dodge2019show,Crossref (api.crossref.org/works/<doi>),10.18653/v1/D19-1224,verified,New. EMNLP-IJCNLP 2019 pp. 2185-2194.
+dietterich1998approximate,Crossref (api.crossref.org/works/<doi>),10.1162/089976698300017197,verified,New. Neural Comput 10(7):1895-1923.
+nadeau2003inference,Crossref (api.crossref.org/works/<doi>),10.1023/A:1024068626366,verified,New. Mach Learn 52(3):239-281.
+bates2023cv,Crossref (api.crossref.org/works/<doi>),10.1080/01621459.2023.2197686,verified,"New. Online 2023, issue JASA 119(546):1434-1445, 2024; year field = 2024 (key kept as bates2023cv)."
+demsar2006statistical,jmlr.org (v7/demsar06a),,verified,New. JMLR 7:1-30. JMLR has no DOIs.
+benavoli2017time,jmlr.org (v18/16-305),,verified,New. JMLR 18(77):1-36. No DOI.
+patterson1971reml,Crossref (api.crossref.org/works/<doi>),10.1093/biomet/58.3.545,verified,New. REML; Biometrika 58(3):545-554.
+shrout1979icc,Crossref (api.crossref.org/works/<doi>),10.1037/0033-2909.86.2.420,verified,New. Psychol Bull 86(2):420-428.
+mcgraw1996icc,Crossref (api.crossref.org/works/<doi>),10.1037/1082-989X.1.1.30,verified,New. Psychol Methods 1(1):30-46.
+burdick1992confidence,Crossref (api.crossref.org/works/<doi>) (book record + Technometrics review 10.2307/1269531 naming both authors),10.1201/9781482277142,verified,"New. Crossref book record lists only ""Burdick""; co-author Graybill confirmed by the Technometrics review record. Original publisher Marcel Dekker 1992; DOI is the CRC Press digital edition. Series field omitted (not verifiable)."
+gelman2006prior,Crossref (api.crossref.org/works/<doi>); author PDF (stat.columbia.edu),10.1214/06-BA117A,verified,New. Crossref has no pages; PDF header gives Bayesian Analysis 1(3) pp. 515-533 (not 515-534).
+efron1993bootstrap,Crossref (api.crossref.org/works/<doi>),10.1201/9780429246593,verified,New. Crossref dates the CRC digital record 1994; print edition Chapman & Hall 1993 used for year. Series/volume omitted (not verifiable).
+kendall1938,Crossref (api.crossref.org/works/<doi>),10.1093/biomet/30.1-2.81,verified,New. Biometrika 30(1-2):81-93.
+holm1979,OpenAlex (W-record); doi.org handle lookup,,verified,"New. Scand J Stat 6:65-70 (issue 2). OpenAlex lists 10.2307/4615733 but doi.org returns ""handle not found"" -> it is a JSTOR stable id, not a registered DOI; DOI omitted."
+oldham1962,Crossref (api.crossref.org/works/<doi>),10.1016/0021-9681(62)90116-9,verified,New. J Chronic Dis 15(10):969-977.
+pitman1939,Crossref (api.crossref.org/works/<doi>),10.1093/biomet/31.1-2.9,verified,New. Biometrika 31(1-2):9-12 (OUP DOI; JSTOR duplicate 10.2307/2334972 not used).
+morgan1939,Crossref (api.crossref.org/works/<doi>),10.1093/biomet/31.1-2.13,verified,New. Biometrika 31(1-2):13-19 (OUP DOI).

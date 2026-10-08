@@ -1,0 +1,53 @@
+{
+ "tier": "S",
+ "cohort": "c17",
+ "fold": 2,
+ "phase": "tune",
+ "jobs": [
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.0003
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.001
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.003
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.01
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "erm_lunit_bt",
+   "seed": 0,
+   "hp": {
+    "lr": 0.03
+   },
+   "phase": "tune",
+   "pcam": false
+  }
+ ]
+}

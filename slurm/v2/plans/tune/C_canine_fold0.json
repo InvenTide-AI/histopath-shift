@@ -1,0 +1,250 @@
+{
+ "tier": "C",
+ "cohort": "canine",
+ "fold": 0,
+ "phase": "tune",
+ "jobs": [
+  {
+   "arm": "sam",
+   "seed": 0,
+   "hp": {
+    "rho": 0.02
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "sam",
+   "seed": 0,
+   "hp": {
+    "rho": 0.05
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "sam",
+   "seed": 0,
+   "hp": {
+    "rho": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "groupdro",
+   "seed": 0,
+   "hp": {
+    "eta": 0.001
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "groupdro",
+   "seed": 0,
+   "hp": {
+    "eta": 0.01
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "groupdro",
+   "seed": 0,
+   "hp": {
+    "eta": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "irm",
+   "seed": 0,
+   "hp": {
+    "irm_lambda": 1.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "irm",
+   "seed": 0,
+   "hp": {
+    "irm_lambda": 10.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "irm",
+   "seed": 0,
+   "hp": {
+    "irm_lambda": 100.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "coral",
+   "seed": 0,
+   "hp": {
+    "coral_lambda": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "coral",
+   "seed": 0,
+   "hp": {
+    "coral_lambda": 1.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "coral",
+   "seed": 0,
+   "hp": {
+    "coral_lambda": 10.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 0,
+   "hp": {
+    "ms_p": 0.5,
+    "ms_alpha": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 0,
+   "hp": {
+    "ms_p": 0.5,
+    "ms_alpha": 0.3
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 0,
+   "hp": {
+    "ms_p": 1.0,
+    "ms_alpha": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "mixstyle",
+   "seed": 0,
+   "hp": {
+    "ms_p": 1.0,
+    "ms_alpha": 0.3
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "fish",
+   "seed": 0,
+   "hp": {
+    "meta_lr": 0.01
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "fish",
+   "seed": 0,
+   "hp": {
+    "meta_lr": 0.05
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "fish",
+   "seed": 0,
+   "hp": {
+    "meta_lr": 0.1
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "fish",
+   "seed": 0,
+   "hp": {
+    "meta_lr": 0.5
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "lisa",
+   "seed": 0,
+   "hp": {
+    "lisa_alpha": 0.5,
+    "p_sel": 0.5
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "lisa",
+   "seed": 0,
+   "hp": {
+    "lisa_alpha": 0.5,
+    "p_sel": 1.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "lisa",
+   "seed": 0,
+   "hp": {
+    "lisa_alpha": 2.0,
+    "p_sel": 0.5
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "lisa",
+   "seed": 0,
+   "hp": {
+    "lisa_alpha": 2.0,
+    "p_sel": 1.0
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "he_jitter",
+   "seed": 0,
+   "hp": {
+    "jitter": 0.2
+   },
+   "phase": "tune",
+   "pcam": false
+  },
+  {
+   "arm": "he_jitter",
+   "seed": 0,
+   "hp": {
+    "jitter": 0.4
+   },
+   "phase": "tune",
+   "pcam": false
+  }
+ ]
+}

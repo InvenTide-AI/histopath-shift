@@ -1,0 +1,277 @@
+%% Discussion (MedIA revision, v2 pipeline). Numbers are those of Section 5 (sections/results.tex);
+%% the case studies (sections/case_study.tex) use v1 numbers, labeled as such.
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What a domain-complete, seed-replicated evaluation shows}
+\label{sec:disc-summary}
+
+Four findings stand out.
+
+First, a held-out score is mostly a statement about the held-out domain. For
+most arms, the domain explains most of the variance of a single run, and the
+same method can score near chance at one scanner and above 0.9 at another
+(Section~\ref{sec:results-domains}). The worst domain also differs between
+methods. A result on one official test split therefore describes one domain,
+and a different split could reverse a comparison.
+
+Second, with three to seven domains, most differences between methods cannot
+be resolved statistically. No standard-tier arm beats ERM after correcting for
+multiple comparisons, even when its mean gain is 0.145 AUROC and it improves
+every domain. On the tumor cohorts, gains are large but vary strongly between
+domains, so between 7 and 53 domains would be needed to confirm a gain of 0.05. On the
+mitosis cohorts, differences are measured precisely but are small. Adding seeds
+does not fix this, because the domain-by-method interaction dominates. This
+agrees with DomainBed, where no algorithm beat ERM by a margin the authors
+found significant \citep{gulrajani2021domainbed}, and with the large ERM seed
+variance reported for Camelyon17 in WILDS \citep{koh2021wilds}.
+
+Third, rankings are uncertain within a cohort and change between cohorts. At
+the standard tier they agree more between cohorts that share a task than
+between cohorts that share a shift type. This reverses the thesis of our own
+earlier version, which held that the type of shift decides which method works
+best. That thesis rested on two cohorts that differed in task as well as in
+shift type, and the factorial design was built to separate the two. With four
+cohorts, one per cell, the design can describe the pattern but cannot prove it,
+and the compact tier does not clearly show it. We read the result as a warning,
+not a law. A method's rank on one task says little about its rank on another,
+even when the shift looks similar.
+
+Fourth, implementation and tuning move results as much as the choice of
+method. Estimating the stain matrix per tile instead of per slide turned the
+fourth-best compact-tier arm on Camelyon17 into the worst. Inheriting a learning rate tuned
+for another initialization made Barlow Twins fine-tuning fail on MIDOG++. The
+defects that we found in our own earlier pipeline (Section~\ref{sec:casestudy})
+are of the same kind. A comparison of methods is only as good as the weakest
+implementation in it.
+
+The method-level results are consistent with earlier work. Under the primary selection rule, none of the six
+domain-generalization objectives ranked in the top five on any cohort. This is
+consistent with DomainBed and WILDS, where such objectives did not reliably
+beat ERM \citep{gulrajani2021domainbed,koh2021wilds}. Color
+augmentation was consistently good, as \citet{tellez2019stain} found for HSV
+and HED augmentation. Pathology foundation models were strong on the tumor
+cohorts, but their frozen features were weak for mitotic figures, and two of
+the four Lunit backbones were weaker frozen encoders than ImageNet ConvNeXt-T.
+Domain-aligned pre-training beats ImageNet pre-training on average
+\citep{kang2023benchmarking}, but which method helps varies across datasets and
+shifts \citep{wiles2022fine}, and in our data it also varied with the task.
+
+\subsection{A roadmap for models that work across sites without retraining}
+\label{sec:roadmap}
+
+Every number in this study answers a practical question: how well does a
+model trained once on some sites work at a site it has never seen? No model
+was trained on labeled data from its test site, and apart from the test-time
+adaptation arms, no model was changed at all. The study therefore
+doubles as a test of the ``train once, deploy at many sites'' strategy that
+practitioners want. At the standard scale, the best method of each cohort
+reached a worst-site AUROC of 0.884 to 0.986 without any retraining, against
+0.534 to 0.895 for ERM. No single method was best everywhere, and no
+improvement over ERM could be confirmed statistically with the sites
+available. A practitioner can therefore improve the odds that a model
+transfers, and can find out whether it does, but cannot assume it.
+
+Figure~\ref{fig:roadmap} and Table~\ref{tab:roadmap} turn the results into six
+steps. Each step carries an evidence grade. \emph{Strong} means that the
+finding holds in all four cohorts at the standard tier. \emph{Moderate} means a
+consistent direction that is not significant after correction, or a result
+that holds with exceptions. \emph{Mixed}
+means large gains in some cohorts and none in others. Step~6 uses the site acceptance test proposed in
+Section~\ref{sec:sat}.
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_roadmap}
+  \caption{A six-step roadmap for pathology models that should work at new
+  sites without retraining, with the evidence for each step from this study
+  (standard tier, ID-validation selection) and its evidence grade. Details are
+  in Table~\ref{tab:roadmap}.}
+  \label{fig:roadmap}
+\end{figure}
+
+\paragraph{Step 1: define the target before training} Decide which task,
+which sites and which scanners the model is meant for, and fix the minimum
+performance that every site must reach. Judge models by their worst site.
+Averages hid a near-chance scanner on the canine cohort (mean AUROC 0.785,
+worst scanner 0.534 for ERM), and the hardest site differed between methods.
+
+\paragraph{Step 2: collect sites, not only slides} Gather development data
+from as many sites and scanners as possible, and split it by site. Most of the
+variance of a held-out score comes from the site (median ICC 0.72--0.95), so
+extra slides or extra training runs from the same sites do little. A pilot
+study gives $\sigma_\Delta$, and Eq.~\eqref{eq:power} then says how many sites
+a validation needs. In our tumor cohorts, confirming a gain of 0.05 AUROC
+needed 7 to 53 sites.
+
+\paragraph{Step 3: train once, with a strong recipe} Start from a pathology
+foundation model, fine-tune it end to end with H\&E color jitter, and tune the
+learning rate for that initialization. In our data, color jitter improved mean
+AUROC over ERM in 18 of 20 held-out domains at the standard tier, and the
+fine-tuned DINO ViT with jitter had the best worst-site AUROC averaged over
+the four cohorts (0.895). Two warnings apply. Frozen foundation-model features
+were not enough for mitotic figures (the frozen probes ranked 18th to 21st on
+both mitosis cohorts), so frozen features must be checked on the task at hand.
+And an initialization with the wrong learning rate can fail outright: Barlow
+Twins fine-tuning with the ImageNet learning rate reached 0.715 mean AUROC on
+MIDOG++, against 0.891 with its own rate. Domain-generalization objectives
+deserve low priority; under the primary selection rule, none of the six
+reached the top five on any cohort.
+
+\paragraph{Step 4: adapt to the new site without labels, if the pipeline
+allows it} Two techniques need neither labels nor any change to the trained
+weights. They use only unlabeled images of the new site at prediction time.
+Re-estimating the batch-normalization statistics (BN-adapt) helped most where
+the shift was severe. At the standard tier it raised mean AUROC by 0.120 on the
+canine scanners, at all five of them, and by 0.015 and 0.022 on Camelyon17 and
+MIDOG~2021, but it did nothing on MIDOG++ ($-0.004$). Per-slide stain
+normalization gave smaller gains than color jitter in three of the four
+cohorts at the standard tier. Both
+techniques must be implemented with care. The test images must arrive in
+shuffled, mixed batches, because a batch of one class corrupts the statistics
+(Section~\ref{sec:setup-arms}). Stain must be estimated from enough tissue: a
+per-tile estimate failed at a whole Camelyon17 center (0.557 against 0.976 for
+the per-slide estimate; Supplementary Section~\ref{S-app:macenko}). TENT, by contrast,
+updates model parameters at test time and is thus a form of fine-tuning.
+
+\paragraph{Step 5: select and validate without touching the target sites}
+Choose hyperparameters and checkpoints on held-out data from the training
+sites only. Validate by holding out whole sites in turn with at least three
+seeds per model. Report every site, the worst site, the seed spread, the
+calibration at each site and confidence intervals that account for the
+training data shared between folds. At the standard scale, the choice of
+selection rule barely changed the rankings ($\tau_b\ge0.83$). With the small
+compact model it did ($\tau_b$ down to 0.32), which is one more reason not to
+draw conclusions from toy models. Calibration also varies: on Camelyon17 alone,
+the mean ECE of standard-tier methods ranged from 0.027 to 0.186.
+
+\paragraph{Step 6: accept each new site with a small labeled sample, then
+monitor} Before a model is used at a new site, label a small random sample of
+that site's patches, spread over many slides, and run the site acceptance test
+of Section~\ref{sec:sat} against the target of Step~1. The development results
+of Step~5 supply its prior, and its planner gives the number of labels to
+collect. At the standard tier, the test kept false acceptance at or below 2.1\%
+and, for targets of 0.80 and 0.85, needed about half as many labels as local
+labels alone. The development
+results alone were not enough: they would have accepted 8.6\% of the sites
+that fell below a target of 0.80. Where the development sites score far above the
+target, a site that fails is a surprise to the prior, so at least 100 labels
+should be collected; the robust variant, which we added after seeing this
+case, lowers the risk further. Where they score near or below the target, the
+prior adds little and local labels decide. After acceptance, inputs and outputs
+should be monitored; we did not test monitoring.
+
+\begin{table}[width=\linewidth,pos=tbp]
+\caption{The roadmap of Fig.~\ref{fig:roadmap} with its evidence. Numbers are
+standard-tier results under ID-validation selection unless stated. Grades:
+strong, holds in all four cohorts at the standard tier; moderate, consistent
+direction but not significant after correction, or holding with exceptions;
+mixed, large gains in some cohorts and none in others.}
+\label{tab:roadmap}
+\footnotesize
+\begin{tabular*}{\tblwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{6.2cm}l@{}}
+\toprule
+Step & What to do & Evidence in this study & Grade \\
+\midrule
+1. Define the target & Fix the task, sites, scanners and a worst-site acceptance level before training. & Canine ERM: mean 0.785, worst scanner 0.534; the worst site differed between methods (Sec.~\ref{sec:results-domains}). & strong \\
+2. Collect sites & Split by site; size the number of sites from a pilot estimate of $\sigma_\Delta$. & Median ICC 0.72--0.95; a 0.05 gain needs 7--53 sites (tumor) or 3 (mitosis); extra seeds help little (Sec.~\ref{sec:results-variance}, \ref{sec:results-contrasts}). & strong \\
+3. Train once, strongly & Fine-tune a pathology foundation model with H\&E jitter; tune its own learning rate; check frozen features on the task; give DG objectives low priority. & Jitter better than ERM in 18/20 domains; DINO FT + jitter best mean worst-site AUROC (0.895); frozen probes 18th--21st on mitosis; BT with inherited learning rate 0.715 vs 0.891 on MIDOG++; no DG objective in the top five (Sec.~\ref{sec:results-ranks}). & moderate \\
+4. Adapt without labels & Optionally re-estimate BN statistics on shuffled site images, or normalize stain per slide; never per small tile. & BN-adapt $+0.120$ on canine (5/5 scanners), $+0.015$ and $+0.022$ on Camelyon17 and MIDOG~2021, $-0.004$ on MIDOG++; per-tile Macenko 0.557 vs 0.976 per slide at one center (Suppl.~\ref{S-app:macenko}). & mixed \\
+5. Select and validate & Select on training-site data; hold out whole sites with $\ge$3 seeds; report every site, the worst site, seeds, ECE and intervals. & Selection rules agree at the standard tier ($\tau_b\ge0.83$) but not at the compact tier (down to 0.32); ECE 0.027--0.186 on Camelyon17 (Sec.~\ref{sec:results-sensitivity}). & strong \\
+6. Accept each new site & Label a small random sample; accept if the site acceptance test gives $P(\text{AUROC}\ge T)\ge0.95$; plan $m$ with its planner; monitor afterwards. & Development results alone: 8.6\% false acceptance at $T=0.80$. Test: false acceptance $\le$2.1\%; at $T=0.80$, 84\% power with 100 labels, which local labels alone need 200 for; worst subgroup 8.7\% and 5.7\% with 25 and 50 labels, 3.3\% with 100 (Sec.~\ref{sec:results-sat}). Monitoring not tested. & moderate \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{What the roadmap does not promise} It does not guarantee that a
+model will work at a new site; it raises the chance, measures the risk and
+checks each site before use. Its
+evidence comes from patch classifiers at 96 to 224~px on four public research
+cohorts, not from whole-slide or detection systems in clinical use, and clinical
+deployment additionally needs prospective and regulatory validation that this
+study does not provide. The method choices in Step~3 were the best on average,
+not on every cohort, which is exactly why Steps 5 and 6 cannot be skipped.
+
+\subsection{What method developers should report}
+\label{sec:disc-research}
+
+For researchers who propose or compare methods, the results add five reporting
+rules to the roadmap. Each one changed a conclusion in this study.
+\begin{enumerate}
+  \item \emph{Report every domain and repeat runs.} A single official split is
+    one sample from a wide distribution, and the seeds of one method spanned
+    up to 0.48 AUROC at a single domain.
+  \item \emph{Report intervals and power.} State $\sigma_\Delta$ and the
+    number of domains a claimed gain would need, treat a large non-significant
+    gain as unresolved, and account for the training data that folds share
+    \citep{nadeau2003inference,bates2023cv}.
+  \item \emph{Include controls and tune every method.} On MIDOG++,
+    compute-matched ERM was the best compact-tier arm and well ahead of
+    SimCLR, which passes the same number of images through the encoder; on
+    the canine cohort it was the worst. Without the control, neither result
+    could be attributed correctly.
+  \item \emph{Report all model-selection rules, and separate transductive
+    methods.} Methods that use unlabeled test-site images were among the
+    strongest and should be compared with each other.
+  \item \emph{Do not transfer rankings across tasks, and release per-run
+    records.} Cohorts that shared only the shift type ranked methods almost
+    independently at the standard tier, and stored records let others add
+    rules and metrics without retraining.
+\end{enumerate}
+
+\input{sections/case_study}
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\paragraph{Four cohorts, one per cell} The task-by-shift analysis has one
+cohort per cell. Task, species, tissue, label definition and training-set size
+vary together between cells, and the cohort-level decomposition is
+descriptive. The two mitosis cohorts share MIDOG~2021's 150 images. More
+cohorts per cell would be needed to separate task from shift type
+statistically.
+
+\paragraph{Few domains} With $K=3$ to 7, the ICC and the paired contrasts have
+wide intervals, and fold dependence can only be handled as a sensitivity
+analysis. MIDOG~2021 has no OOD-validation domain.
+
+\paragraph{Model scale and input size} The standard tier uses ResNet-50 at
+96~px and ViT-S/16 at 224~px. Patch classification at this size is not
+whole-slide inference or mitotic-figure detection, and larger inputs or
+detection pipelines may rank methods differently. The two tiers already
+disagree in part (Section~\ref{sec:results-ranks}).
+
+\paragraph{Foundation models} HuggingFace was not reachable from our compute
+environment, so recent large foundation models such as UNI, Virchow or
+Prov-GigaPath \citep{chen2024uni,vorontsov2024virchow,xu2024gigapath} were not
+evaluated. The Lunit models are trained on TCGA only and are licensed for
+non-commercial research.
+
+\paragraph{Tuning} Hyperparameters were tuned with one seed per fold, and the
+compact tier uses a fixed learning rate. Some selected values lie at a grid
+edge (Supplementary Section~\ref{S-app:tuning}). A larger search could change individual
+ranks.
+
+\paragraph{Transductive stain normalization} Per-slide Macenko normalization
+estimates each test slide's stain from that slide's benchmark patches, which
+were sampled from annotated regions. The effect of this tile set on the
+estimate was small (Supplementary Section~\ref{S-app:macenko}), but a label-independent tissue
+sample would match practice better.
+
+\paragraph{Secondary cohorts} PatchCamelyon overlaps with Camelyon17 in its
+hospitals, and NCT-CRC-HE has no site labels, so neither tests institutional
+shift. The case studies use numbers from our earlier pipeline, which differs
+from the v2 protocol.
+
+\paragraph{Site acceptance test} The test assumes that a new site is
+exchangeable with the development sites, so a site unlike all of them must be
+caught by the local labels; in the hardest subgroup it needed 100 labels to
+keep false acceptance below 5\%. It was validated on labeled patches drawn at
+random from each site's test patches, whereas real labels come in clusters from
+a few slides, which widens the local uncertainty. It addresses patch-level
+AUROC, not a clinical endpoint, and its label planner was slightly optimistic
+at the standard tier.
+
+\paragraph{Metric} AUROC is the primary metric. It ignores the decision
+threshold, which matters in practice, and threshold-dependent metrics may
+rank methods differently. They are stored in every record.

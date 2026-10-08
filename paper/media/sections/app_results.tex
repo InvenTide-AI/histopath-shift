@@ -1,0 +1,235 @@
+%% Appendix: supplementary results (MedIA revision, v2 pipeline).
+%% Figures: paper/media/figs (rendered from snapshot 1381bdd759f9 by src/v2/make_figures_v2.py --freeze).
+%% Tables: paper/media/tables (src/v2/paper_tables.py). Ladder-only rank agreement:
+%% results/v2/analysis/S_ladder_only/cross/kendall_id.csv.
+\section{Compact-tier results}
+\label{app:compact}
+
+This section gives the compact-tier counterparts of the main-text figures
+and tables. Table~\ref{tab:main-C} lists worst-domain and mean AUROC,
+Fig.~\ref{fig:perdomain-C} the per-domain results, Fig.~\ref{fig:variance-C}
+the variance decomposition, Fig.~\ref{fig:power-C} the power curves and
+Fig.~\ref{fig:ranks-C} the rankings. Figure~\ref{fig:seedspread} shows the
+individual seeds of three compact-tier arms next to the best standard-tier arm.
+
+\begin{table}[width=\linewidth,pos=p]
+\caption{Compact tier: worst-domain AUROC (rank among the 20 arms) and mean
+AUROC over held-out domains, ID-validation selection, five seeds. Bold: best
+worst-domain AUROC in the cohort. $^{\dagger}$Transductive.}
+\label{tab:main-C}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/tab_main_C}
+\end{table}
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=\linewidth]{fig_perdomain_C}
+  \caption{Test AUROC of every compact-tier arm at every held-out domain (mean
+  over five seeds; ID-validation selection). Outlined: each arm's worst domain.
+  $^{\dagger}$Transductive.}
+  \label{fig:perdomain-C}
+\end{figure}
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=0.92\linewidth]{fig_variance_C}
+  \caption{Variance decomposition at the compact tier, as in
+  Fig.~\ref{M-fig:variance}. $^{\dagger}$Transductive.}
+  \label{fig:variance-C}
+\end{figure}
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_power_C}
+  \caption{Domains needed for 80\% power at the compact tier, as in
+  Fig.~\ref{M-fig:power}.}
+  \label{fig:power-C}
+\end{figure}
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig_ranks_C}
+  \caption{Rankings at the compact tier, as in Fig.~\ref{M-fig:ranks}.
+  $^{\dagger}$Transductive.}
+  \label{fig:ranks-C}
+\end{figure}
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_seedspread}
+  \caption{Individual seeds at every held-out domain for compact-tier ERM,
+  SimCLR and H\&E jitter, and for the best standard-tier arm (fine-tuned Lunit
+  DINO with H\&E jitter, the arm with the highest mean worst-domain AUROC over
+  the four cohorts, 0.895). Bars mark seed means. The $y$-axes are scaled per
+  cohort.}
+  \label{fig:seedspread}
+\end{figure}
+
+\clearpage
+\section{Model-selection rules}
+\label{app:selection}
+
+Figures~\ref{fig:selection-S} and \ref{fig:selection-C} show each arm's mean
+difference from ERM under the four selection rules. All rules use the same
+ten checkpoints of the same runs (Section~\ref{M-sec:protocol-lodo}), so the
+differences come from selection alone. The $\tau_b$ values printed in the
+figures compare the rankings of these mean differences; those of
+Table~\ref{M-tab:selection} compare worst-domain rankings. At the standard tier
+the rules agree closely. At the compact tier the OOD-validation and oracle
+rules reorder the canine and Camelyon17 arms considerably.
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=\linewidth]{fig_selection_S}
+  \caption{Standard tier: mean AUROC difference from ERM under ID-validation
+  (primary, with 95\% interval), OOD-validation, last-checkpoint and oracle
+  selection. Each panel shows the arms analyzed under every rule available in
+  the cohort. $^{\dagger}$Transductive.}
+  \label{fig:selection-S}
+\end{figure}
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=\linewidth]{fig_selection_C}
+  \caption{Compact tier: mean AUROC difference from ERM under the four
+  selection rules, as in Fig.~\ref{fig:selection-S}.
+  $^{\dagger}$Transductive.}
+  \label{fig:selection-C}
+\end{figure}
+
+\clearpage
+\section{Calibration}
+\label{app:calibration}
+
+Figures~\ref{fig:calibration-S} and \ref{fig:calibration-C} give the expected
+calibration error (Eq.~\ref{M-eq:ece}) of every arm, averaged over domains and at
+its worst domain, and reliability diagrams for the fold in which ERM performs
+worst. At the standard tier, one of the two fine-tuned foundation models with
+H\&E jitter is the best calibrated arm on every cohort. ERM is poorly calibrated on the
+canine cohort and MIDOG~2021 (mean ECE 0.180 on both). Calibration varies
+between domains as much as discrimination does: for most arms the worst-domain
+ECE is well above the mean.
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=0.92\linewidth]{fig_calibration_S}
+  \caption{Calibration at the standard tier. (a) Test ECE (15 equal-width bins)
+  at the worst domain (filled) and averaged over domains (open). (b) Reliability
+  diagrams for the fold whose test domain is ERM's worst, pooled over seeds.
+  $^{\dagger}$Transductive.}
+  \label{fig:calibration-S}
+\end{figure}
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=0.92\linewidth]{fig_calibration_C}
+  \caption{Calibration at the compact tier, as in Fig.~\ref{fig:calibration-S}.
+  $^{\dagger}$Transductive.}
+  \label{fig:calibration-C}
+\end{figure}
+
+\clearpage
+\section{Representation ladder}
+\label{app:ladder}
+
+Figure~\ref{fig:ladder} compares nine frozen backbones under one linear-probe
+protocol: four ImageNet-1k models (ResNet-18, ResNet-50, ConvNeXt-T
+\citep{liu2022convnext}, ViT-B/16), a ViT-B/16 pre-trained with weak supervision on
+3.6 billion images and fine-tuned on ImageNet-1k \citep{singh2022swag}, and four Lunit pathology models
+\citep{kang2023benchmarking}. The Lunit Barlow Twins ResNet-50 and DINO ViT-S/16
+are the best frozen encoders on the canine cohort and, by mean AUROC, on
+Camelyon17; by worst-domain AUROC on Camelyon17 the DINO ViT is fourth, behind
+Barlow Twins and two ImageNet models. On the mitosis cohorts every
+frozen probe is well below fine-tuned ERM, and the Lunit SwAV ResNet-50 is
+below the ImageNet ResNet-50 averaged over the four cohorts. Within this
+probe-only ladder, the two mitosis cohorts rank the backbones almost
+identically ($\tau_b=0.83$), while the two tumor cohorts barely agree
+($\tau_b=0.17$).
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig_ladder}
+  \caption{Frozen backbones with a linear probe (standard tier, 224~px input,
+  three seeds, ID-validation selection): worst-domain (filled, with
+  seed-bootstrap 95\% interval) and mean AUROC (open). Vertical line: fine-tuned
+  ImageNet ResNet-50 ERM, worst domain.}
+  \label{fig:ladder}
+\end{figure}
+
+\clearpage
+\section{Sensitivity analyses}
+\label{app:sensitivity}
+
+\paragraph{Scale normalization of MIDOG~2021} Figure~\ref{fig:sensitivity}
+compares the compact-tier results on the scale-normalized (primary) and the
+un-normalized MIDOG~2021 cohort.
+
+\begin{figure}[pos=tbp]
+  \centering
+  \includegraphics[width=0.9\linewidth]{fig_sensitivity_C}
+  \caption{MIDOG~2021 with and without scale normalization (compact tier,
+  20 arms, same seeds and folds): (a) worst-domain and (b) mean AUROC.
+  $^{\dagger}$Transductive.}
+  \label{fig:sensitivity}
+\end{figure}
+
+\paragraph{PatchCamelyon} Table~\ref{tab:pcam} gives the PatchCamelyon test
+AUROC of the Camelyon17 models at the ID-validation-selected checkpoint,
+averaged over seeds, with its mean and minimum over the five Camelyon17 folds.
+The score is never used for selection. Test-time adaptation is not evaluated
+on PatchCamelyon.
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{PatchCamelyon test AUROC of the Camelyon17 models: mean and minimum
+over the five folds of the seed-mean AUROC. $^{\dagger}$Transductive.}
+\label{tab:pcam}
+\footnotesize
+\input{tables/tab_pcam}
+\end{table}
+
+\paragraph{Hyperparameters} Figures~\ref{fig:tuning-S} and \ref{fig:tuning-C}
+show how test AUROC of the seed-0 tuning runs varies across each grid. Test
+AUROC is shown only to display this sensitivity; selection used ID-validation
+AUROC (Section~\ref{app:tuning}).
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=0.78\linewidth]{fig_tuning_S}
+  \caption{Standard-tier tuning runs (seed 0): test AUROC at the
+  ID-validation-selected checkpoint for each grid value, worst fold (filled) and
+  mean over folds (open). Brackets: number of folds whose ID-validation AUROC
+  selected the value. `$k$ div.': $k$ folds diverged. Gray line: worst domain of
+  final ERM, seed~0.}
+  \label{fig:tuning-S}
+\end{figure}
+
+\begin{figure}[pos=p]
+  \centering
+  \includegraphics[width=0.78\linewidth]{fig_tuning_C}
+  \caption{Compact-tier tuning runs (seed 0), as in Fig.~\ref{fig:tuning-S}.}
+  \label{fig:tuning-C}
+\end{figure}
+
+\clearpage
+\section{Response shape}
+\label{app:response}
+
+Table~\ref{tab:response} summarizes Oldham's correlation $r$ between each
+arm's per-domain gain over ERM and the per-domain mean of the two
+(Section~\ref{sec:protocol-response}). A negative $r$ means that the arm gains
+most where both arms do worst, so it narrows the spread between domains. On the
+tumor cohorts at both tiers and on MIDOG~2021 at the compact tier, most arms
+have a negative $r$; on the canine cohort at the standard tier, all 20 do. The
+Pitman--Morgan test is significant for 14 of them. The exact sign-flip test
+cannot reach $p<0.05$ with five or fewer domains, and on MIDOG++ its smallest
+$p$ is 0.078 at the standard tier. We therefore read the pattern as consistent but not established.
+
+\begin{table}[width=\linewidth,pos=t]
+\caption{Response shape: number of arms with negative Oldham's correlation $r$,
+median $r$, number of arms with Pitman--Morgan $p<0.05$, and the smallest
+exact sign-flip $p$ over arms.}
+\label{tab:response}
+\footnotesize
+\input{tables/tab_response}
+\end{table}

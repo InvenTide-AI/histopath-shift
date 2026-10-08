@@ -1,0 +1,104 @@
+%% Case study (withdrawn v1 synergy claim) and the NCT-CRC-HE scope result.
+%% All numbers are from the authors' earlier (v1) pipeline, recomputed from:
+%%   runs/camelyon17_center2/*.json, results/camelyon17_center2/*.csv
+%%   $DATA/runs/fold{0..4}/{baseline,sam,ssl,ssl_sam}_seed{0,1,2}.json (ood_test.auroc)
+%%   results/nct_crc_he/crc_results_summary.csv, crc_results_raw.csv,
+%%   crc_interaction.csv, crc_data_manifest.json
+%% v1 arm names: baseline = ERM, ssl = SimCLR, sam = SAM, ssl_sam = SimCLR+SAM.
+%% v2 interaction: results/v2/analysis/paper_numbers.json -> simclr_sam_interaction_C (from C/*/per_run_id.csv).
+
+\subsection{Case study: a single-hospital synergy claim that did not survive}
+\label{sec:casestudy}
+
+This study began with a claim of our own that the protocol of
+Section~\ref{sec:protocol} overturns. The numbers below come from our earlier
+(v1) pipeline: a compact CNN on 64~px crops, five epochs and selection on the
+OOD-validation hospital, not the v2 protocol.
+
+\paragraph{The original claim} The model was trained on Camelyon17 hospitals 0,
+3 and 4, selected on hospital 1 and tested on hospital 2, the official WILDS
+split \citep{koh2021wilds}. With one seed per arm, test AUROC was 0.931 for
+ERM, 0.895 for SimCLR, 0.826 for SAM and 0.951 for SimCLR+SAM. The interaction
+$I=\delta_{\text{SimCLR+SAM}}-\delta_{\text{SimCLR}}-\delta_{\text{SAM}}$, with
+$\delta$ the difference from ERM, was $+0.161$ ($\delta_{\text{SimCLR}}=-0.037$,
+$\delta_{\text{SAM}}=-0.105$, $\delta_{\text{SimCLR+SAM}}=+0.019$). Each method
+alone was worse than ERM and the pair was better, so we read $I$ as a synergy.
+Patch-bootstrap intervals were narrow (SAM$-$ERM:
+$[-0.108,-0.102]$).
+
+\paragraph{What the design got wrong} The patch bootstrap measures test
+sampling, not run-to-run variation. A second ERM seed in the same experiment
+scored 0.881, 0.050 below the first and about 15 times the half-width of that
+interval. With both available seeds for ERM and SimCLR, $I$ falls to $+0.112$.
+As a contrast of four single runs, $I$ carries the run noise of all four arms.
+
+\paragraph{How the protocol detects it} The v1 grid has all five hospitals and
+three seeds per cell (fold $t$ tests on hospital $t$). At hospital 2, $I$ is
+$-0.019$. Over hospitals 0--4 it is $-0.012$, $-0.012$, $-0.019$, $+0.180$ and
+$-0.050$: negative at four of five, with mean $+0.017$ (95\% CI
+$[-0.097,+0.132]$, $p=0.70$, Eq.~\ref{eq:mean}). The single positive value
+comes from one SAM run at hospital 3 with test AUROC 0.407 (other seeds:
+0.908 and 0.864). At hospital 2, the seed SDs of ERM, SAM,
+SimCLR and SimCLR+SAM (0.105, 0.065, 0.048 and 0.002) give a single-run SD of $I$ of about 0.13
+if run noise is independent across arms, so $+0.161$ is about 1.2 SDs from
+zero. Seed replication thus shows that one run cannot separate the effect from
+noise, and domain completeness that its sign depends on the test hospital.
+We withdraw the synergy claim. Under the v2 protocol (compact tier, five
+seeds per arm, ID-validation selection), the interaction on Camelyon17 is
+$-0.003$, $-0.007$, $+0.066$, $+0.007$ and $+0.057$ at hospitals 0--4, with
+mean $+0.024$ (95\% CI $[-0.019,+0.067]$, $p=0.20$). On the other cohorts it is
+$-0.007$ (canine), $-0.013$ (MIDOG~2021) and $+0.003$ (MIDOG++). Under v2, the
+official test hospital shows the largest positive value ($+0.066$). A
+single-hospital study on that split would again report a synergy that the full
+design does not support. The small negative value on MIDOG~2021 (95\% CI
+$[-0.021,-0.005]$, unadjusted $p=0.02$, $K=3$) is the only interval that
+excludes zero.
+
+\paragraph{Validity of the v1 records} The v1 defects documented in this
+revision (MixStyle active at evaluation, Macenko as one fixed color transform,
+RotInv identical to ERM, inactive IRM annealing, an empty GroupDRO group on
+MIDOG~2021 and the canine cohort, TENT on single-class test batches) do not
+touch these four arms. One deviation does apply: v1 SAM updated batch-norm running statistics on the
+perturbed pass instead of the unperturbed one, the reverse of the standard
+implementation, and v2 corrects it. It affects SAM and SimCLR+SAM in both
+v1 experiments, by an amount we have not measured. The single-hospital
+experiment also used an earlier script and a different 30,000-patch training
+sample than the grid, so its values are not interchangeable with fold~2's.
+
+\subsection{A single-institution cohort cannot support domain claims (NCT-CRC-HE)}
+\label{sec:nct}
+
+We also ran the four v1 arms on NCT-CRC-HE-100K \citep{kather2018nct}, with
+two seeds each. The task was tumor epithelium versus all other tissue except
+background, on the central $64\times64$~px of each tile. Training (20,000
+tiles), ID validation (4,000) and the SimCLR pool (10,226 unlabeled tiles)
+came from the color-normalized release. There were two test conditions: the
+same release without color normalization (4,000 tiles), and CRC-VAL-HE-7K
+\citep{kather2019predicting}, which comes from 50 other patients of the same
+tissue bank (class-balanced to 2,466 tiles).
+
+\paragraph{$K=1$ by construction} The tiles have no site labels, so no domain
+can be held out. The cohort is one domain, and model selection had to use ID
+validation. Neither test condition changes the institution.
+
+\paragraph{Result} All arms reach ID-validation AUROC of 0.963--0.972 (means
+over two seeds). Without color normalization, ERM scores 0.791, SAM 0.726,
+SimCLR+SAM 0.724 and SimCLR 0.702 ($-0.089$ relative to ERM). On CRC-VAL-HE-7K
+the four arms span only 0.017 (0.927--0.944). ERM has the lowest ECE in both
+test conditions (0.157 against 0.206--0.235, and 0.027 against 0.032--0.037).
+Note that SimCLR's pool saw only normalized tissue, so it never saw the
+un-normalized appearance it was tested on.
+
+The arithmetic of Section~\ref{sec:casestudy} recurs. Without normalization,
+both single methods are worse than ERM, and $I=+0.087$. A tile bootstrap of
+the two-seed ensembles gives $+0.078$ $[0.070,0.085]$. That interval reflects
+tile sampling only, while SimCLR's two seeds differ by 0.102 in the same
+condition (0.752 and 0.651).
+
+\paragraph{Why this is a scope statement} With $K=1$ there are no
+leave-one-domain-out folds and no between-domain variance $\sigma_D$ or ICC
+(Eq.~\ref{eq:oneway}). Eq.~\ref{eq:mean} also needs $K\ge2$. The result shows
+that, on one tissue source, SimCLR pre-trained on normalized tiles did not
+help under an unseen stain appearance or on new patients. It says nothing
+about institutional shift either way. We report it to set the scope of our conclusions. The SAM
+batch-norm caveat above applies here too.

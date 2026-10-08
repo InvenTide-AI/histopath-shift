@@ -1,0 +1,40 @@
+{
+ "arms": [
+  "augonly",
+  "compute_matched",
+  "coral",
+  "fish",
+  "groupdro",
+  "he_jitter",
+  "irm",
+  "lisa",
+  "macenko",
+  "macenko_tile",
+  "mixstyle",
+  "sam",
+  "simclr",
+  "simclr_sam",
+  "tia_style"
+ ],
+ "cohort": {
+  "T": 69.77595168798213,
+  "p": 0.029597040295970403,
+  "B": 10000,
+  "method": "wild",
+  "groups": [
+   "c17",
+   "canine",
+   "midogpp"
+  ],
+  "n_per_group": [
+   5,
+   5,
+   7
+  ],
+  "n_rows": 17,
+  "n_arms": 15
+ },
+ "task_shift_2x2": {
+  "note": "needs the 4 cohorts of the 2x2 design; have ['c17', 'canine', 'midogpp']"
+ }
+}

@@ -1,0 +1,57 @@
+%% Supplementary: protocol details moved from Section 3 of the main text.
+\section{Additional protocol details}
+\label{sup:protocol}
+
+\subsection{Interval estimates for the variance components}
+\label{sup:intervals}
+
+With $F=\mathrm{MSB}/\mathrm{MSW}$, the exact 95\%
+interval for ICC(1) \citep{searle1992variance,mcgraw1996icc} is
+\begin{equation}
+  \Big[\frac{F_L-1}{F_L+n_0-1},\ \frac{F_U-1}{F_U+n_0-1}\Big],\qquad
+  F_L=\frac{F}{F_{0.975}(K-1,N-K)},\quad F_U=\frac{F}{F_{0.025}(K-1,N-K)},
+  \label{eq:iccci}
+\end{equation}
+clipped to $[0,1]$ (exact for balanced data, approximate otherwise).
+$\sigma_R$ receives the exact $\chi^2_{N-K}$ interval and $\sigma_D$ the
+modified large-sample interval
+\citep[\S3.3]{burdick1992confidence}.
+
+
+\subsection{Bayesian posterior}
+\label{sup:bayes}
+
+With $K\le7$, $\hat\sigma_D$ is often at or
+near zero. We therefore also report a grid posterior,
+\begin{equation}
+  p(\sigma_D,\sigma_R\mid \mathbf y)\ \propto\ L_R(\sigma_D,\sigma_R)\,
+  \pi(\sigma_D)\,\pi(\sigma_R),
+  \label{eq:posterior}
+\end{equation}
+where $L_R$ is the restricted likelihood ($\mu$ integrated out under a flat
+prior). $\pi$ is either a half-normal prior,
+$\pi(\sigma)\propto\exp\{-\sigma^2/(2A^2)\}$, or a half-Cauchy prior,
+$\pi(\sigma)\propto(1+\sigma^2/A^2)^{-1}$ \citep{gelman2006prior}. Both are
+independent on each SD with scale $A=0.1$ AUROC for both $\sigma_D$ and
+$\sigma_R$. The half-normal places 95\% of its mass below 0.20; the half-Cauchy
+has heavy tails. The posterior is computed on a $400\times300$ grid (zero plus
+a geometric grid for $\sigma_D$; a geometric grid spanning the $\chi^2$ range of
+the within-domain sum of squares for $\sigma_R$) with trapezoid weights. We
+report posterior medians and equal-tailed 95\% credible intervals for
+$\sigma_D$, $\sigma_R$ and the ICC. When REML is at the boundary or the ANOVA
+estimate is truncated, we report the one-sided interval $[0,q_{0.95}]$, because
+an equal-tailed interval cannot contain zero.
+
+
+\subsection{Response shape}
+\label{sec:protocol-response}
+
+Whether gains are larger where ERM is weak is assessed with Oldham's
+correlation $r=\operatorname{corr}(M_t-E_t,(M_t+E_t)/2)$ between the
+per-domain difference and mean of the arm ($M_t$) and ERM ($E_t$)
+\citep{oldham1962}. Unlike a regression of gain on baseline, it is not biased
+by regression to the mean.
+$r=0$ if and only if $\operatorname{Var}(M)=\operatorname{Var}(E)$, which is
+tested by the Pitman--Morgan statistic $t=r\sqrt{K-2}/\sqrt{1-r^2}$ on $K-2$
+degrees of freedom \citep{pitman1939,morgan1939}. We also give an exact
+sign-flip permutation $p$-value over all $2^K$ swaps of $(M_t,E_t)$. The results are in Section~\ref{app:response}.

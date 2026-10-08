@@ -1,38 +1,39 @@
 cff-version: 1.2.0
-message: "If you use this code or these result records, please cite the manuscript below."
-title: "Domain-Complete Evaluation of Distribution Shift in Histopathology (code and result records)"
+message: "If you use this code or the run records, please cite the article below."
+title: "Train once, deploy across hospitals? Code and run records"
 abstract: >-
-  Eleven robustness interventions evaluated on three histopathology cohorts
-  (Camelyon17-WILDS, MIDOG 2021, multi-scanner canine SCC) with each domain
-  held out in turn. Contains the full pipeline, 388 experimental records,
-  variance-decomposition and power code, and the scripts that regenerate every
-  table and figure in the paper.
+  Domain-complete, seed-replicated evaluation of distribution-shift methods in
+  computational pathology on four public cohorts (Camelyon17-WILDS, multi-scanner
+  canine cSCC, MIDOG 2021, MIDOG++) at two model scales, with the records of all
+  4,778 training runs, the variance-decomposition, power and rank-stability code,
+  and the scripts that regenerate every table and figure of the article.
 type: software
 license: MIT
+repository-code: "https://github.com/InvenTide-AI/histopath-shift"
 authors:
   - family-names: Chatterjee
     given-names: Ayan
-    affiliation: "Indian Institute of Technology Bhubaneswar, India"
+    orcid: "https://orcid.org/0000-0002-8662-4863"
+    affiliation: "School of Electrical and Computer Sciences, Indian Institute of Technology Bhubaneswar, India"
   - family-names: Mukherjee
     given-names: Amitava
-    affiliation: "Birla Institute of Technology & Science, Pilani - Dubai Campus, UAE"
+    affiliation: "Department of Computer Science, Birla Institute of Technology and Science, Pilani - Dubai Campus, United Arab Emirates"
 keywords:
-  - histopathology
+  - computational pathology
   - domain generalization
-  - distribution shift
-  - self-supervised learning
-  - stain normalization
-  - cross-hospital evaluation
-  - Camelyon17
-  - MIDOG
+  - multi-site validation
+  - foundation models
+  - test-time adaptation
+  - evaluation methodology
 preferred-citation:
   type: article
-  title: "Domain-Complete Evaluation of Distribution Shift in Histopathology"
+  title: "Train once, deploy across hospitals? A domain-complete evaluation and an evidence-graded roadmap for cross-site generalization in computational pathology"
   status: submitted
-  journal: "Transactions on Machine Learning Research"
+  journal: "Medical Image Analysis"
   year: 2026
   authors:
     - family-names: Chatterjee
       given-names: Ayan
+      orcid: "https://orcid.org/0000-0002-8662-4863"
     - family-names: Mukherjee
       given-names: Amitava

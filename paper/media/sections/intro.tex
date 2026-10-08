@@ -1,0 +1,134 @@
+%% Introduction (MedIA revision, v2 pipeline). Numbers follow Section 5 (sections/results.tex).
+\section{Introduction}
+\label{sec:intro}
+
+Deep networks for histopathology often lose accuracy when they are applied to
+slides from a laboratory, scanner or patient population they were not trained
+on. Staining protocols, scanners and tissue handling differ between sites, and
+networks pick these differences up: the submitting site of a TCGA slide can be
+predicted from the image, and this signal biases downstream predictions
+\citep{howard2021site}. Color differences between laboratories degrade
+classifiers on unseen laboratories \citep{tellez2019stain}, and mitotic-figure
+detectors deteriorate on new scanners and tumor types
+\citep{aubreville2023midog,aubreville2024midog2022}. The problem is not
+specific to pathology; most externally validated radiology models also perform
+worse on external data \citep{yu2022external}.
+
+For practitioners, the goal is a model that is trained once and then works at
+every hospital where it is used, without collecting labels or retraining at
+each new site. Many remedies promise this: stain normalization and color
+augmentation, domain-generalization (DG) objectives, self-supervised
+pre-training, test-time adaptation and, most recently, pathology foundation
+models. To choose between them, practitioners need evidence that can tell a
+real difference from noise.
+That is harder than it looks. Benchmarks with a single official test site,
+such as Camelyon17-WILDS, evaluate every method on one domain, and ERM accuracy
+on that domain has a standard deviation of 6.4 points across ten seeds
+\citep{koh2021wilds}.
+Across DG benchmarks, ERM is hard to beat once every method is tuned and
+evaluated under the same protocol \citep{gulrajani2021domainbed}. Rankings in
+biomedical image analysis challenges are sensitive to the test data and the
+ranking scheme \citep{maierhein2018rankings}. A reported gain can thus reflect
+the chosen test site, the seed or the tuning budget as much as the method.
+
+This study began with such a gain. In an earlier version of this work, a
+single Camelyon17 test hospital suggested that self-supervised pre-training and
+sharpness-aware minimization were synergistic. Each method alone was worse than
+ERM, and together they were better. Repeating the runs and holding out every
+hospital in turn reversed the sign of this interaction at most hospitals
+(Section~\ref{sec:casestudy}). The same earlier version argued that the type of
+shift, scanner-only or institutional, decides which method works best. That
+argument rested on two cohorts that differed in task as well as in shift type,
+and an audit of our code found defects in several method implementations. We
+therefore rebuilt the study around six questions:
+\begin{enumerate}
+  \item How much of the variance of a held-out score comes from the choice of
+    held-out domain, and how much from run-to-run noise?
+  \item With the few domains that pathology cohorts provide, can realistic
+    differences between methods be detected at all?
+  \item How stable are method rankings within a cohort?
+  \item Do rankings carry over between cohorts that share the task, or between
+    cohorts that share the type of shift?
+  \item Which choices give a model the best chance of working at an unseen site
+    without retraining?
+  \item How can a practitioner decide, with few local labels, whether a trained
+    model is good enough at a particular new site?
+\end{enumerate}
+
+To answer them, we use a \emph{domain-complete, seed-replicated} protocol.
+Every domain of a cohort is the test domain of one leave-one-domain-out fold,
+every method is run at several seeds under one fixed training budget, and
+hyperparameters and checkpoints are selected without test data. We analyze the
+results with a random-effects decomposition into between-domain and
+between-run variance with interval estimates, paired contrasts with a
+fold-dependence sensitivity analysis, a power calculation based on the
+variance of the paired difference, and bootstrap intervals for ranks and for
+rank agreement between cohorts. We apply the protocol to four public cohorts
+arranged in a $2\times2$ design. Two tumor-classification cohorts and two
+mitotic-figure cohorts each pair an acquisition-only shift (scanners within
+one laboratory) with an institutional shift (hospitals or tumor types).
+We evaluate up to 21 arms at two model scales, a compact CNN and ImageNet
+ResNet-50, together with frozen and fine-tuned pathology foundation models,
+in 4,778 training runs. No model is ever trained on labeled data from its test
+site, and apart from the test-time adaptation arms, which use unlabeled test
+images, every result measures how a model trained once performs, unchanged, at
+a site it has never seen.
+
+Our contributions are:
+\begin{itemize}
+  \item an empirical-Bayes \emph{site acceptance test} that decides whether a
+    trained model reaches a target AUROC at a new site. It combines the
+    between-site spread of the development results with a small labeled sample
+    from the new site, plans the number of labels in advance, and is validated
+    on every held-out site of the study (Sections~\ref{sec:sat}
+    and~\ref{sec:results-sat});
+  \item a six-step, evidence-graded roadmap for practitioners who need models
+    that work across hospitals and scanners without retraining, covering the
+    target definition, data collection, training recipe, label-free adaptation
+    at a new site, validation and site acceptance
+    (Section~\ref{sec:roadmap});
+  \item an evaluation protocol and a set of diagnostics for distribution shift
+    in multi-domain pathology cohorts, with the code, the fold definitions and
+    every per-run record released so that each table and figure can be
+    regenerated;
+  \item a $2\times2$ task-by-shift study at two model scales, with
+    domain-generalization objectives, stain and color methods,
+    self-supervision, test-time adaptation, pathology foundation models and
+    two controls for self-supervision, all tuned per fold;
+  \item an external reference point for the variance decomposition, computed
+    from DomainBed's published per-environment results;
+  \item two negative results reported in full: a single-hospital synergy
+    claim that does not survive the protocol, and a single-institution cohort
+    that cannot support domain claims.
+\end{itemize}
+
+The main findings are these. Without retraining, the best standard-scale
+method of each cohort reached a worst-site AUROC of 0.884 to 0.986, against
+0.534 to 0.895 for ERM, but no method was best everywhere. For most arms, the held-out domain accounts for
+most of the variance of a single run (median ICC 0.72--0.95), and the worst
+domain differs between methods. After correction for multiple comparisons, no
+standard-tier method beats ERM on any cohort. Even a mean gain of 0.145 AUROC
+that holds at every domain is not significant with five domains, and detecting
+a gain of 0.05 on the tumor cohorts would need between 7 and 53 domains. Under
+the primary selection rule, none of the six DG objectives ranks in the top five
+on any cohort. At the standard
+tier, method rankings agree more between cohorts that share a task than
+between cohorts that share a shift type. With one cohort per cell this is a
+description, not a proof, and the compact tier does not clearly show it. Fine-tuned
+pathology foundation models with color augmentation were the most reliable
+choice on average, and re-estimating batch-normalization statistics at the new
+site, which needs no labels and no weight updates, helped mainly under severe
+scanner shift. Implementation choices such as per-tile versus per-slide
+stain estimation, and the learning rate of a pretrained encoder, change
+results as much as the choice of method. Finally, the development results
+alone would have accepted 8.6\% of the sites that fell below an AUROC of 0.80.
+At standard scale, the site acceptance test kept false acceptance at or below
+2.1\% and, for targets of 0.80 and 0.85, reached the same power as local labels
+alone with about half as many labels.
+
+Section~\ref{sec:related} reviews related work. Section~\ref{sec:protocol}
+defines the protocol, the statistics and the site acceptance test, and
+Section~\ref{sec:setup} the cohorts, models and arms. Section~\ref{sec:results} reports the results.
+Section~\ref{sec:discussion} discusses them, presents the roadmap
+(Section~\ref{sec:roadmap}) and the two case studies, and lists the
+limitations.
