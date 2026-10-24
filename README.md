@@ -28,10 +28,10 @@ of 0.80 and 0.85, needed about half as many labels as local labels alone.
 
 ## Site acceptance test
 
-`src/v2/site_acceptance.py` has no dependency on the rest of the pipeline (NumPy, SciPy).
+`src/site_acceptance.py` has no dependency on the rest of the pipeline (NumPy, SciPy).
 
 ```python
-import site_acceptance as SA                       # src/v2 on PYTHONPATH
+import site_acceptance as SA                       # src on PYTHONPATH
 from scipy.special import logit
 Z = logit(dev_auroc)                               # (n_dev_sites, n_runs): leave-one-site-out AUROCs of the model
 prior = SA.fit_prior(Z)                            # or SA.robustify(SA.fit_prior(Z)) for the robust variant
@@ -51,7 +51,7 @@ make records     # verify checksums, unpack records/ into $HISTOPATH_DATA/v2
 make test        # unit tests of the training code and the statistics
 make analysis    # statistics under all four selection rules, both tiers (~15 min on 8 cores)
 make sat         # validation of the site acceptance test (~45 min)
-make tables      # outputs/tables/*.tex and results/v2/analysis/paper_numbers.json
+make tables      # outputs/tables/*.tex and results/analysis/paper_numbers.json
 make figures     # outputs/figs/*.{pdf,png}
 ```
 
@@ -72,22 +72,21 @@ and the formats of the fold caches and run records in [docs/CONTRACTS.md](docs/C
 | Table 1 | `tables/tab_main_S.tex` |
 | Supplementary Figs. S1–S19 | `fig_design`, `fig_sat_C`, `fig_kendall_S`, `fig_kendall_C`, `fig_perdomain_C`, `fig_variance_C`, `fig_power_C`, `fig_ranks_C`, `fig_seedspread`, `fig_scale`, `fig_selection_S`, `fig_selection_C`, `fig_calibration_S`, `fig_calibration_C`, `fig_ladder`, `fig_sensitivity_C`, `fig_tuning_S`, `fig_tuning_C`, `fig_domainbed` |
 | Supplementary Tables S4–S11 | `tab_sat_C`, `tab_sat_robust_{S,C}`, `tab_sat_cohorts`, `tab_evidence`, `tab_main_C`, `tab_selection`, `tab_pcam`, `tab_response` |
-| Supplementary Table S18 | `results/v2/external/domainbed_icc_training_domain.tex` |
+| Supplementary Table S18 | `results/external/domainbed_icc_training_domain.tex` |
 
 ## Repository layout
 
 ```
-src/v2/              training (run_v2.py, arms.py, backbones.py, stain.py, ssl_v2.py), planning (make_plan.py,
+src/                 training (run_v2.py, arms.py, backbones.py, stain.py, ssl_v2.py), planning (make_plan.py,
                      select_hparams.py), statistics (stats_v2.py, analyze_v2.py), site acceptance test
                      (site_acceptance.py), tables (paper_tables.py), figures (make_figures_v2.py)
-src/v2/data/         fold-cache construction and verification for every cohort
-src/v2/tests/        unit tests of the training code;  src/v2/stats_tests/  tests of the statistics
-records/             records of all 4,778 runs and the test predictions of every final run -> records/README.md
-results/v2/          selected hyperparameters (input to the final runs) and the DomainBed example
-slurm/v2/            SLURM wrappers used for training
-scripts/             record unpacking, dataset and weight download helpers
+src/data/            fold-cache construction and verification for every cohort
+src/tests/           unit tests of the training code;  src/stats_tests/  tests of the statistics
+records/             records of all 4,778 runs, the test predictions of every final run and the v1 records
+                     behind Supplementary Note S15 -> records/README.md
+results/             selected hyperparameters (input to the final runs) and the DomainBed example
+scripts/             record unpacking, dataset and weight download helpers;  scripts/slurm/  SLURM wrappers
 docs/                reproduction guide, data sources, file formats
-legacy_v1/           records of the earlier pipeline behind Supplementary Note S15 -> legacy_v1/README.md
 ```
 
 ## Notes

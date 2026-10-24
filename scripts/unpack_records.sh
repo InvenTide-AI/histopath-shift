@@ -16,6 +16,9 @@ for t in C S; do tar -xf "records/v2_test_predictions_$t.tar" -C "$SNAP"; done
 for a in v2_quarantine_bt_lr v2_quarantine_macenko_prefix v2_diagnostics_macenko; do
   tar -xJf "records/$a.tar.xz" -C "$V2"
 done
-# v1 records behind the two case studies and the v1 regression test (src/v2/stats_tests/test_v1_regression.py)
-tar -xJf legacy_v1/records/v1_fivehospital_case_study.tar.xz -C "${HISTOPATH_DATA:-data}"
+# v1 records behind Supplementary Note S15: the five-hospital grid (runs/, checked by
+# src/stats_tests/test_v1_regression.py) and the single-hospital and NCT-CRC-HE case studies (v1/)
+for a in v1_fivehospital_case_study v1_case_studies_extra; do
+  tar -xJf "records/$a.tar.xz" -C "${HISTOPATH_DATA:-data}"
+done
 echo "records unpacked under $V2 ($(find "$SNAP/runs" -name '*.json' | wc -l) final, $(find "$SNAP/runs_tune" -name '*.json' | wc -l) tuning)"

@@ -5,7 +5,7 @@ connection, so all usable throughput comes from running many connections at
 once. Each file lands in a .part and is renamed only on success, so re-running
 resumes instead of restarting.
 
-Usage:  python src/fetch_zenodo.py <record_id> <dest_dir> [name_filter]
+Usage:  python scripts/fetch_zenodo.py <record_id> <dest_dir> [name_filter]
 """
 import concurrent.futures as cf
 import json

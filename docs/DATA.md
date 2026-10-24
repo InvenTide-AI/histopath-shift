@@ -9,10 +9,10 @@ All paths are relative to `$HISTOPATH_DATA` (default `./data`).
 |---|---|---|---|
 | Camelyon17-WILDS (Koh et al., 2021; Bándi et al., 2019) | `pip install wilds`, then `python -c "from wilds import get_dataset; get_dataset('camelyon17', download=True, root_dir='$HISTOPATH_DATA/wilds')"` | CC0 1.0 | `wilds/camelyon17_v1.0/{metadata.csv,patches/}` |
 | Canine cutaneous SCC, 44 slides × 5 scanners (Wilm et al., 2023) | Zenodo [10.5281/zenodo.7418555](https://doi.org/10.5281/zenodo.7418555); `python scripts/fetch_zenodo.py 7418555 $HISTOPATH_DATA/canine_scc` | CC BY 4.0 | `canine_scc/{scc_NN_<scanner>.tif, scc.json}` |
-| MIDOG 2021 training set (Aubreville et al., 2023) | Zenodo [10.5281/zenodo.4643381](https://doi.org/10.5281/zenodo.4643381); `python scripts/fetch_midog.py` (writes `./data/midog`) | CC BY 4.0 | `midog/{001..200.tiff, MIDOG.json}` |
-| MIDOG++ (Aubreville et al., Sci. Data 2023) | figshare collection [10.6084/m9.figshare.c.6615571.v1](https://doi.org/10.6084/m9.figshare.c.6615571.v1); `python src/v2/data/fetch_midogpp.py` (reuses the MIDOG 2021 images, verifies md5) | collection CC BY 4.0, files CC0 1.0 | `midogpp/{*.tiff, MIDOG++.json, image_meta.json}` |
+| MIDOG 2021 training set (Aubreville et al., 2023) | Zenodo [10.5281/zenodo.4643381](https://doi.org/10.5281/zenodo.4643381); `python scripts/fetch_zenodo.py 4643381 $HISTOPATH_DATA/midog` | CC BY 4.0 | `midog/{001..200.tiff, MIDOG.json}` |
+| MIDOG++ (Aubreville et al., Sci. Data 2023) | figshare collection [10.6084/m9.figshare.c.6615571.v1](https://doi.org/10.6084/m9.figshare.c.6615571.v1); `python scripts/fetch_midogpp.py` (reuses the MIDOG 2021 images, verifies md5) | collection CC BY 4.0, files CC0 1.0 | `midogpp/{*.tiff, MIDOG++.json, image_meta.json}` |
 | PatchCamelyon test split (Veeling et al., 2018), secondary check only | Zenodo [10.5281/zenodo.2546921](https://doi.org/10.5281/zenodo.2546921) | CC0 1.0 | `pcam/camelyonpatch_level_2_split_test_{x,y}.h5` |
-| NCT-CRC-HE-100K, CRC-VAL-HE-7K (Kather et al.), v1 case study only | Zenodo [10.5281/zenodo.1214456](https://doi.org/10.5281/zenodo.1214456) | CC BY 4.0 | see `legacy_v1/` |
+| NCT-CRC-HE-100K, CRC-VAL-HE-7K (Kather et al.), v1 case study only | Zenodo [10.5281/zenodo.1214456](https://doi.org/10.5281/zenodo.1214456) | CC BY 4.0 | see `records/README.md` |
 
 ## Pretrained weights
 

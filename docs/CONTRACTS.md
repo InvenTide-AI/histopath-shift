@@ -1,6 +1,6 @@
 # v2 interface contracts
 
-`V2=$HISTOPATH_DATA/v2`. Code lives in `src/v2/` (new files only; v1 code under `src/` is not modified).
+`V2=$HISTOPATH_DATA/v2`. Code lives in `src/`.
 
 ## A. Fold cache (written by the data track, read by the training track)
 
@@ -43,7 +43,7 @@ Path: `$V2/runs/{tier}/{cohort}/fold{t}/{tag}.json` (+ `{tag}_preds.npz`, + `{ta
   "test_at": {"id": {"auroc": 0, "...": 0}, "ood": {}, "last": {}, "oracle": {}},
   "tta": {"bnadapt": {"auroc": 0, "...": 0}, "tent": {"auroc": 0, "...": 0}},
   "pcam": {"id": {"auroc": 0, "...": 0}},
-  "code_version": "sha256 of src/v2/*.py", "torch": "2.7.0", "device": "cuda"
+  "code_version": "sha256 of src/*.py", "torch": "2.7.0", "device": "cuda"
 }
 ```
 `ood_val` is `null` and `selected.ood`/`test_at.ood` are absent when the cohort has no validation domain.

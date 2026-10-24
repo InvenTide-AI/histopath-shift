@@ -49,10 +49,17 @@
   "content": "test labels + ID-selected test probabilities, tier S (site acceptance test)"
  },
  {
-  "file": "legacy_v1/records/v1_fivehospital_case_study.tar.xz",
+  "file": "records/v1_fivehospital_case_study.tar.xz",
   "n_records": 60,
   "bytes": 26352,
   "sha256": "f66ee271cf862145454f3426becff2b99a0c3e522107ae8117e4d542afdb6ac7",
   "content": "v1 five-hospital grid, ERM/SAM/SimCLR/SimCLR+SAM x 3 seeds (Supplementary Note S15)"
+ },
+ {
+  "file": "records/v1_case_studies_extra.tar.xz",
+  "n_records": 6,
+  "bytes": 5584,
+  "sha256": "6a1fe2914cfe74daaa0f707f2ba08c6ed081b1d067dba85d79cf5e4ce9db8fe2",
+  "content": "v1 single-hospital Camelyon17 runs (6 records + table) and NCT-CRC-HE results table (Supplementary Note S15)"
  }
 ]

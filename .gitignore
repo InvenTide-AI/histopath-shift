@@ -1,12 +1,13 @@
 # local data, unpacked records and everything the Makefile regenerates
 data/
 outputs/
-results/v2/analysis/
-results/v2/analysis_sens/
-results/v2/site_acceptance/
-results/v2/external/src_2007.01434/
+results/analysis/
+results/analysis_sens/
+results/site_acceptance/
+results/external/src_2007.01434/
 logs/
 __pycache__/
 *.pyc
 .venv/
+scripts/slurm/plans/
 .DS_Store
