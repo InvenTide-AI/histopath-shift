@@ -219,7 +219,8 @@ MS = 4.5
 
 
 def setup_style():
-    fams = {f.name for f in matplotlib.font_manager.fontManager.ttflist}
+    # macOS ships Helvetica as a .ttc collection, whose mathtext glyphs FreeType fails to render
+    fams = {f.name for f in matplotlib.font_manager.fontManager.ttflist if not f.fname.lower().endswith(".ttc")}
     sans = [f for f in ("Nimbus Sans", "Helvetica", "Arial", "Liberation Sans", "DejaVu Sans") if f in fams] or ["sans-serif"]
     matplotlib.rcParams.update({
         "font.family": "sans-serif", "font.sans-serif": sans, "font.size": 7.5, "axes.titlesize": 8,
