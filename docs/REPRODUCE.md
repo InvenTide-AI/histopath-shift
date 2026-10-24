@@ -1,6 +1,6 @@
 # Full reproduction
 
-The shipped records already reproduce every table and figure (`make records analysis tables figures`). This
+The shipped records already reproduce every table and figure (`make all`). This
 guide re-creates the records themselves. Commands assume the repository root as working directory,
 `export HISTOPATH_DATA=/path/to/data`, and a SLURM cluster with one GPU per array task (adapt
 `slurm/v2/run_plan.sh`: partition, modules, time). Each plan shard is one (tier, cohort, fold); `run_v2.py` skips
@@ -53,22 +53,22 @@ SimCLR pre-training runs inside the first job that needs it (or ahead of time wi
 Test-time adaptation and the PatchCamelyon score are evaluated inside the base arm's run.
 
 The original sweep was submitted in several parts because two arms were fixed after the first submission:
-the Macenko family (per-slide estimation, `plans/final_mac`) and the Barlow Twins fine-tunes (own learning
-rate, `plans/final_bt`). All plans that were actually run are in `slurm/v2/plans/`. The superseded records are
-shipped separately (`records/v2_quarantine_*`) because two appendix tables use them.
+the Macenko family (per-slide estimation) and the Barlow Twins fine-tunes (own learning rate). The plans are
+not shipped: `make_plan.py` regenerates them, and every run record stores the full hyperparameters of its job.
+The superseded records are shipped separately (`records/v2_quarantine_*`) because Supplementary Notes S12 and
+S13 use them.
 
 ## 4. Analysis, tables, figures
 
 ```bash
 SNAP=$HISTOPATH_DATA/v2/snap_final2_20261005
 python src/v2/make_figures_v2.py --runs $HISTOPATH_DATA/v2 --freeze $SNAP --analysis results/v2/analysis --freeze-only
-make analysis tables figures HISTOPATH_DATA=$HISTOPATH_DATA
+make analysis sat tables figures HISTOPATH_DATA=$HISTOPATH_DATA
 ```
 
-The site acceptance test is validated with `make sat` (both tiers, ~45 min) and tabulated by `make tables`.
-
 `--freeze` copies the records into one snapshot directory with a manifest (`SNAPSHOT.json`); the analysis and
-figure scripts refuse to mix records from different snapshots.
+figure scripts refuse to mix records from different snapshots. To regenerate the run predictions used by
+`make sat` from new runs, keep the `*_preds.npz` files that `run_v2.py` writes next to each record.
 
 ## Compute
 

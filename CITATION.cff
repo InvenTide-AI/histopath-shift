@@ -1,12 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this code or the run records, please cite the article below."
-title: "Train once, deploy across hospitals? Code and run records"
+title: "Deploying AI pathology models at new hospitals: code and run records"
 abstract: >-
-  Domain-complete, seed-replicated evaluation of distribution-shift methods in
-  computational pathology on four public cohorts (Camelyon17-WILDS, multi-scanner
-  canine cSCC, MIDOG 2021, MIDOG++) at two model scales, with the records of all
-  4,778 training runs, the variance-decomposition, power and rank-stability code,
-  and the scripts that regenerate every table and figure of the article.
+  Leave-one-site-out evaluation of up to 21 methods on four public pathology cohorts
+  (Camelyon17-WILDS, multi-scanner canine cSCC, MIDOG 2021, MIDOG++) at two model scales,
+  with the records of all 4,778 training runs, the test predictions of every final run,
+  the site acceptance test, and the scripts that regenerate every table and figure of the article.
 type: software
 license: MIT
 repository-code: "https://github.com/InvenTide-AI/histopath-shift"
@@ -20,16 +19,15 @@ authors:
     affiliation: "Department of Computer Science, Birla Institute of Technology and Science, Pilani - Dubai Campus, United Arab Emirates"
 keywords:
   - computational pathology
-  - domain generalization
+  - domain shift
+  - site acceptance
   - multi-site validation
   - foundation models
-  - test-time adaptation
-  - evaluation methodology
 preferred-citation:
   type: article
-  title: "Train once, deploy across hospitals? A domain-complete evaluation and an evidence-graded roadmap for cross-site generalization in computational pathology"
+  title: "Deploying AI pathology models at new hospitals"
   status: submitted
-  journal: "Medical Image Analysis"
+  journal: "Nature Communications"
   year: 2026
   authors:
     - family-names: Chatterjee

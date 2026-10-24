@@ -1,6 +1,6 @@
 #!/bin/bash
 # Fetch the arXiv source of DomainBed (Gulrajani & Lopez-Paz, arXiv:2007.01434v1), whose per-environment
-# appendix tables feed the external ICC example (Appendix I). The parsed cells are already shipped in
+# appendix tables feed the external ICC example (Supplementary Note S14). The parsed cells are already shipped in
 # results/v2/external/domainbed_tables.csv; this script is only needed to re-run the parser:
 #   python src/v2/analyze_v2.py domainbed
 set -euo pipefail

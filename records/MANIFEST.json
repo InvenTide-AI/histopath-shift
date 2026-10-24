@@ -18,21 +18,21 @@
   "n_records": 120,
   "bytes": 280896,
   "sha256": "370c4a27f375357eb1d1e0653621a8277268e7eccb83fdd54fb73d39ae50272c",
-  "content": "Barlow Twins fine-tunes with the inherited ImageNet LR (Appendix, tab:tuning-bt)"
+  "content": "Barlow Twins fine-tunes with the inherited ImageNet LR (Supplementary Note S12, Table S12)"
  },
  {
   "file": "records/v2_quarantine_macenko_prefix.tar.xz",
   "n_records": 230,
   "bytes": 519736,
   "sha256": "2539ef60ecfe0fbb616a22bd92f77e083aa7c63654d91929585171c131c73c4c",
-  "content": "pre-fix per-tile Macenko / TIA-style records (Appendix, app:macenko)"
+  "content": "pre-fix per-tile Macenko / TIA-style records (Supplementary Note S13)"
  },
  {
   "file": "records/v2_diagnostics_macenko.tar.xz",
   "n_records": 131,
   "bytes": 424808,
   "sha256": "65cabdf870e990733c189a01c88c85557c9bdfd623cfcd503d04c4ef52996af4",
-  "content": "Macenko diagnostic runs (tile-set dependence; Appendix, app:macenko)"
+  "content": "Macenko diagnostic runs (tile-set dependence; Supplementary Note S13)"
  },
  {
   "file": "records/v2_test_predictions_C.tar",
@@ -53,6 +53,6 @@
   "n_records": 60,
   "bytes": 26352,
   "sha256": "f66ee271cf862145454f3426becff2b99a0c3e522107ae8117e4d542afdb6ac7",
-  "content": "v1 five-hospital grid, ERM/SAM/SimCLR/SimCLR+SAM x 3 seeds (case study)"
+  "content": "v1 five-hospital grid, ERM/SAM/SimCLR/SimCLR+SAM x 3 seeds (Supplementary Note S15)"
  }
 ]

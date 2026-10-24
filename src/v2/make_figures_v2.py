@@ -4,7 +4,7 @@
 Usage
 -----
 module load PyTorch/2.7.0-CONDA
-python src/v2/make_figures_v2.py --analysis results/v2/analysis --runs $V2 --out paper/media/figs --tier both
+python src/v2/make_figures_v2.py --analysis results/v2/analysis --runs $V2 --out outputs/figs --tier both
 # one frozen manifest for every statistic and footnote (copies the records, runs analyze_v2 for all 4 rules):
 python src/v2/make_figures_v2.py --runs $V2 --freeze /tmp/snap_YYYYMMDD --analysis results/v2/analysis --out ...
 
@@ -2943,7 +2943,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--analysis", default=os.path.join(REPO, "results", "v2", "analysis"))
     ap.add_argument("--runs", default=V2, help="v2 root with runs/, runs_tune/, cache64/")
-    ap.add_argument("--out", default=os.path.join(REPO, "paper", "media", "figs"))
+    ap.add_argument("--out", default=os.path.join(REPO, "outputs", "figs"))
     ap.add_argument("--tier", default="both", choices=["C", "S", "both"])
     ap.add_argument("--cohorts", nargs="+", default=COHORTS, help="facet order (2x2: c17 canine midog21sn midogpp)")
     ap.add_argument("--domainbed", default=os.path.join(REPO, "results", "v2", "external", "domainbed_icc.csv"))

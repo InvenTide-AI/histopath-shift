@@ -1,127 +1,108 @@
-# Train once, deploy across hospitals?
+# Deploying AI pathology models at new hospitals
 
-Code, run records and manuscript source for
+Code and run records for
 
-> A. Chatterjee and A. Mukherjee. *Train once, deploy across hospitals? A domain-complete evaluation and an
-> evidence-graded roadmap for cross-site generalization in computational pathology.* Submitted to
-> *Medical Image Analysis*, 2026.
+> A. Chatterjee and A. Mukherjee. *Deploying AI pathology models at new hospitals.*
+> Submitted to *Nature Communications*, 2026.
 
-Every table and figure of the article can be regenerated on a CPU from the records in this repository.
-Re-training every model from scratch needs the public datasets and about 34 GPU-hours (NVIDIA H100).
+Every table and figure can be regenerated on a CPU from the records in this repository. Re-training every model
+from scratch needs the public datasets and about 34 GPU-hours (NVIDIA H100).
 
-## What the study asks
+## Overview
 
-Can a pathology model be trained once and then used at hospitals and scanners it has never seen, without
-retraining? And how can a practitioner decide whether it is good enough at a particular new site? We hold out every domain of four public cohorts in turn, run every
-method with several seeds under one fixed budget, and never use test data for tuning or model selection.
+Can a pathology model trained at a few hospitals be used at a new one, and how can that hospital decide? We hold
+out every site of four public cohorts in turn and train up to 21 methods with several seeds at two model scales
+(4,778 runs). Hyperparameters and checkpoints are never selected on test data.
 
-| Cohort | Task | Domain | Shift | Domains |
+| Cohort | Task | Site | Shift | Sites |
 |---|---|---|---|---|
 | Camelyon17-WILDS | tumor vs normal (lymph node) | hospital | institutional | 5 |
 | Canine cutaneous SCC | tumor vs non-tumor | scanner (same slides) | acquisition only | 5 |
 | MIDOG 2021 | mitotic figure vs look-alike | scanner (one lab) | acquisition only | 3 |
-| MIDOG++ | mitotic figure vs look-alike | tumor type / lab / species | institutional | 7 |
+| MIDOG++ | mitotic figure vs look-alike | tumor type | institutional | 7 |
 
-Up to 21 methods are compared at two scales (a 0.58 M-parameter CNN at 64 px, five seeds; ImageNet ResNet-50
-at 96 px, three seeds), together with Lunit pathology foundation models (Barlow Twins ResNet-50, DINO ViT-S/16)
-frozen and fine-tuned: ERM, SAM, SimCLR, GroupDRO, IRM, CORAL, MixStyle, Fish, LISA, Macenko (per slide and per
-tile), H&E color jitter, TIA-style normalization, BN-adapt, TENT, and compute-matched and augmentation-only
-controls. In total 4,778 runs (1,378 tuning, 3,400 final, including a nine-backbone frozen-probe ladder).
+We propose a **site acceptance test**: an empirical-Bayes procedure that combines a model's development results
+with a small labeled sample from the new site and accepts the site if P(AUROC ≥ target) ≥ 0.95. At standard scale
+it kept false acceptance at or below 2.1% (development results alone: 8.6% at a target of 0.80) and, for targets
+of 0.80 and 0.85, needed about half as many labels as local labels alone.
 
-## Main findings
+## Site acceptance test
 
-- Without retraining, the best standard-scale method of each cohort kept a worst-site AUROC of 0.88–0.99,
-  against 0.53–0.90 for ERM. No method was best everywhere.
-- For most methods the held-out site explains most of the variance of a single run. With 3–7 sites, no
-  standard-scale method beats ERM after correction for multiple comparisons; confirming a 0.05 AUROC gain on the
-  tumor cohorts would need 7–53 sites.
-- Fine-tuned pathology foundation models with color jitter were the most reliable recipe on average. Label-free
-  batch-norm adaptation helped mainly under severe scanner shift. Under the primary selection rule no
-  domain-generalization objective reached the top five on any cohort.
-- At standard scale, rankings agree more between cohorts that share a task than between cohorts that share a
-  shift type (descriptive; one cohort per cell).
-- Development results alone would have accepted 8.6% of the sites that fell below an AUROC of 0.80. The proposed
-  **site acceptance test** kept false acceptance at or below 2.1% at standard scale and needed about half as many
-  local labels as local labels alone.
-
-## The site acceptance test (`src/v2/site_acceptance.py`)
-
-An empirical-Bayes test for a new hospital or scanner. Its prior is the posterior predictive distribution of one
-run's logit AUROC at a new site, from the method's leave-one-site-out development results (one-way random-effects
-model, half-Cauchy priors). It is updated with the AUROC of a small random labeled sample from the new site
-(Hanley-McNeil variance), and the site is accepted if P(AUROC >= target) >= 0.95. A pre-posterior planner gives the
-number of labels to collect, and an epsilon-contaminated variant guards against sites unlike all development sites.
+`src/v2/site_acceptance.py` has no dependency on the rest of the pipeline (NumPy, SciPy).
 
 ```python
-import numpy as np, site_acceptance as SA          # src/v2 on PYTHONPATH
+import site_acceptance as SA                       # src/v2 on PYTHONPATH
 from scipy.special import logit
-Z = logit(dev_auroc)                               # (n_dev_sites, n_runs) leave-one-site-out AUROCs of the method
-prior = SA.robustify(SA.fit_prior(Z))              # or SA.fit_prior(Z)
-m, curve = SA.labels_needed(prior, target=0.85)    # labels to collect
+Z = logit(dev_auroc)                               # (n_dev_sites, n_runs): leave-one-site-out AUROCs of the model
+prior = SA.fit_prior(Z)                            # or SA.robustify(SA.fit_prior(Z)) for the robust variant
+m, curve = SA.labels_needed(prior, target=0.85)    # labels to collect at the new site
 z, v, _, _ = SA.local_estimate(y_local[None], p_local[None])   # labels and model scores of the local sample
 post = SA.posterior(prior, z, v)
 print(SA.prob_above(post, logit(0.85)), SA.accept(post, 0.85))
 ```
 
-## The roadmap (Section 6.2 of the article)
-
-1. **Define the target**: fix the task, the sites and a worst-site acceptance level before training.
-2. **Collect sites, not only slides**: split by site; size the number of sites from a pilot.
-3. **Train once, strongly**: fine-tune a pathology foundation model with color jitter; tune its own learning rate.
-4. **Adapt without labels** (optional): re-estimate batch-norm statistics or normalize stain per slide.
-5. **Select and validate** on training-site data only; hold out whole sites; report every site, seeds and ECE.
-6. **Accept each new site** with the site acceptance test on a small labeled sample, then monitor.
-
-## Quick start: regenerate the paper from the shipped records (CPU)
+## Reproduce every table and figure (CPU)
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
-export HISTOPATH_DATA=$PWD/data          # where records (and, optionally, datasets) live
-make records      # unpack records/*.tar.xz into data/v2 (checksums verified)
-make test         # unit tests of the training code and the statistics
-make analysis     # all statistics, four selection rules, both tiers (~15 min on 8 cores)
-make tables       # paper/media/tables/*.tex, results/v2/analysis/paper_numbers.json, site-test tables
-make sat          # optional: re-run the site acceptance validation (~45 min)
-make figures      # paper/media/figs/*
-make paper        # paper/media/main.pdf and supplementary.pdf (needs TeX)
+export HISTOPATH_DATA=$PWD/data   # records are unpacked here
+make records     # verify checksums, unpack records/ into $HISTOPATH_DATA/v2
+make test        # unit tests of the training code and the statistics
+make analysis    # statistics under all four selection rules, both tiers (~15 min on 8 cores)
+make sat         # validation of the site acceptance test (~45 min)
+make tables      # outputs/tables/*.tex and results/v2/analysis/paper_numbers.json
+make figures     # outputs/figs/*.{pdf,png}
 ```
 
-`make analysis tables` reproduces every shipped CSV in `results/v2/analysis` and every table in `paper/media/tables` byte for byte (only the `snapshot` path field of the `meta_*.json` files changes).
+Re-training from the public datasets (fold caches, tuning, final runs) is described in
+[docs/REPRODUCE.md](docs/REPRODUCE.md). Data and weight sources and licences are in [docs/DATA.md](docs/DATA.md),
+and the formats of the fold caches and run records in [docs/CONTRACTS.md](docs/CONTRACTS.md).
 
-Full re-training (datasets, caches, tuning, final sweeps) is described in [docs/REPRODUCE.md](docs/REPRODUCE.md);
-dataset and weight sources and licences are in [docs/DATA.md](docs/DATA.md).
+### Where each item of the article comes from
+
+| Article | Output |
+|---|---|
+| Fig. 1 | schematic, not generated from data |
+| Fig. 2, Table 2 | `figs/fig_sat_S`, `tables/tab_sat_S.tex` |
+| Fig. 3 | `figs/fig_perdomain_S` |
+| Fig. 4 | `figs/fig_variance_S` (a, b), `figs/fig_power_S` (c) |
+| Fig. 5 | `figs/fig_ranks_S` |
+| Fig. 6 | `figs/fig_roadmap` |
+| Table 1 | `tables/tab_main_S.tex` |
+| Supplementary Figs. S1–S19 | `fig_design`, `fig_sat_C`, `fig_kendall_S`, `fig_kendall_C`, `fig_perdomain_C`, `fig_variance_C`, `fig_power_C`, `fig_ranks_C`, `fig_seedspread`, `fig_scale`, `fig_selection_S`, `fig_selection_C`, `fig_calibration_S`, `fig_calibration_C`, `fig_ladder`, `fig_sensitivity_C`, `fig_tuning_S`, `fig_tuning_C`, `fig_domainbed` |
+| Supplementary Tables S4–S11 | `tab_sat_C`, `tab_sat_robust_{S,C}`, `tab_sat_cohorts`, `tab_evidence`, `tab_main_C`, `tab_selection`, `tab_pcam`, `tab_response` |
+| Supplementary Table S18 | `results/v2/external/domainbed_icc_training_domain.tex` |
 
 ## Repository layout
 
 ```
-src/v2/                 pipeline: training (run_v2.py, arms.py, backbones.py, stain.py, ssl_v2.py),
-                        planning (make_plan.py, select_hparams.py), statistics (stats_v2.py, analyze_v2.py),
-                        figures (make_figures_v2.py), tables (paper_tables.py)
-src/v2/data/            fold-cache construction and verification for every cohort
-src/v2/tests/           unit tests (training);  src/v2/stats_tests/  tests and coverage simulations (statistics)
-slurm/v2/               SLURM scripts and the exact job plans that were run (plans/*/)
-records/                run records (JSON, xz-compressed) + SHA256SUMS + MANIFEST.json  -> records/README.md
-results/v2/             analysis outputs, selected hyperparameters, tuning table, DomainBed external example
-paper/media/            manuscript and supplement source (Elsevier CAS), figures, generated tables, PDFs
-scripts/                record unpacking, weight and dataset download helpers
-docs/                   reproduction guide, data sources, interface contracts, design plan, Macenko notes
-legacy_v1/              earlier (v1) pipeline and records, used only by the two case studies -> legacy_v1/README.md
+src/v2/              training (run_v2.py, arms.py, backbones.py, stain.py, ssl_v2.py), planning (make_plan.py,
+                     select_hparams.py), statistics (stats_v2.py, analyze_v2.py), site acceptance test
+                     (site_acceptance.py), tables (paper_tables.py), figures (make_figures_v2.py)
+src/v2/data/         fold-cache construction and verification for every cohort
+src/v2/tests/        unit tests of the training code;  src/v2/stats_tests/  tests of the statistics
+records/             records of all 4,778 runs and the test predictions of every final run -> records/README.md
+results/v2/          selected hyperparameters (input to the final runs) and the DomainBed example
+slurm/v2/            SLURM wrappers used for training
+scripts/             record unpacking, dataset and weight download helpers
+docs/                reproduction guide, data sources, file formats
+legacy_v1/           records of the earlier pipeline behind Supplementary Note S15 -> legacy_v1/README.md
 ```
 
 ## Notes
 
-- Transductive methods (BN-adapt, TENT, per-slide Macenko, TIA-style) use unlabeled test-domain images and are
-  marked with † in every table and figure.
-- Run records keep their original provenance fields (code hashes, cache fingerprints), so that they can be
-  matched to the frozen snapshot (id `1381bdd759f9`); cluster paths in them are replaced by `$HISTOPATH_DATA`.
+- Transductive methods (BN-adapt, TENT, per-slide Macenko, TIA-style) use unlabeled images of the test site at
+  prediction time and are marked with † in every table and figure.
+- Run records keep their provenance fields (code hash, fold-cache fingerprint) and match the frozen snapshot
+  `1381bdd759f9`; cluster paths in them are replaced by `$HISTOPATH_DATA`.
 - Datasets and pretrained weights are not redistributed. The Lunit weights are for non-commercial research use
   only, and the SWAG weights are CC BY-NC 4.0.
 
 ## Licence
 
-Code: MIT ([LICENSE](LICENSE)). Run records, result tables and figures: CC BY 4.0. Datasets and weights keep
-their own licences ([docs/DATA.md](docs/DATA.md)).
+Code: MIT ([LICENSE](LICENSE)). Run records and derived results: CC BY 4.0. Datasets and weights keep their own
+licences ([docs/DATA.md](docs/DATA.md)).
 
 ## Citation
 

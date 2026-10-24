@@ -435,7 +435,7 @@ def main():
     t = sub.add_parser("tables")
     t.add_argument("--rows", default=os.path.join(os.path.dirname(os.path.dirname(HERE)), "results", "v2",
                                                   "site_acceptance"))
-    t.add_argument("--out", default=os.path.join(os.path.dirname(os.path.dirname(HERE)), "paper", "media", "tables"))
+    t.add_argument("--out", default=os.path.join(os.path.dirname(os.path.dirname(HERE)), "outputs", "tables"))
     t.add_argument("--plan-check", action="store_true", help="also check the label planner on 150 priors per tier")
     a = ap.parse_args()
     if a.cmd == "tables":

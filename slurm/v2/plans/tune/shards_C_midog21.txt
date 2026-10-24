@@ -1,3 +1,0 @@
-slurm/v2/plans/tune/C_midog21_fold0.json
-slurm/v2/plans/tune/C_midog21_fold1.json
-slurm/v2/plans/tune/C_midog21_fold2.json

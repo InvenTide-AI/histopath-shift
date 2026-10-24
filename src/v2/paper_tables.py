@@ -1,11 +1,11 @@
-"""Emit the manuscript tables (paper/media/tables/*.tex) and a numbers file from the frozen analysis.
+"""Emit the manuscript tables (outputs/tables/*.tex) and a numbers file from the frozen analysis.
 
 Every number in these tables is read from results/v2/analysis/{C,S}/... (snapshot 1381bdd759f9), except the
 PatchCamelyon table, which is read from the `pcam` field of the frozen run records, and the SimCLR x SAM interaction,
 which is computed from per_run_id.csv. Nothing is typed by hand.
 
     python src/v2/paper_tables.py --analysis results/v2/analysis --snap $V2/snap_final2_20261005 \
-        --out paper/media/tables --numbers results/v2/analysis/paper_numbers.json
+        --out outputs/tables --numbers results/v2/analysis/paper_numbers.json
 """
 import argparse
 import glob
@@ -304,7 +304,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--analysis", default="results/v2/analysis")
     ap.add_argument("--snap", default=os.path.join(os.environ.get("HISTOPATH_DATA", "data"), "v2/snap_final2_20261005"))
-    ap.add_argument("--out", default="paper/media/tables")
+    ap.add_argument("--out", default="outputs/tables")
     ap.add_argument("--sens", default="results/v2/analysis_sens")
     ap.add_argument("--numbers", default="results/v2/analysis/paper_numbers.json")
     a = ap.parse_args()
